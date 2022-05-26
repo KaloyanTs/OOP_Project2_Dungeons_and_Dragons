@@ -11,8 +11,9 @@ class Image
 public:
     Image(const std::string &p) : path(p) {}
     void print(std::ostream &os = std::cout) const;
+    friend class MultipleImagePrinter;
 };
 
-std::ostream &operator<<(std::ostream &os,const Image &I);
+std::ostream &operator<<(std::ostream &os, const Image &I);
 
 #endif
