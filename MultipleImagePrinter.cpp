@@ -23,7 +23,10 @@ MultipleImagePrinter &MultipleImagePrinter::operator()(const Image *const *arr, 
         std::cout << '\n';
     }
     for (unsigned i = 0; i < count; ++i)
+    {
+        inputs[i]->close();
         delete inputs[i];
+    }
     delete[] inputs;
 
     return *this;
