@@ -5,8 +5,8 @@
 int main()
 {
     Image logo("assets\\logo.dnd");
-    Image dragon1("assets\\dragon7.dnd");
-    Image dragon2("assets\\dragon8.dnd");
+    Image dragon1("assets\\dragon1.dnd");
+    Image dragon2("assets\\dragon9.dnd");
     Image *dragons[] = {&dragon1, &dragon2};
     Printer out;
     out(logo);
@@ -16,8 +16,8 @@ int main()
     Image heartArr[] =
         {
             Image("assets\\health.dnd"),
-            Image("assets\\spell.dnd"),
-            Image("assets\\health.dnd")};
+            Image("assets\\weapon.dnd"),
+            Image("assets\\spell.dnd")};
     Image *hearts[] =
         {
             &heartArr[0],
@@ -25,5 +25,6 @@ int main()
             &heartArr[2]};
 
     mOut(hearts, 3, 5);
+    std::cin.get();
     return 0;
 }
