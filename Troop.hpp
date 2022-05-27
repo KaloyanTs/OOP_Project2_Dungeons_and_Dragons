@@ -9,18 +9,17 @@ class Troop
 
 protected:
     const float maxHealth;
-    float melleeAttack, spellAttack;
+    float melleeAttack;
     float mana, health;
 
 public:
     Troop(float _attack, float _mana, float _health)
-        : spellAttack(0), melleeAttack(_attack),
+        : melleeAttack(_attack),
           mana(_mana), health(_health), maxHealth(_health) {}
     virtual ~Troop() {}
 
     virtual Troop *clone() const = 0;
-    virtual void print(const Printer &p) const;
-    virtual void 
+    virtual void print(const MultipleImagePrinter &p) const;
 };
 
 #endif
