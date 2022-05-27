@@ -14,7 +14,7 @@ size_t Maze::fib(unsigned n, unsigned val1, unsigned val2) const
 void Maze::generateMaze() const
 {
     for (unsigned i = 0; i < rows; ++i)
-        for (unsigned j = 0; j <= cols; ++j)
+        for (unsigned j = 0; j < cols; ++j)
             data[i][j] = (rand() % 4 < 3 ? '.' : '#');
     data[0][0] = data[rows - 1][cols - 1] = '.';
 }
@@ -51,7 +51,7 @@ bool Maze::isReachable(unsigned posY, unsigned posX) const
         bool operator==(const position &other) const { return x == other.x && y == other.y; }
     };
     bool **visited = new bool *[rows];
-    for (unsigned i = 0; i < cols; ++i)
+    for (unsigned i = 0; i < rows; ++i)
     {
         visited[i] = new bool[cols];
         for (unsigned j = 0; j < cols; ++j)
@@ -64,6 +64,7 @@ bool Maze::isReachable(unsigned posY, unsigned posX) const
     memory.push(current);
     while (!memory.empty() && !visited[posY][posX])
     {
+
         current = memory.top();
         visited[current.y][current.x] = true;
         memory.pop();
