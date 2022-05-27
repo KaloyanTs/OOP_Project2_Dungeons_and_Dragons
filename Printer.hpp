@@ -12,9 +12,9 @@ protected:
 public:
     Printer(std::ostream &_os = std::cout) : os(_os) {}
     template <typename Printable>
-    Printer &operator()(const Printable &p)
+    const Printer &operator()(const Printable &p) const
     {
-        os << p << '\n';
+        os << p;
         return *this;
     }
 };
