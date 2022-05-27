@@ -7,7 +7,7 @@ class MultipleImagePrinter : public Printer
 {
 public:
     MultipleImagePrinter(std::ostream &os = std::cout) : Printer(os) {}
-    MultipleImagePrinter &operator()(const Image *const *arr, size_t count, unsigned space = 0);
+    const MultipleImagePrinter &operator()(const Image *const *arr, size_t count, unsigned space = 0) const;
 };
 
 #endif

@@ -1,6 +1,6 @@
 #include "MultipleImagePrinter.hpp"
 
-MultipleImagePrinter &MultipleImagePrinter::operator()(const Image *const *arr, size_t count, unsigned space)
+const MultipleImagePrinter &MultipleImagePrinter::operator()(const Image *const *arr, size_t count, unsigned space) const
 {
     std::ifstream **inputs = new std::ifstream *[count];
     char c;
