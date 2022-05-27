@@ -6,9 +6,12 @@ class Dragon : public Troop
 {
     unsigned level;
     const Image *pic;
+    unsigned posY, posX;
 
 public:
-    Dragon() : Troop(25, 25, 50), level(1), pic(&GameAssets::dragon) {}
+    Dragon(unsigned y, unsigned x) : Troop(25, 25, 50), level(1), pic(&GameAssets::dragon), posY(y), posX(x)
+    {
+    }
     virtual Dragon *clone() const { return new Dragon(*this); }
     virtual void print(const MultipleImagePrinter &p) const;
 };
