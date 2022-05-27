@@ -1,6 +1,6 @@
-#include "Maze.hpp"
+#include "Map.hpp"
 
-size_t Maze::fib(unsigned n, unsigned val1, unsigned val2) const
+size_t Map::fib(unsigned n, unsigned val1, unsigned val2) const
 {
     if (!n)
         throw 1;
@@ -11,7 +11,7 @@ size_t Maze::fib(unsigned n, unsigned val1, unsigned val2) const
     return fib(n - 1, val1, val2) + fib(n - 2, val1, val2);
 }
 
-void Maze::generateMaze() const
+void Map::generateMap() const
 {
     for (unsigned i = 0; i < rows; ++i)
         for (unsigned j = 0; j < cols; ++j)
@@ -19,9 +19,8 @@ void Maze::generateMaze() const
     data[0][0] = data[rows - 1][cols - 1] = '.';
 }
 
-Maze::Maze(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
-                           // FIX
-                           data(new char *[rows])
+Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
+                           data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
 {
     srand(time(0));
     for (unsigned i = 0; i < rows; ++i)
@@ -32,17 +31,28 @@ Maze::Maze(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 1
 
     do
     {
-        generateMaze();
+        generateMap();
     } while (!isReachable(rows - 1, cols - 1));
+    unsigned posY, posX;
+    for (unsigned i = 0; i < dragonCount; ++i)
+    {
+        do
+        {
+            posY = rand() % cols;
+            posX = rand() % rows;
+        } while (data[posY][posX] != '.' || !posY && !posX || !isReachable(posY, posX));
+        dragons[i] = new Dragon(posY, posX); // improve
+        data[posY][posX] = 'M';
+    }
 }
 
-void Maze::print() const
+void Map::print() const
 {
     for (unsigned i = 0; i < rows; ++i)
         std::clog << data[i] << '\n';
 }
 
-bool Maze::isReachable(unsigned posY, unsigned posX) const
+bool Map::isReachable(unsigned posY, unsigned posX) const
 {
     struct position
     {
@@ -99,7 +109,7 @@ bool Maze::isReachable(unsigned posY, unsigned posX) const
     return res;
 }
 
-Maze::~Maze()
+Map::~Map()
 {
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];

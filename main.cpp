@@ -2,7 +2,7 @@
 #include "Image.hpp"
 #include "MultipleImagePrinter.hpp"
 #include "Dragon.hpp"
-#include "Maze.hpp"
+#include "Map.hpp"
 
 int main()
 {
@@ -12,8 +12,8 @@ int main()
     // Dragon lamb;
     //  fix lamb.print(mOut);
     // std::cin.get();
-    Maze m;
-     m.print();
+    Map m;
+    m.print();
     // std::cin.get();
     std::cout << m.isReachable(9, 9);
     std::cin.get();
