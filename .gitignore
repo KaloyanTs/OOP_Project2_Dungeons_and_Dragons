@@ -1,0 +1,10 @@
+/build
+*.pdf
+/.vscode
+*.o
+*.exe
+documentation/latex/*
+!documentation/latex/refman.pdf
+Doxyfile
+present/
+!build/assets
