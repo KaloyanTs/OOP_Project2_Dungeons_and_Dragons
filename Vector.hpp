@@ -6,10 +6,11 @@ template <typename T>
 class Vector
 {
     static const unsigned INIT_CAPACITY = 2;
-   T *data;
+    T *data;
     size_t size, capacity;
 
     void expand();
+    void shrink();
     void copy(const Vector &other);
 
 public:
@@ -25,28 +26,39 @@ public:
 template <typename T>
 void Vector<T>::expand()
 {
-    capacity<<=1;
-    T *newData=new T[capacity];
-    for(unsigned i=0;i<size;++i)
-    newData[i]=data[i];
+    capacity <<= 1;
+    T *newData = new T[capacity];
+    for (unsigned i = 0; i < size; ++i)
+        newData[i] = data[i];
     delete[] data;
-    data=newData;
+    data = newData;
+}
+
+template <typename T>
+void Vector<T>::shrink()
+{
+    capacity >>= 1;
+    T *newData = new T[capacity];
+    for (unsigned i = 0; i < size; ++i)
+        newData[i] = data[i];
+    delete[] data;
+    data = newData;
 }
 
 template <typename T>
 void Vector<T>::copy(const Vector &other)
 {
     clear();
-    size=other.size;
-    capacity=other.capacity;
-    data=new T[capacity];
-    for(unsigned i=0;i<size;++i)
-    data[i]=other.data[i];
+    size = other.size;
+    capacity = other.capacity;
+    data = new T[capacity];
+    for (unsigned i = 0; i < size; ++i)
+        data[i] = other.data[i];
 }
 
 template <typename T>
 Vector<T>::Vector(const Vector &other)
-:data(nullptr),size(0)
+    : data(nullptr), size(0)
 {
     copy(other);
 }
@@ -54,8 +66,8 @@ Vector<T>::Vector(const Vector &other)
 template <typename T>
 Vector<T> &Vector<T>::operator=(const Vector<T> &other)
 {
-    if(this!=&other)
-    copy(other);
+    if (this != &other)
+        copy(other);
     return *this;
 }
 
@@ -68,9 +80,9 @@ Vector<T>::~Vector()
 template <typename T>
 Vector<T> &Vector<T>::push_back(const T &el)
 {
-    if(size==capacity)
-    expand();
-    data[size++]=el;
+    if (size == capacity)
+        expand();
+    data[size++] = el;
     return *this;
 }
 
