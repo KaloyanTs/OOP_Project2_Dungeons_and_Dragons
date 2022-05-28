@@ -1,20 +1,23 @@
 #ifndef __DRAGON_HPP
 #define __DRAGON_HPP
 #include "Troop.hpp"
+#include "EventGenerator.hpp"
 
-class Dragon : public Troop
+class Dragon : public Troop, public EventGenerator
 {
+    static const char stamp = 'M';
     unsigned level;
     const Image *pic;
-    unsigned posY, posX;
 
 public:
-    Dragon(unsigned y, unsigned x) : Troop(25, 25, 50), level(1), pic(&GameAssets::dragon), posY(y), posX(x)
+    Dragon(unsigned y, unsigned x)
+        : Troop(25, 25, 50), EventGenerator(y, x),
+          level(1), pic(&GameAssets::dragon)
     {
     }
     virtual Dragon *clone() const { return new Dragon(*this); }
-    virtual void print(const MultipleImagePrinter &p) const;
-    bool locatedAt(unsigned y, unsigned x) { return posY == y && posX == x; }
+    char getChar() const { return stamp; }
+    void print(const Printer &p) const;
 };
 
 #endif

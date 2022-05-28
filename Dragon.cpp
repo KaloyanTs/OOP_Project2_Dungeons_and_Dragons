@@ -1,7 +1,7 @@
 #include "Dragon.hpp"
 
- void Dragon::print(const MultipleImagePrinter &p) const
+ void Dragon::print(const Printer &p) const
 {
-    ((const Printer &)p)(*pic);
+    p(*pic);
     Troop::print(p);
 }
