@@ -13,10 +13,16 @@ protected:
     float attack;
     float mana, health;
 
+    float determineStat(unsigned lvl, float init, float perLevel) const;
+
 public:
     Troop(float _attack, float _mana, float _health)
         : attack(_attack),
-          mana(_mana), health(_health), maxHealth(_health) {}
+          mana(_mana),
+          health(_health),
+          maxHealth(_health)
+    {
+    }
     virtual ~Troop() {}
 
     virtual Troop *clone() const = 0;

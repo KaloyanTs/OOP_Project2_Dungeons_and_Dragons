@@ -8,3 +8,10 @@ void Troop::print(const Printer &p) const
               << attack << '\t'
               << mana << '\n';
 }
+
+float Troop::determineStat(unsigned lvl, float init, float perLevel) const
+{
+    for (unsigned i = 1; i < lvl; ++i)
+        init *= perLevel;
+    return init;
+}
