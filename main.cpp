@@ -7,9 +7,10 @@
 
 int main()
 {
-    // Image logo("assets\\logo.dnd");
-    // Printer out;
-    //  out(logo);
+    Image logo("assets\\logo.dnd");
+    Printer out;
+    out(logo);
+    getch();
     // Dragon lamb;
     //  fix lamb.print(mOut);
     // std::cin.get();
