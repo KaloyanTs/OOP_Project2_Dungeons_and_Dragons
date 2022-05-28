@@ -11,8 +11,6 @@ enum class MAP_SYMBOLS
 {
     FREE = '.',
     WALL = '#',
-    MONSTER = 'M',
-    TREASURE = 'T',
     PLAYER = (char)177
 };
 
@@ -22,7 +20,8 @@ class Map
     unsigned level;
     char **data;
     size_t dragonCount;
-    Dragon **dragons;
+    size_t treasureCount;
+    Vector<EventGenerator *> events;
     Player *pl;
     const MultipleImagePrinter &p;
     bool running;

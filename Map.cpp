@@ -22,7 +22,8 @@ void Map::generateMap() const
 Map::Map(const MultipleImagePrinter &print, unsigned lvl)
     : running(false),
       p(print), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
-      data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
+      data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
+      events(dragonCount + treasureCount)
 {
     srand(time(0));
     pl = new Player(0, 0); // todo passed as parameter
@@ -41,8 +42,18 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
             posY = rand() % cols;
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
-        dragons[i] = new Dragon(posY, posX); // improve
-        data[posY][posX] = (char)MAP_SYMBOLS::MONSTER;
+        events.push_back(new Dragon(posY, posX)); // improve
+        data[posY][posX] = events[events.size() - 1]->getChar();
+    }
+    for (unsigned i = 0; i < treasureCount; ++i)
+    {
+        do
+        {
+            posY = rand() % cols;
+            posX = rand() % rows;
+        } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
+        events.push_back(new HeroEquipment(posY, posX)); // improve
+        data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
 
@@ -61,6 +72,7 @@ void Map::print() const
                               : (data[i][j] == (char)MAP_SYMBOLS::WALL
                                      ? data[i][j]
                                      : '_'))
+
                       << (data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
                               ? (char)MAP_SYMBOLS::PLAYER
                               : data[i][j]);
@@ -68,10 +80,13 @@ void Map::print() const
         std::clog << '\n';
     }
     unsigned i = 0;
-    while (i < dragonCount && !dragons[i]->locatedAt(pl->getY(), pl->getX()))
+    while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
-    if (i < dragonCount)
-        dragons[i]->print(p);
+    if (i < events.size())
+    {
+        events[i]->print(p);
+        // todo events[i]->action();
+    }
 }
 
 bool Map::isReachable(unsigned posY, unsigned posX) const
@@ -135,6 +150,7 @@ Map::~Map()
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
+    delete pl; // fix
 }
 
 void Map::run()
