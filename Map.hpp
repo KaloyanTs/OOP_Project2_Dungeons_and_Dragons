@@ -11,7 +11,6 @@ enum class MAP_SYMBOLS
 {
     FREE = '.',
     WALL = '#',
-    PLAYER = (char)177
 };
 
 class Map
