@@ -18,6 +18,7 @@ bool operator==(char c, const KEYS &k);
 
 class Player
 {
+    static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
 
 public:
@@ -29,6 +30,7 @@ public:
 
     unsigned getY() const { return y; }
     unsigned getX() const { return x; }
+    virtual char getChar() const { return PLAYER_CHAR; }
 };
 
 template <typename ALLOWED>
