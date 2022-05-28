@@ -9,11 +9,12 @@ class HeroEquipment : public Equipment, public EventGenerator
 
 public:
     // todo more data!!!
-    HeroEquipment(unsigned y, unsigned x) : Equipment(43433), EventGenerator(y, x) {}
-    HeroEquipment *clone() const { return new HeroEquipment(*this); }
+    HeroEquipment(unsigned y, unsigned x, bool board = true)
+        : Equipment(43433), EventGenerator(y, x, board) {}
+    HeroEquipment *clone() const = 0;
 
     char getChar() const { return stamp; }
-    void print(const Printer &p) const;
+    void print(const Printer &p) const = 0;
 };
 
 #endif
