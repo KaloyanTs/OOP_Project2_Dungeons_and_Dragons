@@ -42,7 +42,7 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
             posY = rand() % cols;
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
-        events.push_back(new Dragon(posY, posX)); // improve
+        events.push_back(new Dragon(posY, posX, rand() % lvl + 1)); // improve
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
     unsigned eqNumber; // fix

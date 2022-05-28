@@ -10,7 +10,8 @@
 enum class MAP_SYMBOLS
 {
     FREE = '.',
-    WALL = '#',
+    // WALL = '#',
+    WALL = (char)219,
 };
 
 class Map
