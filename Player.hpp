@@ -9,7 +9,8 @@ enum class KEYS
     UP = 'w',
     DOWN = 's',
     LEFT = 'a',
-    RIGHT = 'd'
+    RIGHT = 'd',
+    EXIT = '`'
     // todo arrows
 };
 
@@ -54,7 +55,7 @@ bool Player::move(bool &run, ALLOWED f)
         ++x;
         return true;
     }
-    else if (c == '\n')
+    else if (c == KEYS::EXIT)
         return run = false;
     return false;
 }
