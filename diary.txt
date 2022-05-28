@@ -1,0 +1,9 @@
+grammar generating gragon names (use the stack)
+heroes:
+    faces
+equipment:
+    images
+keyboard:
+    open inventar
+    show hero info
+    dialog when event generator touched
