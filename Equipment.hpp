@@ -4,7 +4,7 @@
 
 class Equipment
 {
-    std::string name;
+    String name;
     unsigned bonus;
 
 public:
@@ -14,7 +14,7 @@ public:
     virtual Equipment *clone() const = 0;
     virtual void print(const Printer &p) const = 0;
     unsigned getBonus() const { return bonus; }
-    const std::string &getName() { return name; }
+    const String &getName() { return name; }
 };
 
 #endif

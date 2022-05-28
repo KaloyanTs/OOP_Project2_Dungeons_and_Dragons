@@ -33,7 +33,7 @@ class Map
     void print() const;
 
 public:
-    Map(const MultipleImagePrinter &p, const std::string &path);
+    Map(const MultipleImagePrinter &p, const String &path);
     Map(const MultipleImagePrinter &print, unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;

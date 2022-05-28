@@ -176,7 +176,7 @@ void Map::run()
     } while (running);
 }
 
-Map::Map(const MultipleImagePrinter &pr, const std::string &path)
+Map::Map(const MultipleImagePrinter &pr, const String &path)
     : p(pr)
 {
     // todo read map from binary file
