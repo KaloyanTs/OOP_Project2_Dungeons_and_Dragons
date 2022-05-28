@@ -2,8 +2,9 @@
 #define __MAP_HPP
 #include <iostream>
 #include <ctime>
-#include <stack> // fix
+#include "Stack.hpp"
 #include "Dragon.hpp"
+#include "Player.hpp"
 
 enum class MAP_SYMBOLS
 {
@@ -20,18 +21,20 @@ class Map
     char **data;
     size_t dragonCount;
     Dragon **dragons;
+    Player *pl;
 
     void generateMap() const;
 
     size_t fib(unsigned lvl, unsigned val1, unsigned val2) const;
+    bool isReachable(unsigned y, unsigned x) const;
+    void print() const;
 
 public:
-    bool isReachable(unsigned y, unsigned x) const;
     Map(unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;
     ~Map();
-    void print() const;
+    void run();
 };
 
 #endif

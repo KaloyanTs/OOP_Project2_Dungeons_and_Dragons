@@ -15,19 +15,16 @@ void Map::generateMap() const
 {
     for (unsigned i = 0; i < rows; ++i)
         for (unsigned j = 0; j < cols; ++j)
-            data[i][j] = (rand() % 4 < 3 ? '.' : '#');
+            data[i][j] = (rand() % 4 < 3 ? (char)MAP_SYMBOLS::FREE : (char)MAP_SYMBOLS::WALL);
     data[0][0] = data[rows - 1][cols - 1] = '.';
 }
 
 Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
-                           data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
+                         data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
 {
     srand(time(0));
     for (unsigned i = 0; i < rows; ++i)
-    {
-        data[i] = new char[cols + 1];
-        data[i][cols] = '\0';
-    }
+        data[i] = new char[cols];
 
     do
     {
@@ -42,14 +39,18 @@ Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)
             posX = rand() % rows;
         } while (data[posY][posX] != '.' || !posY && !posX || !isReachable(posY, posX));
         dragons[i] = new Dragon(posY, posX); // improve
-        data[posY][posX] = 'M';
+        data[posY][posX] = (char)MAP_SYMBOLS::MONSTER;
     }
 }
 
 void Map::print() const
 {
     for (unsigned i = 0; i < rows; ++i)
-        std::clog << data[i] << '\n';
+    {
+        for (unsigned j = 0; j < cols; ++j)
+            std::clog << (i == pl->getY() && j == pl->getX() ? char(177) : ' ') << data[i][j];
+        std::clog << '\n';
+    }
 }
 
 bool Map::isReachable(unsigned posY, unsigned posX) const
@@ -57,7 +58,7 @@ bool Map::isReachable(unsigned posY, unsigned posX) const
     struct position
     {
         unsigned y, x;
-        position(unsigned row, unsigned col) : y(row), x(col) {}
+        position(unsigned row = 0, unsigned col = 0) : y(row), x(col) {}
         bool operator==(const position &other) const { return x == other.x && y == other.y; }
     };
     bool **visited = new bool *[rows];
@@ -65,11 +66,10 @@ bool Map::isReachable(unsigned posY, unsigned posX) const
     {
         visited[i] = new bool[cols];
         for (unsigned j = 0; j < cols; ++j)
-            visited[i][j] = data[i][j] == '#';
+            visited[i][j] = data[i][j] == (char)MAP_SYMBOLS::WALL;
     }
 
-    // improve use my Stack
-    std::stack<position> memory;
+    Stack<position> memory;
     position current(0, 0), desired(posY, posX);
     memory.push(current);
     while (!memory.empty() && !visited[posY][posX])
@@ -114,4 +114,13 @@ Map::~Map()
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
+}
+
+void Map::run()
+{
+    do
+    {
+        if (pl->move())
+            print();
+    } while (1);
 }
