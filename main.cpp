@@ -3,6 +3,7 @@
 #include "MultipleImagePrinter.hpp"
 #include "Dragon.hpp"
 #include "Map.hpp"
+#include "Player.hpp"
 
 int main()
 {
@@ -16,6 +17,12 @@ int main()
     m.print();
     // std::cin.get();
     std::cout << m.isReachable(9, 9);
-    std::cin.get();
+    Player p(0,0);
+    p.move();
+    p.move();
+    p.move();
+    p.move();
+    p.move();
+    p.move();
     return 0;
 }
