@@ -5,6 +5,7 @@
 template <typename T>
 class Vector
 {
+protected:
     static const unsigned INIT_CAPACITY = 2;
     T *data;
     size_t size, capacity;
@@ -21,6 +22,7 @@ public:
 
     unsigned getCount() const { return size; }
     Vector &push_back(const T &el);
+    bool empty() const { return !size; }
 };
 
 template <typename T>
@@ -48,7 +50,7 @@ void Vector<T>::shrink()
 template <typename T>
 void Vector<T>::copy(const Vector &other)
 {
-    clear();
+    delete[] data;
     size = other.size;
     capacity = other.capacity;
     data = new T[capacity];
