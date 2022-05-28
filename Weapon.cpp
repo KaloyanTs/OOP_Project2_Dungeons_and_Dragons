@@ -2,5 +2,5 @@
 
 void Weapon::print(const Printer &p) const
 {
-    p("weapon");
+    p(*pic);
 }
