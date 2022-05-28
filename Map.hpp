@@ -5,6 +5,7 @@
 #include "Stack.hpp"
 #include "Dragon.hpp"
 #include "Player.hpp"
+#include "MultipleImagePrinter.hpp"
 
 enum class MAP_SYMBOLS
 {
@@ -23,6 +24,8 @@ class Map
     size_t dragonCount;
     Dragon **dragons;
     Player *pl;
+    const MultipleImagePrinter &p;
+    bool running;
 
     void generateMap() const;
 
@@ -31,7 +34,7 @@ class Map
     void print() const;
 
 public:
-    Map(unsigned lvl = 1);
+    Map(const MultipleImagePrinter &print, unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;
     ~Map();

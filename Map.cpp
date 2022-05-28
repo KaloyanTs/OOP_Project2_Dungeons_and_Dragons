@@ -19,8 +19,10 @@ void Map::generateMap() const
     data[0][0] = data[rows - 1][cols - 1] = (char)MAP_SYMBOLS::FREE;
 }
 
-Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
-                         data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
+Map::Map(const MultipleImagePrinter &print, unsigned lvl)
+    : running(false),
+      p(print), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
+      data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
 {
     srand(time(0));
     pl = new Player(0, 0); // todo passed as parameter
@@ -46,6 +48,7 @@ Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)
 
 void Map::print() const
 {
+    // fix USE PRINTER
     system("cls");
     bool plHere = false;
     for (unsigned i = 0; i < rows; ++i)
@@ -64,6 +67,11 @@ void Map::print() const
         }
         std::clog << '\n';
     }
+    unsigned i = 0;
+    while (i < dragonCount && !dragons[i]->locatedAt(pl->getY(), pl->getX()))
+        ++i;
+    if (i < dragonCount)
+        dragons[i]->print(p);
 }
 
 bool Map::isReachable(unsigned posY, unsigned posX) const
@@ -131,11 +139,12 @@ Map::~Map()
 
 void Map::run()
 {
+    running = true;
     print();
     do
     {
-        if (pl->move([&](unsigned y, unsigned x) -> bool
+        if (pl->move(running, [&](unsigned y, unsigned x) -> bool
                      { return y < rows && x < cols && data[y][x] != (char)MAP_SYMBOLS::WALL; }))
             print();
-    } while (1);
+    } while (running);
 }

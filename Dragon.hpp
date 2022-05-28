@@ -14,6 +14,7 @@ public:
     }
     virtual Dragon *clone() const { return new Dragon(*this); }
     virtual void print(const MultipleImagePrinter &p) const;
+    bool locatedAt(unsigned y, unsigned x) { return posY == y && posX == x; }
 };
 
 #endif

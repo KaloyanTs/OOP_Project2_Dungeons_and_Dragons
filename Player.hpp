@@ -24,14 +24,14 @@ public:
         : y(posY), x(posX) {}
 
     template <typename ALLOWED>
-    bool move(ALLOWED f);
+    bool move(bool &run, ALLOWED f);
 
     unsigned getY() const { return y; }
     unsigned getX() const { return x; }
 };
 
 template <typename ALLOWED>
-bool Player::move(ALLOWED f)
+bool Player::move(bool &run, ALLOWED f)
 {
     char c = getch();
     if (c == KEYS::UP && f(y - 1, x))
@@ -54,6 +54,8 @@ bool Player::move(ALLOWED f)
         ++x;
         return true;
     }
+    else if (c == '\n')
+        return run = false;
     return false;
 }
 

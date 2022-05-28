@@ -13,7 +13,8 @@ int main()
     // Dragon lamb;
     //  fix lamb.print(mOut);
     // std::cin.get();
-    Map m;
+    MultipleImagePrinter p;
+    Map m(p);
     m.run();
     return 0;
 }
