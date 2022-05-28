@@ -45,6 +45,7 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
         events.push_back(new Dragon(posY, posX)); // improve
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
+    unsigned eqNumber; // fix
     for (unsigned i = 0; i < treasureCount; ++i)
     {
         do
@@ -52,7 +53,17 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
             posY = rand() % cols;
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
-        events.push_back(new HeroEquipment(posY, posX)); // improve
+
+        // optimize new procedure returning pointer
+        eqNumber = rand() % 3;
+        if (!eqNumber)
+            events.push_back(new Weapon(posY, posX)); // improve
+        else if (eqNumber == 1)
+            events.push_back(new Armor(posY, posX)); // improve
+        else
+            events.push_back(new Spell(posY, posX)); // improve
+        // optimize
+
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
@@ -68,13 +79,13 @@ void Map::print() const
         {
             plHere = (i == pl->getY() && j == pl->getX());
             std::clog << (plHere
-                              ? (char)MAP_SYMBOLS::PLAYER
+                              ? pl->getChar()
                               : (data[i][j] == (char)MAP_SYMBOLS::WALL
                                      ? data[i][j]
                                      : '_'))
 
                       << (data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
-                              ? (char)MAP_SYMBOLS::PLAYER
+                              ? pl->getChar()
                               : data[i][j]);
         }
         std::clog << '\n';
@@ -82,7 +93,7 @@ void Map::print() const
     unsigned i = 0;
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
-    if (i < events.size())
+    if (i < events.size() && events[i]->isOnBoard())
     {
         events[i]->print(p);
         // todo events[i]->action();
