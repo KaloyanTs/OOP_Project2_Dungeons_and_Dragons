@@ -10,9 +10,12 @@ class Dragon : public Troop, public EventGenerator
     const Image *pic;
 
 public:
-    Dragon(unsigned y, unsigned x)
-        : Troop(25, 25, 50), EventGenerator(y, x),
-          level(1), pic(&GameAssets::dragon)
+    Dragon(unsigned y, unsigned x, unsigned lvl = 1)
+        : Troop((unsigned)determineStat(lvl, 25, 1.2),
+                (unsigned)determineStat(lvl, 25, 1.2),
+                (unsigned)determineStat(lvl, 50, 1.2)),
+          EventGenerator(y, x),
+          level(lvl), pic(&GameAssets::dragon)
     {
     }
     virtual Dragon *clone() const { return new Dragon(*this); }
