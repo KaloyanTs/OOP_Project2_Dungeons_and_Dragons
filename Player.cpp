@@ -9,10 +9,9 @@ bool Player::move()
         return false;
     }
     if ((int)c < 0)
-        return;
+        return false;
     if (isArrow)
     {
-        std::cout << "Arrow\n";
         if (c == KEYS::UP && y)
             --y;
         else if (c == KEYS::DOWN && y + 1 < limY)
