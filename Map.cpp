@@ -175,3 +175,9 @@ void Map::run()
             print();
     } while (running);
 }
+
+Map::Map(const MultipleImagePrinter &pr, const std::string &path)
+    : p(pr)
+{
+    // todo read map from binary file
+}
