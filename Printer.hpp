@@ -1,6 +1,7 @@
 #ifndef __Printer_HPP
 #define __Printer_HPP
 #include <iostream>
+#include "GameAssets.hpp"
 
 class Printer
 {
