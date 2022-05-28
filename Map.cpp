@@ -16,13 +16,14 @@ void Map::generateMap() const
     for (unsigned i = 0; i < rows; ++i)
         for (unsigned j = 0; j < cols; ++j)
             data[i][j] = (rand() % 4 < 3 ? (char)MAP_SYMBOLS::FREE : (char)MAP_SYMBOLS::WALL);
-    data[0][0] = data[rows - 1][cols - 1] = '.';
+    data[0][0] = data[rows - 1][cols - 1] = (char)MAP_SYMBOLS::FREE;
 }
 
 Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
                          data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), dragons(new Dragon *[dragonCount])
 {
     srand(time(0));
+    pl = new Player(0, 0); // todo passed as parameter
     for (unsigned i = 0; i < rows; ++i)
         data[i] = new char[cols];
 
@@ -37,7 +38,7 @@ Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)
         {
             posY = rand() % cols;
             posX = rand() % rows;
-        } while (data[posY][posX] != '.' || !posY && !posX || !isReachable(posY, posX));
+        } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
         dragons[i] = new Dragon(posY, posX); // improve
         data[posY][posX] = (char)MAP_SYMBOLS::MONSTER;
     }
@@ -45,10 +46,22 @@ Map::Map(unsigned lvl) : level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)
 
 void Map::print() const
 {
+    system("cls");
+    bool plHere = false;
     for (unsigned i = 0; i < rows; ++i)
     {
         for (unsigned j = 0; j < cols; ++j)
-            std::clog << (i == pl->getY() && j == pl->getX() ? char(177) : ' ') << data[i][j];
+        {
+            plHere = (i == pl->getY() && j == pl->getX());
+            std::clog << (plHere
+                              ? (char)MAP_SYMBOLS::PLAYER
+                              : (data[i][j] == (char)MAP_SYMBOLS::WALL
+                                     ? data[i][j]
+                                     : '_'))
+                      << (data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
+                              ? (char)MAP_SYMBOLS::PLAYER
+                              : data[i][j]);
+        }
         std::clog << '\n';
     }
 }
@@ -118,9 +131,11 @@ Map::~Map()
 
 void Map::run()
 {
+    print();
     do
     {
-        if (pl->move())
+        if (pl->move([&](unsigned y, unsigned x) -> bool
+                     { return y < rows && x < cols && data[y][x] != (char)MAP_SYMBOLS::WALL; }))
             print();
     } while (1);
 }

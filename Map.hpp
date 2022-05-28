@@ -11,7 +11,8 @@ enum class MAP_SYMBOLS
     FREE = '.',
     WALL = '#',
     MONSTER = 'M',
-    TREASURE = 'T'
+    TREASURE = 'T',
+    PLAYER = (char)177
 };
 
 class Map
