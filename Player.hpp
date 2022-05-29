@@ -1,7 +1,8 @@
 #ifndef __PLAYER_HPP
 #define __PLAYER_HPP
 #include <conio.h>
-#include "iostream"
+#include <iostream>
+#include "Inventar.hpp"
 
 enum class KEYS
 {
@@ -20,10 +21,15 @@ class Player
 {
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
+    Inventar inv;
+    Weapon *w;
+    Armor *a;
+    Spell *sp;
 
 public:
     Player(unsigned posY, unsigned posX)
-        : y(posY), x(posX) {}
+        : y(posY), x(posX),
+          w(nullptr), a(nullptr), sp(nullptr) {}
 
     template <typename ALLOWED>
     bool move(bool &run, ALLOWED f);
