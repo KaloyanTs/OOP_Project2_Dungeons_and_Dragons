@@ -15,8 +15,8 @@ int main()
     //  fix lamb.print(mOut);
     // std::cin.get();
     MultipleImagePrinter p;
-    //Map m(p, 4);
-    Map m(p, "assets\\level4.dndmap");
+    Map m(p, 4);
+    //fix Map m(p, "assets\\level4.dndmap");
     m.run();
     return 0;
 }
