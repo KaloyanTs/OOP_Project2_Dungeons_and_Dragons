@@ -33,7 +33,7 @@ class Map
 
     size_t fib(unsigned lvl, unsigned val1, unsigned val2) const;
     bool isReachable(unsigned y, unsigned x) const;
-    void print() const;
+    EventGenerator* print() const;
 
 
 public:

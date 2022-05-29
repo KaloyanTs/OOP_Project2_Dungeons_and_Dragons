@@ -59,7 +59,7 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
     }
 }
 
-void Map::print() const
+EventGenerator *Map::print() const
 {
     // fix USE PRINTER
     system("cls");
@@ -85,10 +85,8 @@ void Map::print() const
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
     if (i < events.size() && events[i]->isOnBoard())
-    {
-        events[i]->print(p);
-        // todo events[i]->action();
-    }
+        return events[i];
+    return nullptr;
 }
 
 bool Map::isReachable(unsigned posY, unsigned posX) const
@@ -164,12 +162,17 @@ Map::~Map()
 void Map::run()
 {
     running = true;
-    print();
+    EventGenerator *event = print();
     do
     {
         if (pl->move(running, [&](unsigned y, unsigned x) -> bool
                      { return y < rows && x < cols && data[y][x] != (char)MAP_SYMBOLS::WALL; }))
-            print();
+            if (event = print())
+            {
+                event->print(p);
+                if (!event->action())
+                    print();
+            }
     } while (running);
 }
 
@@ -211,7 +214,6 @@ Map::Map(const MultipleImagePrinter &pr,
         for (unsigned j = 0; j < cols; ++j)
         {
             ifs.get(data[i][j]);
-            
         }
 
         // optimize better with getline?
