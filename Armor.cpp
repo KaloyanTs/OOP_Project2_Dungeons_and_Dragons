@@ -2,5 +2,5 @@
 
 void Armor::print(const Printer &p) const
 {
-    p("armor");
+    p("armor\n");
 }

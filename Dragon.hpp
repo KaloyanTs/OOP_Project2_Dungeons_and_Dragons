@@ -20,7 +20,7 @@ public:
     }
     virtual Dragon *clone() const { return new Dragon(*this); }
     char getChar() const { return stamp; }
-    bool action(Player *);
+    bool action();
     void print(const Printer &p) const;
 };
 

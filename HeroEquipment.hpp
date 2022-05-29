@@ -2,7 +2,6 @@
 #define __HERO_EQUIPMENT_HPP
 #include "Equipment.hpp"
 #include "EventGenerator.hpp"
-#include "Player.hpp"
 
 class HeroEquipment : public Equipment, public EventGenerator
 {
@@ -15,7 +14,7 @@ public:
     HeroEquipment *clone() const = 0;
 
     char getChar() const { return stamp; }
-    bool action(Player *p);
+    bool action();
     void print(const Printer &p) const = 0;
 };
 

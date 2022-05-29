@@ -170,7 +170,7 @@ void Map::run()
             if (event = print())
             {
                 event->print(p);
-                if (!event->action(pl))
+                if (!event->action())
                     print();
             }
     } while (running);

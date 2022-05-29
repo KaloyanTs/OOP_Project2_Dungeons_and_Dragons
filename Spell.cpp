@@ -2,5 +2,5 @@
 
 void Spell::print(const Printer &p) const
 {
-    p("spell");
+    p("spell\n");
 }
