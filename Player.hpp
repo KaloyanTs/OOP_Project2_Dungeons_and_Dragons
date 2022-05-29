@@ -25,6 +25,7 @@ class Player
     Weapon *w;
     Armor *a;
     Spell *sp;
+    Printer lazy;
 
 public:
     Player(unsigned posY, unsigned posX)
@@ -37,7 +38,7 @@ public:
     unsigned getY() const { return y; }
     unsigned getX() const { return x; }
     virtual char getChar() const { return PLAYER_CHAR; }
-    bool take(const HeroEquipment &)const;
+    bool take(const HeroEquipment &) const;
 };
 
 template <typename ALLOWED>
@@ -66,6 +67,15 @@ bool Player::move(bool &run, ALLOWED f)
     }
     else if (c == KEYS::EXIT)
         return run = false;
+    else if (c == 'i')
+    {
+        system("cls");
+        inv.print(lazy);
+        while (getch() != 'i')
+        {
+        }
+        return true;
+    }
     return false;
 }
 
