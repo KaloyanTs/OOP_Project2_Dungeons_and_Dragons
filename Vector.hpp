@@ -23,6 +23,7 @@ public:
 
     unsigned getCount() const { return m_size; }
     Vector &push_back(const T &el);
+    T pop_back();
     size_t size() const { return m_size; }
     size_t capacity() const { return m_capacity; }
     bool empty() const { return !m_size; }
@@ -90,6 +91,13 @@ Vector<T> &Vector<T>::push_back(const T &el)
         expand();
     data[m_size++] = el;
     return *this;
+}
+
+template <typename T>
+T Vector<T>::pop_back()
+{
+    assert(m_size);
+    return data[--m_size];
 }
 
 template <typename T>
