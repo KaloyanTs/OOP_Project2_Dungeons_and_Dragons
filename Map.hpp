@@ -2,16 +2,19 @@
 #define __MAP_HPP
 #include <iostream>
 #include <ctime>
+#include <fstream>
+#include "Constants.hpp"
 #include "Stack.hpp"
 #include "Dragon.hpp"
+#include "Inventar.hpp"
 #include "Player.hpp"
 #include "MultipleImagePrinter.hpp"
 
 enum class MAP_SYMBOLS
 {
     FREE = '.',
-    // WALL = '#',
-    WALL = (char)219,
+    WALL = '#',
+    //WALL = (char)219,
 };
 
 class Map
@@ -31,6 +34,7 @@ class Map
     size_t fib(unsigned lvl, unsigned val1, unsigned val2) const;
     bool isReachable(unsigned y, unsigned x) const;
     void print() const;
+
 
 public:
     Map(const MultipleImagePrinter &p, const String &path);

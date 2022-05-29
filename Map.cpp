@@ -54,16 +54,7 @@ Map::Map(const MultipleImagePrinter &print, unsigned lvl)
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
 
-        // optimize new procedure returning pointer
-        eqNumber = rand() % 3;
-        if (!eqNumber)
-            events.push_back(new Weapon(posY, posX)); // improve
-        else if (eqNumber == 1)
-            events.push_back(new Armor(posY, posX)); // improve
-        else
-            events.push_back(new Spell(posY, posX)); // improve
-        // optimize
-
+        events.push_back(Inventar::getEquipment(rand() % 3, posY, posX));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
@@ -158,6 +149,12 @@ bool Map::isReachable(unsigned posY, unsigned posX) const
 
 Map::~Map()
 {
+    EventGenerator *tmp;
+    while (!events.empty())
+    {
+        tmp = events.pop_back();
+        delete tmp;
+    }
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
@@ -176,8 +173,49 @@ void Map::run()
     } while (running);
 }
 
-Map::Map(const MultipleImagePrinter &pr, const String &path)
-    : p(pr)
+Map::Map(const MultipleImagePrinter &pr,
+         const String &path)
+    : p(pr), data(nullptr), pl(nullptr),
+      running(false), level(0), rows(0), cols(0), dragonCount(0),
+      treasureCount(0)
 {
-    // todo read map from binary file
+    // todo read map from text file
+    std::ifstream ifs(path.c_str(), std::ios::in);
+    if (!ifs.is_open())
+    {
+        std::cerr << "No such map found!\n";
+        return;
+    }
+    pl = new Player(0, 0);
+    ifs >> level >> rows >> cols;
+
+    unsigned buf, y, x;
+    dragonCount = (fib(level, Constants::MONSTER_COUNT_1, Constants::MONSTER_COUNT_2));
+    treasureCount = (fib(level, Constants::TREASURE_COUNT_1, Constants::TREASURE_COUNT_2));
+    for (unsigned i = 0; i < dragonCount; ++i)
+    {
+        ifs >> buf >> y >> x;
+        events.push_back(new Dragon(y, x, buf));
+    }
+    for (unsigned i = 0; i < treasureCount; ++i)
+    {
+        ifs >> buf >> y >> x;
+        events.push_back(Inventar::getEquipment(buf, y, x));
+    }
+    ifs.get();
+
+    data = new char *[rows];
+    for (unsigned i = 0; i < rows; ++i)
+    {
+        data[i] = new char[cols];
+        for (unsigned j = 0; j < cols; ++j)
+        {
+            ifs.get(data[i][j]);
+            
+        }
+
+        // optimize better with getline?
+    }
+
+    ifs.close();
 }
