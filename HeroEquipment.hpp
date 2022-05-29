@@ -14,6 +14,7 @@ public:
     HeroEquipment *clone() const = 0;
 
     char getChar() const { return stamp; }
+    bool action();
     void print(const Printer &p) const = 0;
 };
 
