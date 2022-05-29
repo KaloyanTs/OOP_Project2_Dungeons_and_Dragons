@@ -2,6 +2,7 @@
 #define __EVENT_GANERATOR_HPP
 #include <conio.h>
 #include "MultipleImagePrinter.hpp"
+#include "Player.hpp"
 
 class EventGenerator
 {
