@@ -7,7 +7,7 @@ void Dragon::print(const Printer &p) const
     Troop::print(p);
 }
 
-bool Dragon::action()
+bool Dragon::action(Player *)
 {
     std::cout << "Would you try to slay this dragon?\nb for battle\ne for escape\n";
     char response;

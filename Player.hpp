@@ -37,6 +37,7 @@ public:
     unsigned getY() const { return y; }
     unsigned getX() const { return x; }
     virtual char getChar() const { return PLAYER_CHAR; }
+    bool take(const HeroEquipment &)const;
 };
 
 template <typename ALLOWED>
