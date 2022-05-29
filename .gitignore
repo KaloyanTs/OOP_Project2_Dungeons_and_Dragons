@@ -8,3 +8,4 @@ documentation/latex/*
 Doxyfile
 present/
 !build/assets
+.VSCodeCounter/
