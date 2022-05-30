@@ -10,7 +10,7 @@ WeaponNameGenerator::WeaponNameGenerator()
     addRule("CREATORS->vikings(1)|hobbits(1)|elfs(1)|gods(1)|hell(1)|chaos(1)|wisdom(1)|prophecy(1)");
     addRule("ENDING->(1)|of(1)SMTH(0)");
     addRule("RARITY->common(1)|rare(1)|epic(1)|legendary(1)|mythical(1)");
-    addRule("SMTH->(1)|death(1)|destiny(1)|gods(1)|chaos(1)");
+    addRule("SMTH->death(1)|destiny(1)|gods(1)|chaos(1)");
     addRule("ADJ->mighty(1)|powerfull(1)|muscular(1)|heavy(1)|vigorous(1)");
     addRule("NOUN->blade(1)|fire(1)|sword(1)|katana(1)|hammer(1)|gun(1)|bazooka(1)|rocket(1)|spear(1)|bow(1)");
 }
