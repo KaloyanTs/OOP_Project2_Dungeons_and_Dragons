@@ -30,7 +30,12 @@ class Player
 public:
     Player(unsigned posY, unsigned posX)
         : y(posY), x(posX),
-          w(nullptr), a(nullptr), sp(nullptr) {}
+          w(nullptr), a(nullptr), sp(nullptr)
+    {
+        inv.put(Weapon(0, 0, false));
+        inv.put(Spell(0, 0, false));
+        inv.put(Armor(0, 0, false));
+    }
 
     template <typename ALLOWED>
     bool move(bool &run, ALLOWED f);
