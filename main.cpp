@@ -4,9 +4,11 @@
 #include "Dragon.hpp"
 #include "Map.hpp"
 #include "Player.hpp"
+#include "Grammar.hpp"
 
 int main()
 {
+    srand(time(0));
     Image logo("assets\\logo.dnd");
     Printer out;
     out(logo);
@@ -15,8 +17,9 @@ int main()
     //  fix lamb.print(mOut);
     // std::cin.get();
     MultipleImagePrinter p;
-    Map m(p, 2);
-    //fix Map m(p, "assets\\level4.dndmap");
+    Map m(p, 3);
+    // fix Map m(p, "assets\\level4.dndmap");
     m.run();
+
     return 0;
 }
