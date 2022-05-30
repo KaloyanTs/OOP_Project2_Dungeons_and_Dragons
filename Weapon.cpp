@@ -2,5 +2,6 @@
 
 void Weapon::print(const Printer &p) const
 {
-    p(*pic);
+    HeroEquipment::print(p);
+    p(name)('\n');
 }
