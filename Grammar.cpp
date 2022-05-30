@@ -20,7 +20,8 @@ Grammar &Grammar::addRule(String rule)
                 ++ruleEnd;
             assert(*ruleEnd);
             *ruleEnd++ = '\0';
-            tmp.push_back(Letter(ruleBeg, *ruleEnd++ == '1'));
+            tmp.push_back(Letter(ruleBeg, *ruleEnd == '1', *ruleEnd != '2'));
+            ++ruleEnd;
             ruleBeg = ++ruleEnd;
         }
         rules.push_back(tmp);
@@ -40,7 +41,11 @@ void Grammar::generateWord(String &buf) const
         if (read.terminal)
         {
             if (*read.str.c_str())
-                buf += read.str += " ";
+            {
+                buf += read.str;
+                if (read.space)
+                    buf += " ";
+            }
         }
         else
         {

@@ -10,10 +10,11 @@ class Grammar
     {
         String str;
         bool terminal;
+        bool space;
 
     public:
         Letter() {}
-        Letter(const String &s, bool t) : str(s), terminal(t) {}
+        Letter(const String &s, bool t, bool sp = true) : str(s), terminal(t) {}
         bool operator==(const Letter &other) const
         {
             return str == other.str && terminal == other.terminal;
