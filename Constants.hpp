@@ -1,6 +1,8 @@
 #ifndef __CONSTANTS_HPP
 #define __CONSTANTS_HPP
 #include "WeaponNameGenerator.hpp"
+#include "ArmorNameGenerator.hpp"
+#include "SpellNameGenerator.hpp"
 
 class Constants
 {
@@ -27,6 +29,8 @@ public:
     static const unsigned TREASURE_COUNT_1 = 2;
     static const unsigned TREASURE_COUNT_2 = 2;
     static const WeaponNameGenerator weapon_name_generator;
+    static const ArmorNameGenerator armor_name_generator;
+    static const SpellNameGenerator spell_name_generator;
 };
 
 #endif
