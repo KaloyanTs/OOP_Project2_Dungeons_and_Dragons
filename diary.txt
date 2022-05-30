@@ -7,3 +7,7 @@ keyboard:
     open inventar
     show hero info
     dialog when event generator touched
+
+    inventar holds the memory of the equipment
+    player has equipment
+    equipment calls method of player
