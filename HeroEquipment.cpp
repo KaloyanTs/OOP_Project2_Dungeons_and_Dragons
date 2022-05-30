@@ -15,3 +15,8 @@ bool HeroEquipment::action()
     } while (response != 'e' && response != 'x');
     return false;
 }
+
+void HeroEquipment::print(const Printer &p) const
+{
+    p(*pic);
+}
