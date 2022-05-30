@@ -35,7 +35,7 @@ public:
         inv.put(Weapon(0, 0, false));
         inv.put(Spell(0, 0, false));
         inv.put(Armor(0, 0, false));
-    }
+    } // todo inventar should be empty
 
     template <typename ALLOWED>
     bool move(bool &run, ALLOWED f);
