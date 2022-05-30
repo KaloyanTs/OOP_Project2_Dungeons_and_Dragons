@@ -2,5 +2,6 @@
 
 void Armor::print(const Printer &p) const
 {
+    HeroEquipment::print(p);
     p("armor\n");
 }
