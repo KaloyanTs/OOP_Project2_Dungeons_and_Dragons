@@ -20,7 +20,7 @@ Grammar &Grammar::addRule(String rule)
                 ++ruleEnd;
             assert(*ruleEnd);
             *ruleEnd++ = '\0';
-            tmp.push_back(Letter(ruleBeg, *ruleEnd == '1', *ruleEnd != '2'));
+            tmp.push_back(Letter(ruleBeg, *ruleEnd != '0', *ruleEnd != '2'));
             ++ruleEnd;
             ruleBeg = ++ruleEnd;
         }
@@ -31,6 +31,7 @@ Grammar &Grammar::addRule(String rule)
 
 void Grammar::generateWord(String &buf) const
 {
+    buf = String();
     Stack<Letter> st;
     st.push(Letter(initVar, false));
     Letter read("", true);

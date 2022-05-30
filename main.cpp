@@ -4,7 +4,6 @@
 #include "Dragon.hpp"
 #include "Map.hpp"
 #include "Player.hpp"
-#include "Grammar.hpp"
 
 int main()
 {
@@ -19,7 +18,7 @@ int main()
     MultipleImagePrinter p;
     Map m(p, 4);
     // fix Map m(p, "assets\\level4.dndmap");
-    m.run();
 
+    m.run();
     return 0;
 }

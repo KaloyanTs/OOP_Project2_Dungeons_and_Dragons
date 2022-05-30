@@ -14,7 +14,7 @@ class Grammar
 
     public:
         Letter() {}
-        Letter(const String &s, bool t, bool sp = true) : str(s), terminal(t) {}
+        Letter(const String &s, bool t, bool sp = true) : str(s), terminal(t), space(sp) {}
         bool operator==(const Letter &other) const
         {
             return str == other.str && terminal == other.terminal;
