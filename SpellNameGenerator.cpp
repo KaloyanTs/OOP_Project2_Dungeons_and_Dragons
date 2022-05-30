@@ -2,7 +2,7 @@
 
 SpellNameGenerator::SpellNameGenerator()
 {
-    addRule("S->SIMPLE(0)|SUPPORT(0)"); // todo more to be added -> SPECIAL
+    addRule("S->SIMPLE(0)|Summon(1)SUPPORT(0)"); // todo more to be added -> SPECIAL
     addRule("SIMPLE->BASICADJ(0)BASIC(0)|BASICADJ(0)BASICADJ(0)BASIC(0)|BASIC(0)");
     addRule("BASICADJ->burning(1)|vaporizing(1)|paralizing(1)|toxic(1)|poisonous(1)");
     addRule("BASIC->fireball(1)|thunder(1)|ignition(1)|slash(1)|hypnose(1)|fire ring(1)|plague(1)");
