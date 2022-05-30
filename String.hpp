@@ -67,13 +67,21 @@ public:
     /**
      * @brief get pointer to the beginning of the array
      */
-    char *c_str() const { return str; }
+    char *c_str() { return str; }
+
+    /**
+     * @brief get const pointer to the beginning of the array
+     */
+    const char *c_str() const { return str; }
 
     /// concatenation of two strings
     String operator+(const String &other) const;
 
     /// concatenate another String to this String
     String &operator+=(const String &other);
+
+    /// compare if two strings are the same
+    bool operator==(const String &other) const;
 
     /// cast this String to const char * by returning pointer to the beginning
     operator const char *() const { return c_str(); }

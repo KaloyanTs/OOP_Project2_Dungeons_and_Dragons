@@ -84,3 +84,11 @@ std::ostream &operator<<(std::ostream &os, const String &S)
 {
     return os << S.c_str();
 }
+
+bool String::operator==(const String &other) const
+{
+    const char *thisPtr = str, *otherPtr = other.str;
+    while (*thisPtr && *otherPtr && *thisPtr == *otherPtr)
+        (++thisPtr, ++otherPtr);
+    return *thisPtr == *otherPtr;
+}
