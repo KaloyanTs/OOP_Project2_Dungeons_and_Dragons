@@ -4,6 +4,7 @@
 #include "Dragon.hpp"
 #include "Map.hpp"
 #include "Player.hpp"
+#include <cstring>
 
 int main()
 {
@@ -23,6 +24,8 @@ int main()
     char name[100]; // fix use String
     std::cout << "Choose name for your hero:\t";
     std::cin.getline(name, 100);
+    if (!*name)
+        strcpy(name, "unknown");
     MultipleImagePrinter p;
     Map m(p, Map::getHero(chosen - '0' - 1, name), 4);
     // fix Map m(p, "assets\\level4.dndmap");
