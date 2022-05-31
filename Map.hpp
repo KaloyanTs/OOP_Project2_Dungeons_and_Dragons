@@ -4,13 +4,10 @@
 #include <ctime>
 #include <fstream>
 #include "Constants.hpp"
-#include "Stack.hpp"
-#include "Dragon.hpp"
-#include "Inventar.hpp" //??? problem
 #include "Human.hpp"
 #include "Warrior.hpp"
 #include "Mage.hpp"
-#include "MultipleImagePrinter.hpp"
+#include "Dragon.hpp"
 
 enum class MAP_SYMBOLS
 {
