@@ -7,5 +7,6 @@ documentation/latex/*
 !documentation/latex/refman.pdf
 Doxyfile
 present/
+present.zip
 !build/assets
 .VSCodeCounter/
