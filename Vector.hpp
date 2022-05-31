@@ -25,6 +25,7 @@ public:
     Vector &push_back(const T &el);
     Vector &remove(const T &el);
     T pop_back();
+    T pop_at(unsigned index);
     size_t size() const { return m_size; }
     size_t capacity() const { return m_capacity; }
     bool empty() const { return !m_size; }
@@ -117,6 +118,20 @@ Vector<T> &Vector<T>::remove(const T &el)
         }
     }
     return *this;
+}
+
+template <typename T>
+T Vector<T>::pop_at(unsigned index)
+{
+    assert(index < m_size);
+    T el = data[index];
+    --m_size;
+    while (index < m_size)
+    {
+        data[index] = data[index + 1];
+        ++index;
+    }
+    return el;
 }
 
 template <typename T>
