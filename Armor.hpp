@@ -7,9 +7,8 @@ class Armor : public HeroEquipment
 {
 
 public:
-    Armor(unsigned y, unsigned x, bool onBoard = true)
-        : HeroEquipment(&GameAssets::armor_icon, y, x, onBoard) { Constants::armor_name_generator.generateWord(name); }
-    HeroEquipment *clone() const { return new Armor(*this); }
+    Armor(unsigned y, unsigned x, bool onBoard = true);
+    HeroEquipment *clone() const;
     void print(const Printer &p) const;
 };
 

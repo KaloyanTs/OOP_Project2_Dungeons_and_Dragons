@@ -7,9 +7,8 @@ class Spell : public HeroEquipment
 {
 
 public:
-    Spell(unsigned y, unsigned x, bool onBoard = true)
-        : HeroEquipment(&GameAssets::spell_icon, y, x, onBoard) { Constants::spell_name_generator.generateWord(name); }
-    HeroEquipment *clone() const { return new Spell(*this); }
+    Spell(unsigned y, unsigned x, bool onBoard = true);
+    HeroEquipment *clone() const;
     void print(const Printer &p) const;
 };
 
