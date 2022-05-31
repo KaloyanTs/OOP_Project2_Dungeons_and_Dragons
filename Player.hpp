@@ -21,7 +21,7 @@ class Player
 {
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
-    Inventar inv;
+    Inventar *inv;
     Weapon *w;
     Armor *a;
     Spell *sp;
@@ -29,20 +29,8 @@ class Player
     String name;
 
 public:
-    Player(unsigned posY, unsigned posX, const String &n)
-        : y(posY), x(posX),
-          w(nullptr), a(nullptr), sp(nullptr), name(n)
-    {
-        inv.put(Weapon(0, 0, false));
-        inv.put(Spell(0, 0, false));
-        inv.put(Armor(0, 0, false));
-    } // todo inventar should be empty
-    virtual ~Player()
-    {
-        delete[] w;
-        delete[] a;
-        delete[] sp;
-    }
+    Player(unsigned posY, unsigned posX, const String &n);
+    virtual ~Player();
 
     template <typename ALLOWED>
     bool move(bool &run, ALLOWED f);
@@ -53,6 +41,7 @@ public:
     bool take(const HeroEquipment &) const;
     const String &getName() const { return name; }
     virtual void printStats(const Printer &p) const = 0;
+    void printItems(const Printer &p) const;
 };
 
 template <typename ALLOWED>
@@ -84,9 +73,20 @@ bool Player::move(bool &run, ALLOWED f)
     else if (c == 'i')
     {
         system("cls");
-        inv.print(lazy);
-        while (getch() != 'i')
+        inv->print(lazy, name);
+        lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n");
+        while ((c = getch()) != 'i')
         {
+            if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
+            {
+                HeroEquipment *rem = inv->remove(c - '0' - 1);
+                delete rem; // fix try to use it
+
+                system("cls");
+                inv->print(lazy, name);
+                lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n");
+            }
+            //  todo swap my item with wanted item
         }
         return true;
     }
