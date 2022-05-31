@@ -1,9 +1,6 @@
 #include <iostream>
-#include "Image.hpp"
 #include "MultipleImagePrinter.hpp"
-#include "Dragon.hpp"
 #include "Map.hpp"
-#include "Player.hpp"
 #include <cstring>
 
 int main()
