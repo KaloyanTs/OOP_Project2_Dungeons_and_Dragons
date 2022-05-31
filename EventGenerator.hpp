@@ -1,20 +1,25 @@
 #ifndef __EVENT_GANERATOR_HPP
 #define __EVENT_GANERATOR_HPP
 #include <conio.h>
+#include "Constants.hpp"
 #include "MultipleImagePrinter.hpp"
+
+class Player;
 
 class EventGenerator
 {
     unsigned posY, posX;
-    bool onBoard = 0;
+    bool onBoard;
+
+    const String *errorMsg;
 
 public:
-    EventGenerator(unsigned y, unsigned x, unsigned board = true)
-        : posY(y), posX(x), onBoard(board) {}
+    EventGenerator(unsigned y, unsigned x, const String &msg, unsigned board = true)
+        : posY(y), posX(x), onBoard(board), errorMsg(&msg) {}
     virtual ~EventGenerator() {}
 
     virtual char getChar() const = 0;
-    virtual bool action() = 0;
+    virtual Constants::ACTION_STATE action(Player *, bool &run) = 0;
     virtual void print(const Printer &p) const = 0;
     bool locatedAt(unsigned y, unsigned x) { return posY == y && posX == x; }
 
@@ -23,6 +28,8 @@ public:
 
     unsigned getY() const { return posY; }
     unsigned getX() const { return posX; }
+
+    const String &getErrorMsg() const { return *errorMsg; }
 };
 
 #endif
