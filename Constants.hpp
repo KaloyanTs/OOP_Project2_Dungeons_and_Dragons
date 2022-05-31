@@ -9,6 +9,12 @@ class Constants
     Constants() {}
 
 public:
+    enum class ACTION_STATE
+    {
+        ESCAPED,
+        SUCCESSFULL,
+        FAILED
+    };
     static const unsigned HERO_TYPES = 3;
     static const unsigned INVENTAR_LIMIT = 4;
     static const unsigned HERO_LEVELUP_POINTS = 30;
