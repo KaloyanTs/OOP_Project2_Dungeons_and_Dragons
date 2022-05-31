@@ -7,7 +7,9 @@
 #include "Stack.hpp"
 #include "Dragon.hpp"
 #include "Inventar.hpp" //??? problem
-#include "Player.hpp"
+#include "Human.hpp"
+#include "Warrior.hpp"
+#include "Mage.hpp"
 #include "MultipleImagePrinter.hpp"
 
 enum class MAP_SYMBOLS
@@ -37,11 +39,12 @@ class Map
 
 public:
     Map(const MultipleImagePrinter &p, const String &path);
-    Map(const MultipleImagePrinter &print, unsigned lvl = 1);
+    Map(const MultipleImagePrinter &print, Player *p, unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;
     ~Map();
     void run();
+    static Player *getHero(unsigned index, const String &name = "unknown");
 };
 
 #endif

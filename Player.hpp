@@ -26,16 +26,23 @@ class Player
     Armor *a;
     Spell *sp;
     Printer lazy;
+    String name;
 
 public:
-    Player(unsigned posY, unsigned posX)
+    Player(unsigned posY, unsigned posX, const String &n)
         : y(posY), x(posX),
-          w(nullptr), a(nullptr), sp(nullptr)
+          w(nullptr), a(nullptr), sp(nullptr), name(n)
     {
         inv.put(Weapon(0, 0, false));
         inv.put(Spell(0, 0, false));
         inv.put(Armor(0, 0, false));
     } // todo inventar should be empty
+    virtual ~Player()
+    {
+        delete[] w;
+        delete[] a;
+        delete[] sp;
+    }
 
     template <typename ALLOWED>
     bool move(bool &run, ALLOWED f);
@@ -44,6 +51,8 @@ public:
     unsigned getX() const { return x; }
     virtual char getChar() const { return PLAYER_CHAR; }
     bool take(const HeroEquipment &) const;
+    const String &getName() const { return name; }
+    virtual void printStats(const Printer &p) const = 0;
 };
 
 template <typename ALLOWED>
@@ -77,6 +86,15 @@ bool Player::move(bool &run, ALLOWED f)
         system("cls");
         inv.print(lazy);
         while (getch() != 'i')
+        {
+        }
+        return true;
+    }
+    else if (c == 'o')
+    {
+        system("cls");
+        printStats(lazy);
+        while (getch() != 'o')
         {
         }
         return true;

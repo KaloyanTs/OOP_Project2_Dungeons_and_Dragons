@@ -19,14 +19,14 @@ void Map::generateMap() const
     data[0][0] = data[rows - 1][cols - 1] = (char)MAP_SYMBOLS::FREE;
 }
 
-Map::Map(const MultipleImagePrinter &print, unsigned lvl)
+Map::Map(const MultipleImagePrinter &print, Player *p, unsigned lvl)
     : running(false),
       p(print), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
       data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
-      events(dragonCount + treasureCount)
+      events(dragonCount + treasureCount), pl(p)
 {
     srand(time(0));
-    pl = new Player(0, 0); // todo passed as parameter
+    // pl = Map::getHero(rand() % Constants::HERO_TYPES); // todo passed as parameter
     for (unsigned i = 0; i < rows; ++i)
         data[i] = new char[cols];
 
@@ -156,7 +156,7 @@ Map::~Map()
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
-    delete pl; // fix
+    delete pl;
 }
 
 void Map::run()
@@ -197,7 +197,7 @@ Map::Map(const MultipleImagePrinter &pr,
         std::cerr << "No such map found!\n";
         return;
     }
-    pl = new Player(0, 0);
+    pl = Map::getHero(rand() % Constants::HERO_TYPES); // fix must be read!!!!!!
     ifs >> level >> rows >> cols;
 
     unsigned buf, y, x;
@@ -228,4 +228,16 @@ Map::Map(const MultipleImagePrinter &pr,
     }
 
     ifs.close();
+}
+
+Player *Map::getHero(unsigned index, const String &name)
+{
+    if (!index)
+        return new Human(0, 0, name);
+    if (index == 1)
+        return new Mage(0, 0, name);
+    if (index == 2)
+        return new Warrior(0, 0, name);
+
+    return nullptr;
 }

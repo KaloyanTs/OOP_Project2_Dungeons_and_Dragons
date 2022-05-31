@@ -8,5 +8,5 @@ bool operator==(char c, const KEYS &k)
 bool Player::take(const HeroEquipment &eq) const
 {
     return true;
-    //inv.put(eq);
+    // inv.put(eq);
 }
