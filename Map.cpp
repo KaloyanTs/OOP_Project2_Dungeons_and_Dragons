@@ -162,6 +162,7 @@ Map::~Map()
 void Map::run()
 {
     running = true;
+    Constants::ACTION_STATE st;
     EventGenerator *event = print();
     do
     {
@@ -170,7 +171,8 @@ void Map::run()
             if (event = print())
             {
                 event->print(p);
-                if (event->action())
+                st = event->action(pl, running);
+                if (st == Constants::ACTION_STATE::SUCCESSFULL)
                 {
                     1; // do some thing
                     events.remove(event);
@@ -178,8 +180,13 @@ void Map::run()
                     delete event;
                     print();
                 }
-                else
+                else if (st == Constants::ACTION_STATE::ESCAPED)
                     print();
+                else if (st == Constants::ACTION_STATE::FAILED)
+                {
+                    print();
+                    std::clog << event->getErrorMsg() << '\n';
+                }
             }
     } while (running);
 }
