@@ -1,9 +1,7 @@
 #ifndef __TROOP_HPP
 #define __TROOP_HPP
+#include "Printer.hpp"
 #include "GameAssets.hpp"
-#include "Armor.hpp"
-#include "Weapon.hpp"
-#include "Spell.hpp"
 
 class Troop
 {
