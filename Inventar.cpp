@@ -11,8 +11,9 @@ EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x)
     return nullptr;
 }
 
-void Inventar::print(const Printer &p) const
+void Inventar::print(const Printer &p, const String &owner) const
 {
+    p(owner)("'s inventar:\n\n");
     for (unsigned i = 0; i < m_size; ++i)
         this->operator[](i)->print(p);
 }
@@ -35,4 +36,9 @@ Inventar::~Inventar()
         ptr = pop_back();
         delete ptr;
     }
+}
+
+HeroEquipment *Inventar::remove(unsigned index)
+{
+    return pop_at(index);
 }
