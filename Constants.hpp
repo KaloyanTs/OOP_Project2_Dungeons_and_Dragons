@@ -9,6 +9,7 @@ class Constants
     Constants() {}
 
 public:
+    static const unsigned HERO_TYPES = 3;
     static const unsigned INVENTAR_LIMIT = 4;
     static const unsigned HERO_LEVELUP_POINTS = 30;
     static const unsigned WARRIOR_INIT_ATTACK = 40;
