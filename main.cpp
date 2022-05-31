@@ -11,6 +11,7 @@ int main()
     Image logo("assets\\logo.dnd");
     Printer out;
     out(logo);
+    out("\tPress any key to play...");
     getch();
     // std::cin.get();
     MultipleImagePrinter p;
