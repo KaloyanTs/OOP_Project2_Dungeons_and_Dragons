@@ -2,15 +2,11 @@
 
 ArmorNameGenerator::ArmorNameGenerator()
 {
-    addRule("S->the(1)DESCRIPTION(0)|DESCRIPTION(0)");
-    addRule("DESCRIPTION->ADJ(0)NOUN(0)ENDING(0)|RARITY(0)OTHER(0)");
-    addRule("OTHER->ENEMY(0)DAMAGE(0)|NOUN(0)of(1)CREATORS(0)");
-    addRule("ENEMY->zombie(1)|dragon(1)|troll(1)|orc(1)|tiger(1)");
-    addRule("DAMAGE->slayer(1)|killer(1)|destroyer(1)");
-    addRule("CREATORS->vikings(1)|hobbits(1)|elfs(1)|gods(1)|hell(1)|chaos(1)|wisdom(1)|prophecy(1)");
-    addRule("ENDING->(1)|of(1)SMTH(0)");
-    addRule("RARITY->common(1)|rare(1)|epic(1)|legendary(1)|mythical(1)");
-    addRule("SMTH->death(1)|destiny(1)|gods(1)|chaos(1)");
-    addRule("ADJ->mighty(1)|powerfull(1)|muscular(1)|heavy(1)|vigorous(1)");
-    addRule("NOUN->blade(1)|fire(1)|sword(1)|katana(1)|hammer(1)|gun(1)|bazooka(1)|rocket(1)|spear(1)|bow(1)");
+    addRule("S->ARTICLE(0)ADJ(0)TYPE(0)ENDING(0)");
+    addRule("TYPE->helmet(1)|armor(1)|mantle(1)|shield(1)|chainmail(1)");
+    addRule("ARTICLE->(1)|the(1)");
+    addRule("ADJ->(1)|holy(1)|dragon scale(1)|lion's(1)|death(1)|thunder(1)|fire(1)");
+    addRule("ENDING->of the(1)PURPOSE(0)|from(1)CREATOR(0)");
+    addRule("CREATOR->gods(1)|heaven(1)|elfs(1)|witches(1)");
+    addRule("PURPOSE->traveller(1)|wizard(1)|elfs(1)|witches(1)|chaos(1)|knight(1)|gladiator(1)|nature(1)|order(1)|elf king(1)");
 }
