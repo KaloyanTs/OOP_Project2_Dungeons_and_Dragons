@@ -2,7 +2,7 @@
 
 void Warrior::print(const Printer &p) const
 {
-    std::clog << getName() << "\tWarrior\n";
+    std::clog << getName() << "\nWarrior\n"; // todo print level
     Troop::print(p);
 }
 

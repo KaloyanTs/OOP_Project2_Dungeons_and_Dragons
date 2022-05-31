@@ -2,7 +2,7 @@
 
 void Human::print(const Printer &p) const
 {
-    std::clog << getName() << "\tHuman\n";
+    std::clog << getName() << "\nHuman\n"; // todo print level
     Troop::print(p);
 }
 

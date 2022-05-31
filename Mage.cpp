@@ -2,7 +2,7 @@
 
 void Mage::print(const Printer &p) const
 {
-    std::clog << getName() << "\tMage\n";
+    std::clog << getName() << "\nMage\n"; // todo print level
     Troop::print(p);
 }
 
