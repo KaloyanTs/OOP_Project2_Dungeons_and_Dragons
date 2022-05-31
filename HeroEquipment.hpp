@@ -5,6 +5,7 @@
 
 class HeroEquipment : public Equipment, public EventGenerator
 {
+    static String errorMsg;
     static const char stamp = 'T';
     const Image *pic;
 
@@ -14,11 +15,11 @@ protected:
 public:
     // todo more data!!!
     HeroEquipment(const Image *p, unsigned y, unsigned x, bool board = true)
-        : Equipment(43433), EventGenerator(y, x, board), pic(p) {}
+        : Equipment(43433), EventGenerator(y, x, errorMsg, board), pic(p) {}
     HeroEquipment *clone() const = 0;
 
     char getChar() const { return stamp; }
-    bool action();
+    Constants::ACTION_STATE action(Player *, bool &run);
     void print(const Printer &p) const;
 };
 
