@@ -11,3 +11,4 @@ keyboard:
     inventar holds the memory of the equipment
     player has equipment
     equipment calls method of player
+    map is the owner of the player (to be changed to Game)
