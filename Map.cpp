@@ -171,7 +171,13 @@ void Map::run()
             {
                 event->print(p);
                 if (event->action())
-                    1; // todo or not // todo
+                {
+                    1; // do some thing
+                    events.remove(event);
+                    data[event->getY()][event->getX()] = (char)MAP_SYMBOLS::FREE;
+                    delete event;
+                    print();
+                }
                 else
                     print();
             }

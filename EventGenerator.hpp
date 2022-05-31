@@ -19,6 +19,10 @@ public:
     bool locatedAt(unsigned y, unsigned x) { return posY == y && posX == x; }
 
     bool isOnBoard() const { return onBoard; }
+    void removeFromBoard() { onBoard = false; }
+
+    unsigned getY() const { return posY; }
+    unsigned getX() const { return posX; }
 };
 
 #endif
