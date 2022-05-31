@@ -1,5 +1,7 @@
 #include "Dragon.hpp"
 
+String Dragon::errorMsg = "You could not stand a chance against this dragon but you fought bravely and died...\n";
+
 void Dragon::print(const Printer &p) const
 {
     p(*pic);
@@ -7,7 +9,7 @@ void Dragon::print(const Printer &p) const
     Troop::print(p);
 }
 
-bool Dragon::action()
+Constants::ACTION_STATE Dragon::action(Player *, bool &run)
 {
     std::cout << "Would you try to slay this dragon?\nb for battle\ne for escape\n";
     char response;
@@ -16,8 +18,10 @@ bool Dragon::action()
         response = getch();
         if (response == 'b')
         {
-            return true;
+            // fix must battle here
+            // if died   run=false
+            return Constants::ACTION_STATE::SUCCESSFULL;
         }
     } while (response != 'e' && response != 'b');
-    return false;
+    return Constants::ACTION_STATE::ESCAPED;
 }
