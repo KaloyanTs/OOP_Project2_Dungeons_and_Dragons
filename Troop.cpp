@@ -3,13 +3,7 @@
 void Troop::print() const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
-    Constants::STDOUT("HEALTH\tATTACK\tMAGIC\n");
-    Constants::STDOUT(health);
-    Constants::STDOUT('\t');
-    Constants::STDOUT(attack);
-    Constants::STDOUT('\t');
-    Constants::STDOUT(mana);
-    Constants::STDOUT('\n');
+    Constants::STDOUT("HEALTH\tATTACK\tMAGIC\n")(health)('\t')(attack)('\t')(mana)('\n');
 }
 
 float Troop::determineStat(unsigned lvl, float init, float perLevel) const

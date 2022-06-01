@@ -25,7 +25,6 @@ class Map
     size_t treasureCount;
     Vector<EventGenerator *> events;
     Player *pl;
-    const MultipleImagePrinter &p;
     bool running;
 
     void generateMap() const;
@@ -35,8 +34,8 @@ class Map
     EventGenerator *print() const;
 
 public:
-    Map(const MultipleImagePrinter &p, const String &path);
-    Map(const MultipleImagePrinter &print, Player *p, unsigned lvl = 1);
+    Map(const String &path);
+    Map(Player *p, unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;
     ~Map();

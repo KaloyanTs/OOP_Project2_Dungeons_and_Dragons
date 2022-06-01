@@ -19,9 +19,8 @@ void Map::generateMap() const
     data[0][0] = data[rows - 1][cols - 1] = (char)MAP_SYMBOLS::FREE;
 }
 
-Map::Map(const MultipleImagePrinter &print, Player *p, unsigned lvl)
-    : running(false),
-      p(print), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
+Map::Map(Player *p, unsigned lvl)
+    : running(false), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
       data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
       events(dragonCount + treasureCount), pl(p)
 {
@@ -69,17 +68,17 @@ EventGenerator *Map::print() const
         for (unsigned j = 0; j < cols; ++j)
         {
             plHere = (i == pl->getY() && j == pl->getX());
-            std::clog << (plHere
-                              ? pl->getChar()
-                              : (data[i][j] == (char)MAP_SYMBOLS::WALL
-                                     ? data[i][j]
-                                     : '_'))
+            Constants::STDOUT(plHere
+                                  ? pl->getChar()
+                                  : (data[i][j] == (char)MAP_SYMBOLS::WALL
+                                         ? data[i][j]
+                                         : '_'))
 
-                      << (data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
-                              ? pl->getChar()
-                              : data[i][j]);
+                ((data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
+                      ? pl->getChar()
+                      : data[i][j]));
         }
-        std::clog << '\n';
+        Constants::STDOUT('\n');
     }
     unsigned i = 0;
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
@@ -174,7 +173,6 @@ void Map::run()
                 st = event->action(pl, running);
                 if (st == Constants::ACTION_STATE::SUCCESSFULL)
                 {
-                    1; // do some thing
                     events.remove(event);
                     data[event->getY()][event->getX()] = (char)MAP_SYMBOLS::FREE;
                     delete event;
@@ -188,12 +186,11 @@ void Map::run()
                     std::clog << event->getErrorMsg() << '\n';
                 }
             }
-    } while (running);
+    } while (running && pl->alive());
 }
 
-Map::Map(const MultipleImagePrinter &pr,
-         const String &path)
-    : p(pr), data(nullptr), pl(nullptr),
+Map::Map(const String &path)
+    : data(nullptr), pl(nullptr),
       running(false), level(0), rows(0), cols(0), dragonCount(0),
       treasureCount(0)
 {
@@ -229,12 +226,16 @@ Map::Map(const MultipleImagePrinter &pr,
         for (unsigned j = 0; j < cols; ++j)
         {
             ifs.get(data[i][j]);
+            if (data[i][j] == '#')
+                data[i][j] = (char)MAP_SYMBOLS::WALL;
         }
-
+        ifs.ignore();
         // optimize better with getline?
     }
-
     ifs.close();
+
+    for (unsigned i = 0; i < events.size(); ++i)
+        data[events[i]->getY()][events[i]->getX()] = events[i]->getChar();
 }
 
 Player *Map::getHero(unsigned index, const String &name)

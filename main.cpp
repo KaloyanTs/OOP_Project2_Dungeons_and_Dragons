@@ -6,9 +6,7 @@
 int main()
 {
     srand(time(0));
-    Image logo("assets\\logo.dnd");
-    Constants::STDOUT(logo);
-    Constants::STDOUT("\tPress any key to play...");
+    Constants::STDOUT(GameAssets::game_logo)("\tPress any key to play...");
     getch();
     system("cls");
     Constants::STDOUT("Choose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n");
@@ -22,9 +20,8 @@ int main()
     std::cin.getline(name, 100);
     if (!*name)
         strcpy(name, "unknown");
-    MultipleImagePrinter p;
-    Map m(p, Map::getHero(chosen - '0' - 1, name), 4);
-    // fix Map m(p, "assets\\level4.dndmap");
+    Map m(Map::getHero(chosen - '0' - 1, name), 4);
+    // Map m("assets\\level4.dndmap");
 
     m.run();
 
