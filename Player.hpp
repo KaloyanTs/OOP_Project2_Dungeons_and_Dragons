@@ -22,13 +22,12 @@ class Player
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
     Inventar *inv;
-    HeroEquipment *w;
-    HeroEquipment *a;
-    HeroEquipment *sp;
+    HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
     Printer lazy;
     String name;
 
     HeroEquipment *&getMatching(const HeroEquipment *ptr);
+    void printInventar() const;
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
@@ -74,12 +73,24 @@ bool Player::move(bool &run, ALLOWED f)
         return run = false;
     else if (c == 'i')
     {
-        system("cls");
-        inv->print(lazy, name);
-        lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n");
+        printInventar();
         while ((c = getch()) != 'i')
         {
-            if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
+            if (c == 'x')
+            {
+                std::cout << "\nPress x again to cancel...";
+                while ((c = getch()) != 'x' && c - '0' < 1 && c - '0' - 1 >= Constants::EQUIPMENT_COUNT)
+                {
+                }
+                if (c != 'x' && equip[c - '0' - 1])
+                {
+                    inv->put(*equip[c - '0' - 1]);
+                    delete equip[c - '0' - 1];
+                    equip[c - '0' - 1] = nullptr;
+                }
+                printInventar();
+            }
+            else if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
             {
                 HeroEquipment *rem = inv->remove(c - '0' - 1);
                 HeroEquipment *&tmp = getMatching(rem);
@@ -90,20 +101,8 @@ bool Player::move(bool &run, ALLOWED f)
 
                 if (rem)
                     inv->put(*rem);
-
-                system("cls");
-                inv->print(lazy, name);
-                lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n");
+                printInventar();
             }
-        }
-        return true;
-    }
-    else if (c == 'o')
-    {
-        system("cls");
-        printStats(lazy);
-        while (getch() != 'o')
-        {
         }
         return true;
     }
