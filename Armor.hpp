@@ -10,6 +10,7 @@ public:
     Armor(unsigned y, unsigned x, bool onBoard = true);
     HeroEquipment *clone() const;
     void print(const Printer &p) const;
+    ID getID() const { return ID::ARMOR; }
 };
 
 #endif
