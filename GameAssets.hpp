@@ -11,7 +11,6 @@ public:
     static const Image battle_icon;
     static const Image game_logo;
     static const Image empty_slot;
-    static const Image empty_slot;
     static const Image health_icon;
     static const Image attack_icon;
     static const Image magic_icon;
