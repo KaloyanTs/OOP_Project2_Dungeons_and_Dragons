@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <iostream>
 #include "Inventar.hpp"
+#include "Dragon.hpp"
 
 enum class KEYS
 {
@@ -43,6 +44,11 @@ public:
     const String &getName() const { return name; }
     virtual void printStats() const = 0;
     void printItems() const;
+    virtual bool alive() const = 0;
+
+    void hit(Dragon &d) const;
+
+    virtual void printBrief() const = 0;
 };
 
 template <typename ALLOWED>

@@ -64,6 +64,11 @@ void Player::printInventar() const
     Constants::STDOUT("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n\nTo disequip an item enter x and the number of the equiped item in the list.\n\nTo throw away an item press z and the number of the item in the inventary list.\n");
 }
 
+void Player::hit(Dragon &d) const
+{
+    // todo attack + equipment + way of attack (mellee/spell)
+}
+
 Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
 {
     Constants::STDOUT("Do you want to take this item?\ne for take\nx for ignore\n");
@@ -79,5 +84,32 @@ Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
                 return Constants::ACTION_STATE::SUCCESSFULL;
         }
     } while (response != 'e' && response != 'x');
+    return Constants::ACTION_STATE::ESCAPED;
+}
+
+Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
+{
+    Constants::STDOUT("Would you try to slay this dragon?\nb for battle\ne for escape\n");
+    char response;
+    do
+    {
+        response = getch();
+        if (response == 'b')
+        {
+            system("cls");
+            p->printBrief();
+            Constants::STDOUT(Image("assets\\battle.dnd"));
+            print();
+            bool turn = rand() % 2; // 0 for player;   1 for player
+            // // // while (alive() && p->alive())
+            // // // {
+            // // //     p->hit(*this);
+            // // //     p->takeDamage(Troop::attack);
+            // // //     turn = !turn;
+            // // // }
+            getch();
+            return Constants::ACTION_STATE::SUCCESSFULL;
+        }
+    } while (response != 'e' && response != 'b');
     return Constants::ACTION_STATE::ESCAPED;
 }

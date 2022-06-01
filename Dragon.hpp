@@ -4,6 +4,8 @@
 #include "Troop.hpp"
 #include "EventGenerator.hpp"
 
+class Player;
+
 class Dragon : public Troop, public EventGenerator
 {
     static String errorMsg;
