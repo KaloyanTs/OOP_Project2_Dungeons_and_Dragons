@@ -15,6 +15,9 @@ public:
     Mage *clone() const { return new Mage(*this); }
     void print() const;
     void printStats() const;
+    bool alive() const { return Troop::alive(); }
+
+    void printBrief() const;
 };
 
 #endif

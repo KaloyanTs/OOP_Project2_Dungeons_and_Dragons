@@ -15,6 +15,9 @@ public:
     Warrior *clone() const { return new Warrior(*this); }
     void print() const;
     void printStats() const;
+    bool alive() const { return Troop::alive(); }
+
+    void printBrief()const;
 };
 
 #endif

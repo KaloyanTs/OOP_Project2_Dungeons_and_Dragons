@@ -2,12 +2,18 @@
 
 void Human::print() const
 {
-    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel())('\n');
-    Troop::print();
+    printBrief();
     printItems();
 }
 
 void Human::printStats() const
 {
     print();
+}
+
+void Human::printBrief() const
+{   
+    //todo add equipments
+    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel())('\n');
+    Troop::print();
 }

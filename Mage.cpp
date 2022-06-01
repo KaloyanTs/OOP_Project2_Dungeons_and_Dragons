@@ -2,12 +2,17 @@
 
 void Mage::print() const
 {
-    Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');
-    Troop::print();
+    printBrief();
     printItems();
 }
 
 void Mage::printStats() const
 {
     print();
+}
+
+void Mage::printBrief() const
+{
+    Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');
+    Troop::print();
 }

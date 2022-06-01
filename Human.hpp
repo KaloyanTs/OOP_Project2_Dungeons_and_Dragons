@@ -15,6 +15,9 @@ public:
     Human *clone() const { return new Human(*this); }
     void print() const;
     void printStats() const;
+    bool alive() const { return Troop::alive(); }
+
+    void printBrief() const;
 };
 
 #endif
