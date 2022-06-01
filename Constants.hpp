@@ -15,6 +15,8 @@ public:
         SUCCESSFULL,
         FAILED
     };
+    static const unsigned EQUIPMENT_COUNT = 3;
+    static const unsigned DISPLAY_WIDTH = 60;
     static const unsigned HERO_TYPES = 3;
     static const unsigned INVENTAR_LIMIT = 4;
     static const unsigned HERO_LEVELUP_POINTS = 30;
