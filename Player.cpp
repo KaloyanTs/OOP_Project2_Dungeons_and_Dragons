@@ -24,6 +24,30 @@ Player::~Player()
     delete inv;
 }
 
+void Player::printItems(const Printer &p) const
+{
+    p("Your equipment:\n\n");
+    if (w)
+        w->print(p);
+    if (a)
+        a->print(p);
+    if (sp)
+        sp->print(p);
+}
+
+HeroEquipment *&Player::getMatching(const HeroEquipment *ptr)
+{
+    if (!w || w->getID() == ptr->getID())
+        return w;
+    else if (!a || a->getID() == ptr->getID())
+        return a;
+    else if (!sp || sp->getID() == ptr->getID())
+        return sp;
+
+    // fix error handling
+    return w;
+}
+
 Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
 {
     std::cout << "Do you want to take this item?\ne for take\nx for ignore\n";
@@ -40,15 +64,4 @@ Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
         }
     } while (response != 'e' && response != 'x');
     return Constants::ACTION_STATE::ESCAPED;
-}
-
-void Player::printItems(const Printer &p) const
-{
-    p("Your equipment:\n\n");
-    if (w)
-        w->print(p);
-    if (a)
-        a->print(p);
-    if (sp)
-        sp->print(p);
 }
