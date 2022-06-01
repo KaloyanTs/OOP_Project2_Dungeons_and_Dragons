@@ -12,9 +12,9 @@ class HeroEquipment : public Equipment, public EventGenerator
 protected:
     enum class ID
     {
-        WEAPON,
-        ARMOR,
-        SPELL
+        WEAPON = 0,
+        ARMOR = 1,
+        SPELL = 2
     };
 
 public:
