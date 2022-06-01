@@ -10,7 +10,12 @@ class HeroEquipment : public Equipment, public EventGenerator
     const Image *pic;
 
 protected:
-    String name;
+    enum class ID
+    {
+        WEAPON,
+        ARMOR,
+        SPELL
+    };
 
 public:
     // todo more data!!!
@@ -21,6 +26,7 @@ public:
     char getChar() const { return stamp; }
     Constants::ACTION_STATE action(Player *, bool &run);
     void print(const Printer &p) const;
+    virtual ID getID() const = 0;
 };
 
 #endif
