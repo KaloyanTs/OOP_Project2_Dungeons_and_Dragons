@@ -12,7 +12,7 @@ const MultipleImagePrinter &MultipleImagePrinter::operator()(const Image *const 
         {
             if (i)
                 for (unsigned i = 0; i < space; ++i)
-                    std::cout << ' ';
+                    getOutputStream() << ' ';
             inputs[i]->get(c);
             while (c != '\n')
             {
@@ -20,7 +20,7 @@ const MultipleImagePrinter &MultipleImagePrinter::operator()(const Image *const 
                 inputs[i]->get(c);
             }
         }
-        std::cout << '\n';
+        getOutputStream() << '\n';
     }
     for (unsigned i = 0; i < count; ++i)
     {

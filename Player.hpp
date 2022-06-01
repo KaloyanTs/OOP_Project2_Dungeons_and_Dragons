@@ -41,8 +41,8 @@ public:
     virtual char getChar() const { return PLAYER_CHAR; }
     bool take(const HeroEquipment &) const;
     const String &getName() const { return name; }
-    virtual void printStats(const Printer &p) const = 0;
-    void printItems(const Printer &p) const;
+    virtual void printStats() const = 0;
+    void printItems() const;
 };
 
 template <typename ALLOWED>
@@ -76,9 +76,19 @@ bool Player::move(bool &run, ALLOWED f)
         printInventar();
         while ((c = getch()) != 'i')
         {
+            if (c == 'z' && inv->getCount())
+            {
+                Constants::STDOUT("\nPress z again to cancel...");
+                while ((c = getch()) != 'z' && c - '0' < 1 && c - '0' - 1 >= inv->getCount())
+                {
+                }
+                if (c != 'z')
+                    delete inv->remove(c - '0' - 1);
+                printInventar();
+            }
             if (c == 'x')
             {
-                std::cout << "\nPress x again to cancel...";
+                Constants::STDOUT("\nPress x again to cancel...");
                 while ((c = getch()) != 'x' && c - '0' < 1 && c - '0' - 1 >= Constants::EQUIPMENT_COUNT)
                 {
                 }

@@ -3,6 +3,7 @@
 #include "WeaponNameGenerator.hpp"
 #include "ArmorNameGenerator.hpp"
 #include "SpellNameGenerator.hpp"
+#include "MultipleImagePrinter.hpp"
 
 class Constants
 {
@@ -15,6 +16,8 @@ public:
         SUCCESSFULL,
         FAILED
     };
+    static const Printer STDOUT;
+    static const MultipleImagePrinter STDOUT_MULTI;
     static const unsigned EQUIPMENT_COUNT = 3;
     static const unsigned DISPLAY_WIDTH = 60;
     static const unsigned HERO_TYPES = 3;

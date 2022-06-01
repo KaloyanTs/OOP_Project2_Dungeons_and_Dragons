@@ -1,12 +1,15 @@
 #include "Troop.hpp"
 
-void Troop::print(const Printer &p) const
+void Troop::print() const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
-    std::cout << "HEALTH\tATTACK\tMAGIC\n"
-              << health << '\t'
-              << attack << '\t'
-              << mana << '\n';
+    Constants::STDOUT("HEALTH\tATTACK\tMAGIC\n");
+    Constants::STDOUT(health);
+    Constants::STDOUT('\t');
+    Constants::STDOUT(attack);
+    Constants::STDOUT('\t');
+    Constants::STDOUT(mana);
+    Constants::STDOUT('\n');
 }
 
 float Troop::determineStat(unsigned lvl, float init, float perLevel) const

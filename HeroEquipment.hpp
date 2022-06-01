@@ -25,7 +25,7 @@ public:
 
     char getChar() const { return stamp; }
     Constants::ACTION_STATE action(Player *, bool &run);
-    void print(const Printer &p) const;
+    void print() const;
     virtual ID getID() const = 0;
 };
 

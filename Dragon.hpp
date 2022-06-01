@@ -23,7 +23,7 @@ public:
     virtual Dragon *clone() const { return new Dragon(*this); }
     char getChar() const { return stamp; }
     Constants::ACTION_STATE action(Player *, bool &);
-    void print(const Printer &p) const;
+    void print() const;
 };
 
 #endif

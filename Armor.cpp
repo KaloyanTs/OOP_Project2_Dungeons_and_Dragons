@@ -1,9 +1,9 @@
 #include "Armor.hpp"
 
-void Armor::print(const Printer &p) const
+void Armor::print() const
 {
-    HeroEquipment::print(p);
-    p(name)('\n');
+    HeroEquipment::print();
+    Constants::STDOUT(name)('\n');
 }
 
 Armor::Armor(unsigned y, unsigned x, bool onBoard)

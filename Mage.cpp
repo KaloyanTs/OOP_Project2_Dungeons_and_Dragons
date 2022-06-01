@@ -1,13 +1,14 @@
 #include "Mage.hpp"
 
-void Mage::print(const Printer &p) const
+void Mage::print() const
 {
-    std::clog << getName() << "\nMage\n"; // todo print level
-    Troop::print(p);
-    printItems(p);
+    Constants::STDOUT(getName());
+    Constants::STDOUT("\nMage\n"); // todo print level
+    Troop::print();
+    printItems();
 }
 
-void Mage::printStats(const Printer &p) const
+void Mage::printStats() const
 {
-    print(p);
+    print();
 }

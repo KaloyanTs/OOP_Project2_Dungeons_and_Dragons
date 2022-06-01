@@ -14,7 +14,7 @@ public:
     virtual ~Equipment() {}
 
     virtual Equipment *clone() const = 0;
-    virtual void print(const Printer &p) const = 0;
+    virtual void print() const = 0;
     unsigned getBonus() const { return bonus; }
     const String &getName() { return name; }
 };

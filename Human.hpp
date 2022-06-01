@@ -13,8 +13,8 @@ public:
                 Constants::HUMAN_INIT_HEALTH) {}
 
     Human *clone() const { return new Human(*this); }
-    void print(const Printer &p) const;
-    void printStats(const Printer &p) const;
+    void print() const;
+    void printStats() const;
 };
 
 #endif

@@ -14,7 +14,7 @@ public:
         : Vector<HeroEquipment *>(lim), limit(lim) {}
     ~Inventar();
     static EventGenerator *getEquipment(unsigned index, unsigned y, unsigned x);
-    void print(const Printer &p, const String &owner) const;
+    void print(const String &owner) const;
     bool put(const HeroEquipment &el);
     HeroEquipment *remove(unsigned index);
     size_t getCount() const { return m_size; }

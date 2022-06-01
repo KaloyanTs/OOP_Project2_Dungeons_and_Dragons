@@ -1,13 +1,13 @@
 #include "Human.hpp"
 
-void Human::print(const Printer &p) const
+void Human::print() const
 {
-    std::clog << getName() << "\nHuman\n"; // todo print level
-    Troop::print(p);
-    printItems(p);
+    Constants::STDOUT("\nHuman\n"); // todo print level
+    Troop::print();
+    printItems();
 }
 
-void Human::printStats(const Printer &p) const
+void Human::printStats() const
 {
-    print(p);
+    print();
 }

@@ -25,30 +25,30 @@ Player::~Player()
     delete inv;
 }
 
-void Player::printItems(const Printer &p) const
+void Player::printItems() const
 {
-    p("Your equipment:\n\n");
+    Constants::STDOUT("Your equipment:\n\n");
     unsigned spaces = Constants::DISPLAY_WIDTH / 2;
 
     for (unsigned i = 0; i < spaces; ++i)
-        std::cout << '<';
+        Constants::STDOUT('<');
     for (unsigned i = 0; i < spaces; ++i)
-        std::cout << '>';
-    std::cout << '\n';
+        Constants::STDOUT('>');
+    Constants::STDOUT('\n');
 
     for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
     {
         if (equip[i])
-            equip[i]->print(p);
+            equip[i]->print();
         else
-            p(GameAssets::empty_slot);
+            Constants::STDOUT(GameAssets::empty_slot);
         for (unsigned i = 0; i < spaces; ++i)
-            std::cout << '<';
+            Constants::STDOUT('<');
         for (unsigned i = 0; i < spaces; ++i)
-            std::cout << '>';
-        std::cout << '\n';
+            Constants::STDOUT('>');
+        Constants::STDOUT('\n');
     }
-    std::cout << '\n';
+    Constants::STDOUT('\n');
 }
 
 HeroEquipment *&Player::getMatching(const HeroEquipment *ptr)
@@ -59,14 +59,14 @@ HeroEquipment *&Player::getMatching(const HeroEquipment *ptr)
 void Player::printInventar() const
 {
     system("cls");
-    printStats(lazy);
-    inv->print(lazy, name);
-    lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n\nTo disequip an item enter x and the number of the equiped item in the list\n");
+    printStats();
+    inv->print(name);
+    Constants::STDOUT("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n\nTo disequip an item enter x and the number of the equiped item in the list.\n\nTo throw away an item press z and the number of the item in the inventary list.\n");
 }
 
 Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
 {
-    std::cout << "Do you want to take this item?\ne for take\nx for ignore\n";
+    Constants::STDOUT("Do you want to take this item?\ne for take\nx for ignore\n");
     char response;
     do
     {

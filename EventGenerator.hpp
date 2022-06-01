@@ -20,7 +20,7 @@ public:
 
     virtual char getChar() const = 0;
     virtual Constants::ACTION_STATE action(Player *, bool &run) = 0;
-    virtual void print(const Printer &p) const = 0;
+    virtual void print() const = 0;
     bool locatedAt(unsigned y, unsigned x) { return posY == y && posX == x; }
 
     bool isOnBoard() const { return onBoard; }

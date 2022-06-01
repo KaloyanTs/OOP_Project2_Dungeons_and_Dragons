@@ -2,7 +2,7 @@
 
 String HeroEquipment::errorMsg = "Your inventar is full!\nRemove an item first.\n";
 
-void HeroEquipment::print(const Printer &p) const
+void HeroEquipment::print() const
 {
-    p(*pic);
+    Constants::STDOUT(*pic);
 }

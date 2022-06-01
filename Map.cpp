@@ -170,7 +170,7 @@ void Map::run()
                      { return y < rows && x < cols && data[y][x] != (char)MAP_SYMBOLS::WALL; }))
             if (event = print())
             {
-                event->print(p);
+                event->print();
                 st = event->action(pl, running);
                 if (st == Constants::ACTION_STATE::SUCCESSFULL)
                 {

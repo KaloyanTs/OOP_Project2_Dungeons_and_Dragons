@@ -11,11 +11,11 @@ EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x)
     return nullptr;
 }
 
-void Inventar::print(const Printer &p, const String &owner) const
+void Inventar::print(const String &owner) const
 {
-    p(owner)("'s inventar:\n\n");
+    Constants::STDOUT(owner)("'s inventar:\n\n");
     for (unsigned i = 0; i < m_size; ++i)
-        this->operator[](i)->print(p);
+        this->operator[](i)->print();
 }
 
 bool Inventar::put(const HeroEquipment &el)

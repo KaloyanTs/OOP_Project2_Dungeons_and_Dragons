@@ -1,13 +1,13 @@
 #include "Warrior.hpp"
 
-void Warrior::print(const Printer &p) const
+void Warrior::print() const
 {
-    std::clog << getName() << "\nWarrior\n"; // todo print level
-    Troop::print(p);
-    printItems(p);
+    Constants::STDOUT("\nWarrior\n"); // todo print level
+    Troop::print();
+    printItems();
 }
 
-void Warrior::printStats(const Printer &p) const
+void Warrior::printStats() const
 {
-    print(p);
+    print();
 }

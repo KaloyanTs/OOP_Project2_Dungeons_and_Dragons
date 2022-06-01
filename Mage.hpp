@@ -13,8 +13,8 @@ public:
                 Constants::MAGE_INIT_HEALTH) {}
 
     Mage *clone() const { return new Mage(*this); }
-    void print(const Printer &p) const;
-    void printStats(const Printer &p) const;
+    void print() const;
+    void printStats() const;
 };
 
 #endif

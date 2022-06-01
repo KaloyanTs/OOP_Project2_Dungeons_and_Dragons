@@ -1,5 +1,6 @@
 #ifndef __TROOP_HPP
 #define __TROOP_HPP
+#include "Constants.hpp"
 #include "Printer.hpp"
 #include "GameAssets.hpp"
 
@@ -24,7 +25,7 @@ public:
     virtual ~Troop() {}
 
     virtual Troop *clone() const = 0;
-    virtual void print(const Printer &p) const;
+    virtual void print() const;
 };
 
 #endif

@@ -13,8 +13,8 @@ public:
                 Constants::WARRIOR_INIT_HEALTH) {}
 
     Warrior *clone() const { return new Warrior(*this); }
-    void print(const Printer &p) const;
-    void printStats(const Printer &p) const;
+    void print() const;
+    void printStats() const;
 };
 
 #endif
