@@ -98,7 +98,7 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
         {
             system("cls");
             p->printBrief();
-            Constants::STDOUT(Image("assets\\battle.dnd"));
+            Constants::STDOUT(GameAssets::battle_icon);
             print();
             bool turn = rand() % 2; // 0 for player;   1 for player
             // // // while (alive() && p->alive())
