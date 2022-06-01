@@ -4,8 +4,10 @@
 
 class Equipment
 {
-    String name;
     unsigned bonus;
+
+protected:
+    String name;
 
 public:
     Equipment(unsigned _bonus = 0) : bonus(_bonus) {}
