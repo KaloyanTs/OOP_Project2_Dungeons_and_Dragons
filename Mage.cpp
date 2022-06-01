@@ -2,8 +2,7 @@
 
 void Mage::print() const
 {
-    Constants::STDOUT(getName());
-    Constants::STDOUT("\nMage\n"); // todo print level
+    Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');
     Troop::print();
     printItems();
 }

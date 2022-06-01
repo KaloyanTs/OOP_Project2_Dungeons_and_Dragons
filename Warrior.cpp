@@ -2,7 +2,7 @@
 
 void Warrior::print() const
 {
-    Constants::STDOUT("\nWarrior\n"); // todo print level
+    Constants::STDOUT(getName())("\nWarrior\tlevel ")(getLevel())('\n');
     Troop::print();
     printItems();
 }

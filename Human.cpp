@@ -2,7 +2,7 @@
 
 void Human::print() const
 {
-    Constants::STDOUT("\nHuman\n"); // todo print level
+    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel())('\n');
     Troop::print();
     printItems();
 }

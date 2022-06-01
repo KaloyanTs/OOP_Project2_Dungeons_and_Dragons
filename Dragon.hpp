@@ -8,16 +8,15 @@ class Dragon : public Troop, public EventGenerator
 {
     static String errorMsg;
     static const char stamp = 'M';
-    unsigned level;
     const Image *pic;
 
 public:
     Dragon(unsigned y, unsigned x, unsigned lvl = 1)
         : Troop((unsigned)determineStat(lvl, 25, 1.2),
                 (unsigned)determineStat(lvl, 25, 1.2),
-                (unsigned)determineStat(lvl, 50, 1.2)),
+                (unsigned)determineStat(lvl, 50, 1.2), lvl),
           EventGenerator(y, x, errorMsg),
-          level(lvl), pic(&GameAssets::dragon)
+          pic(&GameAssets::dragon)
     {
     }
     virtual Dragon *clone() const { return new Dragon(*this); }

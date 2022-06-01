@@ -4,11 +4,11 @@ String Dragon::errorMsg = "You could not stand a chance against this dragon but 
 
 void Dragon::print() const
 {
-    Constants::STDOUT (*pic)("Dragon ")(level)(".lvl\n");
+    Constants::STDOUT (*pic)("Dragon ")(getLevel())(".lvl\n");
     Troop::print();
 }
 
-Constants::ACTION_STATE Dragon::action(Player *, bool &run)
+Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
 {
     Constants::STDOUT("Would you try to slay this dragon?\nb for battle\ne for escape\n");
     char response;
