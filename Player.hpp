@@ -22,11 +22,13 @@ class Player
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
     Inventar *inv;
-    Weapon *w;
-    Armor *a;
-    Spell *sp;
+    HeroEquipment *w;
+    HeroEquipment *a;
+    HeroEquipment *sp;
     Printer lazy;
     String name;
+
+    HeroEquipment *&getMatching(const HeroEquipment *ptr);
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
@@ -80,13 +82,19 @@ bool Player::move(bool &run, ALLOWED f)
             if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
             {
                 HeroEquipment *rem = inv->remove(c - '0' - 1);
-                delete rem; // fix try to use it
+                HeroEquipment *&tmp = getMatching(rem);
+
+                HeroEquipment *buf = tmp;
+                tmp = rem;
+                rem = buf;
+
+                if (rem)
+                    inv->put(*rem);
 
                 system("cls");
                 inv->print(lazy, name);
                 lazy("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n");
             }
-            //  todo swap my item with wanted item
         }
         return true;
     }
