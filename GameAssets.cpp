@@ -1,5 +1,6 @@
 #include "GameAssets.hpp"
 
+const Image GameAssets::battle_icon("assets\\battle.dnd");
 const Image GameAssets::game_logo("assets\\logo.dnd");
 const Image GameAssets::empty_slot("assets\\emptySlot.dnd");
 const Image GameAssets::health_icon("assets\\health.dnd");
