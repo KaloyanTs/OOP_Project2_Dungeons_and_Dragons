@@ -17,7 +17,12 @@ public:
     void printStats() const;
     bool alive() const { return Troop::alive(); }
 
-    void printBrief()const;
+    void printBrief() const;
+    virtual float getAttack() const { return attack; }
+    virtual float getHealth() const { return health; }
+    virtual float getMana() const { return mana; }
+
+    void takeDamage(float dmg) { Troop::takeDamage(dmg * (1 - (equip[1] ? equip[1]->getBonus() : 0))); }
 };
 
 #endif

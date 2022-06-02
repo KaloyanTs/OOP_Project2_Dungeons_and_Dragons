@@ -14,5 +14,7 @@ void Mage::printStats() const
 void Mage::printBrief() const
 {
     Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');
-    Troop::print();
+    Troop::print((equip[0] ? equip[0]->getBonus() : 0));
+    if (equip[2])
+        Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
 }
