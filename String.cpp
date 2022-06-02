@@ -92,3 +92,11 @@ bool String::operator==(const String &other) const
         (++thisPtr, ++otherPtr);
     return *thisPtr == *otherPtr;
 }
+
+bool String::removeLast()
+{
+    if (!m_size)
+        return false;
+    str[m_size-- - 1] = '\0';
+    return true;
+}

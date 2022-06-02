@@ -88,6 +88,9 @@ public:
 
     /// make the capacity equal to the size
     String &shrink_to_fit();
+
+    // todo documentation
+    bool removeLast();
 };
 
 /// print this String to the given output stream
