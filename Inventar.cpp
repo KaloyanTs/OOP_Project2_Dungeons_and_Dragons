@@ -1,13 +1,13 @@
 #include "Inventar.hpp"
 
-EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x)
+EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x, unsigned bot, unsigned top)
 {
     if (!index)
-        return new Weapon(y, x);
+        return new Weapon(y, x, bot, top);
     else if (index == 1)
-        return new Armor(y, x);
+        return new Armor(y, x, bot, top);
     else if (index == 2)
-        return new Spell(y, x);
+        return new Spell(y, x, bot, top);
     return nullptr;
 }
 
