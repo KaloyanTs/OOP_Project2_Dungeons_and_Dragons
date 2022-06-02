@@ -58,4 +58,6 @@ void Grammar::generateWord(String &buf) const
                 st.push(rules[num][i]);
         }
     }
+    if (buf.c_str()[buf.size() - 1] == ' ')
+        buf.removeLast();
 }
