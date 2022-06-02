@@ -23,12 +23,14 @@ class Player
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
     Inventar *inv;
-    HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
     Printer lazy;
     String name;
 
     HeroEquipment *&getMatching(const HeroEquipment *ptr);
     void printInventar() const;
+
+protected:
+    HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
@@ -44,11 +46,17 @@ public:
     const String &getName() const { return name; }
     virtual void printStats() const = 0;
     void printItems() const;
+    void printBattleState(Dragon &) const;
     virtual bool alive() const = 0;
 
     void hit(Dragon &d) const;
+    virtual void takeDamage(float dmg) = 0;
 
     virtual void printBrief() const = 0;
+
+    virtual float getAttack() const = 0;
+    virtual float getHealth() const = 0;
+    virtual float getMana() const = 0;
 };
 
 template <typename ALLOWED>

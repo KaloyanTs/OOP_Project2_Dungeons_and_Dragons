@@ -64,9 +64,39 @@ void Player::printInventar() const
     Constants::STDOUT("\nTo equip an item enter its number in the list.\nIf slot is taken items will be swapped.\n\nTo disequip an item enter x and the number of the equiped item in the list.\n\nTo throw away an item press z and the number of the item in the inventary list.\n");
 }
 
+void Player::printBattleState(Dragon &d) const
+{
+    system("cls");
+    printBrief();
+    Constants::STDOUT(GameAssets::battle_icon);
+    d.print();
+}
+
 void Player::hit(Dragon &d) const
 {
-    // todo attack + equipment + way of attack (mellee/spell)
+    Constants::STDOUT("\nx - basic attack");
+    if (equip[0])
+        Constants::STDOUT(" using ")(equip[0]->getName());
+    if (equip[2])
+        Constants::STDOUT("\tz - cast \"")(equip[2]->getName())("\"");
+    Constants::STDOUT('\n');
+    char c;
+    while ((c = getch()) != 'x' && (!equip[2] || c != 'z'))
+    {
+    }
+    if (c == 'z')
+    {
+        printBattleState(d);
+        Constants::STDOUT("\n\tspell attack");
+        d.takeDamage(getAttack() + (equip[1] ? equip[1]->getBonus() * getAttack() : 0));
+    }
+    // improve
+    else if (c == 'x')
+    {
+        printBattleState(d);
+        Constants::STDOUT("\n\tmellee attack");
+        d.takeDamage(getAttack() + (equip[0] ? equip[0]->getBonus() * getAttack() : 0));
+    }
 }
 
 Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
@@ -96,19 +126,29 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
         response = getch();
         if (response == 'b')
         {
-            system("cls");
-            p->printBrief();
-            Constants::STDOUT(GameAssets::battle_icon);
-            print();
             bool turn = rand() % 2; // 0 for player;   1 for player
-            // // // while (alive() && p->alive())
-            // // // {
-            // // //     p->hit(*this);
-            // // //     p->takeDamage(Troop::attack);
-            // // //     turn = !turn;
-            // // // }
+            while (alive() && p->alive())
+            {
+                p->printBattleState(*this);
+                if (turn)
+                {
+                    Constants::STDOUT("You hit...");
+                    p->hit(*this);
+                }
+                else if (alive())
+                {
+                    Constants::STDOUT("Dragon hits...");
+                    getch();
+                    p->takeDamage(attack);
+                }
+                turn = !turn;
+                if (!turn && alive() && p->alive())
+                    getch();
+            }
+            Constants::STDOUT(p->alive() ? "\n<<<<<<<< VICTORY >>>>>>>>" : "\n<<<<<<<< DEFEAT >>>>>>>>");
+            // todo images for victory and defeat
             getch();
-            return Constants::ACTION_STATE::SUCCESSFULL;
+            return (p->alive() ? Constants::ACTION_STATE::SUCCESSFULL : Constants::ACTION_STATE::FAILED);
         }
     } while (response != 'e' && response != 'b');
     return Constants::ACTION_STATE::ESCAPED;
