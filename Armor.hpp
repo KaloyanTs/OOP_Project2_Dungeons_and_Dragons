@@ -7,7 +7,7 @@ class Armor : public HeroEquipment
 {
 
 public:
-    Armor(unsigned y, unsigned x, bool onBoard = true);
+    Armor(unsigned y, unsigned x, unsigned bot, unsigned top = 0, bool onBoard = true);
     HeroEquipment *clone() const;
     void print() const;
     ID getID() const { return ID::ARMOR; }
