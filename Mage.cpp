@@ -6,11 +6,6 @@ void Mage::print() const
     printItems();
 }
 
-void Mage::printStats() const
-{
-    print();
-}
-
 void Mage::printBrief() const
 {
     Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');

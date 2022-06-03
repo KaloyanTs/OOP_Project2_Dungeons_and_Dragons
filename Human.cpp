@@ -6,11 +6,6 @@ void Human::print() const
     printItems();
 }
 
-void Human::printStats() const
-{
-    print();
-}
-
 void Human::printBrief() const
 {
     // todo add equipments
