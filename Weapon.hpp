@@ -11,6 +11,7 @@ public:
     HeroEquipment *clone() const;
     void print() const;
     ID getID() const { return ID::WEAPON; }
+    float getCost() { return 0; }
 };
 
 #endif
