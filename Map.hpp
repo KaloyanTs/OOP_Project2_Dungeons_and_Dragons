@@ -23,6 +23,7 @@ class Map
     char **data;
     size_t dragonCount;
     size_t treasureCount;
+    size_t potionCount;
     Vector<EventGenerator *> events;
     Player *pl;
     bool running;

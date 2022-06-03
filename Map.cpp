@@ -22,10 +22,11 @@ void Map::generateMap() const
 Map::Map(Player *p, unsigned lvl)
     : running(false), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
       data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
-      events(dragonCount + treasureCount), pl(p)
+      potionCount(fib(lvl, 1, 2)),
+      events(dragonCount + treasureCount + potionCount),
+      pl(p)
 {
     srand(time(0));
-    // pl = Map::getHero(rand() % Constants::HERO_TYPES); // todo passed as parameter
     for (unsigned i = 0; i < rows; ++i)
         data[i] = new char[cols];
 
@@ -44,7 +45,6 @@ Map::Map(Player *p, unsigned lvl)
         events.push_back(new Dragon(posY, posX, rand() % lvl + 1)); // improve
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
-    unsigned eqNumber; // fix
     for (unsigned i = 0; i < treasureCount; ++i)
     {
         do
@@ -54,6 +54,17 @@ Map::Map(Player *p, unsigned lvl)
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
 
         events.push_back(Inventar::getEquipment(rand() % 3, posY, posX, level * 5 + 5, level * 25 + 10, rand() % (lvl * 10) + 10)); // fix use constants
+        data[posY][posX] = events[events.size() - 1]->getChar();
+    }
+    for (unsigned i = 0; i < potionCount; ++i)
+    {
+        do
+        {
+            posY = rand() % cols;
+            posX = rand() % rows;
+        } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
+
+        events.push_back(new Potion(posY, posX, 15 + lvl * 7, 30 + lvl * 7)); // fix use constants
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
