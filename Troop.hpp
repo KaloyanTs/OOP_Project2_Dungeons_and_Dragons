@@ -36,7 +36,7 @@ public:
 
     bool payMana(float points);
 
-    void regen();
+    void regen(float percentage = 0);
 };
 
 #endif

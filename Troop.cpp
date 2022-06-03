@@ -28,8 +28,18 @@ bool Troop::payMana(float points)
     return true;
 }
 
-void Troop::regen()
+void Troop::regen(float percentage)
 {
-    if (health < maxHealth / 2)
-        health = maxHealth / 2;
+    if (!percentage)
+    {
+        if (health < maxHealth / 2)
+            health = maxHealth / 2;
+    }
+    else
+    {
+        health *= (1 + percentage);
+        if (health > maxHealth)
+            health = maxHealth;
+    }
 }
+// todo correct float comparison

@@ -25,7 +25,7 @@ public:
     void takeDamage(float dmg) { Troop::takeDamage(dmg * (1 - (equip[1] ? equip[1]->getBonus() : 0))); }
 
     bool payCost(float points);
-    void regenerate() { Troop::regen(); }
+    void regenerate(float percentage) { Troop::regen(percentage); }
 };
 
 #endif
