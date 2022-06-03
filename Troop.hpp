@@ -33,6 +33,8 @@ public:
     unsigned getLevel() const { return level; }
 
     virtual void takeDamage(float dmg);
+
+    bool payMana(float points);
 };
 
 #endif

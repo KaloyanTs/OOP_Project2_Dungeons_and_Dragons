@@ -3,7 +3,7 @@
 void Troop::print(float attackBonus) const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
-    Constants::STDOUT("HEALTH\tATTACK\tMAGIC\n")(health)('\t')((1 + attackBonus) * attack)('\t')(mana)('\n');
+    Constants::STDOUT("HEALTH\tATTACK\tMANA\n")(health)('\t')((1 + attackBonus) * attack)('\t')(mana)('\n');
 }
 
 float Troop::determineStat(unsigned lvl, float init, float perLevel) const
@@ -19,3 +19,13 @@ void Troop::takeDamage(float dmg)
         health = 0;
     health -= dmg;
 }
+
+bool Troop::payMana(float points)
+{
+    if (mana < points)
+        return false;
+    mana -= points;
+    return true;
+}
+
+// fix mana not paying
