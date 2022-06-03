@@ -5,6 +5,7 @@ var dir_beb673cf36555ddf2dd4c66b8fa54fdd =
     [ "Constants.cpp.obj.d", "_constants_8cpp_8obj_8d.html", null ],
     [ "Dragon.cpp.obj.d", "_dragon_8cpp_8obj_8d.html", null ],
     [ "Equipment.cpp.obj.d", "_equipment_8cpp_8obj_8d.html", null ],
+    [ "Game.cpp.obj.d", "_game_8cpp_8obj_8d.html", null ],
     [ "GameAssets.cpp.obj.d", "_game_assets_8cpp_8obj_8d.html", null ],
     [ "Grammar.cpp.obj.d", "_grammar_8cpp_8obj_8d.html", null ],
     [ "HeroEquipment.cpp.obj.d", "_hero_equipment_8cpp_8obj_8d.html", null ],

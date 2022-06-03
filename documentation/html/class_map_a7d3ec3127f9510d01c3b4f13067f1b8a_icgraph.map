@@ -1,5 +1,6 @@
 <map id="Map::getHero" name="Map::getHero">
-<area shape="rect" id="node1" title=" " alt="" coords="133,31,233,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="20,5,71,32"/>
-<area shape="rect" id="node3" href="$class_map.html#a863824478461557592928afc8534d7d3" title=" " alt="" coords="5,56,85,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="235,31,335,57"/>
+<area shape="rect" id="node2" href="$class_map.html#a863824478461557592928afc8534d7d3" title=" " alt="" coords="105,5,185,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,56,187,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>
