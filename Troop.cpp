@@ -37,7 +37,7 @@ void Troop::regen(float percentage)
     }
     else
     {
-        health *= (1 + percentage);
+        health += percentage * maxHealth;
         if (health > maxHealth)
             health = maxHealth;
     }
