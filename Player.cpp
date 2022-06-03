@@ -199,8 +199,7 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
                 if (!turn && alive() && p->alive())
                     getch();
             }
-            Constants::STDOUT(p->alive() ? "\n<<<<<<<< VICTORY >>>>>>>>" : "\n<<<<<<<< DEFEAT >>>>>>>>");
-            // todo images for victory and defeat
+            Constants::STDOUT('\n')(p->alive() ? GameAssets::victory_icon : GameAssets::defeat_icon);
             getch();
             // todo get xp on victory
             return (p->alive() ? Constants::ACTION_STATE::SUCCESSFULL : Constants::ACTION_STATE::FAILED);

@@ -8,6 +8,8 @@ private:
     GameAssets() {}
 
 public:
+    static const Image victory_icon;
+    static const Image defeat_icon;
     static const Image battle_icon;
     static const Image game_logo;
     static const Image empty_slot;
