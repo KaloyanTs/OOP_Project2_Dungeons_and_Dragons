@@ -1,7 +1,9 @@
 <map id="Game::run" name="Game::run">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,88,83"/>
-<area shape="rect" id="node2" href="$class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="136,56,209,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,88,133"/>
+<area shape="rect" id="node2" href="$class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="136,107,209,133"/>
 <area shape="rect" id="node3" href="$class_player.html#ae1ea365eabdbe2f930e3a49347ab55bd" title=" " alt="" coords="266,5,358,32"/>
-<area shape="rect" id="node4" href="$class_player.html#a558196c90abefe4d2e1781a6955383be" title=" " alt="" coords="263,56,361,83"/>
-<area shape="rect" id="node5" href="$class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6" title=" " alt="" coords="257,107,367,133"/>
+<area shape="rect" id="node4" href="$class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1" title=" " alt="" coords="266,56,358,83"/>
+<area shape="rect" id="node5" href="$class_player.html#af8e08c2349e8a6a177e102b28eadcbd2" title=" " alt="" coords="265,107,359,133"/>
+<area shape="rect" id="node6" href="$class_player.html#a558196c90abefe4d2e1781a6955383be" title=" " alt="" coords="263,157,361,184"/>
+<area shape="rect" id="node7" href="$class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6" title=" " alt="" coords="257,208,367,235"/>
 </map>

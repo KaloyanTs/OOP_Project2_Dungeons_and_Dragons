@@ -1,8 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a" title=" " alt="" coords="104,5,204,32"/>
-<area shape="rect" id="node3" href="$class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="117,56,191,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node2" href="$class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a" title=" " alt="" coords="104,56,204,83"/>
+<area shape="rect" id="node3" href="$class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="117,107,191,133"/>
 <area shape="rect" id="node4" href="$class_player.html#ae1ea365eabdbe2f930e3a49347ab55bd" title=" " alt="" coords="261,5,353,32"/>
-<area shape="rect" id="node5" href="$class_player.html#a558196c90abefe4d2e1781a6955383be" title=" " alt="" coords="258,56,355,83"/>
-<area shape="rect" id="node6" href="$class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6" title=" " alt="" coords="252,107,361,133"/>
+<area shape="rect" id="node5" href="$class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1" title=" " alt="" coords="261,56,353,83"/>
+<area shape="rect" id="node6" href="$class_player.html#af8e08c2349e8a6a177e102b28eadcbd2" title=" " alt="" coords="259,107,354,133"/>
+<area shape="rect" id="node7" href="$class_player.html#a558196c90abefe4d2e1781a6955383be" title=" " alt="" coords="258,157,355,184"/>
+<area shape="rect" id="node8" href="$class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6" title=" " alt="" coords="252,208,361,235"/>
 </map>
