@@ -10,5 +10,3 @@ void Armor::print() const
 
 Armor::Armor(unsigned y, unsigned x, unsigned bot, unsigned top, bool onBoard)
     : HeroEquipment(&GameAssets::armor_icon, y, x, top, bot, onBoard) { Constants::armor_name_generator.generateWord(name); }
-
-HeroEquipment *Armor::clone() const { return new Armor(*this); }

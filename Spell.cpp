@@ -13,5 +13,3 @@ void Spell::print() const
     Equipment::print();
     Constants::STDOUT("\tCost: ")(cost)('\n');
 }
-
-HeroEquipment *Spell::clone() const { return new Spell(*this); }

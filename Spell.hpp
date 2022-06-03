@@ -9,7 +9,7 @@ class Spell : public HeroEquipment
 
 public:
     Spell(unsigned y, unsigned x, unsigned bot, unsigned top = 0, bool onBoard = true, unsigned c = 0);
-    HeroEquipment *clone() const;
+    Spell *clone() const { return new Spell(*this); }
     void print() const;
     ID getID() const { return ID::SPELL; }
     float getCost() { return cost; };

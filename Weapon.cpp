@@ -10,5 +10,3 @@ void Weapon::print() const
     Equipment::print();
     Constants::STDOUT('\n');
 }
-
-HeroEquipment *Weapon::clone() const { return new Weapon(*this); }
