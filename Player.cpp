@@ -72,7 +72,7 @@ void Player::printBattleState(Dragon &d) const
     d.print();
 }
 
-void Player::hit(Dragon &d) const
+void Player::hit(Dragon &d)
 {
     Constants::STDOUT("\nx - basic attack");
     if (equip[0])
@@ -87,15 +87,69 @@ void Player::hit(Dragon &d) const
     if (c == 'z')
     {
         printBattleState(d);
-        Constants::STDOUT("\n\tspell attack");
-        d.takeDamage(getAttack() + (equip[1] ? equip[1]->getBonus() * getAttack() : 0));
+        if (payCost(equip[2]->getCost()))
+        {
+            Constants::STDOUT("\n\tspell attack...");
+            d.takeDamage(getAttack() + equip[2]->getBonus() * getAttack());
+        }
+        else
+        {
+            Constants::STDOUT("\tnot enough mana...");
+            hit(d);
+        }
     }
     // improve
     else if (c == 'x')
     {
         printBattleState(d);
-        Constants::STDOUT("\n\tmellee attack");
+        Constants::STDOUT("\n\tmellee attack...");
         d.takeDamage(getAttack() + (equip[0] ? equip[0]->getBonus() * getAttack() : 0));
+    }
+}
+
+void Player::inventar()
+{
+    char c;
+    printInventar();
+    while ((c = getch()) != 'i')
+    {
+        if (c == 'z' && inv->getCount())
+        {
+            Constants::STDOUT("\nPress z again to cancel...");
+            while ((c = getch()) != 'z' && c - '0' < 1 && c - '0' - 1 >= inv->getCount())
+            {
+            }
+            if (c != 'z')
+                delete inv->remove(c - '0' - 1);
+            printInventar();
+        }
+        if (c == 'x')
+        {
+            Constants::STDOUT("\nPress x again to cancel...");
+            while ((c = getch()) != 'x' && c - '0' < 1 && c - '0' - 1 >= Constants::EQUIPMENT_COUNT)
+            {
+            }
+            if (c != 'x' && equip[c - '0' - 1])
+            {
+                inv->put(*equip[c - '0' - 1]);
+                delete equip[c - '0' - 1];
+                equip[c - '0' - 1] = nullptr;
+            }
+            printInventar();
+        }
+        else if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
+        {
+            HeroEquipment *rem = inv->remove(c - '0' - 1);
+            HeroEquipment *&tmp = getMatching(rem);
+
+            HeroEquipment *buf = tmp;
+            tmp = rem;
+            rem = buf;
+
+            if (rem)
+                inv->put(*rem);
+            printInventar();
+        }
     }
 }
 
@@ -148,6 +202,7 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
             Constants::STDOUT(p->alive() ? "\n<<<<<<<< VICTORY >>>>>>>>" : "\n<<<<<<<< DEFEAT >>>>>>>>");
             // todo images for victory and defeat
             getch();
+            // todo get xp on victory
             return (p->alive() ? Constants::ACTION_STATE::SUCCESSFULL : Constants::ACTION_STATE::FAILED);
         }
     } while (response != 'e' && response != 'b');

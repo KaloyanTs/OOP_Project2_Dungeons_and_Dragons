@@ -28,6 +28,8 @@ class Player
 
     HeroEquipment *&getMatching(const HeroEquipment *ptr);
     void printInventar() const;
+    void inventar();
+    virtual bool payCost(float points) = 0;
 
 protected:
     HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
@@ -49,7 +51,7 @@ public:
     void printBattleState(Dragon &) const;
     virtual bool alive() const = 0;
 
-    void hit(Dragon &d) const;
+    void hit(Dragon &d);
     virtual void takeDamage(float dmg) = 0;
 
     virtual void printBrief() const = 0;
@@ -87,47 +89,7 @@ bool Player::move(bool &run, ALLOWED f)
         return run = false;
     else if (c == 'i')
     {
-        printInventar();
-        while ((c = getch()) != 'i')
-        {
-            if (c == 'z' && inv->getCount())
-            {
-                Constants::STDOUT("\nPress z again to cancel...");
-                while ((c = getch()) != 'z' && c - '0' < 1 && c - '0' - 1 >= inv->getCount())
-                {
-                }
-                if (c != 'z')
-                    delete inv->remove(c - '0' - 1);
-                printInventar();
-            }
-            if (c == 'x')
-            {
-                Constants::STDOUT("\nPress x again to cancel...");
-                while ((c = getch()) != 'x' && c - '0' < 1 && c - '0' - 1 >= Constants::EQUIPMENT_COUNT)
-                {
-                }
-                if (c != 'x' && equip[c - '0' - 1])
-                {
-                    inv->put(*equip[c - '0' - 1]);
-                    delete equip[c - '0' - 1];
-                    equip[c - '0' - 1] = nullptr;
-                }
-                printInventar();
-            }
-            else if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
-            {
-                HeroEquipment *rem = inv->remove(c - '0' - 1);
-                HeroEquipment *&tmp = getMatching(rem);
-
-                HeroEquipment *buf = tmp;
-                tmp = rem;
-                rem = buf;
-
-                if (rem)
-                    inv->put(*rem);
-                printInventar();
-            }
-        }
+        inventar();
         return true;
     }
     return false;
