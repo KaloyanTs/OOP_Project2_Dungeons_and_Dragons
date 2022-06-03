@@ -1,6 +1,6 @@
 #include "Game.hpp"
 
-Game::Game()
+Game::Game() : map(nullptr), pl(nullptr)
 {
 }
 
@@ -16,15 +16,13 @@ bool Game::run()
     {
         chosen = getch();
     } while (chosen - '0' - 1 >= Constants::HERO_TYPES || chosen - '0' - 1 < 0);
-
-    // todo load progress
     char name[100]; // fix use String
     Constants::STDOUT("Choose name for your hero:\t");
     std::cin.getline(name, 100);
     if (!*name)
         strcpy(name, "unknown");
-    // Map m(Map::getHero(chosen - '0' - 1, name), 4);
-    Map m("assets\\level4.dndmap");
-
-    m.run();
+    pl = Map::getHero(chosen - '0' - 1, name);
+    Map m(pl, 1);
+    m.run();     // todo enum for the finish (DIE,SUCCESS,CLOSE)
+    return true; // fix upper line
 }
