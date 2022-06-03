@@ -14,7 +14,8 @@ protected:
     {
         WEAPON = 0,
         ARMOR = 1,
-        SPELL = 2
+        SPELL = 2,
+        POTION = 3
     };
 
 public:
