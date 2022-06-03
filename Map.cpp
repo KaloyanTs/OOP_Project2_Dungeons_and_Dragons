@@ -35,7 +35,7 @@ Map::Map(Player *p, unsigned lvl)
         generateMap();
     } while (!isReachable(rows - 1, cols - 1));
     unsigned posY, posX;
-    for (unsigned i = 0; i < dragonCount; ++i)
+    for (unsigned i = 0; i < dragonCount - 1; ++i)
     {
         do
         {
@@ -45,6 +45,8 @@ Map::Map(Player *p, unsigned lvl)
         events.push_back(new Dragon(posY, posX, rand() % lvl + 1)); // improve
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
+    events.push_back(new Dragon(rows - 1, cols - 1, lvl));
+    data[rows - 1][cols - 1] = events[events.size() - 1]->getChar();
     for (unsigned i = 0; i < treasureCount; ++i)
     {
         do
@@ -89,6 +91,8 @@ EventGenerator *Map::print() const
                       ? pl->getChar()
                       : data[i][j]));
         }
+        if (i == rows - 1)
+            Constants::STDOUT(">>>");
         Constants::STDOUT('\n');
     }
     unsigned i = 0;
@@ -177,7 +181,9 @@ void Map::run()
     do
     {
         if (pl->move(running, [&](unsigned y, unsigned x) -> bool
-                     { return y < rows && x < cols && data[y][x] != (char)MAP_SYMBOLS::WALL; }))
+                     { return (y == (rows - 1) && x == cols) ||
+                              y < rows && x < cols &&
+                                  data[y][x] != (char)MAP_SYMBOLS::WALL; }))
             if (event = print())
             {
                 event->print();
@@ -197,6 +203,12 @@ void Map::run()
                     std::clog << event->getErrorMsg() << '\n';
                     getch();
                 }
+            }
+            else if (pl->getY() == rows - 1 && pl->getX() == cols)
+            {
+                Constants::STDOUT("Level passed successfully!");
+                getch();
+                running = false;
             }
     } while (running && pl->alive());
 }
