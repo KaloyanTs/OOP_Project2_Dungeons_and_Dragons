@@ -5,6 +5,8 @@
 #include "SpellNameGenerator.hpp"
 #include "MultipleImagePrinter.hpp"
 
+//todo consider using #define for speed
+
 class Constants
 {
     Constants() {}
