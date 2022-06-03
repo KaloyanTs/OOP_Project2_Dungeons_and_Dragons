@@ -18,3 +18,8 @@ void Warrior::printBrief() const
     if (equip[2])
         Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
 }
+
+bool Warrior::payCost(float points)
+{
+    return Troop::payMana(points);
+}

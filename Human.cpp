@@ -19,3 +19,8 @@ void Human::printBrief() const
     if (equip[2])
         Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
 }
+
+bool Human::payCost(float points)
+{
+    return Troop::payMana(points);
+}

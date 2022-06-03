@@ -23,6 +23,8 @@ public:
     virtual float getMana() const { return mana; }
 
     void takeDamage(float dmg) { Troop::takeDamage(dmg * (1 - (equip[1] ? equip[1]->getBonus() : 0))); }
+
+    bool payCost(float points);
 };
 
 #endif
