@@ -60,7 +60,7 @@ public:
     virtual float getHealth() const = 0;
     virtual float getMana() const = 0;
 
-    virtual void regenerate() = 0;
+    virtual void regenerate(float percentage = 0) = 0;
 };
 
 template <typename ALLOWED>

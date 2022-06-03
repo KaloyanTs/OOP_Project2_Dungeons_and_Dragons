@@ -116,14 +116,14 @@ void Player::inventar()
         if (c == 'z' && inv->getCount())
         {
             Constants::STDOUT("\nPress z again to cancel...");
-            while ((c = getch()) != 'z' && c - '0' < 1 && c - '0' - 1 >= inv->getCount())
+            while ((c = getch()) != 'z' && (c - '0' < 1 || c - '0' - 1 >= inv->getCount()))
             {
             }
             if (c != 'z')
                 delete inv->remove(c - '0' - 1);
             printInventar();
         }
-        if (c == 'x')
+        else if (c == 'x')
         {
             Constants::STDOUT("\nPress x again to cancel...");
             while ((c = getch()) != 'x' && c - '0' < 1 && c - '0' - 1 >= Constants::EQUIPMENT_COUNT)
@@ -140,14 +140,22 @@ void Player::inventar()
         else if (c - '0' - 1 < inv->getCount() && c - '0' >= 1)
         {
             HeroEquipment *rem = inv->remove(c - '0' - 1);
-            HeroEquipment *&tmp = getMatching(rem);
+            if ((size_t)rem->getID() >= Constants::EQUIPMENT_COUNT)
+            {
+                regenerate(rem->getBonus());
+                delete rem;
+            }
+            else
+            {
+                HeroEquipment *&tmp = getMatching(rem);
 
-            HeroEquipment *buf = tmp;
-            tmp = rem;
-            rem = buf;
+                HeroEquipment *buf = tmp;
+                tmp = rem;
+                rem = buf;
 
-            if (rem)
-                inv->put(*rem);
+                if (rem)
+                    inv->put(*rem);
+            }
             printInventar();
         }
     }
