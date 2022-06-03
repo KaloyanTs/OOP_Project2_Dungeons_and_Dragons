@@ -24,5 +24,6 @@ bool Game::run()
     pl = Map::getHero(chosen - '0' - 1, name);
     Map m(pl, 1);
     m.run();     // todo enum for the finish (DIE,SUCCESS,CLOSE)
+                 // todo in while cycle until !=SUCCESS
     return true; // fix upper line
 }
