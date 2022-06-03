@@ -28,4 +28,8 @@ bool Troop::payMana(float points)
     return true;
 }
 
-// fix mana not paying
+void Troop::regen()
+{
+    if (health < maxHealth / 2)
+        health = maxHealth / 2;
+}

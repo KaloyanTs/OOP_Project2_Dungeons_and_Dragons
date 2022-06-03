@@ -35,6 +35,8 @@ public:
     virtual void takeDamage(float dmg);
 
     bool payMana(float points);
+
+    void regen();
 };
 
 #endif

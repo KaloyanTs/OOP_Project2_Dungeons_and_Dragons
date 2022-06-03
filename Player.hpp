@@ -59,6 +59,8 @@ public:
     virtual float getAttack() const = 0;
     virtual float getHealth() const = 0;
     virtual float getMana() const = 0;
+
+    virtual void regenerate() = 0;
 };
 
 template <typename ALLOWED>
