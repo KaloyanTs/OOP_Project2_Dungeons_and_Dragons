@@ -7,3 +7,4 @@ void Dragon::print() const
     Constants::STDOUT (*pic)("Dragon ")(getLevel())(".lvl\n");
     Troop::print();
 }
+
