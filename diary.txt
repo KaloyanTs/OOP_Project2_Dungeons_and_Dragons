@@ -12,3 +12,10 @@ keyboard:
     player has equipment
     equipment calls method of player
     map is the owner of the player (to be changed to Game)
+
+    dragon has randomly generated attack phrase
+    victory and defeat images
+    potions?
+    health and mana regeneration on victory
+    get xp on win
+    reach end of level
