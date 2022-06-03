@@ -53,7 +53,7 @@ Map::Map(Player *p, unsigned lvl)
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
 
-        events.push_back(Inventar::getEquipment(rand() % 3, posY, posX, level * 25 + 10, level * 5 + 5)); // fix use constants
+        events.push_back(Inventar::getEquipment(rand() % 3, posY, posX, level * 5 + 5, level * 25 + 10, rand() % (lvl * 10) + 10)); // fix use constants
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
@@ -205,7 +205,7 @@ Map::Map(const String &path)
     pl = Map::getHero(rand() % Constants::HERO_TYPES); // fix must be read!!!!!!
     ifs >> level >> rows >> cols;
 
-    unsigned buf, y, x, bonus;
+    unsigned buf, y, x, bonus, cost;
     dragonCount = (fib(level, Constants::MONSTER_COUNT_1, Constants::MONSTER_COUNT_2));
     treasureCount = (fib(level, Constants::TREASURE_COUNT_1, Constants::TREASURE_COUNT_2));
     for (unsigned i = 0; i < dragonCount; ++i)
@@ -215,8 +215,8 @@ Map::Map(const String &path)
     }
     for (unsigned i = 0; i < treasureCount; ++i)
     {
-        ifs >> buf >> y >> x >> bonus;
-        events.push_back(Inventar::getEquipment(buf, y, x, bonus));
+        ifs >> buf >> y >> x >> bonus >> cost;
+        events.push_back(Inventar::getEquipment(buf, y, x, bonus, 0, cost));
     }
     ifs.get();
 
