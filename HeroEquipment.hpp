@@ -27,6 +27,7 @@ public:
     Constants::ACTION_STATE action(Player *, bool &run);
     void print() const;
     virtual ID getID() const = 0;
+    virtual float getCost() = 0;
 };
 
 #endif
