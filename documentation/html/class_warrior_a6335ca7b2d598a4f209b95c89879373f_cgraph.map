@@ -1,0 +1,7 @@
+<map id="Warrior::printBrief" name="Warrior::printBrief">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="176,5,323,32"/>
+<area shape="rect" id="node3" href="$class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="195,56,304,83"/>
+<area shape="rect" id="node4" href="$class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="190,107,309,133"/>
+<area shape="rect" id="node5" href="$class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="206,157,293,184"/>
+</map>

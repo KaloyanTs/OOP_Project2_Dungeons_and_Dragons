@@ -1,0 +1,9 @@
+<map id="HeroEquipment" name="HeroEquipment">
+<area shape="rect" id="node1" title=" " alt="" coords="100,80,211,107"/>
+<area shape="rect" id="node4" href="$class_armor.html" title=" " alt="" coords="5,155,63,181"/>
+<area shape="rect" id="node5" href="$class_potion.html" title=" " alt="" coords="87,155,146,181"/>
+<area shape="rect" id="node6" href="$class_spell.html" title=" " alt="" coords="170,155,221,181"/>
+<area shape="rect" id="node7" href="$class_weapon.html" title=" " alt="" coords="245,155,316,181"/>
+<area shape="rect" id="node2" href="$class_equipment.html" title=" " alt="" coords="53,5,137,32"/>
+<area shape="rect" id="node3" href="$class_event_generator.html" title=" " alt="" coords="161,5,272,32"/>
+</map>

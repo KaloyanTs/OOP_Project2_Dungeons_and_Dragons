@@ -1,0 +1,12 @@
+<map id="Equipment::getBonus" name="Equipment::getBonus">
+<area shape="rect" id="node1" title=" " alt="" coords="497,56,644,83"/>
+<area shape="rect" id="node2" href="$class_human.html#aaf6bd1cee55344b6629acfb996bec3be" title=" " alt="" coords="327,5,449,32"/>
+<area shape="rect" id="node5" href="$class_mage.html#a1564f6467e749d570ef36ea8acc1b2e7" title=" " alt="" coords="331,56,445,83"/>
+<area shape="rect" id="node8" href="$class_warrior.html#a6335ca7b2d598a4f209b95c89879373f" title=" " alt="" coords="327,107,449,133"/>
+<area shape="rect" id="node3" href="$class_human.html#aa31591d182a1b57c2f1e3a6a1f793cea" title=" " alt="" coords="182,5,278,32"/>
+<area shape="rect" id="node4" href="$class_human.html#a5eb69b804d423c0fb421ad55a4bb7c5a" title=" " alt="" coords="6,5,133,32"/>
+<area shape="rect" id="node6" href="$class_mage.html#a42ad5942a85ca027ab1ca45fb099f78f" title=" " alt="" coords="187,56,273,83"/>
+<area shape="rect" id="node7" href="$class_mage.html#af4b83aec44f91d81d0a3081d26e0ad9a" title=" " alt="" coords="10,56,129,83"/>
+<area shape="rect" id="node9" href="$class_warrior.html#a6442acdb2d5705a397f640aa42b2371a" title=" " alt="" coords="181,107,279,133"/>
+<area shape="rect" id="node10" href="$class_warrior.html#acecbdcdca59d7a81dfa5d2db66148a31" title=" " alt="" coords="5,107,133,133"/>
+</map>

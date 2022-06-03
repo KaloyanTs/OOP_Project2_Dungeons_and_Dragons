@@ -1,0 +1,6 @@
+<map id="Troop::regen" name="Troop::regen">
+<area shape="rect" id="node1" title=" " alt="" coords="187,56,281,83"/>
+<area shape="rect" id="node2" href="$class_human.html#a5ea6561d7fecd90567d3e5b2038e832c" title=" " alt="" coords="6,5,138,32"/>
+<area shape="rect" id="node3" href="$class_mage.html#a7c4dedbb124d0d76a9b112415f41f660" title=" " alt="" coords="11,56,133,83"/>
+<area shape="rect" id="node4" href="$class_warrior.html#afbe1a84da874c4db3ca2ec9996ec38ee" title=" " alt="" coords="5,107,139,133"/>
+</map>

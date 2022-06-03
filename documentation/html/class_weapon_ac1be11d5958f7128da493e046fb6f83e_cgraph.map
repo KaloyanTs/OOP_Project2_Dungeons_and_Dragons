@@ -1,0 +1,15 @@
+<map id="Weapon::clone" name="Weapon::clone">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,115,209"/>
+<area shape="rect" id="node2" href="$class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1" title=" " alt="" coords="163,183,289,209"/>
+<area shape="rect" id="node3" href="$class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395" title=" " alt="" coords="337,183,503,209"/>
+<area shape="rect" id="node4" href="$class_string.html#aefb74cf401b56191337867e2780c5286" title="get pointer to the beginning of the array" alt="" coords="569,5,663,32"/>
+<area shape="rect" id="node5" href="$class_stack.html#a275d43ff89b91a9c6c5636cc8539d285" title=" " alt="" coords="566,56,666,83"/>
+<area shape="rect" id="node6" href="$class_stack.html#a2723aec5c7e2611b97fcffeb7709de33" title=" " alt="" coords="573,107,659,133"/>
+<area shape="rect" id="node8" href="$class_stack.html#adc09c8f5b94e9f4a951c8ba1c8083ade" title=" " alt="" coords="570,157,662,184"/>
+<area shape="rect" id="node10" href="$class_string.html#a1cf700a24a2aaafc08ee95d6aff52710" title=" " alt="" coords="551,208,681,235"/>
+<area shape="rect" id="node11" href="$class_string.html#a588c5cc9faededbb9d938662d354feed" title="get the size of the array (number of symbols before the &#39;\0&#39;)" alt="" coords="572,259,660,285"/>
+<area shape="rect" id="node12" href="$class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c" title=" " alt="" coords="570,309,662,336"/>
+<area shape="rect" id="node13" href="$class_stack.html#a1931814ad68db1eaedabdb37fa0fe494" title=" " alt="" coords="575,360,657,387"/>
+<area shape="rect" id="node7" href="$class_vector.html#a21c14696d987344139f98dca2ec78664" title=" " alt="" coords="743,107,846,133"/>
+<area shape="rect" id="node9" href="$class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde" title=" " alt="" coords="729,157,860,184"/>
+</map>

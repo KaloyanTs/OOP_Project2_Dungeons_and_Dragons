@@ -1,0 +1,7 @@
+<map id="Grammar" name="Grammar">
+<area shape="rect" id="node1" title=" " alt="" coords="300,5,376,32"/>
+<area shape="rect" id="node2" href="$class_armor_name_generator.html" title=" " alt="" coords="5,80,153,107"/>
+<area shape="rect" id="node3" href="$class_potion_name_generator.html" title=" " alt="" coords="177,80,328,107"/>
+<area shape="rect" id="node4" href="$class_spell_name_generator.html" title=" " alt="" coords="352,80,495,107"/>
+<area shape="rect" id="node5" href="$class_weapon_name_generator.html" title=" " alt="" coords="519,80,680,107"/>
+</map>

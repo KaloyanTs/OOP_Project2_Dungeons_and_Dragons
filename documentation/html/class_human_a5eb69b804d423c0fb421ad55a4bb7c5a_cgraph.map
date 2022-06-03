@@ -1,0 +1,11 @@
+<map id="Human::printStats" name="Human::printStats">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,132,184"/>
+<area shape="rect" id="node2" href="$class_human.html#aa31591d182a1b57c2f1e3a6a1f793cea" title=" " alt="" coords="180,157,276,184"/>
+<area shape="rect" id="node3" href="$class_human.html#aaf6bd1cee55344b6629acfb996bec3be" title=" " alt="" coords="325,107,447,133"/>
+<area shape="rect" id="node8" href="$class_player.html#ac5699b5bf835475cd0db331c3566c225" title=" " alt="" coords="324,183,448,209"/>
+<area shape="rect" id="node4" href="$class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="496,5,643,32"/>
+<area shape="rect" id="node5" href="$class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="515,56,624,83"/>
+<area shape="rect" id="node6" href="$class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="510,107,629,133"/>
+<area shape="rect" id="node7" href="$class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="526,157,613,184"/>
+<area shape="rect" id="node9" href="$class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f" title=" " alt="" coords="497,208,641,235"/>
+</map>

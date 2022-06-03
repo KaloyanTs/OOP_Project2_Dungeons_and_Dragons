@@ -1,0 +1,7 @@
+<map id="Player::printBattleState" name="Player::printBattleState">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,163,83"/>
+<area shape="rect" id="node2" href="$class_dragon.html#a532458f8906905a6aafe64fe8aceae39" title=" " alt="" coords="222,31,318,57"/>
+<area shape="rect" id="node5" href="$class_player.html#a21467bf0b665bfce964fbe8aee8ae055" title=" " alt="" coords="211,81,329,108"/>
+<area shape="rect" id="node3" href="$class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="377,5,487,32"/>
+<area shape="rect" id="node4" href="$class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="389,56,475,83"/>
+</map>

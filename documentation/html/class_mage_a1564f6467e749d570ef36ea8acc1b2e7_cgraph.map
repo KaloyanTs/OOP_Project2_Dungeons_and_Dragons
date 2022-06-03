@@ -1,0 +1,7 @@
+<map id="Mage::printBrief" name="Mage::printBrief">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,119,108"/>
+<area shape="rect" id="node2" href="$class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="167,5,313,32"/>
+<area shape="rect" id="node3" href="$class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="185,56,295,83"/>
+<area shape="rect" id="node4" href="$class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="181,107,299,133"/>
+<area shape="rect" id="node5" href="$class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="197,157,283,184"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Player::take" name="Player::take">
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,97,61"/>
+<area shape="rect" id="node2" href="$class_inventar.html#abf7086530f57035401e7ef75bd492c41" title=" " alt="" coords="145,35,237,61"/>
+<area shape="rect" id="node3" href="$class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5" title=" " alt="" coords="291,5,441,32"/>
+<area shape="rect" id="node4" href="$class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde" title=" " alt="" coords="285,57,447,98"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="String::shrink_to_fit" name="String::shrink_to_fit">
+<area shape="rect" id="node1" title="make the capacity equal to the size" alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$class_string.html#aefb74cf401b56191337867e2780c5286" title="get pointer to the beginning of the array" alt="" coords="191,5,284,32"/>
+<area shape="rect" id="node3" href="$class_string.html#a6e005d5422ee34c9e8e006cd96742f12" title="Construct a new String object by array of chars." alt="" coords="188,56,287,83"/>
+</map>

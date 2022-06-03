@@ -1,0 +1,7 @@
+<map id="Troop::alive" name="Troop::alive">
+<area shape="rect" id="node1" title=" " alt="" coords="160,81,247,108"/>
+<area shape="rect" id="node2" href="$class_dragon.html#aeb1e2529d367e9a89de0f6512734af87" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="$class_human.html#a8773d92445ae5faed08cf01df51635b7" title=" " alt="" coords="11,56,107,83"/>
+<area shape="rect" id="node4" href="$class_mage.html#aebe8422dfac021f64191b24a4f5a2af4" title=" " alt="" coords="15,107,102,133"/>
+<area shape="rect" id="node5" href="$class_warrior.html#a15c92ae02c73013c58e8c2f982a8c43b" title=" " alt="" coords="10,157,107,184"/>
+</map>

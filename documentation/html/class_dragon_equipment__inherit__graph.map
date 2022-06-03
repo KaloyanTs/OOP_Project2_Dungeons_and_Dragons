@@ -1,0 +1,5 @@
+<map id="DragonEquipment" name="DragonEquipment">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node3" href="$class_scale_armor.html" title=" " alt="" coords="23,155,113,181"/>
+<area shape="rect" id="node2" href="$class_equipment.html" title=" " alt="" coords="26,5,110,32"/>
+</map>

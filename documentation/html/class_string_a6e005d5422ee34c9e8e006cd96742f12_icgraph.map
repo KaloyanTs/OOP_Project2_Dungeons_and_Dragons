@@ -1,0 +1,4 @@
+<map id="String::String" name="String::String">
+<area shape="rect" id="node1" title="Construct a new String object by array of chars." alt="" coords="188,5,287,32"/>
+<area shape="rect" id="node2" href="$class_string.html#a12893a9387a85a6d20b2c4e49729ccec" title="make the capacity equal to the size" alt="" coords="5,5,140,32"/>
+</map>
