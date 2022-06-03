@@ -5,7 +5,7 @@
 #include "SpellNameGenerator.hpp"
 #include "MultipleImagePrinter.hpp"
 
-//todo consider using #define for speed
+// todo consider using #define for speed
 
 class Constants
 {
@@ -20,6 +20,8 @@ public:
     };
     static const Printer STDOUT;
     static const MultipleImagePrinter STDOUT_MULTI;
+    static const unsigned DRAGON_ARMOR_INIT = 15;
+    static const unsigned DRAGON_ARMOR_PER_LEVEL = 5;
     static const unsigned EQUIPMENT_COUNT = 3;
     static const unsigned DISPLAY_WIDTH = 60;
     static const unsigned HERO_TYPES = 3;
@@ -39,7 +41,6 @@ public:
     static const unsigned MONSTER_INIT_HEALTH = 50;
     static const unsigned MONSTER_COUNT_1 = 2;
     static const unsigned MONSTER_COUNT_2 = 3;
-    static const unsigned DRAGON_SCALE_ARMOR = 15;
     static const unsigned TREASURE_COUNT_1 = 2;
     static const unsigned TREASURE_COUNT_2 = 2;
     static const WeaponNameGenerator weapon_name_generator;
