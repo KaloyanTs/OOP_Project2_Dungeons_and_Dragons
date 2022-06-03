@@ -3,6 +3,7 @@
 #include "Weapon.hpp"
 #include "Armor.hpp"
 #include "Spell.hpp"
+#include "Potion.hpp"
 #include "Vector.hpp"
 
 class Inventar : protected Vector<HeroEquipment *>
