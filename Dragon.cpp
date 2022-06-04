@@ -4,7 +4,6 @@ String Dragon::errorMsg = "You could not stand a chance against this dragon but 
 
 void Dragon::print() const
 {
-    Constants::STDOUT (*pic)("Dragon ")(getLevel())(".lvl\n");
+    Constants::STDOUT (*pic)("Dragon ")(getLevel())(".lvl\n")("\t - ")(quote)('\n');
     Troop::print();
 }
-
