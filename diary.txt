@@ -8,9 +8,6 @@ keyboard:
 
     // todo
     dragon has randomly generated attack phrase
-    victory and defeat images
-    potions?
-    health and mana regeneration on victory
     get xp on win
     reach end of level
     dragon scale armor
