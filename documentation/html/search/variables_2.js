@@ -5,5 +5,6 @@ var searchData=
   ['display_5fwidth_2',['DISPLAY_WIDTH',['../class_constants.html#a9d59413549cf958d526550803143bd05',1,'Constants']]],
   ['dragon_3',['dragon',['../class_game_assets.html#aef0f265ce81aa3914839994dc40b5c3b',1,'GameAssets']]],
   ['dragon_5farmor_5finit_4',['DRAGON_ARMOR_INIT',['../class_constants.html#a043a16269d93e6f0170abfb4e626e06f',1,'Constants']]],
-  ['dragon_5farmor_5fper_5flevel_5',['DRAGON_ARMOR_PER_LEVEL',['../class_constants.html#aa186fec9996a289539a1fffa4f49deb9',1,'Constants']]]
+  ['dragon_5farmor_5fper_5flevel_5',['DRAGON_ARMOR_PER_LEVEL',['../class_constants.html#aa186fec9996a289539a1fffa4f49deb9',1,'Constants']]],
+  ['dragon_5fquote_5fgenerator_6',['dragon_quote_generator',['../class_constants.html#a1376bdcdd03a17ef169d3b0b164d17b5',1,'Constants']]]
 ];

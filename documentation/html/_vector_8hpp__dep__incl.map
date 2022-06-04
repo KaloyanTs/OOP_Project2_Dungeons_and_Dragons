@@ -1,7 +1,7 @@
 <map id="C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Vector.hpp" name="C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Vector.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,175,61"/>
 <area shape="rect" id="node2" href="$_inventar_8hpp.html" title=" " alt="" coords="311,837,480,893"/>
-<area shape="rect" id="node17" href="$_stack_8hpp.html" title=" " alt="" coords="424,109,593,165"/>
+<area shape="rect" id="node17" href="$_stack_8hpp.html" title=" " alt="" coords="552,109,721,165"/>
 <area shape="rect" id="node3" href="$_inventar_8cpp.html" title=" " alt="" coords="311,941,480,997"/>
 <area shape="rect" id="node4" href="$_player_8hpp.html" title=" " alt="" coords="1136,941,1305,997"/>
 <area shape="rect" id="node5" href="$_human_8hpp.html" title=" " alt="" coords="1127,1045,1296,1101"/>
@@ -16,13 +16,14 @@
 <area shape="rect" id="node10" href="$main_8cpp.html" title=" " alt="" coords="1320,1357,1489,1413"/>
 <area shape="rect" id="node13" href="$_mage_8cpp.html" title=" " alt="" coords="1513,1149,1683,1205"/>
 <area shape="rect" id="node16" href="$_warrior_8cpp.html" title=" " alt="" coords="740,1149,909,1205"/>
-<area shape="rect" id="node18" href="$_grammar_8hpp.html" title=" " alt="" coords="923,213,1092,269"/>
-<area shape="rect" id="node19" href="$_armor_name_generator_8hpp.html" title=" " alt="" coords="779,317,1011,373"/>
-<area shape="rect" id="node42" href="$_grammar_8cpp.html" title=" " alt="" coords="1036,317,1205,373"/>
-<area shape="rect" id="node43" href="$_potion_name_generator_8hpp.html" title=" " alt="" coords="1230,317,1465,373"/>
-<area shape="rect" id="node45" href="$_spell_name_generator_8hpp.html" title=" " alt="" coords="1489,317,1715,373"/>
-<area shape="rect" id="node47" href="$_weapon_name_generator_8hpp.html" title=" " alt="" coords="510,317,755,373"/>
-<area shape="rect" id="node20" href="$_armor_name_generator_8cpp.html" title=" " alt="" coords="779,421,1011,477"/>
+<area shape="rect" id="node18" href="$_grammar_8hpp.html" title=" " alt="" coords="1067,213,1236,269"/>
+<area shape="rect" id="node19" href="$_armor_name_generator_8hpp.html" title=" " alt="" coords="1035,317,1267,373"/>
+<area shape="rect" id="node42" href="$_dragon_quote_generator_8hpp.html" title=" " alt="" coords="1485,317,1724,373"/>
+<area shape="rect" id="node44" href="$_grammar_8cpp.html" title=" " alt="" coords="1292,317,1461,373"/>
+<area shape="rect" id="node45" href="$_potion_name_generator_8hpp.html" title=" " alt="" coords="1749,317,1983,373"/>
+<area shape="rect" id="node47" href="$_spell_name_generator_8hpp.html" title=" " alt="" coords="515,317,742,373"/>
+<area shape="rect" id="node49" href="$_weapon_name_generator_8hpp.html" title=" " alt="" coords="766,317,1011,373"/>
+<area shape="rect" id="node20" href="$_armor_name_generator_8cpp.html" title=" " alt="" coords="1230,421,1462,477"/>
 <area shape="rect" id="node21" href="$_constants_8hpp.html" title=" " alt="" coords="1036,421,1205,477"/>
 <area shape="rect" id="node22" href="$_armor_8hpp.html" title=" " alt="" coords="67,733,236,789"/>
 <area shape="rect" id="node24" href="$_constants_8cpp.html" title=" " alt="" coords="888,525,1057,581"/>
@@ -44,7 +45,8 @@
 <area shape="rect" id="node36" href="$_spell_8cpp.html" title=" " alt="" coords="697,837,867,893"/>
 <area shape="rect" id="node38" href="$_troop_8cpp.html" title=" " alt="" coords="1136,837,1305,893"/>
 <area shape="rect" id="node40" href="$_weapon_8cpp.html" title=" " alt="" coords="891,837,1060,893"/>
-<area shape="rect" id="node44" href="$_potion_name_generator_8cpp.html" title=" " alt="" coords="1230,421,1465,477"/>
-<area shape="rect" id="node46" href="$_spell_name_generator_8cpp.html" title=" " alt="" coords="1489,421,1715,477"/>
-<area shape="rect" id="node48" href="$_weapon_name_generator_8cpp.html" title=" " alt="" coords="510,421,755,477"/>
+<area shape="rect" id="node43" href="$_dragon_quote_generator_8cpp.html" title=" " alt="" coords="1487,421,1725,477"/>
+<area shape="rect" id="node46" href="$_potion_name_generator_8cpp.html" title=" " alt="" coords="1750,421,1985,477"/>
+<area shape="rect" id="node48" href="$_spell_name_generator_8cpp.html" title=" " alt="" coords="515,421,742,477"/>
+<area shape="rect" id="node50" href="$_weapon_name_generator_8cpp.html" title=" " alt="" coords="766,421,1011,477"/>
 </map>

@@ -20,6 +20,7 @@ var hierarchy =
     [ "GameAssets", "class_game_assets.html", null ],
     [ "Grammar", "class_grammar.html", [
       [ "ArmorNameGenerator", "class_armor_name_generator.html", null ],
+      [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", null ],
       [ "PotionNameGenerator", "class_potion_name_generator.html", null ],
       [ "SpellNameGenerator", "class_spell_name_generator.html", null ],
       [ "WeaponNameGenerator", "class_weapon_name_generator.html", null ]

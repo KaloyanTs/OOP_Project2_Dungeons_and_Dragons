@@ -5,6 +5,7 @@ var annotated_dup =
     [ "Constants", "class_constants.html", "class_constants" ],
     [ "Dragon", "class_dragon.html", "class_dragon" ],
     [ "DragonEquipment", "class_dragon_equipment.html", null ],
+    [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", "class_dragon_quote_generator" ],
     [ "Equipment", "class_equipment.html", "class_equipment" ],
     [ "EventGenerator", "class_event_generator.html", "class_event_generator" ],
     [ "Game", "class_game.html", "class_game" ],

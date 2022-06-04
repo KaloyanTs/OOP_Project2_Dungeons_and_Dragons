@@ -4,6 +4,7 @@ var dir_beb673cf36555ddf2dd4c66b8fa54fdd =
     [ "ArmorNameGenerator.cpp.obj.d", "_armor_name_generator_8cpp_8obj_8d.html", null ],
     [ "Constants.cpp.obj.d", "_constants_8cpp_8obj_8d.html", null ],
     [ "Dragon.cpp.obj.d", "_dragon_8cpp_8obj_8d.html", null ],
+    [ "DragonQuoteGenerator.cpp.obj.d", "_dragon_quote_generator_8cpp_8obj_8d.html", null ],
     [ "Equipment.cpp.obj.d", "_equipment_8cpp_8obj_8d.html", null ],
     [ "Game.cpp.obj.d", "_game_8cpp_8obj_8d.html", null ],
     [ "GameAssets.cpp.obj.d", "_game_assets_8cpp_8obj_8d.html", null ],

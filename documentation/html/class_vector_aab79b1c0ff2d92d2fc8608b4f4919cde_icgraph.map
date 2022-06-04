@@ -1,19 +1,22 @@
 <map id="Vector::push_back" name="Vector::push_back">
-<area shape="rect" id="node1" title=" " alt="" coords="733,199,864,226"/>
-<area shape="rect" id="node2" href="$class_grammar.html#a454e34a8fa75bc1d6f67442152d29801" title=" " alt="" coords="555,143,685,170"/>
-<area shape="rect" id="node7" href="$class_map.html#a7e6cf7ba89f84c99829ff4cd7eaa46c3" title=" " alt="" coords="580,199,660,226"/>
-<area shape="rect" id="node8" href="$class_stack.html#adc09c8f5b94e9f4a951c8ba1c8083ade" title=" " alt="" coords="574,261,666,287"/>
+<area shape="rect" id="node1" title=" " alt="" coords="733,233,864,259"/>
+<area shape="rect" id="node2" href="$class_grammar.html#a454e34a8fa75bc1d6f67442152d29801" title=" " alt="" coords="555,177,685,203"/>
+<area shape="rect" id="node8" href="$class_map.html#a7e6cf7ba89f84c99829ff4cd7eaa46c3" title=" " alt="" coords="580,233,660,259"/>
+<area shape="rect" id="node9" href="$class_stack.html#adc09c8f5b94e9f4a951c8ba1c8083ade" title=" " alt="" coords="574,294,666,321"/>
 <area shape="rect" id="node3" href="$class_armor_name_generator.html#a83017d118d0ebca6ed38a31ef692118f" title=" " alt="" coords="344,5,500,47"/>
-<area shape="rect" id="node4" href="$class_potion_name_generator.html#a66f510910226b625b3e9964dc44872b3" title=" " alt="" coords="343,71,501,112"/>
-<area shape="rect" id="node5" href="$class_spell_name_generator.html#ab79cfc357faac9a6c46ccc5dcc83517f" title=" " alt="" coords="347,136,497,177"/>
-<area shape="rect" id="node6" href="$class_weapon_name_generator.html#a99d30430e6a5b89b624bfea55a73aea9" title=" " alt="" coords="337,201,507,243"/>
-<area shape="rect" id="node9" href="$class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395" title=" " alt="" coords="339,267,505,294"/>
-<area shape="rect" id="node10" href="$class_armor.html#acd45fb2b9a7b3abfb16daefdf5585da0" title=" " alt="" coords="176,191,276,218"/>
-<area shape="rect" id="node12" href="$class_potion.html#aae9f5ebf647ac8c8ff2ee9e676503d7d" title=" " alt="" coords="174,242,278,269"/>
-<area shape="rect" id="node14" href="$class_spell.html#aaf8f33bfee5eb15eac62617a02328678" title=" " alt="" coords="182,293,270,319"/>
-<area shape="rect" id="node16" href="$class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1" title=" " alt="" coords="163,343,289,370"/>
-<area shape="rect" id="node11" href="$class_armor.html#a66a7dd54cf4327b8946b8599e058ec8d" title=" " alt="" coords="12,191,108,218"/>
-<area shape="rect" id="node13" href="$class_potion.html#aee7adfeb54ef87dfb611367795711235" title=" " alt="" coords="11,242,109,269"/>
-<area shape="rect" id="node15" href="$class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae" title=" " alt="" coords="15,293,105,319"/>
-<area shape="rect" id="node17" href="$class_weapon.html#ac1be11d5958f7128da493e046fb6f83e" title=" " alt="" coords="5,343,115,370"/>
+<area shape="rect" id="node4" href="$class_dragon_quote_generator.html#afd71b86e9cd0cfc14a7e0ff0931c762e" title=" " alt="" coords="341,71,503,112"/>
+<area shape="rect" id="node5" href="$class_potion_name_generator.html#a66f510910226b625b3e9964dc44872b3" title=" " alt="" coords="343,136,501,177"/>
+<area shape="rect" id="node6" href="$class_spell_name_generator.html#ab79cfc357faac9a6c46ccc5dcc83517f" title=" " alt="" coords="347,201,497,243"/>
+<area shape="rect" id="node7" href="$class_weapon_name_generator.html#a99d30430e6a5b89b624bfea55a73aea9" title=" " alt="" coords="337,267,507,308"/>
+<area shape="rect" id="node10" href="$class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395" title=" " alt="" coords="339,333,505,359"/>
+<area shape="rect" id="node11" href="$class_armor.html#acd45fb2b9a7b3abfb16daefdf5585da0" title=" " alt="" coords="176,231,276,258"/>
+<area shape="rect" id="node13" href="$class_dragon.html#ad7224beef7bfced11ff35157b78fabaf" title=" " alt="" coords="170,282,282,309"/>
+<area shape="rect" id="node15" href="$class_potion.html#aae9f5ebf647ac8c8ff2ee9e676503d7d" title=" " alt="" coords="174,333,278,359"/>
+<area shape="rect" id="node17" href="$class_spell.html#aaf8f33bfee5eb15eac62617a02328678" title=" " alt="" coords="182,383,270,410"/>
+<area shape="rect" id="node19" href="$class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1" title=" " alt="" coords="163,434,289,461"/>
+<area shape="rect" id="node12" href="$class_armor.html#a66a7dd54cf4327b8946b8599e058ec8d" title=" " alt="" coords="12,231,108,258"/>
+<area shape="rect" id="node14" href="$class_dragon.html#a507c01dc7d1f90b0f67cac4587bba390" title=" " alt="" coords="9,282,111,309"/>
+<area shape="rect" id="node16" href="$class_potion.html#aee7adfeb54ef87dfb611367795711235" title=" " alt="" coords="11,333,109,359"/>
+<area shape="rect" id="node18" href="$class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae" title=" " alt="" coords="15,383,105,410"/>
+<area shape="rect" id="node20" href="$class_weapon.html#ac1be11d5958f7128da493e046fb6f83e" title=" " alt="" coords="5,434,115,461"/>
 </map>

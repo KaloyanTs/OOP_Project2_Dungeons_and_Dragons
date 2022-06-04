@@ -20,6 +20,10 @@ var files_dup =
     [ "DragonEquipment.hpp", "_dragon_equipment_8hpp.html", [
       [ "DragonEquipment", "class_dragon_equipment.html", null ]
     ] ],
+    [ "DragonQuoteGenerator.cpp", "_dragon_quote_generator_8cpp.html", null ],
+    [ "DragonQuoteGenerator.hpp", "_dragon_quote_generator_8hpp.html", [
+      [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", "class_dragon_quote_generator" ]
+    ] ],
     [ "Equipment.cpp", "_equipment_8cpp.html", null ],
     [ "Equipment.hpp", "_equipment_8hpp.html", [
       [ "Equipment", "class_equipment.html", "class_equipment" ]
