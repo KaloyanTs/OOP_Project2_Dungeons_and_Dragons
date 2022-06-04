@@ -7,8 +7,6 @@ keyboard:
     map is the owner of the player (to be changed to Game)
 
     // todo
-    dragon has randomly generated attack phrase
     get xp on win
-    reach end of level
     dragon scale armor
     // todo
