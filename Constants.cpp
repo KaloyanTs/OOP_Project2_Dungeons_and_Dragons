@@ -3,6 +3,7 @@
 const Printer Constants::STDOUT(std::cout);
 const MultipleImagePrinter Constants::STDOUT_MULTI(std::cout);
 
+const DragonQuoteGenerator Constants::dragon_quote_generator;
 const WeaponNameGenerator Constants::weapon_name_generator;
 const ArmorNameGenerator Constants::armor_name_generator;
 const SpellNameGenerator Constants::spell_name_generator;

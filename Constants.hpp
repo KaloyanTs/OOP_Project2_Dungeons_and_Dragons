@@ -4,6 +4,7 @@
 #include "ArmorNameGenerator.hpp"
 #include "SpellNameGenerator.hpp"
 #include "PotionNameGenerator.hpp"
+#include "DragonQuoteGenerator.hpp"
 #include "MultipleImagePrinter.hpp"
 
 // todo consider using #define for speed
@@ -48,6 +49,7 @@ public:
     static const ArmorNameGenerator armor_name_generator;
     static const SpellNameGenerator spell_name_generator;
     static const PotionNameGenerator potion_name_generator;
+    static const DragonQuoteGenerator dragon_quote_generator;
 };
 
 #endif
