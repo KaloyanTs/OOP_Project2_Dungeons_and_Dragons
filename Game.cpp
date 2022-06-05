@@ -1,10 +1,10 @@
 #include "Game.hpp"
 
-Game::Game() : map(nullptr), pl(nullptr)
+Game::Game() : map(nullptr), pl(nullptr), running(false)
 {
 }
 
-bool Game::run()
+void Game::newGame()
 {
     Constants::STDOUT(GameAssets::game_logo);
     Constants::STDOUT("\tPress any key to play...");
@@ -22,8 +22,14 @@ bool Game::run()
     if (!*name)
         strcpy(name, "unknown");
     pl = Map::getHero(chosen - '0' - 1, name);
-    Map m(pl, 1);
-    m.run();     // todo enum for the finish (DIE,SUCCESS,CLOSE)
-                 // todo in while cycle until !=SUCCESS
-    return true; // fix upper line
+    map = new Map(pl, 1);
+}
+
+Constants::LEVEL_STATE Game::run()
+{
+    if (running)
+        return Constants::LEVEL_STATE::ERROR;
+    return map->run(); // todo enum for the finish (DIE,SUCCESS,CLOSE)
+                       // todo in while cycle until !=SUCCESS
+                       // return Constants::LEVEL_STATE::PASS; // fix upper line
 }

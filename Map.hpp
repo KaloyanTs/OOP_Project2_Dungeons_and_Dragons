@@ -40,7 +40,7 @@ public:
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;
     ~Map();
-    void run();
+    Constants::LEVEL_STATE run();
     static Player *getHero(unsigned index, const String &name = "unknown");
 };
 

@@ -5,6 +5,7 @@ int main()
 {
     srand(time(0));
     Game dnd;
+    dnd.newGame();
     dnd.run();
 
     return 0;

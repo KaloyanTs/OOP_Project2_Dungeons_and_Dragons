@@ -8,11 +8,16 @@ class Game
 {
     Map *map;
     Player *pl;
+    bool running;
 
 public:
     Game();
 
-    bool run();
+    void load();
+
+    void newGame();
+
+    Constants::LEVEL_STATE run();
 };
 
 #endif

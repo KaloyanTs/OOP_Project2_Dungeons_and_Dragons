@@ -20,6 +20,13 @@ public:
         SUCCESSFULL,
         FAILED
     };
+    enum class LEVEL_STATE
+    {
+        ERROR,
+        PASS,
+        DIE,
+        CLOSE
+    };
     static const Printer STDOUT;
     static const MultipleImagePrinter STDOUT_MULTI;
     static const unsigned DRAGON_ARMOR_INIT = 15;

@@ -173,7 +173,7 @@ Map::~Map()
     delete pl;
 }
 
-void Map::run()
+Constants::LEVEL_STATE Map::run()
 {
     running = true;
     Constants::ACTION_STATE st;
@@ -202,6 +202,7 @@ void Map::run()
                     print();
                     std::clog << event->getErrorMsg() << '\n';
                     getch();
+                    return Constants::LEVEL_STATE::DIE;
                 }
             }
             else if (pl->getY() == rows - 1 && pl->getX() == cols)
@@ -209,8 +210,11 @@ void Map::run()
                 Constants::STDOUT("Level passed successfully!");
                 getch();
                 running = false;
+                return Constants::LEVEL_STATE::PASS;
             }
     } while (running && pl->alive());
+    running = false;
+    return (pl->alive() ? Constants::LEVEL_STATE::CLOSE : Constants::LEVEL_STATE::DIE);
 }
 
 Map::Map(const String &path)
