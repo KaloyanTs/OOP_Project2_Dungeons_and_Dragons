@@ -9,9 +9,15 @@ class Game
     Map *map;
     Player *pl;
     bool running;
+    unsigned level;
 
 public:
     Game();
+    ~Game()
+    {
+        delete map;
+        delete pl;
+    } // improve ask for saving
 
     void load();
 

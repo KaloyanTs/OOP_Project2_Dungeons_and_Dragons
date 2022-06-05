@@ -61,6 +61,8 @@ public:
     virtual float getMana() const = 0;
 
     virtual void regenerate(float percentage = 0) = 0;
+
+    void reset() { y = x = 0; }
 };
 
 template <typename ALLOWED>

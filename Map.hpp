@@ -35,7 +35,7 @@ class Map
     EventGenerator *print() const;
 
 public:
-    Map(const String &path);
+    Map(Player *p, const String &path);
     Map(Player *p, unsigned lvl = 1);
     Map(const Map &other) = delete;
     Map &operator=(const Map &other) = delete;

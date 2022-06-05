@@ -170,7 +170,6 @@ Map::~Map()
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
-    delete pl;
 }
 
 Constants::LEVEL_STATE Map::run()
@@ -217,8 +216,8 @@ Constants::LEVEL_STATE Map::run()
     return (pl->alive() ? Constants::LEVEL_STATE::CLOSE : Constants::LEVEL_STATE::DIE);
 }
 
-Map::Map(const String &path)
-    : data(nullptr), pl(nullptr),
+Map::Map(Player *p, const String &path)
+    : data(nullptr), pl(p),
       running(false), level(0), rows(0), cols(0), dragonCount(0),
       treasureCount(0)
 {
@@ -229,7 +228,6 @@ Map::Map(const String &path)
         std::cerr << "No such map found!\n";
         return;
     }
-    pl = Map::getHero(rand() % Constants::HERO_TYPES); // fix must be read!!!!!!
     ifs >> level >> rows >> cols;
 
     unsigned buf, y, x, bonus, cost;

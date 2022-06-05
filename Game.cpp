@@ -1,6 +1,6 @@
 #include "Game.hpp"
 
-Game::Game() : map(nullptr), pl(nullptr), running(false)
+Game::Game() : map(nullptr), pl(nullptr), running(false), level(1)
 {
 }
 
@@ -22,14 +22,30 @@ void Game::newGame()
     if (!*name)
         strcpy(name, "unknown");
     pl = Map::getHero(chosen - '0' - 1, name);
-    map = new Map(pl, 1);
+    map = new Map(pl, level);
 }
 
 Constants::LEVEL_STATE Game::run()
 {
     if (running)
         return Constants::LEVEL_STATE::ERROR;
-    return map->run(); // todo enum for the finish (DIE,SUCCESS,CLOSE)
-                       // todo in while cycle until !=SUCCESS
-                       // return Constants::LEVEL_STATE::PASS; // fix upper line
+    Constants::LEVEL_STATE tmp;
+    while (true)
+    {
+        std::cout << "Begin:\n";
+        tmp = map->run();
+        if (tmp == Constants::LEVEL_STATE::PASS)
+        {
+            delete map;
+            map = new Map(pl, ++level);
+            pl->reset();
+        }
+        else
+            return tmp;
+    }
+
+    return Constants::LEVEL_STATE::ERROR;
+    // todo enum for the finish (DIE,SUCCESS,CLOSE)
+    // todo in while cycle until !=SUCCESS
+    // return Constants::LEVEL_STATE::PASS; // fix upper line
 }
