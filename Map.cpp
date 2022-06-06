@@ -75,6 +75,7 @@ EventGenerator *Map::print() const
 {
     // fix USE PRINTER
     system("cls");
+    Constants::STDOUT("Level ")(level)("\n\n");
     bool plHere = false;
     for (unsigned i = 0; i < rows; ++i)
     {
