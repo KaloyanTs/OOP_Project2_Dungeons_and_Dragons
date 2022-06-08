@@ -42,4 +42,3 @@ void Troop::regen(float percentage)
             health = maxHealth;
     }
 }
-// todo correct float comparison

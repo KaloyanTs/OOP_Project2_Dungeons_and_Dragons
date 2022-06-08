@@ -90,8 +90,6 @@ bool Player::move(bool &run, bool &pause, ALLOWED f)
         ++x;
         return true;
     }
-    // else if (c == KEYS::EXIT)//todo should it be here
-    //     return run = false;
     else if (c == 'i')
     {
         inventar();

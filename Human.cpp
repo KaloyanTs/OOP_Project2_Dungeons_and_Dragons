@@ -8,7 +8,6 @@ void Human::print() const
 
 void Human::printBrief() const
 {
-    // todo add equipments
     Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel())('\n');
     Troop::print((equip[0] ? equip[0]->getBonus() : 0));
     if (equip[2])

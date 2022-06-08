@@ -21,8 +21,7 @@ void Game::start()
     {
         try
         {
-            load(); // todo if not found throw exception
-            // todo error handling
+            load();
         }
         catch (const MyException &err)
         {
