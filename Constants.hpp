@@ -29,6 +29,7 @@ public:
     };
     static const Printer STDOUT;
     static const MultipleImagePrinter STDOUT_MULTI;
+    static const unsigned INPUT_LIMIT = 100;
     static const unsigned DRAGON_ARMOR_INIT = 15;
     static const unsigned DRAGON_ARMOR_PER_LEVEL = 5;
     static const unsigned EQUIPMENT_COUNT = 3;

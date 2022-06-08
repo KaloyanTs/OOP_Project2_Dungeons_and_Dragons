@@ -35,8 +35,28 @@ void Game::start()
 
 void Game::load()
 {
-    // todo ask for name and search file
-    // todo use exceptions
+    char name[Constants::INPUT_LIMIT];
+    strcpy(name, "\\games\\");
+    Constants::STDOUT("enter name of game to be loaded:\n");
+    std::cin.getline(name + 7, Constants::INPUT_LIMIT);
+    // fix use constants
+    strcat(name, ".dndgame");
+    std::ifstream ifs(name);
+    if (!ifs)
+        throw "ERROR!"; // fix use my exception
+    char type;
+    ifs >> type;
+    // if (type == '1')
+    //     pl = new Human(ifs);
+    // if (type == '2')
+    //     pl = new Mage(ifs);
+    // if (type == '3')
+    //     pl = new Warrior(ifs);
+    // ifs >> name + 7; // fix use constants
+    // strcat(name, ".dndmap");
+    // map = new Map(pl, name);
+
+    ifs.close();
 }
 
 void Game::newGame()
@@ -49,9 +69,9 @@ void Game::newGame()
     {
         chosen = getch();
     } while (chosen - '0' - 1 >= Constants::HERO_TYPES || chosen - '0' - 1 < 0);
-    char name[100]; // fix use String
+    char name[Constants::INPUT_LIMIT]; // fix use String
     Constants::STDOUT("Choose name for your hero:\t");
-    std::cin.getline(name, 100);
+    std::cin.getline(name, Constants::INPUT_LIMIT);
     if (!*name)
         strcpy(name, "unknown");
     pl = Map::getHero(chosen - '0' - 1, name);

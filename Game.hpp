@@ -21,7 +21,7 @@ public:
     {
         delete map;
         delete pl;
-    } // improve ask for saving
+    }
 
     void start();
 
