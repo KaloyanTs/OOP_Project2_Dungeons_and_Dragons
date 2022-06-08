@@ -39,7 +39,7 @@ public:
     virtual ~Player();
 
     template <typename ALLOWED>
-    bool move(bool &run, ALLOWED f);
+    bool move(bool &run, bool &pause, ALLOWED f);
 
     unsigned getY() const { return y; }
     unsigned getX() const { return x; }
@@ -66,7 +66,7 @@ public:
 };
 
 template <typename ALLOWED>
-bool Player::move(bool &run, ALLOWED f)
+bool Player::move(bool &run, bool &pause, ALLOWED f)
 {
     char c = getch();
     if (c == KEYS::UP && f(y - 1, x))
@@ -89,12 +89,17 @@ bool Player::move(bool &run, ALLOWED f)
         ++x;
         return true;
     }
-    else if (c == KEYS::EXIT)
-        return run = false;
+    // else if (c == KEYS::EXIT)//todo should it be here
+    //     return run = false;
     else if (c == 'i')
     {
         inventar();
         return true;
+    }
+    else if (c == 'p')
+    {
+        pause = true;
+        return false;
     }
     return false;
 }

@@ -27,12 +27,17 @@ class Map
     Vector<EventGenerator *> events;
     Player *pl;
     bool running;
+    bool pause;
 
     void generateMap() const;
 
     size_t fib(unsigned lvl, unsigned val1, unsigned val2) const;
     bool isReachable(unsigned y, unsigned x) const;
     EventGenerator *print() const;
+
+    void menu(); // todo should it be public
+
+    void saveProgress() const; // todo should it be public
 
 public:
     Map(Player *p, const String &path);

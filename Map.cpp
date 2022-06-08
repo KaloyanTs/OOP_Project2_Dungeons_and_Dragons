@@ -20,7 +20,7 @@ void Map::generateMap() const
 }
 
 Map::Map(Player *p, unsigned lvl)
-    : running(false), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
+    : running(false), pause(false), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
       data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
       potionCount(fib(lvl, 1, 2)),
       events(dragonCount + treasureCount + potionCount),
@@ -180,7 +180,7 @@ Constants::LEVEL_STATE Map::run()
     EventGenerator *event = print();
     do
     {
-        if (pl->move(running, [&](unsigned y, unsigned x) -> bool
+        if (pl->move(running, pause, [&](unsigned y, unsigned x) -> bool
                      { return (y == (rows - 1) && x == cols) ||
                               y < rows && x < cols &&
                                   data[y][x] != (char)MAP_SYMBOLS::WALL; }))
@@ -212,9 +212,36 @@ Constants::LEVEL_STATE Map::run()
                 running = false;
                 return Constants::LEVEL_STATE::PASS;
             }
+        if (pause)
+        {
+            menu();
+            if (running)
+                print();
+        }
     } while (running && pl->alive());
     running = false;
     return (pl->alive() ? Constants::LEVEL_STATE::CLOSE : Constants::LEVEL_STATE::DIE);
+}
+
+void Map::menu()
+{
+    system("cls");
+    char c;
+    Constants::STDOUT("Press p to resume the game;\nPress s to save current progress;\nPress ` to exit without saving.");
+    // fix ask again before closing
+    while ((c = getch()) != 'p' && c != '`' && c != 's')
+    {
+    }
+    if (c == '`')
+        running = false;
+    else if (c == 's')
+        saveProgress();
+    pause = false;
+}
+
+void Map::saveProgress() const
+{
+    // fix real save with name of the save map is saved in different file
 }
 
 Map::Map(Player *p, const String &path)
