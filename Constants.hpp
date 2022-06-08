@@ -9,6 +9,19 @@
 
 // todo consider using #define for speed
 
+#define INITIAL_MINIMAL_BONUS 5
+#define MINIMUM_BONUS_PER_LEVEL 5
+
+#define INITIAL_MAXIMAL_BONUS 10
+#define MAXIMAL_BONUS_PER_LEVEL 25
+
+#define INITIAL_MINIMAL_COST 10
+#define COST_PER_LEVEL 10
+
+#define POTION_INITIAL_MINIMAL_COST 15
+#define POTION_INITIAL_MAXIMAL_COST 30
+#define POTION_COST_PER_LEVEL 7
+
 class Constants
 {
     Constants() {}
@@ -25,7 +38,8 @@ public:
         ERROR,
         PASS,
         DIE,
-        CLOSE
+        CLOSE,
+        PAUSE
     };
     static const Printer STDOUT;
     static const MultipleImagePrinter STDOUT_MULTI;
