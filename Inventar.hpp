@@ -19,6 +19,8 @@ public:
     bool put(const HeroEquipment &el);
     HeroEquipment *remove(unsigned index);
     size_t getCount() const { return m_size; }
+
+    void write(std::ofstream &ofs) const;
 };
 
 #endif

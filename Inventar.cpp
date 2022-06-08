@@ -42,3 +42,13 @@ HeroEquipment *Inventar::remove(unsigned index)
 {
     return pop_at(index);
 }
+
+void Inventar::write(std::ofstream &ofs) const
+{
+    ofs << m_size << '\n';
+    for (unsigned i = 0; i < m_size; ++i)
+    {
+        if (data[i])
+            data[i]->save(ofs);
+    }
+}
