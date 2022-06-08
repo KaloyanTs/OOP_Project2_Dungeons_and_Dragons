@@ -11,6 +11,10 @@ class Game
     bool running;
     unsigned level;
 
+    void newGame();
+
+    Constants::LEVEL_STATE run();
+
 public:
     Game();
     ~Game()
@@ -19,11 +23,9 @@ public:
         delete pl;
     } // improve ask for saving
 
+    void start();
+
     void load();
-
-    void newGame();
-
-    Constants::LEVEL_STATE run();
 };
 
 #endif

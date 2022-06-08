@@ -229,7 +229,7 @@ void Map::menu()
     char c;
     Constants::STDOUT("Press p to resume the game;\nPress s to save current progress;\nPress ` to exit without saving.");
     // fix ask again before closing
-    while ((c = getch()) != 'p' && c != '`' && c != 's')
+    while ((c = getch()) != 'p' && c != '`' && c != 's' && c != 'l')
     {
     }
     if (c == '`')

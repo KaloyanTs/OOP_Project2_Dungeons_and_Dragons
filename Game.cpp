@@ -1,14 +1,47 @@
 #include "Game.hpp"
 
-Game::Game() : map(nullptr), pl(nullptr), running(false), level(1)
+Game::Game() : map(nullptr), pl(nullptr), running(false), level(0)
 {
+}
+
+void Game::start()
+{
+    // todo enable Constants::STDOUT(GameAssets::game_logo);
+    // todo enable Constants::STDOUT("\tPress any key to play...");
+    getch();
+    system("cls");
+    Constants::STDOUT("Press l to load game or n to begin new game\n");
+    char c;
+    while ((c = getch()) != 'l' && c != 'n')
+    {
+    }
+    try
+    {
+        if (c == 'l')
+        {
+            load(); // todo if not found throw exception
+            // todo error handling
+        }
+        else
+            newGame();
+        Constants::LEVEL_STATE res = run();
+    }
+    catch (const char *msg)
+    {
+        return;
+    } // fix use my own exception class
+    // todo switch cases for res and print appropriate messages
+}
+
+void Game::load()
+{
+    // todo ask for name and search file
+    // todo use exceptions
 }
 
 void Game::newGame()
 {
-    Constants::STDOUT(GameAssets::game_logo);
-    Constants::STDOUT("\tPress any key to play...");
-    getch();
+    level = 1;
     system("cls");
     Constants::STDOUT("Choose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n");
     char chosen;
@@ -41,7 +74,10 @@ Constants::LEVEL_STATE Game::run()
             pl->reset();
         }
         else
+        {
+            running = false;
             return tmp;
+        }
     }
 
     return Constants::LEVEL_STATE::ERROR;
