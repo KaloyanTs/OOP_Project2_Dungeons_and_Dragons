@@ -6,5 +6,6 @@ var searchData=
   ['info_5flanguage_5fstandard_5fdefault_3',['info_language_standard_default',['../_c_make_c_compiler_id_8c.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCXXCompilerId.cpp']]],
   ['info_5fplatform_4',['info_platform',['../_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
   ['init_5fcapacity_5',['INIT_CAPACITY',['../class_vector.html#a958962153e62865ea1ed0a2f4f140836',1,'Vector']]],
-  ['inventar_5flimit_6',['INVENTAR_LIMIT',['../class_constants.html#a17b65027f16902896598a7657cee740b',1,'Constants']]]
+  ['input_5flimit_6',['INPUT_LIMIT',['../class_constants.html#a19fda6445e8c370200e584e040b4a78c',1,'Constants']]],
+  ['inventar_5flimit_7',['INVENTAR_LIMIT',['../class_constants.html#a17b65027f16902896598a7657cee740b',1,'Constants']]]
 ];

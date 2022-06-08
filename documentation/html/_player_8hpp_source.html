@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('_player_8hpp_source.html',''); initRes
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ALLOWED&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_player.html#a558196c90abefe4d2e1781a6955383be">move</a>(<span class="keywordtype">bool</span> &amp;run, ALLOWED f);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">move</a>(<span class="keywordtype">bool</span> &amp;run, <span class="keywordtype">bool</span> &amp;pause, ALLOWED f);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_player.html#af8e08c2349e8a6a177e102b28eadcbd2">   44</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_function" href="class_player.html#af8e08c2349e8a6a177e102b28eadcbd2">getY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> y; }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1">   45</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_function" href="class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1">getX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> x; }</div>
@@ -150,43 +150,50 @@ $(document).ready(function(){initNavTree('_player_8hpp_source.html',''); initRes
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_player.html#a01924d190e773c8a27c0071d23986bbd">   61</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_player.html#a01924d190e773c8a27c0071d23986bbd">getMana</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">   63</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">regenerate</a>(<span class="keywordtype">float</span> percentage = 0) = 0;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ALLOWED&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_player.html#a558196c90abefe4d2e1781a6955383be">   67</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_player.html#a558196c90abefe4d2e1781a6955383be">Player::move</a>(<span class="keywordtype">bool</span> &amp;run, ALLOWED f)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">char</span> c = getch();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211afbaedde498cdead4f2780217646e9ba1">KEYS::UP</a> &amp;&amp; f(y - 1, x))</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        --y;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211ac4e0e4e3118472beeb2ae75827450f1f">KEYS::DOWN</a> &amp;&amp; f(y + 1, x))</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        ++y;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a684d325a7303f52e64011467ff5c5758">KEYS::LEFT</a> &amp;&amp; f(y, x - 1))</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        --x;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a21507b40c80068eda19865706fdc2403">KEYS::RIGHT</a> &amp;&amp; f(y, x + 1))</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        ++x;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211aa42b2fb0e720a080e79a92f4ca97d927">KEYS::EXIT</a>)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> run = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;i&#39;</span>)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        inventar();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a>() { y = x = 0; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ALLOWED&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">   69</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">Player::move</a>(<span class="keywordtype">bool</span> &amp;run, <span class="keywordtype">bool</span> &amp;pause, ALLOWED f)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">char</span> c = getch();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211afbaedde498cdead4f2780217646e9ba1">KEYS::UP</a> &amp;&amp; f(y - 1, x))</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        --y;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211ac4e0e4e3118472beeb2ae75827450f1f">KEYS::DOWN</a> &amp;&amp; f(y + 1, x))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        ++y;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a684d325a7303f52e64011467ff5c5758">KEYS::LEFT</a> &amp;&amp; f(y, x - 1))</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        --x;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <a class="code hl_enumvalue" href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a21507b40c80068eda19865706fdc2403">KEYS::RIGHT</a> &amp;&amp; f(y, x + 1))</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        ++x;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// else if (c == KEYS::EXIT)//todo should it be here</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//     return run = false;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;i&#39;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        inventar();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;p&#39;</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        pause = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_dragon_8hpp_html"><div class="ttname"><a href="_dragon_8hpp.html">Dragon.hpp</a></div></div>
 <div class="ttc" id="a_inventar_8hpp_html"><div class="ttname"><a href="_inventar_8hpp.html">Inventar.hpp</a></div></div>
 <div class="ttc" id="a_player_8hpp_html_a3d813aac43b61a7297a93edd68dfb7d7"><div class="ttname"><a href="_player_8hpp.html#a3d813aac43b61a7297a93edd68dfb7d7">operator==</a></div><div class="ttdeci">bool operator==(char c, const KEYS &amp;k)</div><div class="ttdef"><b>Definition:</b> Player.cpp:11</div></div>
@@ -197,7 +204,7 @@ $(document).ready(function(){initNavTree('_player_8hpp_source.html',''); initRes
 <div class="ttc" id="a_player_8hpp_html_a917cb2ad6b731b390f8c57aa48656211ab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211ab50339a10e1de285ac99d4c3990b8693">KEYS::NONE</a></div><div class="ttdeci">@ NONE</div></div>
 <div class="ttc" id="a_player_8hpp_html_a917cb2ad6b731b390f8c57aa48656211ac4e0e4e3118472beeb2ae75827450f1f"><div class="ttname"><a href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211ac4e0e4e3118472beeb2ae75827450f1f">KEYS::DOWN</a></div><div class="ttdeci">@ DOWN</div></div>
 <div class="ttc" id="a_player_8hpp_html_a917cb2ad6b731b390f8c57aa48656211afbaedde498cdead4f2780217646e9ba1"><div class="ttname"><a href="_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211afbaedde498cdead4f2780217646e9ba1">KEYS::UP</a></div><div class="ttdeci">@ UP</div></div>
-<div class="ttc" id="aclass_constants_html_a92aeb5d8bf6bb3a3fd65212f3d325a38"><div class="ttname"><a href="class_constants.html#a92aeb5d8bf6bb3a3fd65212f3d325a38">Constants::EQUIPMENT_COUNT</a></div><div class="ttdeci">static const unsigned EQUIPMENT_COUNT</div><div class="ttdef"><b>Definition:</b> Constants.hpp:27</div></div>
+<div class="ttc" id="aclass_constants_html_a92aeb5d8bf6bb3a3fd65212f3d325a38"><div class="ttname"><a href="class_constants.html#a92aeb5d8bf6bb3a3fd65212f3d325a38">Constants::EQUIPMENT_COUNT</a></div><div class="ttdeci">static const unsigned EQUIPMENT_COUNT</div><div class="ttdef"><b>Definition:</b> Constants.hpp:35</div></div>
 <div class="ttc" id="aclass_dragon_html"><div class="ttname"><a href="class_dragon.html">Dragon</a></div><div class="ttdef"><b>Definition:</b> Dragon.hpp:10</div></div>
 <div class="ttc" id="aclass_hero_equipment_html"><div class="ttname"><a href="class_hero_equipment.html">HeroEquipment</a></div><div class="ttdef"><b>Definition:</b> HeroEquipment.hpp:7</div></div>
 <div class="ttc" id="aclass_inventar_html"><div class="ttname"><a href="class_inventar.html">Inventar</a></div><div class="ttdef"><b>Definition:</b> Inventar.hpp:10</div></div>
@@ -205,11 +212,12 @@ $(document).ready(function(){initNavTree('_player_8hpp_source.html',''); initRes
 <div class="ttc" id="aclass_player_html_a01924d190e773c8a27c0071d23986bbd"><div class="ttname"><a href="class_player.html#a01924d190e773c8a27c0071d23986bbd">Player::getMana</a></div><div class="ttdeci">virtual float getMana() const =0</div></div>
 <div class="ttc" id="aclass_player_html_a03bd4ab639c42919c70965940ab64dd5"><div class="ttname"><a href="class_player.html#a03bd4ab639c42919c70965940ab64dd5">Player::take</a></div><div class="ttdeci">bool take(const HeroEquipment &amp;) const</div><div class="ttdef"><b>Definition:</b> Player.cpp:16</div></div>
 <div class="ttc" id="aclass_player_html_a17e8922a96ebf4e647f8193bedb3facf"><div class="ttname"><a href="class_player.html#a17e8922a96ebf4e647f8193bedb3facf">Player::getAttack</a></div><div class="ttdeci">virtual float getAttack() const =0</div></div>
+<div class="ttc" id="aclass_player_html_a1af5d39f7bac2aeaa1e30c7dda2332fa"><div class="ttname"><a href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">Player::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> Player.hpp:65</div></div>
 <div class="ttc" id="aclass_player_html_a21467bf0b665bfce964fbe8aee8ae055"><div class="ttname"><a href="class_player.html#a21467bf0b665bfce964fbe8aee8ae055">Player::printBrief</a></div><div class="ttdeci">virtual void printBrief() const =0</div></div>
 <div class="ttc" id="aclass_player_html_a5176eb73a71d54dc2976e9f2821631d5"><div class="ttname"><a href="class_player.html#a5176eb73a71d54dc2976e9f2821631d5">Player::takeDamage</a></div><div class="ttdeci">virtual void takeDamage(float dmg)=0</div></div>
-<div class="ttc" id="aclass_player_html_a558196c90abefe4d2e1781a6955383be"><div class="ttname"><a href="class_player.html#a558196c90abefe4d2e1781a6955383be">Player::move</a></div><div class="ttdeci">bool move(bool &amp;run, ALLOWED f)</div><div class="ttdef"><b>Definition:</b> Player.hpp:67</div></div>
 <div class="ttc" id="aclass_player_html_a5a97887e33c7ba20a8dc11671d46e646"><div class="ttname"><a href="class_player.html#a5a97887e33c7ba20a8dc11671d46e646">Player::getHealth</a></div><div class="ttdeci">virtual float getHealth() const =0</div></div>
 <div class="ttc" id="aclass_player_html_a6b0ad3e5de326f9b30090186fcf5cc2a"><div class="ttname"><a href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">Player::regenerate</a></div><div class="ttdeci">virtual void regenerate(float percentage=0)=0</div></div>
+<div class="ttc" id="aclass_player_html_a6b4af8af17be94af69b06b6c470e2ed9"><div class="ttname"><a href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">Player::move</a></div><div class="ttdeci">bool move(bool &amp;run, bool &amp;pause, ALLOWED f)</div><div class="ttdef"><b>Definition:</b> Player.hpp:69</div></div>
 <div class="ttc" id="aclass_player_html_a6c811d2bd82845a7b2659a07bc5a5384"><div class="ttname"><a href="class_player.html#a6c811d2bd82845a7b2659a07bc5a5384">Player::printBattleState</a></div><div class="ttdeci">void printBattleState(Dragon &amp;) const</div><div class="ttdef"><b>Definition:</b> Player.cpp:67</div></div>
 <div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">virtual ~Player()</div><div class="ttdef"><b>Definition:</b> Player.cpp:21</div></div>
 <div class="ttc" id="aclass_player_html_a786aa953d350e5bc0d23b25c5640c46b"><div class="ttname"><a href="class_player.html#a786aa953d350e5bc0d23b25c5640c46b">Player::printStats</a></div><div class="ttdeci">virtual void printStats() const =0</div></div>

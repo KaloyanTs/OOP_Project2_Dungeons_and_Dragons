@@ -17,9 +17,6 @@ var files_dup =
     [ "Dragon.hpp", "_dragon_8hpp.html", [
       [ "Dragon", "class_dragon.html", "class_dragon" ]
     ] ],
-    [ "DragonEquipment.hpp", "_dragon_equipment_8hpp.html", [
-      [ "DragonEquipment", "class_dragon_equipment.html", null ]
-    ] ],
     [ "DragonQuoteGenerator.cpp", "_dragon_quote_generator_8cpp.html", null ],
     [ "DragonQuoteGenerator.hpp", "_dragon_quote_generator_8hpp.html", [
       [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", "class_dragon_quote_generator" ]
@@ -80,9 +77,6 @@ var files_dup =
     ] ],
     [ "Printer.hpp", "_printer_8hpp.html", [
       [ "Printer", "class_printer.html", "class_printer" ]
-    ] ],
-    [ "ScaleArmor.hpp", "_scale_armor_8hpp.html", [
-      [ "ScaleArmor", "class_scale_armor.html", null ]
     ] ],
     [ "Spell.cpp", "_spell_8cpp.html", null ],
     [ "Spell.hpp", "_spell_8hpp.html", [

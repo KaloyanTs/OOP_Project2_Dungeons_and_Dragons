@@ -5,5 +5,6 @@ var searchData=
   ['remove_2',['remove',['../class_inventar.html#a735e70349f5e932dbae0af0009741ceb',1,'Inventar::remove()'],['../class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6',1,'Vector::remove()']]],
   ['removefromboard_3',['removeFromBoard',['../class_event_generator.html#ad35c75e01dc0dd3597a84457ed5097e9',1,'EventGenerator']]],
   ['removelast_4',['removeLast',['../class_string.html#a1cf700a24a2aaafc08ee95d6aff52710',1,'String']]],
-  ['run_5',['run',['../class_game.html#a461460c2f0ce7f83467ab2786408a92b',1,'Game::run()'],['../class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3',1,'Map::run()']]]
+  ['reset_5',['reset',['../class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa',1,'Player']]],
+  ['run_6',['run',['../class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98',1,'Map']]]
 ];

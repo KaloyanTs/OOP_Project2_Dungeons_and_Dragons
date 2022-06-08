@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['left_0',['LEFT',['../_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a684d325a7303f52e64011467ff5c5758',1,'Player.hpp']]]
+  ['failed_0',['FAILED',['../class_constants.html#aead8da5c6a3d03a60f04eb732e9139a7ab9e14d9b2886bcff408b85aefa780419',1,'Constants']]],
+  ['free_1',['FREE',['../_map_8hpp.html#a4a7e0c5732be345f2b797033cf099241a88c189a42c87aa49d667fc8ab76bc323',1,'Map.hpp']]]
 ];

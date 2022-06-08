@@ -1,11 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,56,108"/>
-<area shape="rect" id="node2" href="$class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,81,187,108"/>
-<area shape="rect" id="node3" href="$class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a" title=" " alt="" coords="235,56,335,83"/>
-<area shape="rect" id="node4" href="$class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="248,107,321,133"/>
-<area shape="rect" id="node5" href="$class_player.html#ae1ea365eabdbe2f930e3a49347ab55bd" title=" " alt="" coords="391,5,483,32"/>
-<area shape="rect" id="node6" href="$class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1" title=" " alt="" coords="391,56,483,83"/>
-<area shape="rect" id="node7" href="$class_player.html#af8e08c2349e8a6a177e102b28eadcbd2" title=" " alt="" coords="390,107,485,133"/>
-<area shape="rect" id="node8" href="$class_player.html#a558196c90abefe4d2e1781a6955383be" title=" " alt="" coords="389,157,486,184"/>
-<area shape="rect" id="node9" href="$class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6" title=" " alt="" coords="383,208,492,235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node2" href="$class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90" title=" " alt="" coords="104,5,195,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a9f67e04bd108aa5943479bc17680a599" title=" " alt="" coords="243,5,332,32"/>
 </map>

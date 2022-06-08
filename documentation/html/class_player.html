@@ -123,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9686165e0f897e13e1c37f24773af6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a558196c90abefe4d2e1781a6955383be"><td class="memTemplParams" colspan="2">template&lt;typename ALLOWED &gt; </td></tr>
-<tr class="memitem:a558196c90abefe4d2e1781a6955383be"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_player.html#a558196c90abefe4d2e1781a6955383be">move</a> (bool &amp;run, ALLOWED f)</td></tr>
-<tr class="separator:a558196c90abefe4d2e1781a6955383be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memTemplParams" colspan="2">template&lt;typename ALLOWED &gt; </td></tr>
+<tr class="memitem:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">move</a> (bool &amp;run, bool &amp;pause, ALLOWED f)</td></tr>
+<tr class="separator:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8e08c2349e8a6a177e102b28eadcbd2"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af8e08c2349e8a6a177e102b28eadcbd2">getY</a> () const</td></tr>
 <tr class="separator:af8e08c2349e8a6a177e102b28eadcbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c7d58f89ff2bf0138b9d9248c3aec1"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1">getX</a> () const</td></tr>
@@ -158,6 +158,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01924d190e773c8a27c0071d23986bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b0ad3e5de326f9b30090186fcf5cc2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">regenerate</a> (float percentage=0)=0</td></tr>
 <tr class="separator:a6b0ad3e5de326f9b30090186fcf5cc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a> ()</td></tr>
+<tr class="separator:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -254,11 +256,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_ae1ea365eabdbe2f930e3a49347ab55bd_icgraph.png" border="0" usemap="#aclass_player_ae1ea365eabdbe2f930e3a49347ab55bd_icgraph" alt=""/></div>
 <map name="aclass_player_ae1ea365eabdbe2f930e3a49347ab55bd_icgraph" id="aclass_player_ae1ea365eabdbe2f930e3a49347ab55bd_icgraph">
-<area shape="rect" title=" " alt="" coords="389,31,481,57"/>
-<area shape="rect" href="class_dragon.html#aeb1e2529d367e9a89de0f6512734af87" title=" " alt="" coords="235,5,341,32"/>
-<area shape="rect" href="class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="251,56,325,83"/>
-<area shape="rect" href="class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,56,187,83"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" title=" " alt="" coords="160,31,252,57"/>
+<area shape="rect" href="class_dragon.html#aeb1e2529d367e9a89de0f6512734af87" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98" title=" " alt="" coords="22,56,95,83"/>
 </map>
 </div>
 
@@ -449,10 +449,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_ad0c7d58f89ff2bf0138b9d9248c3aec1_icgraph.png" border="0" usemap="#aclass_player_ad0c7d58f89ff2bf0138b9d9248c3aec1_icgraph" alt=""/></div>
 <map name="aclass_player_ad0c7d58f89ff2bf0138b9d9248c3aec1_icgraph" id="aclass_player_ad0c7d58f89ff2bf0138b9d9248c3aec1_icgraph">
-<area shape="rect" title=" " alt="" coords="356,5,448,32"/>
-<area shape="rect" href="class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="235,5,308,32"/>
-<area shape="rect" href="class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="127,5,219,32"/>
+<area shape="rect" href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98" title=" " alt="" coords="5,5,79,32"/>
 </map>
 </div>
 
@@ -485,10 +483,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_af8e08c2349e8a6a177e102b28eadcbd2_icgraph.png" border="0" usemap="#aclass_player_af8e08c2349e8a6a177e102b28eadcbd2_icgraph" alt=""/></div>
 <map name="aclass_player_af8e08c2349e8a6a177e102b28eadcbd2_icgraph" id="aclass_player_af8e08c2349e8a6a177e102b28eadcbd2_icgraph">
-<area shape="rect" title=" " alt="" coords="356,5,451,32"/>
-<area shape="rect" href="class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="235,5,308,32"/>
-<area shape="rect" href="class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="127,5,221,32"/>
+<area shape="rect" href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98" title=" " alt="" coords="5,5,79,32"/>
 </map>
 </div>
 
@@ -538,8 +534,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a558196c90abefe4d2e1781a6955383be" name="a558196c90abefe4d2e1781a6955383be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a558196c90abefe4d2e1781a6955383be">&#9670;&nbsp;</a></span>move()</h2>
+<a id="a6b4af8af17be94af69b06b6c470e2ed9" name="a6b4af8af17be94af69b06b6c470e2ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4af8af17be94af69b06b6c470e2ed9">&#9670;&nbsp;</a></span>move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,6 +547,12 @@ template&lt;typename ALLOWED &gt; </div>
           <td>(</td>
           <td class="paramtype">bool &amp;&#160;</td>
           <td class="paramname"><em>run</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>pause</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -568,12 +570,10 @@ template&lt;typename ALLOWED &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_player_a558196c90abefe4d2e1781a6955383be_icgraph.png" border="0" usemap="#aclass_player_a558196c90abefe4d2e1781a6955383be_icgraph" alt=""/></div>
-<map name="aclass_player_a558196c90abefe4d2e1781a6955383be_icgraph" id="aclass_player_a558196c90abefe4d2e1781a6955383be_icgraph">
-<area shape="rect" title=" " alt="" coords="356,5,453,32"/>
-<area shape="rect" href="class_map.html#a076053adc0adcd4d6ddf54d7eb12a7e3" title=" " alt="" coords="235,5,308,32"/>
-<area shape="rect" href="class_game.html#a461460c2f0ce7f83467ab2786408a92b" title=" " alt="" coords="104,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<div class="center"><img src="class_player_a6b4af8af17be94af69b06b6c470e2ed9_icgraph.png" border="0" usemap="#aclass_player_a6b4af8af17be94af69b06b6c470e2ed9_icgraph" alt=""/></div>
+<map name="aclass_player_a6b4af8af17be94af69b06b6c470e2ed9_icgraph" id="aclass_player_a6b4af8af17be94af69b06b6c470e2ed9_icgraph">
+<area shape="rect" title=" " alt="" coords="127,5,224,32"/>
+<area shape="rect" href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98" title=" " alt="" coords="5,5,79,32"/>
 </map>
 </div>
 
@@ -758,6 +758,31 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_dragon.html#aeb1e2529d367e9a89de0f6512734af87" title=" " alt="" coords="5,5,112,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a1af5d39f7bac2aeaa1e30c7dda2332fa" name="a1af5d39f7bac2aeaa1e30c7dda2332fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af5d39f7bac2aeaa1e30c7dda2332fa">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

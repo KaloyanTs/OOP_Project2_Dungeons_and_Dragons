@@ -2,9 +2,6 @@ var hierarchy =
 [
     [ "Constants", "class_constants.html", null ],
     [ "Equipment", "class_equipment.html", [
-      [ "DragonEquipment", "class_dragon_equipment.html", [
-        [ "ScaleArmor", "class_scale_armor.html", null ]
-      ] ],
       [ "HeroEquipment", "class_hero_equipment.html", [
         [ "Armor", "class_armor.html", null ],
         [ "Potion", "class_potion.html", null ],
