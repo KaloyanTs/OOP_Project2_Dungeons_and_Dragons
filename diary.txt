@@ -5,8 +5,5 @@ equipment:
 keyboard:
 
     map is the owner of the player (to be changed to Game)
-
-    // todo
-    get xp on win
-    dragon scale armor
-    // todo
+    
+    xp on level pass
