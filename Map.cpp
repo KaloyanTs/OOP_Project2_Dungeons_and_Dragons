@@ -312,3 +312,8 @@ Player *Map::getHero(unsigned index, const String &name)
 
     return nullptr;
 }
+
+Map *Map::read(const String &file)
+{
+    throw MyException("Temporarily disabled", "Map *read(const String &)");
+}

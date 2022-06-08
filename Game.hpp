@@ -17,6 +17,8 @@ class Game
 
     void save();
 
+    static Player *readPlayer(const String &file);
+
 public:
     Game();
     ~Game()

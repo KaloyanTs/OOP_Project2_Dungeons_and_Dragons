@@ -38,8 +38,6 @@ class Map
     bool isReachable(unsigned y, unsigned x) const;
     EventGenerator *print() const;
 
-    void menu(); // todo should it be public
-
 public:
     Map(Player *p, const String &path);
     Map(Player *p, unsigned lvl = 1);
@@ -49,7 +47,8 @@ public:
     Constants::LEVEL_STATE run();
     static Player *getHero(unsigned index, const String &name = "unknown");
     bool isSaved() const { return saved; }
-    void saveProgress(const String &game); // todo should it be public
+    void saveProgress(const String &game);
+    static Map *read(const String &file);
 };
 
 #endif

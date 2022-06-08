@@ -10,42 +10,41 @@ void Game::start()
     // todo enable Constants::STDOUT("\tPress any key to play...");
     // todo enable getch();
     system("cls");
+    delete map;
+    delete pl;
     Constants::STDOUT("Press l to load game or n to begin new game\n");
     char c;
     while ((c = getch()) != 'l' && c != 'n')
     {
     }
-    try
+    if (c == 'l')
     {
-        if (c == 'l')
+        try
         {
             load(); // todo if not found throw exception
             // todo error handling
         }
-        else
+        catch (const MyException &err)
+        {
+            std::cerr << err.what() << '\n';
+            getch();
             newGame();
-        Constants::LEVEL_STATE res = run();
+        }
     }
-    catch (const char *msg)
-    {
-        return;
-    } // fix use my own exception class
-    // todo switch cases for res and print appropriate messages
+    else
+        newGame();
+    Constants::LEVEL_STATE res = run();
+    if (res == Constants::LEVEL_STATE::ERROR)
+        std::cerr << "Unexpected error occured...\n";
 }
 
 void Game::load()
 {
     char name[Constants::INPUT_LIMIT];
-    strcpy(name, "games\\");
     Constants::STDOUT("enter name of game to be loaded:\n");
-    std::cin.getline(name + 6, Constants::INPUT_LIMIT);
-    // fix use constants
-    strcat(name, ".dndgame");
-    std::ifstream ifs(name);
-    if (!ifs)
-        throw "ERROR!"; // fix use my exception
-    char type;
-    ifs >> type;
+    std::cin.getline(name, Constants::INPUT_LIMIT);
+    pl = Game::readPlayer(name);
+    map = Map::read(name);
     // if (type == '1')
     //     pl = new Human(ifs);
     // if (type == '2')
@@ -55,8 +54,11 @@ void Game::load()
     // ifs >> name + 6; // fix use constants
     // strcat(name, ".dndmap");
     // map = new Map(pl, name);
+}
 
-    ifs.close();
+Player *Game::readPlayer(const String &file)
+{
+    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
 }
 
 void Game::newGame()
