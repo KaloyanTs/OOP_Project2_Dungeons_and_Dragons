@@ -12,7 +12,7 @@ public:
     Spell *clone() const { return new Spell(*this); }
     void print() const;
     ID getID() const { return ID::SPELL; }
-    float getCost() { return cost; };
+    float getCost() const { return cost; };
 };
 
 #endif

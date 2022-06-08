@@ -11,7 +11,7 @@ public:
     Weapon *clone() const { return new Weapon(*this); }
     void print() const;
     ID getID() const { return ID::WEAPON; }
-    float getCost() { return 0; }
+    float getCost() const { return 0; }
 };
 
 #endif

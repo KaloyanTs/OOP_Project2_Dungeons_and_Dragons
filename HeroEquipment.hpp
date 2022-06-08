@@ -28,7 +28,17 @@ public:
     Constants::ACTION_STATE action(Player *, bool &run);
     void print() const;
     virtual ID getID() const = 0;
-    virtual float getCost() = 0;
+    virtual float getCost() const = 0;
+
+    inline void write(std::ofstream &ofs) const
+    {
+        ofs << (int)getID() << ' ' << getY() << ' ' << getX() << ' ' << getBonus() << ' ' << getCost() << '\n';
+    }
+    inline void save(std::ofstream &ofs) const
+    {
+        ofs << (int)getID() << ' ' << getBonus() << getCost() << ' '
+            << name.size() << ' ' << name.c_str() << '\n';
+    }
 };
 
 #endif

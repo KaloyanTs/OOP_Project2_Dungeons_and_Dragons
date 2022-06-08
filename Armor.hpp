@@ -11,7 +11,7 @@ public:
     Armor *clone() const { return new Armor(*this); }
     void print() const;
     ID getID() const { return ID::ARMOR; }
-    float getCost() { return 0; }
+    float getCost() const { return 0; }
 };
 
 #endif

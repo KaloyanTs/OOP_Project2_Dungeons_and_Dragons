@@ -9,7 +9,7 @@ public:
     Potion *clone() const { return new Potion(*this); }
     void print() const;
     ID getID() const { return ID::POTION; }
-    float getCost() { return 0; }
+    float getCost() const { return 0; }
 };
 
 #endif
