@@ -63,6 +63,8 @@ public:
     virtual void regenerate(float percentage = 0) = 0;
 
     void reset() { y = x = 0; }
+
+    void save(const String &game) const;
 };
 
 template <typename ALLOWED>
