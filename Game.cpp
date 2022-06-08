@@ -51,7 +51,6 @@ void Game::load()
     //     pl = new Mage(ifs);
     // if (type == '3')
     //     pl = new Warrior(ifs);
-    // ifs >> name + 6; // fix use constants
     // strcat(name, ".dndmap");
     // map = new Map(pl, name);
 }

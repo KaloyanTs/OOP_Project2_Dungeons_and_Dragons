@@ -19,7 +19,6 @@ protected:
     };
 
 public:
-    // todo more data!!!
     HeroEquipment(const Image *p, unsigned y, unsigned x, unsigned top = 0, unsigned bottom = 0, bool board = true)
         : Equipment((top ? rand() % (top - bottom + 1) + bottom : bottom)), EventGenerator(y, x, errorMsg, board), pic(p) {}
     HeroEquipment *clone() const = 0;

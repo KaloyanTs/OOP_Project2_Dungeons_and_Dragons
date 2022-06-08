@@ -13,7 +13,6 @@ enum class KEYS
     LEFT = 'a',
     RIGHT = 'd',
     EXIT = '`'
-    // todo arrows
 };
 
 bool operator==(char c, const KEYS &k);

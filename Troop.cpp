@@ -15,14 +15,14 @@ float Troop::determineStat(unsigned lvl, float init, float perLevel) const
 
 void Troop::takeDamage(float dmg)
 {
-    if (dmg > health)
+    if (Constants::greater(dmg, health))
         health = 0;
     health -= dmg;
 }
 
 bool Troop::payMana(float points)
 {
-    if (mana < points)
+    if (Constants::less(mana, points))
         return false;
     mana -= points;
     return true;
@@ -38,7 +38,7 @@ void Troop::regen(float percentage)
     else
     {
         health += percentage * maxHealth;
-        if (health > maxHealth)
+        if (Constants::greater(health, maxHealth))
             health = maxHealth;
     }
 }

@@ -25,7 +25,7 @@ bool Inventar::put(const HeroEquipment &el)
         push_back(el.clone());
         return true;
     }
-    return false; // todo info to clog about the operation
+    return false;
 }
 
 Inventar::~Inventar()

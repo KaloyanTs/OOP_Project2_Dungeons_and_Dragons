@@ -89,7 +89,7 @@ public:
     /// make the capacity equal to the size
     String &shrink_to_fit();
 
-    // todo documentation
+    /// removes the last character from the string if such, otherwise nothing happens
     bool removeLast();
 };
 

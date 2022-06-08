@@ -7,8 +7,6 @@
 #include "DragonQuoteGenerator.hpp"
 #include "MultipleImagePrinter.hpp"
 
-// todo consider using #define for speed
-
 #define INITIAL_MINIMAL_BONUS 5
 #define MINIMUM_BONUS_PER_LEVEL 5
 
@@ -21,6 +19,8 @@
 #define POTION_INITIAL_MINIMAL_COST 15
 #define POTION_INITIAL_MAXIMAL_COST 30
 #define POTION_COST_PER_LEVEL 7
+
+#define EPS 1e-3
 
 class Constants
 {
@@ -41,6 +41,9 @@ public:
         CLOSE,
         PAUSE
     };
+    static bool equal(float a, float b) { return a - b < EPS && a - b > -EPS; }
+    static bool less(float a, float b) { return a - b <= -EPS; }
+    static bool greater(float a, float b) { return a - b >= EPS; }
     static const Printer STDOUT;
     static const MultipleImagePrinter STDOUT_MULTI;
     static const unsigned INPUT_LIMIT = 100;

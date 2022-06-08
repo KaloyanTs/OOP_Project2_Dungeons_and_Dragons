@@ -15,7 +15,7 @@ protected:
     float mana, health;
 
     float determineStat(unsigned lvl, float init, float perLevel) const;
-    bool alive() const { return health > 0; }
+    bool alive() const { return Constants::greater(health, 0); }
 
 public:
     Troop(float _attack, float _mana, float _health, unsigned lvl = 1)
