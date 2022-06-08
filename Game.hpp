@@ -15,6 +15,8 @@ class Game
 
     Constants::LEVEL_STATE run();
 
+    void save();
+
 public:
     Game();
     ~Game()
