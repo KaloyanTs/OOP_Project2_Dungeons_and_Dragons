@@ -20,7 +20,8 @@ void Map::generateMap() const
 }
 
 Map::Map(Player *p, unsigned lvl)
-    : running(false), pause(false), level(1), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
+    : running(false), pause(false), saved(false),
+      level(lvl), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
       data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
       potionCount(fib(lvl, 1, 2)),
       events(dragonCount + treasureCount + potionCount),
@@ -55,7 +56,11 @@ Map::Map(Player *p, unsigned lvl)
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
 
-        events.push_back(Inventar::getEquipment(rand() % 3, posY, posX, level * 5 + 5, level * 25 + 10, rand() % (lvl * 10) + 10)); // fix use constants
+        events.push_back(Inventar::getEquipment(
+            rand() % 3, posY, posX,
+            level * MINIMUM_BONUS_PER_LEVEL + INITIAL_MINIMAL_BONUS,
+            level * MAXIMAL_BONUS_PER_LEVEL + INITIAL_MAXIMAL_BONUS,
+            rand() % (lvl * COST_PER_LEVEL) + INITIAL_MINIMAL_COST));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
     for (unsigned i = 0; i < potionCount; ++i)
@@ -66,14 +71,16 @@ Map::Map(Player *p, unsigned lvl)
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
 
-        events.push_back(new Potion(posY, posX, 15 + lvl * 7, 30 + lvl * 7)); // fix use constants
+        events.push_back(new Potion(
+            posY, posX,
+            POTION_INITIAL_MINIMAL_COST + lvl * POTION_COST_PER_LEVEL,
+            POTION_INITIAL_MAXIMAL_COST + lvl * POTION_COST_PER_LEVEL));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }
 
 EventGenerator *Map::print() const
 {
-    // fix USE PRINTER
     system("cls");
     Constants::STDOUT("Level ")(level)("\n\n");
     bool plHere = false;
@@ -184,6 +191,8 @@ Constants::LEVEL_STATE Map::run()
                      { return (y == (rows - 1) && x == cols) ||
                               y < rows && x < cols &&
                                   data[y][x] != (char)MAP_SYMBOLS::WALL; }))
+        {
+            saved = false;
             if (event = print())
             {
                 event->print();
@@ -212,50 +221,51 @@ Constants::LEVEL_STATE Map::run()
                 running = false;
                 return Constants::LEVEL_STATE::PASS;
             }
+        }
         if (pause)
         {
-            menu();
-            if (running)
-                print();
+            pause = false;
+            return Constants::LEVEL_STATE::PAUSE;
         }
+
     } while (running && pl->alive());
     running = false;
     return (pl->alive() ? Constants::LEVEL_STATE::CLOSE : Constants::LEVEL_STATE::DIE);
 }
 
-void Map::menu()
+void Map::saveProgress(const String &game)
 {
-    system("cls");
-    char c;
-    Constants::STDOUT("Press p to resume the game;\nPress s to save current progress;\nPress ` to exit without saving.");
-    // fix ask again before closing
-    while ((c = getch()) != 'p' && c != '`' && c != 's' && c != 'l')
-    {
-    }
-    if (c == '`')
-        running = false;
-    else if (c == 's')
-        saveProgress();
-    pause = false;
-}
+    String name = "games\\";
+    name += game;
+    name += ".dndmap";
+    std::ofstream ofs(name.c_str());
 
-void Map::saveProgress() const
-{
-    // fix real save with name of the save map is saved in different file
+    ofs << level << ' ' << rows << ' ' << cols << "\n\n";
+    for (unsigned i = 0; i < events.size(); ++i)
+        events[i]->write(ofs);
+    for (unsigned i = 0; i < rows; ++i)
+    {
+        for (unsigned j = 0; j < cols; ++j)
+            ofs << (data[i][j] != (char)MAP_SYMBOLS::WALL ? (char)MAP_SYMBOLS::FREE : '#');
+        ofs << '\n';
+    }
+    ofs.close();
+    saved = true;
 }
 
 Map::Map(Player *p, const String &path)
-    : data(nullptr), pl(p),
-      running(false), level(0), rows(0), cols(0), dragonCount(0),
+    : data(nullptr), pl(p), running(false), pause(false), saved(false),
+      level(0), rows(0), cols(0), dragonCount(0),
       treasureCount(0)
 {
-    // todo read map from text file
-    std::ifstream ifs(path.c_str(), std::ios::in);
+    String file = "games\\";
+    file += path;
+    file += ".dndmap";
+
+    std::ifstream ifs;
+    ifs.open(file.c_str(), std::ios::in);
     if (!ifs.is_open())
-    {
-        std::cerr << "No such map found!\n";
-        return;
-    }
+        throw MyException("No such file found!", "Map::Map(Player *,const String &)");
     ifs >> level >> rows >> cols;
 
     unsigned buf, y, x, bonus, cost;
@@ -284,7 +294,6 @@ Map::Map(Player *p, const String &path)
                 data[i][j] = (char)MAP_SYMBOLS::WALL;
         }
         ifs.ignore();
-        // optimize better with getline?
     }
     ifs.close();
 

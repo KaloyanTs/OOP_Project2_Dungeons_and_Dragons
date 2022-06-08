@@ -1,6 +1,7 @@
 #ifndef __MAP_HPP
 #define __MAP_HPP
 #include <iostream>
+#include <cstring>
 #include <ctime>
 #include <fstream>
 #include "Constants.hpp"
@@ -8,6 +9,7 @@
 #include "Warrior.hpp"
 #include "Mage.hpp"
 #include "Dragon.hpp"
+#include "MyException.hpp"
 
 enum class MAP_SYMBOLS
 {
@@ -28,6 +30,7 @@ class Map
     Player *pl;
     bool running;
     bool pause;
+    bool saved;
 
     void generateMap() const;
 
@@ -37,8 +40,6 @@ class Map
 
     void menu(); // todo should it be public
 
-    void saveProgress() const; // todo should it be public
-
 public:
     Map(Player *p, const String &path);
     Map(Player *p, unsigned lvl = 1);
@@ -47,6 +48,8 @@ public:
     ~Map();
     Constants::LEVEL_STATE run();
     static Player *getHero(unsigned index, const String &name = "unknown");
+    bool isSaved() const { return saved; }
+    void saveProgress(const String &game); // todo should it be public
 };
 
 #endif
