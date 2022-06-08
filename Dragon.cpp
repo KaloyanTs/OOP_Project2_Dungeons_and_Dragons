@@ -7,3 +7,8 @@ void Dragon::print() const
     Constants::STDOUT (*pic)("Dragon ")(getLevel())(".lvl\n")("\t - ")(quote)('\n');
     Troop::print();
 }
+
+void Dragon::write(std::ofstream &ofs) const
+{
+    ofs << level << ' ' << getY() << ' ' << getX() << '\n';
+}

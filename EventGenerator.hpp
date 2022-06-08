@@ -30,6 +30,8 @@ public:
     unsigned getX() const { return posX; }
 
     const String &getErrorMsg() const { return *errorMsg; }
+
+    virtual void write(std::ofstream &ofs) const = 0;
 };
 
 #endif

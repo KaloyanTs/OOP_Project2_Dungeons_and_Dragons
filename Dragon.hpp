@@ -30,6 +30,8 @@ public:
     Constants::ACTION_STATE action(Player *, bool &);
     void print() const;
     void takeDamage(float dmg) { Troop::takeDamage(dmg - armor * dmg / 100); }
+
+    void write(std::ofstream &ofs) const;
 };
 
 #endif
