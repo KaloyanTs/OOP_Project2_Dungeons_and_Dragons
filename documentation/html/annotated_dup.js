@@ -17,6 +17,7 @@ var annotated_dup =
     [ "Mage", "class_mage.html", "class_mage" ],
     [ "Map", "class_map.html", "class_map" ],
     [ "MultipleImagePrinter", "class_multiple_image_printer.html", "class_multiple_image_printer" ],
+    [ "MyException", "class_my_exception.html", "class_my_exception" ],
     [ "Player", "class_player.html", "class_player" ],
     [ "Potion", "class_potion.html", "class_potion" ],
     [ "PotionNameGenerator", "class_potion_name_generator.html", "class_potion_name_generator" ],

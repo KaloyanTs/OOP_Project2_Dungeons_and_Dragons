@@ -10,7 +10,9 @@ var class_hero_equipment =
     [ "action", "class_hero_equipment.html#a0c3ce9a19f46a1834c8fa8be3e8954bd", null ],
     [ "clone", "class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5", null ],
     [ "getChar", "class_hero_equipment.html#a3441677fa036dc60c9dc8afde7f9ef33", null ],
-    [ "getCost", "class_hero_equipment.html#a78ff145938eef8b817c5b2a26bf80b55", null ],
+    [ "getCost", "class_hero_equipment.html#aa558ae97e7dcd7102f6fe3d16cad85fc", null ],
     [ "getID", "class_hero_equipment.html#abefa58addb723b086c1a62f33fefa7af", null ],
-    [ "print", "class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f", null ]
+    [ "print", "class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f", null ],
+    [ "save", "class_hero_equipment.html#a23f73eb7c5e4ec9600d48896875bea23", null ],
+    [ "write", "class_hero_equipment.html#ad3f9181954eb2cc6a008afb1aa5d038d", null ]
 ];

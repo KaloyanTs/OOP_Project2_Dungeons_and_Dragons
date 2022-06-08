@@ -13,6 +13,9 @@ var hierarchy =
       [ "Dragon", "class_dragon.html", null ],
       [ "HeroEquipment", "class_hero_equipment.html", null ]
     ] ],
+    [ "std::exception", null, [
+      [ "MyException", "class_my_exception.html", null ]
+    ] ],
     [ "Game", "class_game.html", null ],
     [ "GameAssets", "class_game_assets.html", null ],
     [ "Grammar", "class_grammar.html", [

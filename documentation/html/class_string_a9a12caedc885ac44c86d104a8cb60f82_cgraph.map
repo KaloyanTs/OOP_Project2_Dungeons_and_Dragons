@@ -1,4 +1,0 @@
-<map id="String::operator const char *" name="String::operator const char *">
-<area shape="rect" id="node1" title="cast this String to const char * by returning pointer to the beginning" alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$class_string.html#aefb74cf401b56191337867e2780c5286" title="get pointer to the beginning of the array" alt="" coords="200,13,293,39"/>
-</map>

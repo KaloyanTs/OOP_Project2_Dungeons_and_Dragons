@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dungeons &amp; Dragons: C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Game.hpp Source File</title>
+<title>Dungeons &amp; Dragons: Game.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('_game_8hpp_source.html',''); initResiz
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Game.hpp</div></div>
+  <div class="headertitle"><div class="title">Game.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="_game_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __GAME_HPP</span></div>
@@ -104,30 +104,35 @@ $(document).ready(function(){initNavTree('_game_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_enumeration" href="class_constants.html#af21cd021274693d26201a595a4b7234a">Constants::LEVEL_STATE</a> run();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">   20</a></span>    <a class="code hl_function" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a>()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">delete</span> map;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">delete</span> pl;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">start</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game.html#a9f67e04bd108aa5943479bc17680a599">load</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> save();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_player.html">Player</a> *readPlayer(<span class="keyword">const</span> <a class="code hl_class" href="class_string.html">String</a> &amp;file);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">   24</a></span>    <a class="code hl_function" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">delete</span> map;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">delete</span> pl;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">start</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game.html#a9f67e04bd108aa5943479bc17680a599">load</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_map_8hpp_html"><div class="ttname"><a href="_map_8hpp.html">Map.hpp</a></div></div>
 <div class="ttc" id="a_multiple_image_printer_8hpp_html"><div class="ttname"><a href="_multiple_image_printer_8hpp.html">MultipleImagePrinter.hpp</a></div></div>
-<div class="ttc" id="aclass_constants_html_af21cd021274693d26201a595a4b7234a"><div class="ttname"><a href="class_constants.html#af21cd021274693d26201a595a4b7234a">Constants::LEVEL_STATE</a></div><div class="ttdeci">LEVEL_STATE</div><div class="ttdef"><b>Definition:</b> Constants.hpp:24</div></div>
+<div class="ttc" id="aclass_constants_html_af21cd021274693d26201a595a4b7234a"><div class="ttname"><a href="class_constants.html#af21cd021274693d26201a595a4b7234a">Constants::LEVEL_STATE</a></div><div class="ttdeci">LEVEL_STATE</div><div class="ttdef"><b>Definition:</b> Constants.hpp:37</div></div>
 <div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> Game.hpp:8</div></div>
 <div class="ttc" id="aclass_game_html_a3d9b98f7c4a96ecf578f75b96c9f0e90"><div class="ttname"><a href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">Game::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> Game.cpp:7</div></div>
-<div class="ttc" id="aclass_game_html_a9f67e04bd108aa5943479bc17680a599"><div class="ttname"><a href="class_game.html#a9f67e04bd108aa5943479bc17680a599">Game::load</a></div><div class="ttdeci">void load()</div><div class="ttdef"><b>Definition:</b> Game.cpp:36</div></div>
+<div class="ttc" id="aclass_game_html_a9f67e04bd108aa5943479bc17680a599"><div class="ttname"><a href="class_game.html#a9f67e04bd108aa5943479bc17680a599">Game::load</a></div><div class="ttdeci">void load()</div><div class="ttdef"><b>Definition:</b> Game.cpp:40</div></div>
 <div class="ttc" id="aclass_game_html_ad59df6562a58a614fda24622d3715b65"><div class="ttname"><a href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> Game.cpp:3</div></div>
-<div class="ttc" id="aclass_game_html_ae3d112ca6e0e55150d2fdbc704474530"><div class="ttname"><a href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">Game::~Game</a></div><div class="ttdeci">~Game()</div><div class="ttdef"><b>Definition:</b> Game.hpp:20</div></div>
-<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> Map.hpp:20</div></div>
-<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.hpp:22</div></div>
+<div class="ttc" id="aclass_game_html_ae3d112ca6e0e55150d2fdbc704474530"><div class="ttname"><a href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">Game::~Game</a></div><div class="ttdeci">~Game()</div><div class="ttdef"><b>Definition:</b> Game.hpp:24</div></div>
+<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> Map.hpp:22</div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.hpp:21</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">Class representing dynamic string (array of characters)</div><div class="ttdef"><b>Definition:</b> String.hpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

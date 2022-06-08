@@ -1,6 +1,0 @@
-<map id="Troop::payMana" name="Troop::payMana">
-<area shape="rect" id="node1" title=" " alt="" coords="173,56,288,83"/>
-<area shape="rect" id="node2" href="$class_human.html#a6dfda996d0e9a2f50d04f062e0620564" title=" " alt="" coords="6,5,125,32"/>
-<area shape="rect" id="node3" href="$class_mage.html#a27acbac719713f18ea812201d0eee989" title=" " alt="" coords="10,56,121,83"/>
-<area shape="rect" id="node4" href="$class_warrior.html#a9891873801f41d8f0e8e27210ad605a1" title=" " alt="" coords="5,107,125,133"/>
-</map>

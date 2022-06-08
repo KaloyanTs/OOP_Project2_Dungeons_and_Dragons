@@ -95,17 +95,17 @@ $(document).ready(function(){initNavTree('class_event_generator.html',''); initR
 <div class="dynheader">
 Inheritance diagram for EventGenerator:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_generator__inherit__graph.png" border="0" usemap="#a_event_generator_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_event_generator_inherit__map" id="a_event_generator_inherit__map">
-<area shape="rect" title=" " alt="" coords="44,5,155,32"/>
-<area shape="rect" href="class_dragon.html" title=" " alt="" coords="13,80,76,107"/>
-<area shape="rect" href="class_hero_equipment.html" title=" " alt="" coords="100,80,211,107"/>
-<area shape="rect" href="class_armor.html" title=" " alt="" coords="5,155,63,181"/>
-<area shape="rect" href="class_potion.html" title=" " alt="" coords="87,155,146,181"/>
-<area shape="rect" href="class_spell.html" title=" " alt="" coords="170,155,221,181"/>
-<area shape="rect" href="class_weapon.html" title=" " alt="" coords="245,155,316,181"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="class_event_generator.png" usemap="#EventGenerator_map" alt=""/>
+  <map id="EventGenerator_map" name="EventGenerator_map">
+<area href="class_dragon.html" alt="Dragon" shape="rect" coords="0,56,101,80"/>
+<area href="class_hero_equipment.html" alt="HeroEquipment" shape="rect" coords="166,56,267,80"/>
+<area href="class_armor.html" alt="Armor" shape="rect" coords="0,112,101,136"/>
+<area href="class_potion.html" alt="Potion" shape="rect" coords="111,112,212,136"/>
+<area href="class_spell.html" alt="Spell" shape="rect" coords="222,112,323,136"/>
+<area href="class_weapon.html" alt="Weapon" shape="rect" coords="333,112,434,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,6 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa090e3767587340a07ce146f194e624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8ead9d3203dc4ae0885677d28ca71b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a7e8ead9d3203dc4ae0885677d28ca71b">getErrorMsg</a> () const</td></tr>
 <tr class="separator:a7e8ead9d3203dc4ae0885677d28ca71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6fe78c71ee7069bdf03504a154ed29e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#ac6fe78c71ee7069bdf03504a154ed29e">write</a> (std::ofstream &amp;ofs) const =0</td></tr>
+<tr class="separator:ac6fe78c71ee7069bdf03504a154ed29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f34fd2b2359ce8454309a516b44b445" name="a6f34fd2b2359ce8454309a516b44b445"></a>
@@ -460,8 +462,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac6fe78c71ee7069bdf03504a154ed29e" name="ac6fe78c71ee7069bdf03504a154ed29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6fe78c71ee7069bdf03504a154ed29e">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EventGenerator::write </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>ofs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_dragon.html#ac4bf53716ebde9abe45228081b91ab3f">Dragon</a>, and <a class="el" href="class_hero_equipment.html#ad3f9181954eb2cc6a008afb1aa5d038d">HeroEquipment</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/<a class="el" href="_event_generator_8hpp_source.html">EventGenerator.hpp</a></li>
+<li><a class="el" href="_event_generator_8hpp_source.html">EventGenerator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

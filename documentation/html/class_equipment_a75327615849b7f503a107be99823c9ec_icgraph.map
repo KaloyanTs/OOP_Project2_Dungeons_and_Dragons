@@ -1,7 +1,0 @@
-<map id="Equipment::print" name="Equipment::print">
-<area shape="rect" id="node1" title=" " alt="" coords="156,81,273,108"/>
-<area shape="rect" id="node2" href="$class_armor.html#a8eacfc08eba1b81e33a69bf75897136f" title=" " alt="" coords="11,5,102,32"/>
-<area shape="rect" id="node3" href="$class_potion.html#a829520e66c08f015541dbd5b816dc1e8" title=" " alt="" coords="11,56,103,83"/>
-<area shape="rect" id="node4" href="$class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80" title=" " alt="" coords="15,107,99,133"/>
-<area shape="rect" id="node5" href="$class_weapon.html#a32308d94be1b0de6e545fd727398b0e9" title=" " alt="" coords="5,157,108,184"/>
-</map>

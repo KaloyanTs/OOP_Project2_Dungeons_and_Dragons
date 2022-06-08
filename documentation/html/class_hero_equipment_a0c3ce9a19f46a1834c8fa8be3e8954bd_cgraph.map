@@ -1,7 +1,0 @@
-<map id="HeroEquipment::action" name="HeroEquipment::action">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,160,61"/>
-<area shape="rect" id="node2" href="$class_player.html#a03bd4ab639c42919c70965940ab64dd5" title=" " alt="" coords="208,35,300,61"/>
-<area shape="rect" id="node3" href="$class_inventar.html#abf7086530f57035401e7ef75bd492c41" title=" " alt="" coords="348,35,440,61"/>
-<area shape="rect" id="node4" href="$class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5" title=" " alt="" coords="493,5,644,32"/>
-<area shape="rect" id="node5" href="$class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde" title=" " alt="" coords="488,57,649,98"/>
-</map>

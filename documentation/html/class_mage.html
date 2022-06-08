@@ -95,27 +95,13 @@ $(document).ready(function(){initNavTree('class_mage.html',''); initResizable();
 <div class="dynheader">
 Inheritance diagram for Mage:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_mage__inherit__graph.png" border="0" usemap="#a_mage_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_mage_inherit__map" id="a_mage_inherit__map">
-<area shape="rect" title=" " alt="" coords="47,80,102,107"/>
-<area shape="rect" href="class_player.html" title=" " alt="" coords="5,5,64,32"/>
-<area shape="rect" href="class_troop.html" title=" " alt="" coords="89,5,143,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Mage:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage__coll__graph.png" border="0" usemap="#a_mage_coll__map" alt="Collaboration graph"/></div>
-<map name="a_mage_coll__map" id="a_mage_coll__map">
-<area shape="rect" title=" " alt="" coords="120,336,175,363"/>
-<area shape="rect" href="class_player.html" title=" " alt="" coords="78,260,137,287"/>
-<area shape="rect" href="class_hero_equipment.html" title=" " alt="" coords="52,171,163,197"/>
-<area shape="rect" href="class_equipment.html" title=" " alt="" coords="5,95,89,121"/>
-<area shape="rect" href="class_string.html" title="Class representing dynamic string (array of characters)" alt="" coords="19,5,75,32"/>
-<area shape="rect" href="class_event_generator.html" title=" " alt="" coords="113,95,224,121"/>
-<area shape="rect" href="class_troop.html" title=" " alt="" coords="161,260,216,287"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="class_mage.png" usemap="#Mage_map" alt=""/>
+  <map id="Mage_map" name="Mage_map">
+<area href="class_player.html" alt="Player" shape="rect" coords="0,0,49,24"/>
+<area href="class_troop.html" alt="Troop" shape="rect" coords="59,0,108,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -185,6 +171,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b0ad3e5de326f9b30090186fcf5cc2a inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af5d39f7bac2aeaa1e30c7dda2332fa inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a> ()</td></tr>
 <tr class="separator:a1af5d39f7bac2aeaa1e30c7dda2332fa inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eab765db52a1d6cacccc89e02d5f298 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0eab765db52a1d6cacccc89e02d5f298">save</a> (const <a class="el" href="class_string.html">String</a> &amp;game) const</td></tr>
+<tr class="separator:a0eab765db52a1d6cacccc89e02d5f298 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_troop"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_troop')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_troop.html">Troop</a></td></tr>
 <tr class="memitem:a67074de9f11779acc74f3a5d275c3d1c inherit pub_methods_class_troop"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a67074de9f11779acc74f3a5d275c3d1c">Troop</a> (float _attack, float _mana, float _health, unsigned lvl=1)</td></tr>
 <tr class="separator:a67074de9f11779acc74f3a5d275c3d1c inherit pub_methods_class_troop"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,15 +253,6 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a1e3517d4c437906da5514be3d2029fb3_icgraph.png" border="0" usemap="#aclass_mage_a1e3517d4c437906da5514be3d2029fb3_icgraph" alt=""/></div>
-<map name="aclass_mage_a1e3517d4c437906da5514be3d2029fb3_icgraph" id="aclass_mage_a1e3517d4c437906da5514be3d2029fb3_icgraph">
-<area shape="rect" title=" " alt="" coords="147,5,241,32"/>
-<area shape="rect" href="class_mage.html#a04f784c7325b0331632124825451bd9b" title=" " alt="" coords="5,5,99,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -302,15 +281,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html#ae1ea365eabdbe2f930e3a49347ab55bd">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_aebe8422dfac021f64191b24a4f5a2af4_cgraph.png" border="0" usemap="#aclass_mage_aebe8422dfac021f64191b24a4f5a2af4_cgraph" alt=""/></div>
-<map name="aclass_mage_aebe8422dfac021f64191b24a4f5a2af4_cgraph" id="aclass_mage_aebe8422dfac021f64191b24a4f5a2af4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,92,32"/>
-<area shape="rect" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b" title=" " alt="" coords="140,5,227,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -338,15 +308,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_troop.html#ad58799ff5841d4f3dc2dfb42e1fc601c">Troop</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a04f784c7325b0331632124825451bd9b_cgraph.png" border="0" usemap="#aclass_mage_a04f784c7325b0331632124825451bd9b_cgraph" alt=""/></div>
-<map name="aclass_mage_a04f784c7325b0331632124825451bd9b_cgraph" id="aclass_mage_a04f784c7325b0331632124825451bd9b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,99,32"/>
-<area shape="rect" href="class_mage.html#a1e3517d4c437906da5514be3d2029fb3" title=" " alt="" coords="147,5,241,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -456,15 +417,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a27acbac719713f18ea812201d0eee989_cgraph.png" border="0" usemap="#aclass_mage_a27acbac719713f18ea812201d0eee989_cgraph" alt=""/></div>
-<map name="aclass_mage_a27acbac719713f18ea812201d0eee989_cgraph" id="aclass_mage_a27acbac719713f18ea812201d0eee989_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" href="class_troop.html#a60f7b53d4d238610d0d7de4a73246be4" title=" " alt="" coords="164,5,279,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -482,30 +434,6 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a42ad5942a85ca027ab1ca45fb099f78f_cgraph.png" border="0" usemap="#aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_cgraph" alt=""/></div>
-<map name="aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_cgraph" id="aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,92,184"/>
-<area shape="rect" href="class_mage.html#a1564f6467e749d570ef36ea8acc1b2e7" title=" " alt="" coords="145,107,259,133"/>
-<area shape="rect" href="class_player.html#ac5699b5bf835475cd0db331c3566c225" title=" " alt="" coords="140,183,264,209"/>
-<area shape="rect" href="class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="312,5,459,32"/>
-<area shape="rect" href="class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="331,56,440,83"/>
-<area shape="rect" href="class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="326,107,445,133"/>
-<area shape="rect" href="class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="342,157,429,184"/>
-<area shape="rect" href="class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f" title=" " alt="" coords="313,208,457,235"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a42ad5942a85ca027ab1ca45fb099f78f_icgraph.png" border="0" usemap="#aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_icgraph" alt=""/></div>
-<map name="aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_icgraph" id="aclass_mage_a42ad5942a85ca027ab1ca45fb099f78f_icgraph">
-<area shape="rect" title=" " alt="" coords="172,5,259,32"/>
-<area shape="rect" href="class_mage.html#af4b83aec44f91d81d0a3081d26e0ad9a" title=" " alt="" coords="5,5,124,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -533,28 +461,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html#a21467bf0b665bfce964fbe8aee8ae055">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a1564f6467e749d570ef36ea8acc1b2e7_cgraph.png" border="0" usemap="#aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_cgraph" alt=""/></div>
-<map name="aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_cgraph" id="aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,119,108"/>
-<area shape="rect" href="class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="167,5,313,32"/>
-<area shape="rect" href="class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="185,56,295,83"/>
-<area shape="rect" href="class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="181,107,299,133"/>
-<area shape="rect" href="class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="197,157,283,184"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a1564f6467e749d570ef36ea8acc1b2e7_icgraph.png" border="0" usemap="#aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_icgraph" alt=""/></div>
-<map name="aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_icgraph" id="aclass_mage_a1564f6467e749d570ef36ea8acc1b2e7_icgraph">
-<area shape="rect" title=" " alt="" coords="307,5,420,32"/>
-<area shape="rect" href="class_mage.html#a42ad5942a85ca027ab1ca45fb099f78f" title=" " alt="" coords="172,5,259,32"/>
-<area shape="rect" href="class_mage.html#af4b83aec44f91d81d0a3081d26e0ad9a" title=" " alt="" coords="5,5,124,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -582,22 +488,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html#a786aa953d350e5bc0d23b25c5640c46b">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_af4b83aec44f91d81d0a3081d26e0ad9a_cgraph.png" border="0" usemap="#aclass_mage_af4b83aec44f91d81d0a3081d26e0ad9a_cgraph" alt=""/></div>
-<map name="aclass_mage_af4b83aec44f91d81d0a3081d26e0ad9a_cgraph" id="aclass_mage_af4b83aec44f91d81d0a3081d26e0ad9a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,124,184"/>
-<area shape="rect" href="class_mage.html#a42ad5942a85ca027ab1ca45fb099f78f" title=" " alt="" coords="172,157,259,184"/>
-<area shape="rect" href="class_mage.html#a1564f6467e749d570ef36ea8acc1b2e7" title=" " alt="" coords="312,107,425,133"/>
-<area shape="rect" href="class_player.html#ac5699b5bf835475cd0db331c3566c225" title=" " alt="" coords="307,183,431,209"/>
-<area shape="rect" href="class_equipment.html#a0b230a7c27a220df4129211480dfc8ca" title=" " alt="" coords="479,5,625,32"/>
-<area shape="rect" href="class_troop.html#a8900de59ffca17c1de50965db7636bda" title=" " alt="" coords="497,56,607,83"/>
-<area shape="rect" href="class_player.html#af7576d2f69a277218213912a5697cb16" title=" " alt="" coords="493,107,611,133"/>
-<area shape="rect" href="class_troop.html#a340181700539d108c97aadef47e05e5a" title=" " alt="" coords="509,157,595,184"/>
-<area shape="rect" href="class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f" title=" " alt="" coords="480,208,624,235"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -626,15 +516,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_a7c4dedbb124d0d76a9b112415f41f660_cgraph.png" border="0" usemap="#aclass_mage_a7c4dedbb124d0d76a9b112415f41f660_cgraph" alt=""/></div>
-<map name="aclass_mage_a7c4dedbb124d0d76a9b112415f41f660_cgraph" id="aclass_mage_a7c4dedbb124d0d76a9b112415f41f660_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,128,32"/>
-<area shape="rect" href="class_troop.html#a4e3866268550e389001ae63c12daddf3" title=" " alt="" coords="176,5,271,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -663,21 +544,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_player.html#a5176eb73a71d54dc2976e9f2821631d5">Player</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_mage_ab514e52d9d8da90fd95ecd313808b16e_cgraph.png" border="0" usemap="#aclass_mage_ab514e52d9d8da90fd95ecd313808b16e_cgraph" alt=""/></div>
-<map name="aclass_mage_ab514e52d9d8da90fd95ecd313808b16e_cgraph" id="aclass_mage_ab514e52d9d8da90fd95ecd313808b16e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" href="class_troop.html#aa221953d9ab89bf04e37826076ff5abd" title=" " alt="" coords="188,5,323,32"/>
-</map>
-</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/<a class="el" href="_mage_8hpp_source.html">Mage.hpp</a></li>
-<li>C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/<a class="el" href="_mage_8cpp.html">Mage.cpp</a></li>
+<li><a class="el" href="_mage_8hpp_source.html">Mage.hpp</a></li>
+<li><a class="el" href="_mage_8cpp.html">Mage.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

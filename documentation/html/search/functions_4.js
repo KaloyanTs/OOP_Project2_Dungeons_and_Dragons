@@ -5,7 +5,7 @@ var searchData=
   ['getattack_2',['getAttack',['../class_human.html#a425f0642d533f467c6253e5eed724264',1,'Human::getAttack()'],['../class_mage.html#a447ea48f94fd2bfe1617ee04cbb4be7b',1,'Mage::getAttack()'],['../class_player.html#a17e8922a96ebf4e647f8193bedb3facf',1,'Player::getAttack()'],['../class_warrior.html#a85f0c9aaae497e2324fe63d1f7ab5337',1,'Warrior::getAttack()']]],
   ['getbonus_3',['getBonus',['../class_equipment.html#a0b230a7c27a220df4129211480dfc8ca',1,'Equipment']]],
   ['getchar_4',['getChar',['../class_dragon.html#a6fdf692a5b97d4c2006fe0bbb2ae6fca',1,'Dragon::getChar()'],['../class_event_generator.html#a26c476f4825d750da9634094c32323c7',1,'EventGenerator::getChar()'],['../class_hero_equipment.html#a3441677fa036dc60c9dc8afde7f9ef33',1,'HeroEquipment::getChar()'],['../class_player.html#a90cf459656e4ac511c56834c9e5a76b8',1,'Player::getChar()']]],
-  ['getcost_5',['getCost',['../class_armor.html#af4527c0a484a36796c6da4e150432d9e',1,'Armor::getCost()'],['../class_hero_equipment.html#a78ff145938eef8b817c5b2a26bf80b55',1,'HeroEquipment::getCost()'],['../class_potion.html#ad38b6fe16ae225d29f8175d13d573421',1,'Potion::getCost()'],['../class_spell.html#a2e2499b7b4e6598f394606121be78777',1,'Spell::getCost()'],['../class_weapon.html#aabc1de99f834830c63d54da1a079873e',1,'Weapon::getCost()']]],
+  ['getcost_5',['getCost',['../class_armor.html#a1ad3decbe0723e17360d12572fc18a68',1,'Armor::getCost()'],['../class_hero_equipment.html#aa558ae97e7dcd7102f6fe3d16cad85fc',1,'HeroEquipment::getCost()'],['../class_potion.html#ae1eb9192f899f962a63a9b0932bdd016',1,'Potion::getCost()'],['../class_spell.html#aa847be175d18bfffeb6146f01dfdb519',1,'Spell::getCost()'],['../class_weapon.html#a7a2347ee60ec278f2e87ae23a40da475',1,'Weapon::getCost()']]],
   ['getcount_6',['getCount',['../class_inventar.html#a0bd3cd999f666d504b129f26508ef760',1,'Inventar::getCount()'],['../class_vector.html#a7c995f24eaa46f3c9e91bc0cee1db887',1,'Vector::getCount()']]],
   ['getequipment_7',['getEquipment',['../class_inventar.html#ae1986ecbe0b1826ee0518ad55f114e0f',1,'Inventar']]],
   ['geterrormsg_8',['getErrorMsg',['../class_event_generator.html#a7e8ead9d3203dc4ae0885677d28ca71b',1,'EventGenerator']]],
@@ -18,5 +18,6 @@ var searchData=
   ['getoutputstream_15',['getOutputStream',['../class_printer.html#a1a48ce8cd2d01bf07b813d54de887882',1,'Printer']]],
   ['getx_16',['getX',['../class_event_generator.html#aa090e3767587340a07ce146f194e624b',1,'EventGenerator::getX()'],['../class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1',1,'Player::getX()']]],
   ['gety_17',['getY',['../class_event_generator.html#a0a78e020148152c5bdbde9745a1637bc',1,'EventGenerator::getY()'],['../class_player.html#af8e08c2349e8a6a177e102b28eadcbd2',1,'Player::getY()']]],
-  ['grammar_18',['Grammar',['../class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f',1,'Grammar']]]
+  ['grammar_18',['Grammar',['../class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f',1,'Grammar']]],
+  ['greater_19',['greater',['../class_constants.html#a3d566364e1171e8bac1c4c380b02284d',1,'Constants']]]
 ];

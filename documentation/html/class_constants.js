@@ -9,6 +9,7 @@ var class_constants =
       [ "ERROR", "class_constants.html#af21cd021274693d26201a595a4b7234aabb1ca97ec761fc37101737ba0aa2e7c5", null ],
       [ "PASS", "class_constants.html#af21cd021274693d26201a595a4b7234aa7a95bf926a0333f57705aeac07a362a2", null ],
       [ "DIE", "class_constants.html#af21cd021274693d26201a595a4b7234aa83ebd7c89f4cc1a85396fba7d6f7e900", null ],
-      [ "CLOSE", "class_constants.html#af21cd021274693d26201a595a4b7234aa7286293c9125ac7d7bace94c190bc16d", null ]
+      [ "CLOSE", "class_constants.html#af21cd021274693d26201a595a4b7234aa7286293c9125ac7d7bace94c190bc16d", null ],
+      [ "PAUSE", "class_constants.html#af21cd021274693d26201a595a4b7234aa291554596c183e837f0a6bec3767c891", null ]
     ] ]
 ];

@@ -10,9 +10,7 @@ var files_dup =
       [ "ArmorNameGenerator", "class_armor_name_generator.html", "class_armor_name_generator" ]
     ] ],
     [ "Constants.cpp", "_constants_8cpp.html", null ],
-    [ "Constants.hpp", "_constants_8hpp.html", [
-      [ "Constants", "class_constants.html", "class_constants" ]
-    ] ],
+    [ "Constants.hpp", "_constants_8hpp.html", "_constants_8hpp" ],
     [ "Dragon.cpp", "_dragon_8cpp.html", null ],
     [ "Dragon.hpp", "_dragon_8hpp.html", [
       [ "Dragon", "class_dragon.html", "class_dragon" ]
@@ -64,6 +62,9 @@ var files_dup =
     [ "MultipleImagePrinter.cpp", "_multiple_image_printer_8cpp.html", null ],
     [ "MultipleImagePrinter.hpp", "_multiple_image_printer_8hpp.html", [
       [ "MultipleImagePrinter", "class_multiple_image_printer.html", "class_multiple_image_printer" ]
+    ] ],
+    [ "MyException.hpp", "_my_exception_8hpp.html", [
+      [ "MyException", "class_my_exception.html", "class_my_exception" ]
     ] ],
     [ "Player.cpp", "_player_8cpp.html", "_player_8cpp" ],
     [ "Player.hpp", "_player_8hpp.html", "_player_8hpp" ],

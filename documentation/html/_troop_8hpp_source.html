@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dungeons &amp; Dragons: C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Troop.hpp Source File</title>
+<title>Dungeons &amp; Dragons: Troop.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('_troop_8hpp_source.html',''); initResi
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/Troop.hpp</div></div>
+  <div class="headertitle"><div class="title">Troop.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="_troop_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __TROOP_HPP</span></div>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('_troop_8hpp_source.html',''); initResi
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">   15</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_troop.html#a6d35faae5cbc9dd46244e66274b349cd">mana</a>, <a class="code hl_variable" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">health</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_troop.html#a4c6c38121f85e8a310c3a3fbe091669c">determineStat</a>(<span class="keywordtype">unsigned</span> lvl, <span class="keywordtype">float</span> init, <span class="keywordtype">float</span> perLevel) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">   18</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">alive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">health</a> &gt; 0; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">   18</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">alive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_constants.html#a3d566364e1171e8bac1c4c380b02284d">Constants::greater</a>(<a class="code hl_variable" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">health</a>, 0); }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_troop.html#a67074de9f11779acc74f3a5d275c3d1c">   21</a></span>    <a class="code hl_function" href="class_troop.html#a67074de9f11779acc74f3a5d275c3d1c">Troop</a>(<span class="keywordtype">float</span> _attack, <span class="keywordtype">float</span> _mana, <span class="keywordtype">float</span> _health, <span class="keywordtype">unsigned</span> lvl = 1)</div>
@@ -133,6 +133,7 @@ $(document).ready(function(){initNavTree('_troop_8hpp_source.html',''); initResi
 <div class="ttc" id="a_game_assets_8hpp_html"><div class="ttname"><a href="_game_assets_8hpp.html">GameAssets.hpp</a></div></div>
 <div class="ttc" id="a_hero_equipment_8hpp_html"><div class="ttname"><a href="_hero_equipment_8hpp.html">HeroEquipment.hpp</a></div></div>
 <div class="ttc" id="a_printer_8hpp_html"><div class="ttname"><a href="_printer_8hpp.html">Printer.hpp</a></div></div>
+<div class="ttc" id="aclass_constants_html_a3d566364e1171e8bac1c4c380b02284d"><div class="ttname"><a href="class_constants.html#a3d566364e1171e8bac1c4c380b02284d">Constants::greater</a></div><div class="ttdeci">static bool greater(float a, float b)</div><div class="ttdef"><b>Definition:</b> Constants.hpp:46</div></div>
 <div class="ttc" id="aclass_troop_html"><div class="ttname"><a href="class_troop.html">Troop</a></div><div class="ttdef"><b>Definition:</b> Troop.hpp:9</div></div>
 <div class="ttc" id="aclass_troop_html_a340181700539d108c97aadef47e05e5a"><div class="ttname"><a href="class_troop.html#a340181700539d108c97aadef47e05e5a">Troop::print</a></div><div class="ttdeci">virtual void print(float attackBonus=0) const</div><div class="ttdef"><b>Definition:</b> Troop.cpp:3</div></div>
 <div class="ttc" id="aclass_troop_html_a489506cd244ede8010fa7d93cc47b14b"><div class="ttname"><a href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">Troop::alive</a></div><div class="ttdeci">bool alive() const</div><div class="ttdef"><b>Definition:</b> Troop.hpp:18</div></div>

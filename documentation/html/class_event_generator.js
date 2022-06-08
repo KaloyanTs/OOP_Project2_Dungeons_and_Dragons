@@ -10,5 +10,6 @@ var class_event_generator =
     [ "isOnBoard", "class_event_generator.html#a9f5fc33ce4dae34acd579be6ff770b15", null ],
     [ "locatedAt", "class_event_generator.html#aedaf687f0b44dc70282ee9250274631f", null ],
     [ "print", "class_event_generator.html#aefdf51225b0bb2abd2fbca2bb8195ae8", null ],
-    [ "removeFromBoard", "class_event_generator.html#ad35c75e01dc0dd3597a84457ed5097e9", null ]
+    [ "removeFromBoard", "class_event_generator.html#ad35c75e01dc0dd3597a84457ed5097e9", null ],
+    [ "write", "class_event_generator.html#ac6fe78c71ee7069bdf03504a154ed29e", null ]
 ];

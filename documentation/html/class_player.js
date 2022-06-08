@@ -18,6 +18,7 @@ var class_player =
     [ "printStats", "class_player.html#a786aa953d350e5bc0d23b25c5640c46b", null ],
     [ "regenerate", "class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a", null ],
     [ "reset", "class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa", null ],
+    [ "save", "class_player.html#a0eab765db52a1d6cacccc89e02d5f298", null ],
     [ "take", "class_player.html#a03bd4ab639c42919c70965940ab64dd5", null ],
     [ "takeDamage", "class_player.html#a5176eb73a71d54dc2976e9f2821631d5", null ],
     [ "equip", "class_player.html#af3f1d0666549ae2319c417f0b03504e6", null ]

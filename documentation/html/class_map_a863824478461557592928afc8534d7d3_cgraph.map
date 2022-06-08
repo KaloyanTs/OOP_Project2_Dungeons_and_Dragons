@@ -1,8 +1,0 @@
-<map id="Map::Map" name="Map::Map">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,85,133"/>
-<area shape="rect" id="node2" href="$class_string.html#aefb74cf401b56191337867e2780c5286" title="get pointer to the beginning of the array" alt="" coords="164,5,257,32"/>
-<area shape="rect" id="node3" href="$class_inventar.html#ae1986ecbe0b1826ee0518ad55f114e0f" title=" " alt="" coords="133,56,288,83"/>
-<area shape="rect" id="node4" href="$class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a" title=" " alt="" coords="161,107,261,133"/>
-<area shape="rect" id="node5" href="$class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde" title=" " alt="" coords="145,157,276,184"/>
-<area shape="rect" id="node6" href="$class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c" title=" " alt="" coords="165,208,257,235"/>
-</map>

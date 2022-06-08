@@ -1,5 +1,0 @@
-<map id="DragonEquipment" name="DragonEquipment">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,131,197"/>
-<area shape="rect" id="node2" href="$class_equipment.html" title=" " alt="" coords="26,95,110,121"/>
-<area shape="rect" id="node3" href="$class_string.html" title="Class representing dynamic string (array of characters)" alt="" coords="40,5,96,32"/>
-</map>

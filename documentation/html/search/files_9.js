@@ -11,5 +11,6 @@ var searchData=
   ['maze_2ecpp_2eobj_2ed_8',['Maze.cpp.obj.d',['../_maze_8cpp_8obj_8d.html',1,'']]],
   ['multipleimageprinter_2ecpp_9',['MultipleImagePrinter.cpp',['../_multiple_image_printer_8cpp.html',1,'']]],
   ['multipleimageprinter_2ecpp_2eobj_2ed_10',['MultipleImagePrinter.cpp.obj.d',['../_multiple_image_printer_8cpp_8obj_8d.html',1,'']]],
-  ['multipleimageprinter_2ehpp_11',['MultipleImagePrinter.hpp',['../_multiple_image_printer_8hpp.html',1,'']]]
+  ['multipleimageprinter_2ehpp_11',['MultipleImagePrinter.hpp',['../_multiple_image_printer_8hpp.html',1,'']]],
+  ['myexception_2ehpp_12',['MyException.hpp',['../_my_exception_8hpp.html',1,'']]]
 ];

@@ -11,11 +11,15 @@ var searchData=
   ['info_5flanguage_5fstandard_5fdefault_8',['info_language_standard_default',['../_c_make_c_compiler_id_8c.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCXXCompilerId.cpp']]],
   ['info_5fplatform_9',['info_platform',['../_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
   ['init_5fcapacity_10',['INIT_CAPACITY',['../class_vector.html#a958962153e62865ea1ed0a2f4f140836',1,'Vector']]],
-  ['input_5flimit_11',['INPUT_LIMIT',['../class_constants.html#a19fda6445e8c370200e584e040b4a78c',1,'Constants']]],
-  ['inventar_12',['Inventar',['../class_inventar.html',1,'Inventar'],['../class_inventar.html#a8c592c99bc20ca9fe21e6fa0f0c798fd',1,'Inventar::Inventar()']]],
-  ['inventar_2ecpp_13',['Inventar.cpp',['../_inventar_8cpp.html',1,'']]],
-  ['inventar_2ecpp_2eobj_2ed_14',['Inventar.cpp.obj.d',['../_inventar_8cpp_8obj_8d.html',1,'']]],
-  ['inventar_2ehpp_15',['Inventar.hpp',['../_inventar_8hpp.html',1,'']]],
-  ['inventar_5flimit_16',['INVENTAR_LIMIT',['../class_constants.html#a17b65027f16902896598a7657cee740b',1,'Constants']]],
-  ['isonboard_17',['isOnBoard',['../class_event_generator.html#a9f5fc33ce4dae34acd579be6ff770b15',1,'EventGenerator']]]
+  ['initial_5fmaximal_5fbonus_11',['INITIAL_MAXIMAL_BONUS',['../_constants_8hpp.html#a3c2df87b336a4f85b2f2df3423150703',1,'Constants.hpp']]],
+  ['initial_5fminimal_5fbonus_12',['INITIAL_MINIMAL_BONUS',['../_constants_8hpp.html#aacfea5a6502f6b0e682896c322db92c0',1,'Constants.hpp']]],
+  ['initial_5fminimal_5fcost_13',['INITIAL_MINIMAL_COST',['../_constants_8hpp.html#a073180cc85bda9bb70aa73a2da54fbf8',1,'Constants.hpp']]],
+  ['input_5flimit_14',['INPUT_LIMIT',['../class_constants.html#a19fda6445e8c370200e584e040b4a78c',1,'Constants']]],
+  ['inventar_15',['Inventar',['../class_inventar.html',1,'Inventar'],['../class_inventar.html#a8c592c99bc20ca9fe21e6fa0f0c798fd',1,'Inventar::Inventar()']]],
+  ['inventar_2ecpp_16',['Inventar.cpp',['../_inventar_8cpp.html',1,'']]],
+  ['inventar_2ecpp_2eobj_2ed_17',['Inventar.cpp.obj.d',['../_inventar_8cpp_8obj_8d.html',1,'']]],
+  ['inventar_2ehpp_18',['Inventar.hpp',['../_inventar_8hpp.html',1,'']]],
+  ['inventar_5flimit_19',['INVENTAR_LIMIT',['../class_constants.html#a17b65027f16902896598a7657cee740b',1,'Constants']]],
+  ['isonboard_20',['isOnBoard',['../class_event_generator.html#a9f5fc33ce4dae34acd579be6ff770b15',1,'EventGenerator']]],
+  ['issaved_21',['isSaved',['../class_map.html#a9742bfb34e95ef450f5f6f46c5b39b91',1,'Map']]]
 ];
