@@ -12,7 +12,7 @@ protected:
     std::ostream &getOutputStream() const { return os; }
 
 public:
-    Printer(std::ostream &_os = std::cout) : os(_os) { os.precision(2); }
+    Printer(std::ostream &_os = std::cout) : os(_os) { os << std::setprecision(2) << std::fixed; }
     template <typename Printable>
     const Printer &operator()(const Printable &p) const
     {
