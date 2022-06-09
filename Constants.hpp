@@ -22,6 +22,8 @@
 
 #define EPS 1e-3
 
+#define LEVEL_COUNT 3
+
 class Constants
 {
     Constants() {}
@@ -39,7 +41,8 @@ public:
         PASS,
         DIE,
         CLOSE,
-        PAUSE
+        PAUSE,
+        END
     };
     static bool equal(float a, float b) { return a - b < EPS && a - b > -EPS; }
     static bool less(float a, float b) { return a - b <= -EPS; }

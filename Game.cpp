@@ -100,9 +100,18 @@ Constants::LEVEL_STATE Game::run()
         tmp = map->run();
         if (tmp == Constants::LEVEL_STATE::PASS)
         {
-            delete map;
-            map = new Map(pl, ++level);
-            pl->reset();
+            if (level < LEVEL_COUNT)
+            {
+                delete map;
+                map = new Map(pl, ++level);
+                pl->reset();
+            }
+            else
+            {
+                Constants::STDOUT(pl->getName())(", you proved yourself as a real hero and will be rewarded as deserved!\nThis is the end game...");
+                running = false;
+                return Constants::LEVEL_STATE::END;
+            }
         }
         else if (tmp == Constants::LEVEL_STATE::PAUSE)
         {
