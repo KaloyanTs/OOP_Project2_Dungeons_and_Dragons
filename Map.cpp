@@ -211,7 +211,8 @@ Constants::LEVEL_STATE Map::run()
                     print();
                     std::clog << event->getErrorMsg() << '\n';
                     getch();
-                    return Constants::LEVEL_STATE::DIE;
+                    if (!pl->alive())
+                        return Constants::LEVEL_STATE::DIE;
                 }
             }
             else if (pl->getY() == rows - 1 && pl->getX() == cols)

@@ -1,5 +1,6 @@
 #ifndef __ARMOR_HPP
 #define __ARMOR_HPP
+#include <algorithm>
 #include "HeroEquipment.hpp"
 #include "Constants.hpp"
 
