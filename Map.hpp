@@ -48,7 +48,7 @@ public:
     static Player *getHero(unsigned index, const String &name = "unknown");
     bool isSaved() const { return saved; }
     void saveProgress(const String &game);
-    static Map *read(const String &file);
+    static Map *read(const String &file, Player *p);
 };
 
 #endif

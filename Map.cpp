@@ -243,6 +243,7 @@ void Map::saveProgress(const String &game)
     ofs << level << ' ' << rows << ' ' << cols << "\n\n";
     for (unsigned i = 0; i < events.size(); ++i)
         events[i]->write(ofs);
+    // fix potions maybe not saving
     for (unsigned i = 0; i < rows; ++i)
     {
         for (unsigned j = 0; j < cols; ++j)
@@ -261,6 +262,8 @@ Map::Map(Player *p, const String &path)
     String file = "games\\";
     file += path;
     file += ".dndmap";
+    std::cout << file;
+    getch();
 
     std::ifstream ifs;
     ifs.open(file.c_str(), std::ios::in);
@@ -269,14 +272,15 @@ Map::Map(Player *p, const String &path)
     ifs >> level >> rows >> cols;
 
     unsigned buf, y, x, bonus, cost;
-    dragonCount = (fib(level, Constants::MONSTER_COUNT_1, Constants::MONSTER_COUNT_2));
-    treasureCount = (fib(level, Constants::TREASURE_COUNT_1, Constants::TREASURE_COUNT_2));
+    dragonCount = fib(level, Constants::MONSTER_COUNT_1, Constants::MONSTER_COUNT_2);
+    treasureCount = fib(level, Constants::TREASURE_COUNT_1, Constants::TREASURE_COUNT_2);
+    potionCount = fib(level, 1, 2);
     for (unsigned i = 0; i < dragonCount; ++i)
     {
         ifs >> buf >> y >> x;
         events.push_back(new Dragon(y, x, buf));
     }
-    for (unsigned i = 0; i < treasureCount; ++i)
+    for (unsigned i = 0; i < treasureCount + potionCount; ++i)
     {
         ifs >> buf >> y >> x >> bonus >> cost;
         events.push_back(Inventar::getEquipment(buf, y, x, bonus, 0, cost));
@@ -311,9 +315,4 @@ Player *Map::getHero(unsigned index, const String &name)
         return new Warrior(0, 0, name);
 
     return nullptr;
-}
-
-Map *Map::read(const String &file)
-{
-    throw MyException("Temporarily disabled", "Map *read(const String &)");
 }

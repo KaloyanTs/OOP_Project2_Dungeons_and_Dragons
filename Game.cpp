@@ -25,6 +25,8 @@ void Game::start()
         }
         catch (const MyException &err)
         {
+            delete pl;
+            delete map;
             std::cerr << err.what() << '\n';
             getch();
             newGame();
@@ -43,20 +45,29 @@ void Game::load()
     Constants::STDOUT("enter name of game to be loaded:\n");
     std::cin.getline(name, Constants::INPUT_LIMIT);
     pl = Game::readPlayer(name);
-    map = Map::read(name);
-    // if (type == '1')
-    //     pl = new Human(ifs);
-    // if (type == '2')
-    //     pl = new Mage(ifs);
-    // if (type == '3')
-    //     pl = new Warrior(ifs);
-    // strcat(name, ".dndmap");
-    // map = new Map(pl, name);
+    map = new Map(pl, name);
 }
 
 Player *Game::readPlayer(const String &file)
 {
-    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+    // todo testing throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+    String path = "games\\";
+    (path += file) += ".dndplayer";
+    std::ifstream ifs(path);
+    if (!ifs)
+        throw MyException(path + " NOT FOUND...", "Player *readPlayer(const String &)");
+    int type;
+    ifs >> type;
+    Player *res = nullptr;
+    if (type == (int)Player::HERO_TYPE::HUMAN)
+        res = new Human(ifs); // todo read stats!!!
+    if (type == (int)Player::HERO_TYPE::MAGE)
+        res = new Mage(ifs);
+    if (type == (int)Player::HERO_TYPE::WARRIOR)
+        res = new Warrior(ifs);
+    else
+        throw MyException("FAILED TO DETERMINE HERO TYPE...", "Player *readPlayer(const String &)");
+    return res;
 }
 
 void Game::newGame()
@@ -76,7 +87,6 @@ void Game::newGame()
         strcpy(name, "unknown");
     pl = Map::getHero(chosen - '0' - 1, name);
     map = new Map(pl, level); // todo this is throwing an exception
-    // map = new Map(pl, "assets\\level4.dndmap");
 }
 
 Constants::LEVEL_STATE Game::run()

@@ -19,22 +19,33 @@ bool operator==(char c, const KEYS &k);
 
 class Player
 {
+public:
+    enum class HERO_TYPE
+    {
+        HUMAN = 0,
+        MAGE = 1,
+        WARRIOR = 2,
+        ERROR = 3
+    };
+
+private:
     static const char PLAYER_CHAR = (char)177;
     unsigned y, x;
     Inventar *inv;
-    Printer lazy;
     String name;
 
     HeroEquipment *&getMatching(const HeroEquipment *ptr);
     void printInventar() const;
     void inventar();
     virtual bool payCost(float points) = 0;
+    virtual HERO_TYPE getID() const = 0;
 
 protected:
     HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
+    Player(std::ifstream &ifs);
     virtual ~Player();
 
     template <typename ALLOWED>

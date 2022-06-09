@@ -5,14 +5,25 @@
 
 class Human : public Player, public Troop
 {
+
+    HERO_TYPE getID() const { return HERO_TYPE::HUMAN; }
+
 public:
     Human(unsigned posY, unsigned posX, const String &name = "unknown")
         : Player(posY, posX, name),
           Troop(Constants::HUMAN_INIT_ATTACK,
                 Constants::HUMAN_INIT_MANA,
                 Constants::HUMAN_INIT_HEALTH) {}
+    Human(std::ifstream &ifs)
+        : Player(ifs),
+          Troop(Constants::HUMAN_INIT_ATTACK,
+                Constants::HUMAN_INIT_MANA,
+                Constants::HUMAN_INIT_HEALTH) {}
 
-    Human *clone() const { return new Human(*this); }
+    Human *clone() const
+    {
+        return new Human(*this);
+    }
     void print() const;
     void printStats() const { print(); }
     bool alive() const { return Troop::alive(); }

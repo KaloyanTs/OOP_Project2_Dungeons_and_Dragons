@@ -5,9 +5,16 @@
 
 class Mage : public Player, public Troop
 {
+    HERO_TYPE getID() const { return HERO_TYPE::MAGE; }
+
 public:
     Mage(unsigned posY, unsigned posX, const String &name)
         : Player(posY, posX, name),
+          Troop(Constants::MAGE_INIT_ATTACK,
+                Constants::MAGE_INIT_MANA,
+                Constants::MAGE_INIT_HEALTH) {}
+    Mage(std::ifstream &ifs)
+        : Player(ifs),
           Troop(Constants::MAGE_INIT_ATTACK,
                 Constants::MAGE_INIT_MANA,
                 Constants::MAGE_INIT_HEALTH) {}

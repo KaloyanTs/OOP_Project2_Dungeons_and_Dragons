@@ -8,6 +8,28 @@ Player::Player(unsigned posY, unsigned posX, const String &n)
         equip[i] = nullptr;
 }
 
+Player::Player(std::ifstream &ifs)
+    : inv(new Inventar)
+{
+    int buf;
+    ifs >> buf;
+    ifs.ignore();
+    char *readName = new char[buf + 1];
+    ifs.getline(readName, buf + 1);
+    name = readName;
+
+    // todo baaaad
+    ifs >> y >> y >> y;
+    // todo baaaad
+
+    ifs >> y >> x;
+
+    for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
+        equip[i] = nullptr;
+    // todo read equipment and inventar
+    delete[] readName;
+}
+
 bool operator==(char c, const KEYS &k)
 {
     return (char)k == c;
@@ -227,6 +249,7 @@ void Player::save(const String &game) const
     file += game;
     file += ".dndplayer";
     std::ofstream ofs(file);
+    ofs << (int)getID() << '\n';
     ofs << name.size() << ' ' << name.c_str() << '\n';
     ofs << getAttack() << ' ' << getHealth() << ' ' << getMana() << '\n';
     ofs << y << ' ' << x << '\n';

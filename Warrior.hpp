@@ -5,9 +5,16 @@
 
 class Warrior : public Player, public Troop
 {
+    HERO_TYPE getID() const { return HERO_TYPE::WARRIOR; }
+
 public:
     Warrior(unsigned posY, unsigned posX, const String &name)
         : Player(posY, posX, name),
+          Troop(Constants::WARRIOR_INIT_ATTACK,
+                Constants::WARRIOR_INIT_MANA,
+                Constants::WARRIOR_INIT_HEALTH) {}
+    Warrior(std::ifstream &ifs)
+        : Player(ifs),
           Troop(Constants::WARRIOR_INIT_ATTACK,
                 Constants::WARRIOR_INIT_MANA,
                 Constants::WARRIOR_INIT_HEALTH) {}
