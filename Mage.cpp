@@ -18,3 +18,9 @@ bool Mage::payCost(float points)
 {
     return Troop::payMana(points);
 }
+
+void Mage::levelUp()
+{
+    Troop::levelUp();
+    printBrief();
+}

@@ -37,6 +37,8 @@ public:
 
     bool payCost(float points);
     void regenerate(float percentage) { Troop::regen(percentage); }
+
+    void levelUp();
 };
 
 #endif

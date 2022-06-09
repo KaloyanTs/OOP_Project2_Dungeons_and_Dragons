@@ -18,3 +18,9 @@ bool Human::payCost(float points)
 {
     return Troop::payMana(points);
 }
+
+void Human::levelUp()
+{
+    Troop::levelUp();
+    printBrief();
+}

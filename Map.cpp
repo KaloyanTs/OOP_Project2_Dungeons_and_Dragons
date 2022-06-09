@@ -219,6 +219,7 @@ Constants::LEVEL_STATE Map::run()
             {
                 Constants::STDOUT("Level passed successfully!");
                 getch();
+                pl->levelUp();
                 running = false;
                 return Constants::LEVEL_STATE::PASS;
             }

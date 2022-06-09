@@ -10,7 +10,7 @@ class Troop
 
 protected:
     unsigned level;
-    const float maxHealth;
+    float maxHealth;
     float attack;
     float mana, health;
 
@@ -37,6 +37,8 @@ public:
     bool payMana(float points);
 
     void regen(float percentage = 0);
+
+    void levelUp();
 };
 
 #endif

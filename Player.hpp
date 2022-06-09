@@ -75,6 +75,8 @@ public:
     void reset() { y = x = 0; }
 
     void save(const String &game) const;
+
+    virtual void levelUp() = 0;
 };
 
 template <typename ALLOWED>

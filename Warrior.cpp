@@ -18,3 +18,9 @@ bool Warrior::payCost(float points)
 {
     return Troop::payMana(points);
 }
+
+void Warrior::levelUp()
+{
+    Troop::levelUp();
+    printBrief();
+}

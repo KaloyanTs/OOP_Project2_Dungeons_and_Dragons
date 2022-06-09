@@ -42,3 +42,40 @@ void Troop::regen(float percentage)
             health = maxHealth;
     }
 }
+
+void Troop::levelUp()
+{
+    system("cls");
+    unsigned sum = 0;
+    unsigned a, h, m;
+    Constants::STDOUT("You are now level ")(++level)("\n\tChoose how to distribute ")(LEVEL_UP_POINTS)(" points...\n");
+    Constants::STDOUT("\tPoints improving attack: ");
+    std::cin >> a;
+    while (sum + a > LEVEL_UP_POINTS)
+    {
+        Constants::STDOUT("Too much power gained! Try again...\n");
+        std::cin >> a;
+    }
+    sum += a;
+
+    Constants::STDOUT("\tPoints improving health: ");
+    std::cin >> h;
+    while (sum + h > LEVEL_UP_POINTS)
+    {
+        Constants::STDOUT("Too much power gained! Try again...\n");
+        std::cin >> h;
+    }
+    sum += h;
+
+    Constants::STDOUT("\tPoints improving mana: ");
+    std::cin >> m;
+    while (sum + m > LEVEL_UP_POINTS)
+    {
+        Constants::STDOUT("Too much power gained! Try again...\n");
+        std::cin >> m;
+    }
+    maxHealth += h;
+    health = maxHealth;
+    attack += a;
+    mana += m;
+}
