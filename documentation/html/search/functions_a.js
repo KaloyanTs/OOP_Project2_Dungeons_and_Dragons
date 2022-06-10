@@ -2,7 +2,7 @@ var searchData=
 [
   ['paycost_0',['payCost',['../class_human.html#a6dfda996d0e9a2f50d04f062e0620564',1,'Human::payCost()'],['../class_mage.html#a27acbac719713f18ea812201d0eee989',1,'Mage::payCost()'],['../class_warrior.html#a9891873801f41d8f0e8e27210ad605a1',1,'Warrior::payCost()']]],
   ['paymana_1',['payMana',['../class_troop.html#a60f7b53d4d238610d0d7de4a73246be4',1,'Troop']]],
-  ['player_2',['Player',['../class_player.html#a9686165e0f897e13e1c37f24773af6a4',1,'Player']]],
+  ['player_2',['Player',['../class_player.html#a9686165e0f897e13e1c37f24773af6a4',1,'Player::Player(unsigned posY, unsigned posX, const String &amp;n)'],['../class_player.html#a959f38b798e6eb9b483d1647d11a7f65',1,'Player::Player(std::ifstream &amp;ifs)']]],
   ['pop_3',['pop',['../class_stack.html#a2723aec5c7e2611b97fcffeb7709de33',1,'Stack']]],
   ['pop_5fat_4',['pop_at',['../class_vector.html#a5a85c9458592289e460bb87603d944f7',1,'Vector']]],
   ['pop_5fback_5',['pop_back',['../class_vector.html#ab508ab90dabd2253a1e5721ecf9e8965',1,'Vector']]],

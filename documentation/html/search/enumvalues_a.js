@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['up_0',['UP',['../_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211afbaedde498cdead4f2780217646e9ba1',1,'Player.hpp']]]
+  ['right_0',['RIGHT',['../_player_8hpp.html#a917cb2ad6b731b390f8c57aa48656211a21507b40c80068eda19865706fdc2403',1,'Player.hpp']]]
 ];

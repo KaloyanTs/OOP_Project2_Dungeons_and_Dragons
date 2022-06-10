@@ -41,6 +41,8 @@ void Game::start()
 
 void Game::load()
 {
+    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+
     char name[Constants::INPUT_LIMIT];
     Constants::STDOUT("enter name of game to be loaded:\n");
     std::cin.getline(name, Constants::INPUT_LIMIT);
@@ -52,8 +54,6 @@ Player *Game::readPlayer(const String &file)
 {
     throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
 
-
-    
     String path = "games\\";
     (path += file) += ".dndplayer";
     std::ifstream ifs(path);

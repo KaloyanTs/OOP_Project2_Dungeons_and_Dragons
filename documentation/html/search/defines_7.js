@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['maximal_5fbonus_5fper_5flevel_0',['MAXIMAL_BONUS_PER_LEVEL',['../_constants_8hpp.html#aff69f024b26dead3a6b32d34c8acbee0',1,'Constants.hpp']]],
-  ['minimum_5fbonus_5fper_5flevel_1',['MINIMUM_BONUS_PER_LEVEL',['../_constants_8hpp.html#a870ecc47e3ea9cd1ead487c275520e55',1,'Constants.hpp']]]
+  ['level_5fcount_0',['LEVEL_COUNT',['../_constants_8hpp.html#aeab1aec6a533c4a44f5697d0b7079188',1,'Constants.hpp']]],
+  ['level_5fup_5fpoints_1',['LEVEL_UP_POINTS',['../_constants_8hpp.html#a0b661312fece32aae80ac8847ad1ca56',1,'Constants.hpp']]]
 ];

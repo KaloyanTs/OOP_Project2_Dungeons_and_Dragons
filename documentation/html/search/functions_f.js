@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['warrior_0',['Warrior',['../class_warrior.html#a2db62d7c17b48a23fd0b311cbf5bf9d5',1,'Warrior']]],
+  ['warrior_0',['Warrior',['../class_warrior.html#a2db62d7c17b48a23fd0b311cbf5bf9d5',1,'Warrior::Warrior(unsigned posY, unsigned posX, const String &amp;name)'],['../class_warrior.html#ab27894d1272a48204bbdbb636cc767fd',1,'Warrior::Warrior(std::ifstream &amp;ifs)']]],
   ['weapon_1',['Weapon',['../class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1',1,'Weapon']]],
   ['weaponnamegenerator_2',['WeaponNameGenerator',['../class_weapon_name_generator.html#a99d30430e6a5b89b624bfea55a73aea9',1,'WeaponNameGenerator']]],
   ['what_3',['what',['../class_my_exception.html#a37afb55a04da01e024cdb9745cbe9756',1,'MyException']]],

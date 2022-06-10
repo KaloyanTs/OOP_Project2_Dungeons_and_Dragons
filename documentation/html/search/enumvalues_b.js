@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wall_0',['WALL',['../_map_8hpp.html#a4a7e0c5732be345f2b797033cf099241a48d536b2de1195d0c9f6ea8ab884085e',1,'Map.hpp']]],
-  ['weapon_1',['WEAPON',['../class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340a192633948703cf46924846d15ea7b5c1',1,'HeroEquipment']]]
+  ['spell_0',['SPELL',['../class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340a69462e7a7d42c351c648eed28b70f265',1,'HeroEquipment']]],
+  ['successfull_1',['SUCCESSFULL',['../class_constants.html#aead8da5c6a3d03a60f04eb732e9139a7addeb18c17d0a5ef9c37a8fbf41ab6999',1,'Constants']]]
 ];
