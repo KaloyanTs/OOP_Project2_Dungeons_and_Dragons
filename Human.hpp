@@ -39,6 +39,8 @@ public:
     void regenerate(float percentage) { Troop::regen(percentage); }
 
     void levelUp();
+
+    void save(const String &game) const;
 };
 
 #endif

@@ -11,11 +11,14 @@ class Troop
 protected:
     unsigned level;
     float maxHealth;
+    float maxMana;
     float attack;
     float mana, health;
 
     float determineStat(unsigned lvl, float init, float perLevel) const;
     bool alive() const { return Constants::greater(health, 0); }
+
+    void save(std::ofstream &ofs) const;
 
 public:
     Troop(float _attack, float _mana, float _health, unsigned lvl = 1)
@@ -23,6 +26,7 @@ public:
           mana(_mana),
           health(_health),
           maxHealth(_health),
+          maxMana(_mana),
           level(lvl)
     {
     }

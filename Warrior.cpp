@@ -24,3 +24,17 @@ void Warrior::levelUp()
     Troop::levelUp();
     printBrief();
 }
+
+void Warrior::save(const String &game) const
+{
+    String file = "games\\";
+    file += game;
+    file += ".dndplayer";
+    std::ofstream ofs(file);
+
+    // todo
+    // Player::save(ofs);
+    // Troop::save(ofs);
+
+    ofs.close();
+}

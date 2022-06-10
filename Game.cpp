@@ -50,7 +50,10 @@ void Game::load()
 
 Player *Game::readPlayer(const String &file)
 {
-    // todo testing throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+
+
+    
     String path = "games\\";
     (path += file) += ".dndplayer";
     std::ifstream ifs(path);

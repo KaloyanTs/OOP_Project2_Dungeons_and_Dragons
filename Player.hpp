@@ -42,6 +42,7 @@ private:
 
 protected:
     HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
+    virtual void save(std::ofstream &ofs) const;
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
@@ -74,7 +75,7 @@ public:
 
     void reset() { y = x = 0; }
 
-    void save(const String &game) const;
+    virtual void save(const String &game) const = 0;
 
     virtual void levelUp() = 0;
 };

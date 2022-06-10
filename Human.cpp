@@ -24,3 +24,21 @@ void Human::levelUp()
     Troop::levelUp();
     printBrief();
 }
+
+void Human::save(const String &game) const
+{
+    String file = "games\\";
+    file += game;
+    file += ".dndplayer";
+    std::ofstream ofs(file);
+
+    std::cout << "to be saved...";
+    getch();
+    // fix work on this
+
+    // todo
+    // Player::save(ofs);
+    // Troop::save(ofs);
+
+    ofs.close();
+}

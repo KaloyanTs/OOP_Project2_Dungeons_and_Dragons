@@ -49,7 +49,7 @@ void Troop::levelUp()
     unsigned sum = 0;
     unsigned a, h, m;
     Constants::STDOUT("You are now level ")(++level)("\n\tChoose how to distribute ")(LEVEL_UP_POINTS)(" points...\n");
-    Constants::STDOUT("\tPoints improving attack: ");
+    Constants::STDOUT("\tPoints improving attack\t(currently ")(attack)("): ");
     std::cin >> a;
     while (sum + a > LEVEL_UP_POINTS)
     {
@@ -58,7 +58,7 @@ void Troop::levelUp()
     }
     sum += a;
 
-    Constants::STDOUT("\tPoints improving health: ");
+    Constants::STDOUT("\tPoints improving health\t(currently ")(health)("): ");
     std::cin >> h;
     while (sum + h > LEVEL_UP_POINTS)
     {
@@ -67,7 +67,7 @@ void Troop::levelUp()
     }
     sum += h;
 
-    Constants::STDOUT("\tPoints improving mana: ");
+    Constants::STDOUT("\tPoints improving mana\t(currently ")(mana)("): ");
     std::cin >> m;
     while (sum + m > LEVEL_UP_POINTS)
     {
@@ -77,5 +77,6 @@ void Troop::levelUp()
     maxHealth += h;
     health = maxHealth;
     attack += a;
-    mana += m;
+    maxMana += m;
+    mana = maxMana;
 }

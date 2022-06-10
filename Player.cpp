@@ -243,15 +243,10 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
     return Constants::ACTION_STATE::ESCAPED;
 }
 
-void Player::save(const String &game) const
+void Player::save(std::ofstream &ofs) const
 {
-    String file = "games\\";
-    file += game;
-    file += ".dndplayer";
-    std::ofstream ofs(file);
     ofs << (int)getID() << '\n';
     ofs << name.size() << ' ' << name.c_str() << '\n';
-    ofs << getAttack() << ' ' << getHealth() << ' ' << getMana() << '\n';
     ofs << y << ' ' << x << '\n';
     for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
         if (equip[i])
@@ -260,6 +255,4 @@ void Player::save(const String &game) const
             ofs << -1 << '\n';
 
     inv->write(ofs);
-
-    ofs.close();
 }
