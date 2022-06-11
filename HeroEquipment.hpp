@@ -33,7 +33,7 @@ public:
 
     inline void write(std::ofstream &ofs) const
     {
-        ofs << (int)getID() << ' ' << getY() << ' ' << getX() << ' ' << getBonus() << ' ' << getCost() << '\n';
+        ofs << "e " << (int)getID() << ' ' << getY() << ' ' << getX() << ' ' << bonus << ' ' << getCost() << '\n';
     }
     inline void save(std::ofstream &ofs) const
     {

@@ -10,5 +10,5 @@ void Dragon::print() const
 
 void Dragon::write(std::ofstream &ofs) const
 {
-    ofs << level << ' ' << getY() << ' ' << getX() << '\n';
+    ofs << "d " << level << ' ' << getY() << ' ' << getX() << '\n';
 }

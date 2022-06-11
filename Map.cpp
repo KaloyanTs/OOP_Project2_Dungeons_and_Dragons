@@ -242,9 +242,9 @@ void Map::saveProgress(const String &game)
     std::ofstream ofs(name.c_str());
 
     ofs << level << ' ' << rows << ' ' << cols << "\n\n";
+    ofs << events.size() << '\n';
     for (unsigned i = 0; i < events.size(); ++i)
         events[i]->write(ofs);
-    // fix potions maybe not saving
     for (unsigned i = 0; i < rows; ++i)
     {
         for (unsigned j = 0; j < cols; ++j)
@@ -274,17 +274,24 @@ Map::Map(Player *p, const String &path)
     dragonCount = fib(level, Constants::MONSTER_COUNT_1, Constants::MONSTER_COUNT_2);
     treasureCount = fib(level, Constants::TREASURE_COUNT_1, Constants::TREASURE_COUNT_2);
     potionCount = fib(level, 1, 2);
-    for (unsigned i = 0; i < dragonCount; ++i)
+    unsigned evCount;
+    char detChar;
+    ifs >> evCount;
+
+    for (unsigned i = 0; i < evCount; ++i)
     {
-        ifs >> buf >> y >> x;
-        events.push_back(new Dragon(y, x, buf));
+        ifs >> detChar;
+        if (detChar == 'd')
+        {
+            ifs >> buf >> y >> x;
+            events.push_back(new Dragon(y, x, buf));
+        }
+        else if (detChar == 'e')
+        {
+            ifs >> buf >> y >> x >> bonus >> cost;
+            events.push_back(Inventar::getEquipment(buf, y, x, bonus, 0, cost));
+        }
     }
-    for (unsigned i = 0; i < treasureCount + potionCount; ++i)
-    {
-        ifs >> buf >> y >> x >> bonus >> cost;
-        events.push_back(Inventar::getEquipment(buf, y, x, bonus, 0, cost));
-    }
-    ifs.get();
 
     data = new char *[rows];
     for (unsigned i = 0; i < rows; ++i)
@@ -292,7 +299,7 @@ Map::Map(Player *p, const String &path)
         data[i] = new char[cols];
         for (unsigned j = 0; j < cols; ++j)
         {
-            ifs.get(data[i][j]);
+            ifs >> data[i][j];
             if (data[i][j] == '#')
                 data[i][j] = (char)MAP_SYMBOLS::WALL;
         }
