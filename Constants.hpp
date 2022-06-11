@@ -22,7 +22,7 @@
 
 #define EPS 1e-3
 
-#define LEVEL_COUNT 3
+#define LEVEL_COUNT 4
 #define LEVEL_UP_POINTS 30
 
 #define XP_NEED_ACUMULATION 5
