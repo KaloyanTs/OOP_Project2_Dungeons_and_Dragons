@@ -12,5 +12,5 @@ void Human::printBrief() const
     Constants::STDOUT("\t(")(xpNeeded)("xp needed)\n");
     Troop::print((equip[0] ? equip[0]->getBonus() : 0));
     if (equip[2])
-        Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
+        Constants::STDOUT("\tSPELL DAMAGE(")(equip[2]->getCost())(" mana): ")(attack * (1 + equip[2]->getBonus()))('\n');
 }

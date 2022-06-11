@@ -49,6 +49,7 @@ public:
     bool isSaved() const { return saved; }
     void saveProgress(const String &game);
     static Map *read(const String &file, Player *p);
+    unsigned getLevel() const { return level; }
 };
 
 #endif

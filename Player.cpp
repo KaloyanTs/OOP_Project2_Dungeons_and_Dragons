@@ -222,9 +222,6 @@ void Player::save(const String &game) const
     file += ".dndplayer";
     std::ofstream ofs(file);
 
-    std::cout << "to be saved...";
-    getch();
-
     ofs << (int)getID() << '\n';
     ofs << name.size() << ' ' << name.c_str() << '\n';
     ofs << y << ' ' << x << '\n';

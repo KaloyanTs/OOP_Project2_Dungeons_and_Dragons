@@ -2,13 +2,14 @@
 
 Troop::Troop(std::ifstream &ifs)
 {
-    ifs >> maxHealth >> maxMana >> attack >> mana >> health >> xpNeeded;
+    ifs >> level >> maxHealth >> maxMana >> attack >> mana >> health >> xpNeeded;
 }
 
 void Troop::print(float attackBonus) const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
-    Constants::STDOUT("HEALTH\tATTACK\tMANA\n")(health)('\t')((1 + attackBonus) * attack)('\t')(mana)('\n');
+    Constants::STDOUT("HEALTH\t\tATTACK\tMANA\n")(health)('\\')(maxHealth);
+    Constants::STDOUT('\t')((1 + attackBonus) * attack)('\t')(mana)('\\')(maxMana)('\n');
 }
 
 float Troop::determineStat(unsigned lvl, float init, float perLevel) const
@@ -104,7 +105,7 @@ void Troop::levelUp()
 
 void Troop::save(std::ofstream &ofs) const
 {
-    ofs << maxHealth << ' ' << maxMana << '\n'
+    ofs << level << ' ' << maxHealth << ' ' << maxMana << '\n'
         << attack << ' ' << mana << ' ' << health << '\n'
         << xpNeeded << '\n';
 }

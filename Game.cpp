@@ -49,6 +49,7 @@ void Game::load()
     std::cin.getline(name, Constants::INPUT_LIMIT);
     pl = Game::readPlayer(name);
     map = new Map(pl, name);
+    level = map->getLevel();
 }
 
 Player *Game::readPlayer(const String &file)
