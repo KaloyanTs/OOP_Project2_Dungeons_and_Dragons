@@ -1,5 +1,12 @@
 #include "Troop.hpp"
 
+Troop::Troop(std::ifstream &ifs)
+{
+    std::cout << "reading stats...";
+    getch();
+    ifs >> maxHealth >> maxMana >> attack >> mana >> health >> xpNeeded;
+}
+
 void Troop::print(float attackBonus) const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
@@ -95,4 +102,11 @@ void Troop::levelUp()
     attack += a;
     maxMana += m;
     mana = maxMana;
+}
+
+void Troop::save(std::ofstream &ofs) const
+{
+    ofs << maxHealth << ' ' << maxMana << '\n'
+        << attack << ' ' << mana << ' ' << health << '\n'
+        << xpNeeded << '\n';
 }

@@ -5,10 +5,12 @@
 
 class Equipment
 {
-    unsigned bonus;
 
 protected:
+    unsigned bonus;
     String name;
+    Equipment(unsigned b, const String &n)
+        : bonus(b), name(n) {}
 
 public:
     Equipment(unsigned _bonus = 0) : bonus(_bonus) {}

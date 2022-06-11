@@ -11,6 +11,8 @@ Player::Player(unsigned posY, unsigned posX, const String &n)
 Player::Player(std::ifstream &ifs)
     : inv(new Inventar)
 {
+
+    // todo read right after id everything until stats
     int buf;
     ifs >> buf;
     ifs.ignore();
@@ -18,15 +20,26 @@ Player::Player(std::ifstream &ifs)
     ifs.getline(readName, buf + 1);
     name = readName;
 
-    // todo baaaad
-    ifs >> y >> y >> y;
-    // todo baaaad
-
     ifs >> y >> x;
 
     for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
-        equip[i] = nullptr;
-    // todo read equipment and inventar
+    {
+        ifs >> buf;
+        if (buf < 0)
+            equip[i] = nullptr;
+        else
+            equip[i] = Inventar::readEquipment(ifs, buf);
+    }
+    unsigned invSize;
+    ifs >> invSize;
+    HeroEquipment *tmp = nullptr;
+    for (unsigned i = 0; i < invSize; ++i)
+    {
+        ifs >> buf;
+        tmp = Inventar::readEquipment(ifs, buf);
+        inv->put(*tmp);
+        delete tmp;
+    }
     delete[] readName;
 }
 
@@ -201,6 +214,31 @@ Constants::ACTION_STATE HeroEquipment::action(Player *p, bool &run)
     return Constants::ACTION_STATE::ESCAPED;
 }
 
+void Player::save(const String &game) const
+{
+
+    String file = "games\\";
+    file += game;
+    file += ".dndplayer";
+    std::ofstream ofs(file);
+
+    std::cout << "to be saved...";
+    getch();
+
+    ofs << (int)getID() << '\n';
+    ofs << name.size() << ' ' << name.c_str() << '\n';
+    ofs << y << ' ' << x << '\n';
+    for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
+        if (equip[i])
+            equip[i]->save(ofs);
+        else
+            ofs << -1 << '\n';
+
+    inv->write(ofs);
+    saveStats(ofs);
+    ofs.close();
+}
+
 Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
 {
     Constants::STDOUT("Would you try to slay this dragon?\nb for battle\ne for escape\n");
@@ -242,18 +280,4 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
         }
     } while (response != 'e' && response != 'b');
     return Constants::ACTION_STATE::ESCAPED;
-}
-
-void Player::save(std::ofstream &ofs) const
-{
-    ofs << (int)getID() << '\n';
-    ofs << name.size() << ' ' << name.c_str() << '\n';
-    ofs << y << ' ' << x << '\n';
-    for (unsigned i = 0; i < Constants::EQUIPMENT_COUNT; ++i)
-        if (equip[i])
-            equip[i]->save(ofs);
-        else
-            ofs << -1 << '\n';
-
-    inv->write(ofs);
 }

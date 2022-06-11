@@ -52,3 +52,28 @@ void Inventar::write(std::ofstream &ofs) const
             data[i]->save(ofs);
     }
 }
+
+HeroEquipment *Inventar::readEquipment(std::ifstream &ifs, unsigned buf)
+{
+    // ofs << (int)getID() << ' ' << getBonus() << getCost() << ' '
+    //         << name.size() << ' ' << name.c_str() << '\n';
+    unsigned bonus;
+    float cost;
+    unsigned length;
+    ifs >> cost >> bonus >> length;
+    ifs.ignore();
+    char *name = new char[length + 1];
+    ifs.getline(name, length + 1);
+    HeroEquipment *res = nullptr;
+    if (buf == (unsigned)HeroEquipment::ID::ARMOR)
+        res = new Armor(bonus, name);
+    else if (buf == (unsigned)HeroEquipment::ID::POTION)
+        res = new Potion(bonus, name);
+    else if (buf == (int)HeroEquipment::ID::WEAPON)
+        res = new Weapon(bonus, name);
+    else if (buf == (int)HeroEquipment::ID::SPELL)
+        res = new Spell(bonus, cost, name);
+
+    delete[] name;
+    return res;
+}

@@ -7,6 +7,7 @@ class Human : public Player, public Troop
 {
 
     HERO_TYPE getID() const { return HERO_TYPE::HUMAN; }
+    void saveStats(std::ofstream &ofs) const { Troop::save(ofs); }
 
 public:
     Human(unsigned posY, unsigned posX, const String &name = "unknown")
@@ -16,9 +17,7 @@ public:
                 Constants::HUMAN_INIT_HEALTH) {}
     Human(std::ifstream &ifs)
         : Player(ifs),
-          Troop(Constants::HUMAN_INIT_ATTACK,
-                Constants::HUMAN_INIT_MANA,
-                Constants::HUMAN_INIT_HEALTH) {}
+          Troop(ifs) {}
 
     Human *clone() const
     {

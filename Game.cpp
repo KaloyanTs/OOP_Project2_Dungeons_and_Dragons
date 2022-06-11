@@ -9,7 +9,7 @@ void Game::start()
     Constants::STDOUT(GameAssets::game_logo);
     Constants::STDOUT("\tPress any key to play...");
     getch();
-    
+
     system("cls");
     delete map;
     delete pl;
@@ -42,7 +42,7 @@ void Game::start()
 
 void Game::load()
 {
-    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
+    // throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
 
     char name[Constants::INPUT_LIMIT];
     Constants::STDOUT("enter name of game to be loaded:\n");
@@ -53,8 +53,6 @@ void Game::load()
 
 Player *Game::readPlayer(const String &file)
 {
-    throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
-
     String path = "games\\";
     (path += file) += ".dndplayer";
     std::ifstream ifs(path);
@@ -64,7 +62,7 @@ Player *Game::readPlayer(const String &file)
     ifs >> type;
     Player *res = nullptr;
     if (type == (int)Player::HERO_TYPE::HUMAN)
-        res = new Human(ifs); // todo read stats!!!
+        res = new Human(ifs);
     if (type == (int)Player::HERO_TYPE::MAGE)
         res = new Mage(ifs);
     if (type == (int)Player::HERO_TYPE::WARRIOR)

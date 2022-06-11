@@ -13,6 +13,10 @@ class EventGenerator
 
     const String *errorMsg;
 
+protected:
+    EventGenerator(unsigned y, unsigned x, unsigned board = true)
+        : posY(y), posX(x), onBoard(board), errorMsg(nullptr) {}
+
 public:
     EventGenerator(unsigned y, unsigned x, const String &msg, unsigned board = true)
         : posY(y), posX(x), onBoard(board), errorMsg(&msg) {}

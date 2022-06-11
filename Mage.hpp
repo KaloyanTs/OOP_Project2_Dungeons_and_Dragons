@@ -6,6 +6,7 @@
 class Mage : public Player, public Troop
 {
     HERO_TYPE getID() const { return HERO_TYPE::MAGE; }
+    void saveStats(std::ofstream &ofs) const { Troop::save(ofs); }
 
 public:
     Mage(unsigned posY, unsigned posX, const String &name)
@@ -15,9 +16,7 @@ public:
                 Constants::MAGE_INIT_HEALTH) {}
     Mage(std::ifstream &ifs)
         : Player(ifs),
-          Troop(Constants::MAGE_INIT_ATTACK,
-                Constants::MAGE_INIT_MANA,
-                Constants::MAGE_INIT_HEALTH) {}
+          Troop(ifs) {}
 
     Mage *clone() const { return new Mage(*this); }
     void print() const;

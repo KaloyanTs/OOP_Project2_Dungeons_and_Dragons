@@ -9,6 +9,8 @@ class Armor : public HeroEquipment
 
 public:
     Armor(unsigned y, unsigned x, unsigned bot, unsigned top = 0, bool onBoard = true);
+    Armor(unsigned bonus, const String &name)
+        : HeroEquipment(bonus, name, &GameAssets::armor_icon) {}
     Armor *clone() const { return new Armor(*this); }
     void print() const;
     ID getID() const { return ID::ARMOR; }

@@ -263,8 +263,6 @@ Map::Map(Player *p, const String &path)
     String file = "games\\";
     file += path;
     file += ".dndmap";
-    std::cout << file;
-    getch();
 
     std::ifstream ifs;
     ifs.open(file.c_str(), std::ios::in);

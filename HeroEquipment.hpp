@@ -10,6 +10,10 @@ class HeroEquipment : public Equipment, public EventGenerator
     const Image *pic;
 
 protected:
+    HeroEquipment(unsigned bonus, const String &name, const Image *p)
+        : Equipment(bonus, name), EventGenerator(0, 0, false), pic(p) {}
+
+public:
     enum class ID
     {
         WEAPON = 0,
@@ -17,8 +21,6 @@ protected:
         SPELL = 2,
         POTION = 3
     };
-
-public:
     HeroEquipment(const Image *p, unsigned y, unsigned x, unsigned top = 0, unsigned bottom = 0, bool board = true)
         : Equipment((top ? rand() % (top - bottom + 1) + bottom : bottom)), EventGenerator(y, x, errorMsg, board), pic(p) {}
     HeroEquipment *clone() const = 0;
@@ -35,7 +37,7 @@ public:
     }
     inline void save(std::ofstream &ofs) const
     {
-        ofs << (int)getID() << ' ' << getBonus() << getCost() << ' '
+        ofs << (int)getID() << ' ' << getCost() << ' ' << bonus << ' '
             << name.size() << ' ' << name.c_str() << '\n';
     }
 };

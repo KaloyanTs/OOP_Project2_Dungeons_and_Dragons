@@ -15,6 +15,7 @@ public:
         : Vector<HeroEquipment *>(lim), limit(lim) {}
     ~Inventar();
     static EventGenerator *getEquipment(unsigned index, unsigned y, unsigned x, unsigned bot, unsigned top = 0, unsigned cost = 0);
+    static HeroEquipment *readEquipment(std::ifstream &ifs, unsigned buf);
     void print(const String &owner) const;
     bool put(const HeroEquipment &el);
     HeroEquipment *remove(unsigned index);

@@ -38,15 +38,15 @@ private:
     void printInventar() const;
     void inventar();
     virtual bool payCost(float points) = 0;
+    virtual void saveStats(std::ofstream &ofs) const = 0;
     virtual HERO_TYPE getID() const = 0;
 
 protected:
     HeroEquipment *equip[Constants::EQUIPMENT_COUNT];
-    virtual void save(std::ofstream &ofs) const;
+    Player(std::ifstream &ifs);
 
 public:
     Player(unsigned posY, unsigned posX, const String &n);
-    Player(std::ifstream &ifs);
     virtual ~Player();
 
     template <typename ALLOWED>
@@ -75,7 +75,7 @@ public:
 
     void reset() { y = x = 0; }
 
-    virtual void save(const String &game) const = 0;
+    void save(const String &game) const;
 
     virtual void gainXP(unsigned gain) = 0;
 };

@@ -9,6 +9,8 @@ class Spell : public HeroEquipment
 
 public:
     Spell(unsigned y, unsigned x, unsigned bot, unsigned top = 0, bool onBoard = true, unsigned c = 0);
+    Spell(unsigned bonus, unsigned c, const String &name)
+        : HeroEquipment(bonus, name, &GameAssets::spell_icon), cost(c) {}
     Spell *clone() const { return new Spell(*this); }
     void print() const;
     ID getID() const { return ID::SPELL; }
