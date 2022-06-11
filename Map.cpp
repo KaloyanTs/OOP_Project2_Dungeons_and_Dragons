@@ -291,6 +291,8 @@ Map::Map(Player *p, const String &path)
             ifs >> buf >> y >> x >> bonus >> cost;
             events.push_back(Inventar::getEquipment(buf, y, x, bonus, 0, cost));
         }
+        else
+            throw MyException("Corrupted file...", "Map::Map(Player *, const String &)");
     }
 
     data = new char *[rows];

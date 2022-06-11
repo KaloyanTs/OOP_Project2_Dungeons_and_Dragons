@@ -5,6 +5,7 @@
 #include "Spell.hpp"
 #include "Potion.hpp"
 #include "Vector.hpp"
+#include "MyException.hpp"
 
 class Inventar : protected Vector<HeroEquipment *>
 {

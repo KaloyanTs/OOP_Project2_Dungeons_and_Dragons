@@ -8,7 +8,9 @@ EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x, u
         return new Armor(y, x, bot, top);
     else if (index == 2)
         return new Spell(y, x, bot, top, true, cost);
-    return nullptr;
+    else if (index == 3)
+        return new Potion(y, x, bot, top);
+    throw MyException("Bad index", "EventGenerator *Inventar::getEquipment(unsigned, unsigned, unsigned, unsigned, unsigned, unsigned)");
 }
 
 void Inventar::print(const String &owner) const
