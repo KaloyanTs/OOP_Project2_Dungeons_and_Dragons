@@ -6,9 +6,10 @@ Game::Game() : map(nullptr), pl(nullptr), running(false), level(0)
 
 void Game::start()
 {
-    // todo enable Constants::STDOUT(GameAssets::game_logo);
-    // todo enable Constants::STDOUT("\tPress any key to play...");
-    // todo enable getch();
+    Constants::STDOUT(GameAssets::game_logo);
+    Constants::STDOUT("\tPress any key to play...");
+    getch();
+    
     system("cls");
     delete map;
     delete pl;
