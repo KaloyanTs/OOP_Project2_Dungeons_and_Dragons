@@ -6,7 +6,7 @@ var searchData=
   ['top_3',['top',['../class_stack.html#a1931814ad68db1eaedabdb37fa0fe494',1,'Stack']]],
   ['treasure_5fcount_5f1_4',['TREASURE_COUNT_1',['../class_constants.html#afd3836481ceb8fb0c5f486dede9cbd7a',1,'Constants']]],
   ['treasure_5fcount_5f2_5',['TREASURE_COUNT_2',['../class_constants.html#a9d9facd62f72ccb85ebc925593050e06',1,'Constants']]],
-  ['troop_6',['Troop',['../class_troop.html',1,'Troop'],['../class_troop.html#a67074de9f11779acc74f3a5d275c3d1c',1,'Troop::Troop()']]],
+  ['troop_6',['Troop',['../class_troop.html',1,'Troop'],['../class_troop.html#a67074de9f11779acc74f3a5d275c3d1c',1,'Troop::Troop(float _attack, float _mana, float _health, unsigned lvl=1)'],['../class_troop.html#a8fec8442de49d617fe31e0a7c3f9ba6d',1,'Troop::Troop(std::ifstream &amp;ifs)']]],
   ['troop_2ecpp_7',['Troop.cpp',['../_troop_8cpp.html',1,'']]],
   ['troop_2ecpp_2eobj_2ed_8',['Troop.cpp.obj.d',['../_troop_8cpp_8obj_8d.html',1,'']]],
   ['troop_2ehpp_9',['Troop.hpp',['../_troop_8hpp.html',1,'']]]

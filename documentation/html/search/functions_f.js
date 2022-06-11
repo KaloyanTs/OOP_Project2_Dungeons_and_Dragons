@@ -1,7 +1,7 @@
 var searchData=
 [
   ['warrior_0',['Warrior',['../class_warrior.html#a2db62d7c17b48a23fd0b311cbf5bf9d5',1,'Warrior::Warrior(unsigned posY, unsigned posX, const String &amp;name)'],['../class_warrior.html#ab27894d1272a48204bbdbb636cc767fd',1,'Warrior::Warrior(std::ifstream &amp;ifs)']]],
-  ['weapon_1',['Weapon',['../class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1',1,'Weapon']]],
+  ['weapon_1',['Weapon',['../class_weapon.html#ae61d3701f6d499fc0ed3e31dd0c7b3d1',1,'Weapon::Weapon(unsigned y, unsigned x, unsigned bot, unsigned top=0, bool onBoard=true)'],['../class_weapon.html#a2c087510d2ed202a1c10c49b760faa14',1,'Weapon::Weapon(unsigned bonus, const String &amp;name)']]],
   ['weaponnamegenerator_2',['WeaponNameGenerator',['../class_weapon_name_generator.html#a99d30430e6a5b89b624bfea55a73aea9',1,'WeaponNameGenerator']]],
   ['what_3',['what',['../class_my_exception.html#a37afb55a04da01e024cdb9745cbe9756',1,'MyException']]],
   ['where_4',['where',['../class_my_exception.html#aa0e928b974188c447cc9fe7b87dc043d',1,'MyException']]],

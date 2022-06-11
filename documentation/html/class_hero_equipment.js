@@ -6,6 +6,7 @@ var class_hero_equipment =
       [ "SPELL", "class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340a69462e7a7d42c351c648eed28b70f265", null ],
       [ "POTION", "class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340a6a492839f1a85f3ddb226750959f799a", null ]
     ] ],
+    [ "HeroEquipment", "class_hero_equipment.html#adbcba15e22f5098528c5c8de678fd3ea", null ],
     [ "HeroEquipment", "class_hero_equipment.html#a78f112309f57050a7d7284e3e71a099c", null ],
     [ "action", "class_hero_equipment.html#a0c3ce9a19f46a1834c8fa8be3e8954bd", null ],
     [ "clone", "class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5", null ],

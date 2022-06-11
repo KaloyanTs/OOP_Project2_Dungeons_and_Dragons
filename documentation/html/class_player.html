@@ -120,8 +120,6 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9686165e0f897e13e1c37f24773af6a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9686165e0f897e13e1c37f24773af6a4">Player</a> (unsigned posY, unsigned posX, const <a class="el" href="class_string.html">String</a> &amp;n)</td></tr>
 <tr class="separator:a9686165e0f897e13e1c37f24773af6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959f38b798e6eb9b483d1647d11a7f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a959f38b798e6eb9b483d1647d11a7f65">Player</a> (std::ifstream &amp;ifs)</td></tr>
-<tr class="separator:a959f38b798e6eb9b483d1647d11a7f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memTemplParams" colspan="2">template&lt;typename ALLOWED &gt; </td></tr>
@@ -161,15 +159,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b0ad3e5de326f9b30090186fcf5cc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a> ()</td></tr>
 <tr class="separator:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58741f2fec465ec0e2fcd0d43c84363a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a58741f2fec465ec0e2fcd0d43c84363a">save</a> (const <a class="el" href="class_string.html">String</a> &amp;game) const =0</td></tr>
-<tr class="separator:a58741f2fec465ec0e2fcd0d43c84363a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eab765db52a1d6cacccc89e02d5f298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0eab765db52a1d6cacccc89e02d5f298">save</a> (const <a class="el" href="class_string.html">String</a> &amp;game) const</td></tr>
+<tr class="separator:a0eab765db52a1d6cacccc89e02d5f298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a281a2890f05d55453bb91dec640ed026"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a281a2890f05d55453bb91dec640ed026">gainXP</a> (unsigned gain)=0</td></tr>
 <tr class="separator:a281a2890f05d55453bb91dec640ed026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5ea74ad5028cfceeb1c647f3286c09f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5ea74ad5028cfceeb1c647f3286c09f1">save</a> (std::ofstream &amp;ofs) const</td></tr>
-<tr class="separator:a5ea74ad5028cfceeb1c647f3286c09f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959f38b798e6eb9b483d1647d11a7f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a959f38b798e6eb9b483d1647d11a7f65">Player</a> (std::ifstream &amp;ifs)</td></tr>
+<tr class="separator:a959f38b798e6eb9b483d1647d11a7f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -206,8 +204,34 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a959f38b798e6eb9b483d1647d11a7f65" name="a959f38b798e6eb9b483d1647d11a7f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959f38b798e6eb9b483d1647d11a7f65">&#9670;&nbsp;</a></span>Player() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramtype">std::ifstream &amp;&#160;</td>
+          <td class="paramname"><em>ifs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9686165e0f897e13e1c37f24773af6a4" name="a9686165e0f897e13e1c37f24773af6a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9686165e0f897e13e1c37f24773af6a4">&#9670;&nbsp;</a></span>Player() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9686165e0f897e13e1c37f24773af6a4">&#9670;&nbsp;</a></span>Player() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,24 +258,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a959f38b798e6eb9b483d1647d11a7f65" name="a959f38b798e6eb9b483d1647d11a7f65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a959f38b798e6eb9b483d1647d11a7f65">&#9670;&nbsp;</a></span>Player() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Player::Player </td>
-          <td>(</td>
-          <td class="paramtype">std::ifstream &amp;&#160;</td>
-          <td class="paramname"><em>ifs</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -716,56 +722,20 @@ template&lt;typename ALLOWED &gt; </div>
 
 </div>
 </div>
-<a id="a58741f2fec465ec0e2fcd0d43c84363a" name="a58741f2fec465ec0e2fcd0d43c84363a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58741f2fec465ec0e2fcd0d43c84363a">&#9670;&nbsp;</a></span>save() <span class="overload">[1/2]</span></h2>
+<a id="a0eab765db52a1d6cacccc89e02d5f298" name="a0eab765db52a1d6cacccc89e02d5f298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eab765db52a1d6cacccc89e02d5f298">&#9670;&nbsp;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Player::save </td>
+          <td class="memname">void Player::save </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>game</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_human.html#a22891e7cc0b0aca6a56c8faa130a26e4">Human</a>, <a class="el" href="class_mage.html#a6d472f8265f2b99fdb9cda76b596e608">Mage</a>, and <a class="el" href="class_warrior.html#a6cf35dd5ecb124176f2688bb17f19afa">Warrior</a>.</p>
-
-</div>
-</div>
-<a id="a5ea74ad5028cfceeb1c647f3286c09f1" name="a5ea74ad5028cfceeb1c647f3286c09f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ea74ad5028cfceeb1c647f3286c09f1">&#9670;&nbsp;</a></span>save() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::save </td>
-          <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
-          <td class="paramname"><em>ofs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

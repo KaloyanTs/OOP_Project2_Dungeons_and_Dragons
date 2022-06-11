@@ -1,5 +1,6 @@
 var class_event_generator =
 [
+    [ "EventGenerator", "class_event_generator.html#a75a32587a0e58fd6b1efc7b87b2ebca0", null ],
     [ "EventGenerator", "class_event_generator.html#a6f34fd2b2359ce8454309a516b44b445", null ],
     [ "~EventGenerator", "class_event_generator.html#a65ef84c1033c722593ce41386efe679a", null ],
     [ "action", "class_event_generator.html#a4f1332b3bdf8ee1477ca4a4aea2e824d", null ],

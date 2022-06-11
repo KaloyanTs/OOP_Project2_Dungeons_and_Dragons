@@ -1,6 +1,7 @@
 var class_troop =
 [
     [ "Troop", "class_troop.html#a67074de9f11779acc74f3a5d275c3d1c", null ],
+    [ "Troop", "class_troop.html#a8fec8442de49d617fe31e0a7c3f9ba6d", null ],
     [ "~Troop", "class_troop.html#a9b75f72ec43bc3471895fb215c821a59", null ],
     [ "alive", "class_troop.html#a489506cd244ede8010fa7d93cc47b14b", null ],
     [ "clone", "class_troop.html#ad58799ff5841d4f3dc2dfb42e1fc601c", null ],
