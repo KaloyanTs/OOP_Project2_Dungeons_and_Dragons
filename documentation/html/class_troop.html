@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60f7b53d4d238610d0d7de4a73246be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e3866268550e389001ae63c12daddf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a4e3866268550e389001ae63c12daddf3">regen</a> (float percentage=0)</td></tr>
 <tr class="separator:a4e3866268550e389001ae63c12daddf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bdb46130ce72761b354db33335dd859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a5bdb46130ce72761b354db33335dd859">levelUp</a> ()</td></tr>
-<tr class="separator:a5bdb46130ce72761b354db33335dd859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec12392e67f7667178f9ffdcb73e198c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#aec12392e67f7667178f9ffdcb73e198c">gainXP</a> (unsigned gain)</td></tr>
+<tr class="separator:aec12392e67f7667178f9ffdcb73e198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -151,6 +151,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a6d35faae5cbc9dd46244e66274b349cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab361e42b3cbd9d58b1a6b6256d43a361"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">health</a></td></tr>
 <tr class="separator:ab361e42b3cbd9d58b1a6b6256d43a361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a8b4439c510e0d9846221750d843f7"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a90a8b4439c510e0d9846221750d843f7">xpNeeded</a></td></tr>
+<tr class="separator:a90a8b4439c510e0d9846221750d843f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a67074de9f11779acc74f3a5d275c3d1c" name="a67074de9f11779acc74f3a5d275c3d1c"></a>
@@ -321,6 +323,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aec12392e67f7667178f9ffdcb73e198c" name="aec12392e67f7667178f9ffdcb73e198c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec12392e67f7667178f9ffdcb73e198c">&#9670;&nbsp;</a></span>gainXP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Troop::gainXP </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>gain</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8900de59ffca17c1de50965db7636bda" name="a8900de59ffca17c1de50965db7636bda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8900de59ffca17c1de50965db7636bda">&#9670;&nbsp;</a></span>getLevel()</h2>
 
@@ -342,23 +362,6 @@ Protected Attributes</h2></td></tr>
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5bdb46130ce72761b354db33335dd859" name="a5bdb46130ce72761b354db33335dd859"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bdb46130ce72761b354db33335dd859">&#9670;&nbsp;</a></span>levelUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Troop::levelUp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
@@ -601,6 +604,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float Troop::maxMana</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90a8b4439c510e0d9846221750d843f7" name="a90a8b4439c510e0d9846221750d843f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a8b4439c510e0d9846221750d843f7">&#9670;&nbsp;</a></span>xpNeeded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Troop::xpNeeded</td>
         </tr>
       </table>
   </td>

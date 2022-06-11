@@ -12,5 +12,7 @@ var _constants_8hpp =
     [ "MINIMUM_BONUS_PER_LEVEL", "_constants_8hpp.html#a870ecc47e3ea9cd1ead487c275520e55", null ],
     [ "POTION_COST_PER_LEVEL", "_constants_8hpp.html#a7d4739e56bb354efb33f14310afe5962", null ],
     [ "POTION_INITIAL_MAXIMAL_COST", "_constants_8hpp.html#a4a0ddcddb333a7a11c3bc7c24a055b91", null ],
-    [ "POTION_INITIAL_MINIMAL_COST", "_constants_8hpp.html#a2203b36a0cad1262ec4a7bd12f387fa5", null ]
+    [ "POTION_INITIAL_MINIMAL_COST", "_constants_8hpp.html#a2203b36a0cad1262ec4a7bd12f387fa5", null ],
+    [ "XP_DROP_PER_LEVEL", "_constants_8hpp.html#a8f71b9d0b15ef3935e5bb0f706e34b69", null ],
+    [ "XP_NEED_ACUMULATION", "_constants_8hpp.html#acad16e4d66493744e7123fe7c2b85c91", null ]
 ];

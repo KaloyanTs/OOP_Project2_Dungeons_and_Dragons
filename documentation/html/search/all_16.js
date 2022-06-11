@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['_7eequipment_0',['~Equipment',['../class_equipment.html#a127acbd4e8d8020efe6da3ceb02efc3d',1,'Equipment']]],
-  ['_7eeventgenerator_1',['~EventGenerator',['../class_event_generator.html#a65ef84c1033c722593ce41386efe679a',1,'EventGenerator']]],
-  ['_7egame_2',['~Game',['../class_game.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7einventar_3',['~Inventar',['../class_inventar.html#a065f75916b13c9ebae676b81e68bff26',1,'Inventar']]],
-  ['_7emap_4',['~Map',['../class_map.html#aa403fbe09394ccf39747588f5168e3b2',1,'Map']]],
-  ['_7eplayer_5',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7estring_6',['~String',['../class_string.html#ac40b2a3fb58c2d8556f5e6ff73510036',1,'String']]],
-  ['_7etroop_7',['~Troop',['../class_troop.html#a9b75f72ec43bc3471895fb215c821a59',1,'Troop']]],
-  ['_7evector_8',['~Vector',['../class_vector.html#afd524fac19e6d3d69db5198ffe2952b0',1,'Vector']]]
+  ['xp_5fdrop_5fper_5flevel_0',['XP_DROP_PER_LEVEL',['../_constants_8hpp.html#a8f71b9d0b15ef3935e5bb0f706e34b69',1,'Constants.hpp']]],
+  ['xp_5fneed_5facumulation_1',['XP_NEED_ACUMULATION',['../_constants_8hpp.html#acad16e4d66493744e7123fe7c2b85c91',1,'Constants.hpp']]],
+  ['xpneeded_2',['xpNeeded',['../class_troop.html#a90a8b4439c510e0d9846221750d843f7',1,'Troop']]]
 ];

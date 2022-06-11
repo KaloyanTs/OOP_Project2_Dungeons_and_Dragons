@@ -1,8 +1,12 @@
 var NAVTREEINDEX2 =
 {
+"functions_s.html":[0,3,0,14],
+"functions_t.html":[0,3,0,15],
+"functions_v.html":[0,3,0,16],
 "functions_vars.html":[0,3,2],
 "functions_w.html":[0,3,0,17],
-"functions_~.html":[0,3,0,18],
+"functions_x.html":[0,3,0,18],
+"functions_~.html":[0,3,0,19],
 "globals.html":[1,1,0],
 "globals_defs.html":[1,1,4],
 "globals_enum.html":[1,1,3],
