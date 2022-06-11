@@ -43,6 +43,22 @@ void Troop::regen(float percentage)
     }
 }
 
+void Troop::gainXP(unsigned gain)
+{
+    if (xpNeeded <= gain)
+    {
+        do
+        {
+            levelUp();
+            gain -= xpNeeded;
+            xpNeeded = level * XP_NEED_ACUMULATION;
+        } while (gain >= xpNeeded);
+        xpNeeded -= gain;
+    }
+    else
+        xpNeeded -= gain;
+}
+
 void Troop::levelUp()
 {
     system("cls");

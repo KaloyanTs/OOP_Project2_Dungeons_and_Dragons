@@ -31,10 +31,10 @@ public:
 
     void takeDamage(float dmg) { Troop::takeDamage(dmg * (1 - (equip[1] ? equip[1]->getBonus() : 0))); }
 
-    bool payCost(float points);
+    bool payCost(float points) { return Troop::payMana(points); }
     void regenerate(float percentage) { Troop::regen(percentage); }
 
-    void levelUp();
+    void gainXP(unsigned gain) { Troop::gainXP(gain); }
 
     void save(const String &game) const;
 };

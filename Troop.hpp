@@ -7,6 +7,7 @@
 
 class Troop
 {
+    void levelUp();
 
 protected:
     unsigned level;
@@ -14,6 +15,7 @@ protected:
     float maxMana;
     float attack;
     float mana, health;
+    unsigned xpNeeded;
 
     float determineStat(unsigned lvl, float init, float perLevel) const;
     bool alive() const { return Constants::greater(health, 0); }
@@ -27,7 +29,8 @@ public:
           health(_health),
           maxHealth(_health),
           maxMana(_mana),
-          level(lvl)
+          level(lvl),
+          xpNeeded(lvl * XP_NEED_ACUMULATION)
     {
     }
     virtual ~Troop() {}
@@ -42,7 +45,7 @@ public:
 
     void regen(float percentage = 0);
 
-    void levelUp();
+    void gainXP(unsigned gain);
 };
 
 #endif

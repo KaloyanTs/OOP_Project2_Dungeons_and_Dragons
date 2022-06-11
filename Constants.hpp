@@ -25,6 +25,9 @@
 #define LEVEL_COUNT 3
 #define LEVEL_UP_POINTS 30
 
+#define XP_NEED_ACUMULATION 5
+#define XP_DROP_PER_LEVEL 2
+
 class Constants
 {
     Constants() {}

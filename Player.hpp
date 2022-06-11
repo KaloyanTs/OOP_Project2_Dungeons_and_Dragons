@@ -77,7 +77,7 @@ public:
 
     virtual void save(const String &game) const = 0;
 
-    virtual void levelUp() = 0;
+    virtual void gainXP(unsigned gain) = 0;
 };
 
 template <typename ALLOWED>

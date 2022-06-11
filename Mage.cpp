@@ -8,21 +8,11 @@ void Mage::print() const
 
 void Mage::printBrief() const
 {
-    Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel())('\n');
+    Constants::STDOUT(getName())("\nMage\tlevel ")(getLevel());
+    Constants::STDOUT("\t(")(xpNeeded)("xp needed)\n");
     Troop::print((equip[0] ? equip[0]->getBonus() : 0));
     if (equip[2])
         Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
-}
-
-bool Mage::payCost(float points)
-{
-    return Troop::payMana(points);
-}
-
-void Mage::levelUp()
-{
-    Troop::levelUp();
-    printBrief();
 }
 
 void Mage::save(const String &game) const

@@ -8,21 +8,11 @@ void Human::print() const
 
 void Human::printBrief() const
 {
-    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel())('\n');
+    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel());
+    Constants::STDOUT("\t(")(xpNeeded)("xp needed)\n");
     Troop::print((equip[0] ? equip[0]->getBonus() : 0));
     if (equip[2])
         Constants::STDOUT("\tSPELL DAMAGE: ")(attack * (1 + equip[2]->getBonus()))('\n');
-}
-
-bool Human::payCost(float points)
-{
-    return Troop::payMana(points);
-}
-
-void Human::levelUp()
-{
-    Troop::levelUp();
-    printBrief();
 }
 
 void Human::save(const String &game) const
@@ -39,6 +29,8 @@ void Human::save(const String &game) const
     // todo
     // Player::save(ofs);
     // Troop::save(ofs);
+
+    // todo heroes can gain xp through troop gain xp and private level up
 
     ofs.close();
 }

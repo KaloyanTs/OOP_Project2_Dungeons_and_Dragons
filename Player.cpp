@@ -234,6 +234,7 @@ Constants::ACTION_STATE Dragon::action(Player *p, bool &run)
             if (p->alive())
             {
                 p->regenerate();
+                p->gainXP(level * XP_DROP_PER_LEVEL);
                 return Constants::ACTION_STATE::SUCCESSFULL;
             }
             else
