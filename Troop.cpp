@@ -2,8 +2,6 @@
 
 Troop::Troop(std::ifstream &ifs)
 {
-    std::cout << "reading stats...";
-    getch();
     ifs >> maxHealth >> maxMana >> attack >> mana >> health >> xpNeeded;
 }
 
