@@ -80,7 +80,7 @@ void Troop::levelUp()
     }
     sum += a;
 
-    Constants::STDOUT("\tPoints improving health\t(currently ")(health)("): ");
+    Constants::STDOUT("\tPoints improving health\t(currently ")(maxHealth)("): ");
     std::cin >> h;
     while (sum + h > Constants::LEVEL_UP_POINTS)
     {
@@ -89,7 +89,7 @@ void Troop::levelUp()
     }
     sum += h;
 
-    Constants::STDOUT("\tPoints improving mana\t(currently ")(mana)("): ");
+    Constants::STDOUT("\tPoints improving mana\t(currently ")(maxMana)("): ");
     std::cin >> m;
     while (sum + m > Constants::LEVEL_UP_POINTS)
     {
