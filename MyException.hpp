@@ -3,6 +3,7 @@
 #include <exception>
 #include "String.hpp"
 
+/// class inheriting std::exception knowing what is the error and where it happened
 class MyException : public std::exception
 {
     String errorMsg;

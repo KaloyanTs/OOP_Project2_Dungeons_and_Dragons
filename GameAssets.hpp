@@ -2,6 +2,7 @@
 #define __GAME_ASSETS_HPP
 #include "Image.hpp"
 
+/// class without instances keeping all images used in this project
 class GameAssets
 {
 private:

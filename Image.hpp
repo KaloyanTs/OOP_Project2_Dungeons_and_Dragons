@@ -4,12 +4,15 @@
 #include "String.hpp"
 #include <fstream>
 
+/// class representing image (ascii art)
 class Image
 {
     String path;
 
 public:
+    /// create image by showing its path
     Image(const String &p) : path(p) {}
+    /// print the image to output stream
     void print(std::ostream &os = std::cout) const;
     friend class MultipleImagePrinter;
 };

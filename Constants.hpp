@@ -5,19 +5,22 @@
 #include "SpellNameGenerator.hpp"
 #include "PotionNameGenerator.hpp"
 #include "DragonQuoteGenerator.hpp"
-#include "MultipleImagePrinter.hpp"
+#include "Printer.hpp"
 
+/// class without instances keeping all the constants in this project
 class Constants
 {
     Constants() {}
 
 public:
+    /// enum of values used to determine the result of action on the map
     enum class ACTION_STATE
     {
         ESCAPED,
         SUCCESSFULL,
         FAILED
     };
+    /// enum of values used to determine how is the game going
     enum class LEVEL_STATE
     {
         ERROR,
@@ -40,11 +43,13 @@ public:
     static const unsigned LEVEL_UP_POINTS;
     static const unsigned XP_NEED_ACUMULATION = 5;
     static const unsigned XP_DROP_PER_LEVEL = 2;
+    /// function comparing floats with precision
     static bool equal(float a, float b) { return a - b < EPS && a - b > -EPS; }
+    /// function comparing floats with precision
     static bool less(float a, float b) { return a - b <= -EPS; }
+    /// function comparing floats with precision
     static bool greater(float a, float b) { return a - b >= EPS; }
     static const Printer STDOUT;
-    static const MultipleImagePrinter STDOUT_MULTI;
     static const unsigned INPUT_LIMIT = 100;
     static const unsigned DRAGON_ARMOR_INIT = 15;
     static const unsigned DRAGON_ARMOR_PER_LEVEL = 5;
@@ -69,6 +74,7 @@ public:
     static const unsigned MONSTER_COUNT_2 = 3;
     static const unsigned TREASURE_COUNT_1 = 2;
     static const unsigned TREASURE_COUNT_2 = 2;
+    /// precision of floats
     static const float EPS;
 };
 
