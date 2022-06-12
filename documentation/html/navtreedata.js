@@ -40,17 +40,7 @@ var NAVTREE =
       [ "GitHub", "md_markdowns_bibliography.html#GitHub", null ],
       [ "Used materials", "md_markdowns_bibliography.html#m", null ]
     ] ],
-    [ "User commands", "md_markdowns_commands.html", [
-      [ "The UI works with the following commands:", "md_markdowns_commands.html#autotoc_md0", null ],
-      [ "Adding new reservation", "md_markdowns_commands.html#autotoc_md1", null ],
-      [ "Free rooms on particular date", "md_markdowns_commands.html#autotoc_md2", null ],
-      [ "Free particular room", "md_markdowns_commands.html#autotoc_md3", null ],
-      [ "Create report about the usage of the rooms in particular period", "md_markdowns_commands.html#autotoc_md4", null ],
-      [ "Suggest room for a group of guests and partcular period", "md_markdowns_commands.html#autotoc_md5", null ],
-      [ "Close a room for maintenance", "md_markdowns_commands.html#autotoc_md6", null ],
-      [ "See current state of all the rooms", "md_markdowns_commands.html#autotoc_md7", null ],
-      [ "See when a room is free for certain number of days", "md_markdowns_commands.html#autotoc_md8", null ]
-    ] ],
+    [ "User commands", "md_markdowns_commands.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

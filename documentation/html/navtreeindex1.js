@@ -200,8 +200,8 @@ var NAVTREEINDEX1 =
 "dragon_8dnd.html":[4,0,0,0,3],
 "empty_slot_8dnd.html":[4,0,0,0,5],
 "files.html":[4,0],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -249,5 +249,5 @@ var NAVTREEINDEX1 =
 "globals_vars.html":[4,1,2],
 "health_8dnd.html":[4,0,0,0,6],
 "hierarchy.html":[3,2],
-"index.html":[0]
+"index.html":[]
 };

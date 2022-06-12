@@ -1,6 +1,6 @@
 var NAVTREEINDEX2 =
 {
-"index.html":[],
+"index.html":[0],
 "index.html#Achitecture":[0,1],
 "index.html#Example":[0,3,0],
 "index.html#Overview":[0,0],
@@ -17,20 +17,13 @@ var NAVTREEINDEX2 =
 "md_markdowns_bibliography.html#GitHub":[1,0],
 "md_markdowns_bibliography.html#m":[1,1],
 "md_markdowns_commands.html":[2],
-"md_markdowns_commands.html#autotoc_md0":[2,0],
-"md_markdowns_commands.html#autotoc_md1":[2,1],
-"md_markdowns_commands.html#autotoc_md2":[2,2],
-"md_markdowns_commands.html#autotoc_md3":[2,3],
-"md_markdowns_commands.html#autotoc_md4":[2,4],
-"md_markdowns_commands.html#autotoc_md5":[2,5],
-"md_markdowns_commands.html#autotoc_md6":[2,6],
-"md_markdowns_commands.html#autotoc_md7":[2,7],
-"md_markdowns_commands.html#autotoc_md8":[2,8],
 "pages.html":[],
 "potion_8dnd.html":[4,0,0,0,9],
 "spell_8dnd.html":[4,0,0,0,10],
-"testing2_8dndmap.html":[4,0,0,2,1],
+"testing2_8dndmap.html":[4,0,0,2,2],
+"testing2_8dndplayer.html":[4,0,0,2,3],
 "testing_8dndmap.html":[4,0,0,2,0],
+"testing_8dndplayer.html":[4,0,0,2,1],
 "victory_8dnd.html":[4,0,0,0,11],
 "weapon_8dnd.html":[4,0,0,0,12]
 };
