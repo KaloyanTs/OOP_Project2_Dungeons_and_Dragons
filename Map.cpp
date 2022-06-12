@@ -27,7 +27,6 @@ Map::Map(Player *p, unsigned lvl)
       events(dragonCount + treasureCount + potionCount),
       pl(p)
 {
-    srand(time(0));
     for (unsigned i = 0; i < rows; ++i)
         data[i] = new char[cols];
 
