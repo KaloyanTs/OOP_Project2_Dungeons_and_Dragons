@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['spell_5ficon_0',['spell_icon',['../class_game_assets.html#a093717e60656466d226a34fbf2c4d063',1,'GameAssets']]],
-  ['spell_5fname_5fgenerator_1',['spell_name_generator',['../class_constants.html#a37255af871ad63d9a2c1274686c1d2cb',1,'Constants']]],
-  ['stats_5fcount_2',['stats_count',['../class_game_assets.html#a0f275432503c25ebc5d2d63e3a43fbef',1,'GameAssets']]],
-  ['stats_5fheader_3',['stats_header',['../class_game_assets.html#a1b6df7d1023d5ce68edefd8bd42b8309',1,'GameAssets']]],
-  ['stdout_4',['STDOUT',['../class_constants.html#a4fd3636fbd33107efb51cba2630a81af',1,'Constants']]],
-  ['stdout_5fmulti_5',['STDOUT_MULTI',['../class_constants.html#a7c13a5643d10527ec7026c022e43cd04',1,'Constants']]]
+  ['potion_5fcost_5fper_5flevel_0',['POTION_COST_PER_LEVEL',['../class_constants.html#acd5df3895de53ada054a68b99a61e088',1,'Constants']]],
+  ['potion_5ficon_1',['potion_icon',['../class_game_assets.html#ac86cc59e067d293c6c5767c5457aa132',1,'GameAssets']]],
+  ['potion_5finitial_5fmaximal_5fcost_2',['POTION_INITIAL_MAXIMAL_COST',['../class_constants.html#af5aea7bbb86cc1ce97e9e701b8ca68ae',1,'Constants']]],
+  ['potion_5finitial_5fminimal_5fcost_3',['POTION_INITIAL_MINIMAL_COST',['../class_constants.html#ac6a427d58512a9ea6b3e56e175fdd8cb',1,'Constants']]],
+  ['potion_5fname_5fgenerator_4',['potion_name_generator',['../class_constants.html#ae1e4aa970a53262b9286aab539b0925d',1,'Constants']]]
 ];

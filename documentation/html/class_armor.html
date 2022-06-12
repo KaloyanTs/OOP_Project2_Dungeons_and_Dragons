@@ -91,6 +91,9 @@ $(document).ready(function(){initNavTree('class_armor.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>class representing armor of the player protecting him from enemies damage with some bonus  
+ <a href="class_armor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_armor_8hpp_source.html">Armor.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Armor:</div>
@@ -107,16 +110,22 @@ Inheritance diagram for Armor:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acd45fb2b9a7b3abfb16daefdf5585da0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#acd45fb2b9a7b3abfb16daefdf5585da0">Armor</a> (unsigned y, unsigned x, unsigned bot, unsigned top=0, bool onBoard=true)</td></tr>
+<tr class="memdesc:acd45fb2b9a7b3abfb16daefdf5585da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, placing the armor on certain position on the board and setting bounds for the given bonus, name is randomly generated  <a href="class_armor.html#acd45fb2b9a7b3abfb16daefdf5585da0">More...</a><br /></td></tr>
 <tr class="separator:acd45fb2b9a7b3abfb16daefdf5585da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed51d0ab83ab87c511bde0cbbf1b1bce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#aed51d0ab83ab87c511bde0cbbf1b1bce">Armor</a> (unsigned <a class="el" href="class_equipment.html#a431115f428ae4c157d34330424d5a6ec">bonus</a>, const <a class="el" href="class_string.html">String</a> &amp;<a class="el" href="class_equipment.html#a2475e80488b85de0adc69d7d459ca3f3">name</a>)</td></tr>
+<tr class="memdesc:aed51d0ab83ab87c511bde0cbbf1b1bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, creating armor owned by a hero and having only bonus and name  <a href="class_armor.html#aed51d0ab83ab87c511bde0cbbf1b1bce">More...</a><br /></td></tr>
 <tr class="separator:aed51d0ab83ab87c511bde0cbbf1b1bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a7dd54cf4327b8946b8599e058ec8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_armor.html">Armor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#a66a7dd54cf4327b8946b8599e058ec8d">clone</a> () const</td></tr>
+<tr class="memdesc:a66a7dd54cf4327b8946b8599e058ec8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual clone function  <a href="class_armor.html#a66a7dd54cf4327b8946b8599e058ec8d">More...</a><br /></td></tr>
 <tr class="separator:a66a7dd54cf4327b8946b8599e058ec8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eacfc08eba1b81e33a69bf75897136f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#a8eacfc08eba1b81e33a69bf75897136f">print</a> () const</td></tr>
+<tr class="memdesc:a8eacfc08eba1b81e33a69bf75897136f"><td class="mdescLeft">&#160;</td><td class="mdescRight">printing image, name and bonus of this armor  <a href="class_armor.html#a8eacfc08eba1b81e33a69bf75897136f">More...</a><br /></td></tr>
 <tr class="separator:a8eacfc08eba1b81e33a69bf75897136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f309930cb7f5af715da36e91d1f3e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340">ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#ad7f309930cb7f5af715da36e91d1f3e8">getID</a> () const</td></tr>
+<tr class="memdesc:ad7f309930cb7f5af715da36e91d1f3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the ID (used in saving and reading equipment)  <a href="class_armor.html#ad7f309930cb7f5af715da36e91d1f3e8">More...</a><br /></td></tr>
 <tr class="separator:ad7f309930cb7f5af715da36e91d1f3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad3decbe0723e17360d12572fc18a68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_armor.html#a1ad3decbe0723e17360d12572fc18a68">getCost</a> () const</td></tr>
+<tr class="memdesc:a1ad3decbe0723e17360d12572fc18a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the cost of the usage of this armor (it is always 0)  <a href="class_armor.html#a1ad3decbe0723e17360d12572fc18a68">More...</a><br /></td></tr>
 <tr class="separator:a1ad3decbe0723e17360d12572fc18a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_hero_equipment"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_hero_equipment')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_hero_equipment.html">HeroEquipment</a></td></tr>
 <tr class="memitem:a78f112309f57050a7d7284e3e71a099c inherit pub_methods_class_hero_equipment"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hero_equipment.html#a78f112309f57050a7d7284e3e71a099c">HeroEquipment</a> (const <a class="el" href="class_image.html">Image</a> *p, unsigned y, unsigned x, unsigned top=0, unsigned bottom=0, bool board=true)</td></tr>
@@ -200,7 +209,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2475e80488b85de0adc69d7d459ca3f3 inherit pro_attribs_class_equipment"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a2475e80488b85de0adc69d7d459ca3f3">name</a></td></tr>
 <tr class="separator:a2475e80488b85de0adc69d7d459ca3f3 inherit pro_attribs_class_equipment"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing armor of the player protecting him from enemies damage with some bonus </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acd45fb2b9a7b3abfb16daefdf5585da0" name="acd45fb2b9a7b3abfb16daefdf5585da0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd45fb2b9a7b3abfb16daefdf5585da0">&#9670;&nbsp;</a></span>Armor() <span class="overload">[1/2]</span></h2>
 
@@ -245,6 +256,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>constructor, placing the armor on certain position on the board and setting bounds for the given bonus, name is randomly generated </p>
+
 </div>
 </div>
 <a id="aed51d0ab83ab87c511bde0cbbf1b1bce" name="aed51d0ab83ab87c511bde0cbbf1b1bce"></a>
@@ -281,6 +294,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>constructor, creating armor owned by a hero and having only bonus and name </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -306,6 +321,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>virtual clone function </p>
 
 <p>Implements <a class="el" href="class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5">HeroEquipment</a>.</p>
 
@@ -334,6 +351,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>getter for the cost of the usage of this armor (it is always 0) </p>
+
 <p>Implements <a class="el" href="class_hero_equipment.html#aa558ae97e7dcd7102f6fe3d16cad85fc">HeroEquipment</a>.</p>
 
 </div>
@@ -361,6 +380,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>getter for the ID (used in saving and reading equipment) </p>
+
 <p>Implements <a class="el" href="class_hero_equipment.html#abefa58addb723b086c1a62f33fefa7af">HeroEquipment</a>.</p>
 
 </div>
@@ -387,6 +408,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>printing image, name and bonus of this armor </p>
 
 <p>Reimplemented from <a class="el" href="class_equipment.html#a75327615849b7f503a107be99823c9ec">Equipment</a>.</p>
 

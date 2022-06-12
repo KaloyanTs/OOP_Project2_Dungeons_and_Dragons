@@ -53,8 +53,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armor_8cpp.html",
-"class_hero_equipment.html#a78f112309f57050a7d7284e3e71a099c",
-"functions_h.html"
+"class_human.html#a38496860d10074a7c3b04d31f2109be2",
+"functions_x.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['info_5farch_0',['info_arch',['../_c_make_c_compiler_id_8c.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fcompiler_1',['info_compiler',['../_c_make_c_compiler_id_8c.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5flanguage_5fextensions_5fdefault_2',['info_language_extensions_default',['../_c_make_c_compiler_id_8c.html#a0f46a8a39e09d9b803c4766904fd7e99',1,'info_language_extensions_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a0f46a8a39e09d9b803c4766904fd7e99',1,'info_language_extensions_default():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5flanguage_5fstandard_5fdefault_3',['info_language_standard_default',['../_c_make_c_compiler_id_8c.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fplatform_4',['info_platform',['../_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
-  ['init_5fcapacity_5',['INIT_CAPACITY',['../class_vector.html#a958962153e62865ea1ed0a2f4f140836',1,'Vector']]],
-  ['input_5flimit_6',['INPUT_LIMIT',['../class_constants.html#a19fda6445e8c370200e584e040b4a78c',1,'Constants']]],
-  ['inventar_5flimit_7',['INVENTAR_LIMIT',['../class_constants.html#a17b65027f16902896598a7657cee740b',1,'Constants']]]
+  ['health_0',['health',['../class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361',1,'Troop']]],
+  ['health_5ficon_1',['health_icon',['../class_game_assets.html#a5a9e9929656834bf4d407e57a5cc4fb7',1,'GameAssets']]],
+  ['hero_5flevelup_5fpoints_2',['HERO_LEVELUP_POINTS',['../class_constants.html#a7e50a872e528e0ec30aec231872abd8e',1,'Constants']]],
+  ['hero_5ftypes_3',['HERO_TYPES',['../class_constants.html#a78fb71275d999325405405de8e197d68',1,'Constants']]],
+  ['human_5finit_5fattack_4',['HUMAN_INIT_ATTACK',['../class_constants.html#ad889377ae3726017cad2d5fb172e129a',1,'Constants']]],
+  ['human_5finit_5fhealth_5',['HUMAN_INIT_HEALTH',['../class_constants.html#ad16ff661603553a82112f07cb27cb76a',1,'Constants']]],
+  ['human_5finit_5fmana_6',['HUMAN_INIT_MANA',['../class_constants.html#a80dd7b21326e6a1c6a472460ad1a7801',1,'Constants']]]
 ];

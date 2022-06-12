@@ -10,7 +10,9 @@ var files_dup =
       [ "ArmorNameGenerator", "class_armor_name_generator.html", "class_armor_name_generator" ]
     ] ],
     [ "Constants.cpp", "_constants_8cpp.html", null ],
-    [ "Constants.hpp", "_constants_8hpp.html", "_constants_8hpp" ],
+    [ "Constants.hpp", "_constants_8hpp.html", [
+      [ "Constants", "class_constants.html", "class_constants" ]
+    ] ],
     [ "Dragon.cpp", "_dragon_8cpp.html", null ],
     [ "Dragon.hpp", "_dragon_8hpp.html", [
       [ "Dragon", "class_dragon.html", "class_dragon" ]

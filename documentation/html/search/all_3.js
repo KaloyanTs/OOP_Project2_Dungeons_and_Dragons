@@ -13,6 +13,6 @@ var searchData=
   ['constants_2ecpp_2eobj_2ed_10',['Constants.cpp.obj.d',['../_constants_8cpp_8obj_8d.html',1,'']]],
   ['constants_2ehpp_11',['Constants.hpp',['../_constants_8hpp.html',1,'']]],
   ['copy_12',['copy',['../class_vector.html#af814b039cfa44e866e7bd4b1100149b8',1,'Vector']]],
-  ['cost_5fper_5flevel_13',['COST_PER_LEVEL',['../_constants_8hpp.html#a60ef5467ba685bc32512895c1e6d3097',1,'Constants.hpp']]],
+  ['cost_5fper_5flevel_13',['COST_PER_LEVEL',['../class_constants.html#aa09aa0d2b8d63b86e7d00318a2f35977',1,'Constants']]],
   ['cxx_5fstd_14',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
 ];
