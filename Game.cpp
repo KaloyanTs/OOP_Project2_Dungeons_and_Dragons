@@ -67,9 +67,9 @@ Player *Game::readPlayer(const String &file)
     Player *res = nullptr;
     if (type == (int)Player::HERO_TYPE::HUMAN)
         res = new Human(ifs);
-    if (type == (int)Player::HERO_TYPE::MAGE)
+    else if (type == (int)Player::HERO_TYPE::MAGE)
         res = new Mage(ifs);
-    if (type == (int)Player::HERO_TYPE::WARRIOR)
+    else if (type == (int)Player::HERO_TYPE::WARRIOR)
         res = new Warrior(ifs);
     else
         throw MyException("FAILED TO DETERMINE HERO TYPE...", "Player *readPlayer(const String &)");
@@ -114,7 +114,9 @@ Constants::LEVEL_STATE Game::run()
             }
             else
             {
+                system("cls");
                 Constants::STDOUT(pl->getName())(", you proved yourself as a real hero and will be rewarded as deserved!\nThis is the end game...");
+                getch();
                 running = false;
                 return Constants::LEVEL_STATE::END;
             }
