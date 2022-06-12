@@ -32,6 +32,7 @@ var NAVTREEINDEX2 =
 "pages.html":[],
 "potion_8dnd.html":[1,0,0,0,9],
 "spell_8dnd.html":[1,0,0,0,10],
+"testing2_8dndmap.html":[1,0,0,2,1],
 "testing_8dndmap.html":[1,0,0,2,0],
 "victory_8dnd.html":[1,0,0,0,11],
 "weapon_8dnd.html":[1,0,0,0,12]
