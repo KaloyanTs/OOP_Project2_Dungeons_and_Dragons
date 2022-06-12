@@ -43,9 +43,12 @@ void Game::start()
 void Game::load()
 {
     // throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
-
+    delete pl;
+    pl = nullptr;
+    delete map;
+    map = nullptr;
     char name[Constants::INPUT_LIMIT];
-    Constants::STDOUT("enter name of game to be loaded:\n");
+    Constants::STDOUT("\nEnter name of game to be loaded:\n");
     std::cin.getline(name, Constants::INPUT_LIMIT);
     pl = Game::readPlayer(name);
     map = new Map(pl, name);
@@ -77,7 +80,7 @@ void Game::newGame()
 {
     level = 1;
     system("cls");
-    Constants::STDOUT("Choose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n");
+    Constants::STDOUT("New game:\n\tChoose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n");
     char chosen;
     do
     {
@@ -121,8 +124,8 @@ Constants::LEVEL_STATE Game::run()
             system("cls");
 
             char c;
-            Constants::STDOUT("Press p to resume the game;\nPress s to save current progress;\nPress ` to exit.");
-            while ((c = getch()) != 'p' && c != '`' && c != 's')
+            Constants::STDOUT("Press p to resume the game;\nPress n to start a new game;\nPress s to save current progress;\nPress l to load existing game;\nPress ` to exit.");
+            while ((c = getch()) != 'p' && c != (char)KEYS::EXIT && c != 's' && c != 'l' && c != 'n')
             {
             }
             if (c == KEYS::EXIT)
@@ -143,6 +146,52 @@ Constants::LEVEL_STATE Game::run()
             }
             else if (c == 's')
                 save();
+            else if (c == 'l')
+            {
+                try
+                {
+                    if (!map->isSaved())
+                    {
+                        Constants::STDOUT("\n\ns to save your progress\nx to quit without saving\n");
+                        char c;
+                        while ((c = getch()) != 's' && c != 'x' && c != (char)KEYS::EXIT)
+                        {
+                        }
+                        if (c == 's')
+                            save();
+                        else if (c == KEYS::EXIT)
+                            running = true;
+                    }
+                    load();
+                }
+                catch (const MyException &err)
+                {
+                    delete pl;
+                    delete map;
+                    std::cerr << err.what() << '\n';
+                    getch();
+                    newGame();
+                }
+            }
+            else if (c == 'n')
+            {
+                if (!map->isSaved())
+                {
+                    Constants::STDOUT("\n\ns to save your progress\nx to discard progress\n");
+                    char c;
+                    while ((c = getch()) != 's' && c != 'x' && c != (char)KEYS::EXIT)
+                    {
+                    }
+                    if (c == 's')
+                    {
+                        save();
+                        std::cin.ignore();
+                    }
+                    else if (c == KEYS::EXIT)
+                        running = true;
+                }
+                newGame();
+            }
         }
         else
         {

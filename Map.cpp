@@ -43,7 +43,7 @@ Map::Map(Player *p, unsigned lvl)
             posY = rand() % cols;
             posX = rand() % rows;
         } while (data[posY][posX] != (char)MAP_SYMBOLS::FREE || !posY && !posX || !isReachable(posY, posX));
-        events.push_back(new Dragon(posY, posX, rand() % lvl + 1)); // improve
+        events.push_back(new Dragon(posY, posX, rand() % lvl + 1));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
     events.push_back(new Dragon(rows - 1, cols - 1, lvl));
@@ -256,7 +256,7 @@ void Map::saveProgress(const String &game)
 }
 
 Map::Map(Player *p, const String &path)
-    : data(nullptr), pl(p), running(false), pause(false), saved(false),
+    : data(nullptr), pl(p), running(false), pause(false), saved(true),
       level(0), rows(0), cols(0), dragonCount(0),
       treasureCount(0)
 {
