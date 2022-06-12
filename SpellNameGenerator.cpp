@@ -16,3 +16,9 @@ SpellNameGenerator::SpellNameGenerator()
     addRule("TYPE->dragon(1)|dinosaur(1)|phoenix(1)|behemoth(1)|angel(1)|hydra(1)");
     addRule("SPAN->lake(1)|skies(1)|heaven(1)|darkness(1)|graveyard(1)|woods(1)");
 }
+
+SpellNameGenerator &SpellNameGenerator::getInstance()
+{
+    static SpellNameGenerator obj;
+    return obj;
+}

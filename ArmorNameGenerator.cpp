@@ -10,3 +10,9 @@ ArmorNameGenerator::ArmorNameGenerator()
     addRule("CREATOR->gods(1)|heaven(1)|elfs(1)|witches(1)");
     addRule("PURPOSE->traveller(1)|wizard(1)|elfs(1)|witches(1)|chaos(1)|knight(1)|gladiator(1)|nature(1)|order(1)|elf king(1)");
 }
+
+ArmorNameGenerator &ArmorNameGenerator::getInstance()
+{
+    static ArmorNameGenerator obj;
+    return obj;
+}

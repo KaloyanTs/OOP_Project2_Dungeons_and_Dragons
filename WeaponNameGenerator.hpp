@@ -4,8 +4,10 @@
 
 class WeaponNameGenerator : public Grammar
 {
-public:
     WeaponNameGenerator();
+
+public:
+    static WeaponNameGenerator &getInstance();
 };
 
 #endif

@@ -4,8 +4,10 @@
 
 class SpellNameGenerator : public Grammar
 {
-public:
     SpellNameGenerator();
+
+public:
+    static SpellNameGenerator &getInstance();
 };
 
 #endif

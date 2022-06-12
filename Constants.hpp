@@ -69,11 +69,6 @@ public:
     static const unsigned MONSTER_COUNT_2 = 3;
     static const unsigned TREASURE_COUNT_1 = 2;
     static const unsigned TREASURE_COUNT_2 = 2;
-    static const WeaponNameGenerator weapon_name_generator;
-    static const ArmorNameGenerator armor_name_generator;
-    static const SpellNameGenerator spell_name_generator;
-    static const PotionNameGenerator potion_name_generator;
-    static const DragonQuoteGenerator dragon_quote_generator;
     static const float EPS;
 };
 

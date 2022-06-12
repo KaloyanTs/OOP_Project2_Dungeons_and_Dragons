@@ -13,3 +13,9 @@ DragonQuoteGenerator::DragonQuoteGenerator()
     addRule("S->Darkness is my only true enemy...(1)");
     addRule("INSULT->weak(1)|bad(1)|deficient(1)|faulty(1)");
 }
+
+DragonQuoteGenerator &DragonQuoteGenerator::getInstance()
+{
+    static DragonQuoteGenerator obj;
+    return obj;
+}

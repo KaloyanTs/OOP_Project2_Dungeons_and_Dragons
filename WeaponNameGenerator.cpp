@@ -14,3 +14,9 @@ WeaponNameGenerator::WeaponNameGenerator()
     addRule("ADJ->mighty(1)|powerfull(1)|muscular(1)|heavy(1)|vigorous(1)");
     addRule("NOUN->blade(1)|fire(1)|sword(1)|katana(1)|hammer(1)|gun(1)|bazooka(1)|rocket(1)|spear(1)|bow(1)");
 }
+
+WeaponNameGenerator &WeaponNameGenerator::getInstance()
+{
+    static WeaponNameGenerator obj;
+    return obj;
+}

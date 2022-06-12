@@ -23,7 +23,7 @@ public:
           pic(&GameAssets::dragon),
           armor(Constants::DRAGON_ARMOR_INIT + (lvl - 1) * Constants::DRAGON_ARMOR_PER_LEVEL)
     {
-        Constants::dragon_quote_generator.generateWord(quote);
+        DragonQuoteGenerator::getInstance().generateWord(quote);
     }
     virtual Dragon *clone() const { return new Dragon(*this); }
     char getChar() const { return stamp; }

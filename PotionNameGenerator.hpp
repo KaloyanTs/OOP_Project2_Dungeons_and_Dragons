@@ -4,8 +4,10 @@
 
 class PotionNameGenerator : public Grammar
 {
-public:
     PotionNameGenerator();
+
+public:
+    static PotionNameGenerator &getIntance();
 };
 
 #endif

@@ -9,4 +9,4 @@ void Armor::print() const
 }
 
 Armor::Armor(unsigned y, unsigned x, unsigned bot, unsigned top, bool onBoard)
-    : HeroEquipment(&GameAssets::armor_icon, y, x, std::min(top, 70u), bot, onBoard) { Constants::armor_name_generator.generateWord(name); }
+    : HeroEquipment(&GameAssets::armor_icon, y, x, std::min(top, 70u), bot, onBoard) { ArmorNameGenerator::getInstance().generateWord(name); }

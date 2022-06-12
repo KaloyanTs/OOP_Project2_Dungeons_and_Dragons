@@ -4,8 +4,9 @@
 
 class ArmorNameGenerator : public Grammar
 {
-public:
     ArmorNameGenerator();
+public:
+    static ArmorNameGenerator &getInstance();
 };
 
 #endif

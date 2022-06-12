@@ -4,8 +4,10 @@
 
 class DragonQuoteGenerator : public Grammar
 {
-public:
     DragonQuoteGenerator();
+
+public:
+    static DragonQuoteGenerator &getInstance();
 };
 
 #endif

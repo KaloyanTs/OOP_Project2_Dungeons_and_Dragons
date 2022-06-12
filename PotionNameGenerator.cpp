@@ -12,3 +12,9 @@ PotionNameGenerator::PotionNameGenerator()
     addRule("ADJ->ancient(1)|instant(1)|high(1)");
     addRule("NOUN->perfection(1)|knowledge(1)|will(1)|insanity(1)|vitality(1)|ancestry(1)|ecstasy(1)|power(1)|anger(1)|levitation(1)|foresight(1)|wisdom(1)");
 }
+
+PotionNameGenerator &PotionNameGenerator::getIntance()
+{
+    static PotionNameGenerator obj;
+    return obj;
+}
