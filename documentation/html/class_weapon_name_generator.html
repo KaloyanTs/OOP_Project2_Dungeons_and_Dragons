@@ -85,11 +85,14 @@ $(document).ready(function(){initNavTree('class_weapon_name_generator.html','');
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_weapon_name_generator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WeaponNameGenerator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>singleton class generating random names of weapons based on CFG grammar rules  
+ <a href="class_weapon_name_generator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_weapon_name_generator_8hpp_source.html">WeaponNameGenerator.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -98,41 +101,57 @@ Inheritance diagram for WeaponNameGenerator:</div>
  <div class="center">
   <img src="class_weapon_name_generator.png" usemap="#WeaponNameGenerator_map" alt=""/>
   <map id="WeaponNameGenerator_map" name="WeaponNameGenerator_map">
-<area href="class_grammar.html" alt="Grammar" shape="rect" coords="0,0,147,24"/>
+<area href="class_grammar.html" title="class representing context-free grammar having rules for word generation" alt="Grammar" shape="rect" coords="0,0,147,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a99d30430e6a5b89b624bfea55a73aea9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon_name_generator.html#a99d30430e6a5b89b624bfea55a73aea9">WeaponNameGenerator</a> ()</td></tr>
-<tr class="separator:a99d30430e6a5b89b624bfea55a73aea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_grammar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_grammar')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_grammar.html">Grammar</a></td></tr>
-<tr class="memitem:ab7c468dafe5a6e6204c874cc8ab8c78f inherit pub_methods_class_grammar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f">Grammar</a> (const <a class="el" href="class_string.html">String</a> &amp;start=&quot;S&quot;)</td></tr>
-<tr class="separator:ab7c468dafe5a6e6204c874cc8ab8c78f inherit pub_methods_class_grammar"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f3401e9f1f15cc1d78695f0c8b50395 inherit pub_methods_class_grammar"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395">generateWord</a> (<a class="el" href="class_string.html">String</a> &amp;buf) const</td></tr>
-<tr class="separator:a9f3401e9f1f15cc1d78695f0c8b50395 inherit pub_methods_class_grammar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a781d0e24e7ccc9312fe70823fc726903"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_weapon_name_generator.html">WeaponNameGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon_name_generator.html#a781d0e24e7ccc9312fe70823fc726903">getInstance</a> ()</td></tr>
+<tr class="memdesc:a781d0e24e7ccc9312fe70823fc726903"><td class="mdescLeft">&#160;</td><td class="mdescRight">get access to the only object of type <a class="el" href="class_weapon_name_generator.html" title="singleton class generating random names of weapons based on CFG grammar rules">WeaponNameGenerator</a>  <a href="class_weapon_name_generator.html#a781d0e24e7ccc9312fe70823fc726903">More...</a><br /></td></tr>
+<tr class="separator:a781d0e24e7ccc9312fe70823fc726903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_grammar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_grammar')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_grammar.html">Grammar</a></td></tr>
+<tr class="memitem:ab7c468dafe5a6e6204c874cc8ab8c78f inherit pub_methods_class_grammar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f">Grammar</a> (const <a class="el" href="class_string.html">String</a> &amp;start=&quot;S&quot;)</td></tr>
+<tr class="memdesc:ab7c468dafe5a6e6204c874cc8ab8c78f inherit pub_methods_class_grammar"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor of grammar based on initial variable ('S' by default)  <a href="class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f">More...</a><br /></td></tr>
+<tr class="separator:ab7c468dafe5a6e6204c874cc8ab8c78f inherit pub_methods_class_grammar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3401e9f1f15cc1d78695f0c8b50395 inherit pub_methods_class_grammar"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395">generateWord</a> (<a class="el" href="class_string.html">String</a> &amp;buf) const</td></tr>
+<tr class="memdesc:a9f3401e9f1f15cc1d78695f0c8b50395 inherit pub_methods_class_grammar"><td class="mdescLeft">&#160;</td><td class="mdescRight">get random word from the language of the grammar  <a href="class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395">More...</a><br /></td></tr>
+<tr class="separator:a9f3401e9f1f15cc1d78695f0c8b50395 inherit pub_methods_class_grammar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_grammar"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_grammar')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_grammar.html">Grammar</a></td></tr>
 <tr class="memitem:a454e34a8fa75bc1d6f67442152d29801 inherit pro_methods_class_grammar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grammar.html">Grammar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#a454e34a8fa75bc1d6f67442152d29801">addRule</a> (<a class="el" href="class_string.html">String</a> rule)</td></tr>
+<tr class="memdesc:a454e34a8fa75bc1d6f67442152d29801 inherit pro_methods_class_grammar"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a new rule to the list of rules; multiple rules are allowed divided by '|' and after each letter (0|1|2) must be typed specifying if the letter is variable (1), terminal with space (1) or terminal without space (2)  <a href="class_grammar.html#a454e34a8fa75bc1d6f67442152d29801">More...</a><br /></td></tr>
 <tr class="separator:a454e34a8fa75bc1d6f67442152d29801 inherit pro_methods_class_grammar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a99d30430e6a5b89b624bfea55a73aea9" name="a99d30430e6a5b89b624bfea55a73aea9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99d30430e6a5b89b624bfea55a73aea9">&#9670;&nbsp;</a></span>WeaponNameGenerator()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >singleton class generating random names of weapons based on CFG grammar rules </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a781d0e24e7ccc9312fe70823fc726903" name="a781d0e24e7ccc9312fe70823fc726903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781d0e24e7ccc9312fe70823fc726903">&#9670;&nbsp;</a></span>getInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">WeaponNameGenerator::WeaponNameGenerator </td>
+          <td class="memname"><a class="el" href="class_weapon_name_generator.html">WeaponNameGenerator</a> &amp; WeaponNameGenerator::getInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>get access to the only object of type <a class="el" href="class_weapon_name_generator.html" title="singleton class generating random names of weapons based on CFG grammar rules">WeaponNameGenerator</a> </p>
 
 </div>
 </div>

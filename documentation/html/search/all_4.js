@@ -17,9 +17,8 @@ var searchData=
   ['dragon1_2ednd_14',['dragon1.dnd',['../dragon1_8dnd.html',1,'']]],
   ['dragon_5farmor_5finit_15',['DRAGON_ARMOR_INIT',['../class_constants.html#a043a16269d93e6f0170abfb4e626e06f',1,'Constants']]],
   ['dragon_5farmor_5fper_5flevel_16',['DRAGON_ARMOR_PER_LEVEL',['../class_constants.html#aa186fec9996a289539a1fffa4f49deb9',1,'Constants']]],
-  ['dragon_5fquote_5fgenerator_17',['dragon_quote_generator',['../class_constants.html#a1376bdcdd03a17ef169d3b0b164d17b5',1,'Constants']]],
-  ['dragonquotegenerator_18',['DragonQuoteGenerator',['../class_dragon_quote_generator.html',1,'DragonQuoteGenerator'],['../class_dragon_quote_generator.html#afd71b86e9cd0cfc14a7e0ff0931c762e',1,'DragonQuoteGenerator::DragonQuoteGenerator()']]],
-  ['dragonquotegenerator_2ecpp_19',['DragonQuoteGenerator.cpp',['../_dragon_quote_generator_8cpp.html',1,'']]],
-  ['dragonquotegenerator_2ecpp_2eobj_2ed_20',['DragonQuoteGenerator.cpp.obj.d',['../_dragon_quote_generator_8cpp_8obj_8d.html',1,'']]],
-  ['dragonquotegenerator_2ehpp_21',['DragonQuoteGenerator.hpp',['../_dragon_quote_generator_8hpp.html',1,'']]]
+  ['dragonquotegenerator_17',['DragonQuoteGenerator',['../class_dragon_quote_generator.html',1,'']]],
+  ['dragonquotegenerator_2ecpp_18',['DragonQuoteGenerator.cpp',['../_dragon_quote_generator_8cpp.html',1,'']]],
+  ['dragonquotegenerator_2ecpp_2eobj_2ed_19',['DragonQuoteGenerator.cpp.obj.d',['../_dragon_quote_generator_8cpp_8obj_8d.html',1,'']]],
+  ['dragonquotegenerator_2ehpp_20',['DragonQuoteGenerator.hpp',['../_dragon_quote_generator_8hpp.html',1,'']]]
 ];

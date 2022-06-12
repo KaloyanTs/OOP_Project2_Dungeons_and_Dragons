@@ -32,9 +32,7 @@ var hierarchy =
       [ "Mage", "class_mage.html", null ],
       [ "Warrior", "class_warrior.html", null ]
     ] ],
-    [ "Printer", "class_printer.html", [
-      [ "MultipleImagePrinter", "class_multiple_image_printer.html", null ]
-    ] ],
+    [ "Printer", "class_printer.html", null ],
     [ "String", "class_string.html", null ],
     [ "Troop", "class_troop.html", [
       [ "Dragon", "class_dragon.html", null ],

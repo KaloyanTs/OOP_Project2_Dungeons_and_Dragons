@@ -1,5 +1,9 @@
 var class_map =
 [
+    [ "MAP_SYMBOLS", "class_map.html#a7d60cecac143edb0795606a5ca6a087e", [
+      [ "FREE", "class_map.html#a7d60cecac143edb0795606a5ca6a087ea88c189a42c87aa49d667fc8ab76bc323", null ],
+      [ "WALL", "class_map.html#a7d60cecac143edb0795606a5ca6a087ea48d536b2de1195d0c9f6ea8ab884085e", null ]
+    ] ],
     [ "Map", "class_map.html#a90dbf1dbeb4bc5f1917c7c736782f460", null ],
     [ "Map", "class_map.html#a7e6cf7ba89f84c99829ff4cd7eaa46c3", null ],
     [ "Map", "class_map.html#a5618697d5c1aadb33ac680f5bb6f7d90", null ],

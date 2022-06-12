@@ -6,7 +6,6 @@ var searchData=
   ['shrink_5fto_5ffit_3',['shrink_to_fit',['../class_string.html#a12893a9387a85a6d20b2c4e49729ccec',1,'String']]],
   ['size_4',['size',['../class_string.html#a588c5cc9faededbb9d938662d354feed',1,'String::size()'],['../class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c',1,'Vector::size()']]],
   ['spell_5',['Spell',['../class_spell.html#aaf8f33bfee5eb15eac62617a02328678',1,'Spell::Spell(unsigned y, unsigned x, unsigned bot, unsigned top=0, bool onBoard=true, unsigned c=0)'],['../class_spell.html#a34cc045bc7bd7ca6b08f009aacaab022',1,'Spell::Spell(unsigned bonus, unsigned c, const String &amp;name)']]],
-  ['spellnamegenerator_6',['SpellNameGenerator',['../class_spell_name_generator.html#ab79cfc357faac9a6c46ccc5dcc83517f',1,'SpellNameGenerator']]],
-  ['start_7',['start',['../class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90',1,'Game']]],
-  ['string_8',['String',['../class_string.html#a6e005d5422ee34c9e8e006cd96742f12',1,'String::String(const char *_str=&quot;&quot;)'],['../class_string.html#afc158dffcdf56e601bd640cbacdfcd3c',1,'String::String(const String &amp;other)']]]
+  ['start_6',['start',['../class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90',1,'Game']]],
+  ['string_7',['String',['../class_string.html#a6e005d5422ee34c9e8e006cd96742f12',1,'String::String(const char *_str=&quot;&quot;)'],['../class_string.html#afc158dffcdf56e601bd640cbacdfcd3c',1,'String::String(const String &amp;other)']]]
 ];

@@ -91,17 +91,19 @@ $(document).ready(function(){initNavTree('_spell_name_generator_8hpp_source.html
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __SPELL_NAME_GENERATOR_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_grammar_8hpp.html">Grammar.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_spell_name_generator.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_spell_name_generator.html">SpellNameGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_grammar.html">Grammar</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="class_spell_name_generator.html#ab79cfc357faac9a6c46ccc5dcc83517f">SpellNameGenerator</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>};</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_spell_name_generator.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_spell_name_generator.html">SpellNameGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_grammar.html">Grammar</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_class" href="class_spell_name_generator.html">SpellNameGenerator</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_spell_name_generator.html">SpellNameGenerator</a> &amp;<a class="code hl_function" href="class_spell_name_generator.html#afdf85530be012e11c702c74e2e49730a">getInstance</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_grammar_8hpp_html"><div class="ttname"><a href="_grammar_8hpp.html">Grammar.hpp</a></div></div>
-<div class="ttc" id="aclass_grammar_html"><div class="ttname"><a href="class_grammar.html">Grammar</a></div><div class="ttdef"><b>Definition:</b> Grammar.hpp:8</div></div>
-<div class="ttc" id="aclass_spell_name_generator_html"><div class="ttname"><a href="class_spell_name_generator.html">SpellNameGenerator</a></div><div class="ttdef"><b>Definition:</b> SpellNameGenerator.hpp:6</div></div>
-<div class="ttc" id="aclass_spell_name_generator_html_ab79cfc357faac9a6c46ccc5dcc83517f"><div class="ttname"><a href="class_spell_name_generator.html#ab79cfc357faac9a6c46ccc5dcc83517f">SpellNameGenerator::SpellNameGenerator</a></div><div class="ttdeci">SpellNameGenerator()</div><div class="ttdef"><b>Definition:</b> SpellNameGenerator.cpp:3</div></div>
+<div class="ttc" id="aclass_grammar_html"><div class="ttname"><a href="class_grammar.html">Grammar</a></div><div class="ttdoc">class representing context-free grammar having rules for word generation</div><div class="ttdef"><b>Definition:</b> Grammar.hpp:9</div></div>
+<div class="ttc" id="aclass_spell_name_generator_html"><div class="ttname"><a href="class_spell_name_generator.html">SpellNameGenerator</a></div><div class="ttdoc">singleton class generating random names of spells based on CFG grammar rules</div><div class="ttdef"><b>Definition:</b> SpellNameGenerator.hpp:7</div></div>
+<div class="ttc" id="aclass_spell_name_generator_html_afdf85530be012e11c702c74e2e49730a"><div class="ttname"><a href="class_spell_name_generator.html#afdf85530be012e11c702c74e2e49730a">SpellNameGenerator::getInstance</a></div><div class="ttdeci">static SpellNameGenerator &amp; getInstance()</div><div class="ttdoc">get access to the only object of type SpellNameGenerator</div><div class="ttdef"><b>Definition:</b> SpellNameGenerator.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

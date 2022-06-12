@@ -93,25 +93,25 @@ $(document).ready(function(){initNavTree('_image_8hpp_source.html',''); initResi
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_string_8hpp.html">String.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_image.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_image.html">Image</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_string.html">String</a> path;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">   12</a></span>    <a class="code hl_function" href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">Image</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_string.html">String</a> &amp;p) : path(p) {}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_image.html#a6b4f7406ffec3d089db91c1784b3e760">print</a>(std::ostream &amp;os = std::cout) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_image.html#a4781e3d506d6adedbc6bda4a2dccd887">   14</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_multiple_image_printer.html">MultipleImagePrinter</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>std::ostream &amp;<a class="code hl_function" href="_image_8hpp.html#a8c9dcc38795fd631e2b37df3b520c361">operator&lt;&lt;</a>(std::ostream &amp;os, <span class="keyword">const</span> <a class="code hl_class" href="class_image.html">Image</a> &amp;I);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_image.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_image.html">Image</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_string.html">String</a> path;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">   14</a></span>    <a class="code hl_function" href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">Image</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_string.html">String</a> &amp;p) : path(p) {}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_image.html#a6b4f7406ffec3d089db91c1784b3e760">print</a>(std::ostream &amp;os = std::cout) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_image.html#a4781e3d506d6adedbc6bda4a2dccd887">   17</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_image.html#a4781e3d506d6adedbc6bda4a2dccd887">MultipleImagePrinter</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>std::ostream &amp;<a class="code hl_function" href="_image_8hpp.html#a8c9dcc38795fd631e2b37df3b520c361">operator&lt;&lt;</a>(std::ostream &amp;os, <span class="keyword">const</span> <a class="code hl_class" href="class_image.html">Image</a> &amp;I);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_image_8hpp_html_a8c9dcc38795fd631e2b37df3b520c361"><div class="ttname"><a href="_image_8hpp.html#a8c9dcc38795fd631e2b37df3b520c361">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Image &amp;I)</div><div class="ttdef"><b>Definition:</b> Image.cpp:17</div></div>
 <div class="ttc" id="a_string_8hpp_html"><div class="ttname"><a href="_string_8hpp.html">String.hpp</a></div></div>
-<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> Image.hpp:8</div></div>
-<div class="ttc" id="aclass_image_html_a6b4f7406ffec3d089db91c1784b3e760"><div class="ttname"><a href="class_image.html#a6b4f7406ffec3d089db91c1784b3e760">Image::print</a></div><div class="ttdeci">void print(std::ostream &amp;os=std::cout) const</div><div class="ttdef"><b>Definition:</b> Image.cpp:3</div></div>
-<div class="ttc" id="aclass_image_html_a96dd3b8d07f1f90f679aaae585e7fa27"><div class="ttname"><a href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">Image::Image</a></div><div class="ttdeci">Image(const String &amp;p)</div><div class="ttdef"><b>Definition:</b> Image.hpp:12</div></div>
-<div class="ttc" id="aclass_multiple_image_printer_html"><div class="ttname"><a href="class_multiple_image_printer.html">MultipleImagePrinter</a></div><div class="ttdef"><b>Definition:</b> MultipleImagePrinter.hpp:7</div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdoc">class representing image (ascii art)</div><div class="ttdef"><b>Definition:</b> Image.hpp:9</div></div>
+<div class="ttc" id="aclass_image_html_a4781e3d506d6adedbc6bda4a2dccd887"><div class="ttname"><a href="class_image.html#a4781e3d506d6adedbc6bda4a2dccd887">Image::MultipleImagePrinter</a></div><div class="ttdeci">friend class MultipleImagePrinter</div><div class="ttdef"><b>Definition:</b> Image.hpp:17</div></div>
+<div class="ttc" id="aclass_image_html_a6b4f7406ffec3d089db91c1784b3e760"><div class="ttname"><a href="class_image.html#a6b4f7406ffec3d089db91c1784b3e760">Image::print</a></div><div class="ttdeci">void print(std::ostream &amp;os=std::cout) const</div><div class="ttdoc">print the image to output stream</div><div class="ttdef"><b>Definition:</b> Image.cpp:3</div></div>
+<div class="ttc" id="aclass_image_html_a96dd3b8d07f1f90f679aaae585e7fa27"><div class="ttname"><a href="class_image.html#a96dd3b8d07f1f90f679aaae585e7fa27">Image::Image</a></div><div class="ttdeci">Image(const String &amp;p)</div><div class="ttdoc">create image by showing its path</div><div class="ttdef"><b>Definition:</b> Image.hpp:14</div></div>
 <div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">Class representing dynamic string (array of characters)</div><div class="ttdef"><b>Definition:</b> String.hpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

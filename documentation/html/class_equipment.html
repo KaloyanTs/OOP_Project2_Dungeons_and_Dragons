@@ -93,6 +93,9 @@ $(document).ready(function(){initNavTree('class_equipment.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
+<p>abstract class representing equipment having name and giving some bonus to the owner's stats  
+ <a href="class_equipment.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_equipment_8hpp_source.html">Equipment.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Equipment:</div>
@@ -100,7 +103,7 @@ Inheritance diagram for Equipment:</div>
  <div class="center">
   <img src="class_equipment.png" usemap="#Equipment_map" alt=""/>
   <map id="Equipment_map" name="Equipment_map">
-<area href="class_hero_equipment.html" alt="HeroEquipment" shape="rect" coords="160,56,257,80"/>
+<area href="class_hero_equipment.html" title="class representing equipment owned by a hero" alt="HeroEquipment" shape="rect" coords="160,56,257,80"/>
 <area href="class_armor.html" title="class representing armor of the player protecting him from enemies damage with some bonus" alt="Armor" shape="rect" coords="0,112,97,136"/>
 <area href="class_potion.html" alt="Potion" shape="rect" coords="107,112,204,136"/>
 <area href="class_spell.html" alt="Spell" shape="rect" coords="214,112,311,136"/>
@@ -111,16 +114,22 @@ Inheritance diagram for Equipment:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9a5e50dcd5e6aa9fbccb2992617a2b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#ad9a5e50dcd5e6aa9fbccb2992617a2b0">Equipment</a> (unsigned _bonus=0)</td></tr>
+<tr class="memdesc:ad9a5e50dcd5e6aa9fbccb2992617a2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct equipment with bonus (in percents) and no name  <a href="class_equipment.html#ad9a5e50dcd5e6aa9fbccb2992617a2b0">More...</a><br /></td></tr>
 <tr class="separator:ad9a5e50dcd5e6aa9fbccb2992617a2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127acbd4e8d8020efe6da3ceb02efc3d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a127acbd4e8d8020efe6da3ceb02efc3d">~Equipment</a> ()=default</td></tr>
+<tr class="memdesc:a127acbd4e8d8020efe6da3ceb02efc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual destructor  <a href="class_equipment.html#a127acbd4e8d8020efe6da3ceb02efc3d">More...</a><br /></td></tr>
 <tr class="separator:a127acbd4e8d8020efe6da3ceb02efc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9c0c878b2ee2f89f3f6d5faa4522b8d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_equipment.html">Equipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#ae9c0c878b2ee2f89f3f6d5faa4522b8d">clone</a> () const =0</td></tr>
+<tr class="memdesc:ae9c0c878b2ee2f89f3f6d5faa4522b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virtual clone function  <a href="class_equipment.html#ae9c0c878b2ee2f89f3f6d5faa4522b8d">More...</a><br /></td></tr>
 <tr class="separator:ae9c0c878b2ee2f89f3f6d5faa4522b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75327615849b7f503a107be99823c9ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a75327615849b7f503a107be99823c9ec">print</a> () const</td></tr>
+<tr class="memdesc:a75327615849b7f503a107be99823c9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">print equipment's bonus  <a href="class_equipment.html#a75327615849b7f503a107be99823c9ec">More...</a><br /></td></tr>
 <tr class="separator:a75327615849b7f503a107be99823c9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b230a7c27a220df4129211480dfc8ca"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a0b230a7c27a220df4129211480dfc8ca">getBonus</a> () const</td></tr>
+<tr class="memdesc:a0b230a7c27a220df4129211480dfc8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">get bonus (as a multiplier)  <a href="class_equipment.html#a0b230a7c27a220df4129211480dfc8ca">More...</a><br /></td></tr>
 <tr class="separator:a0b230a7c27a220df4129211480dfc8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104a8a912857e3b85f02a65f031e6424"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a104a8a912857e3b85f02a65f031e6424">getName</a> ()</td></tr>
+<tr class="memdesc:a104a8a912857e3b85f02a65f031e6424"><td class="mdescLeft">&#160;</td><td class="mdescRight">get this equipment's name  <a href="class_equipment.html#a104a8a912857e3b85f02a65f031e6424">More...</a><br /></td></tr>
 <tr class="separator:a104a8a912857e3b85f02a65f031e6424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -135,7 +144,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a2475e80488b85de0adc69d7d459ca3f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a2475e80488b85de0adc69d7d459ca3f3">name</a></td></tr>
 <tr class="separator:a2475e80488b85de0adc69d7d459ca3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >abstract class representing equipment having name and giving some bonus to the owner's stats </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0a75124edfd2df68a70149b3c9a3b813" name="a0a75124edfd2df68a70149b3c9a3b813"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a75124edfd2df68a70149b3c9a3b813">&#9670;&nbsp;</a></span>Equipment() <span class="overload">[1/2]</span></h2>
 
@@ -196,6 +207,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>construct equipment with bonus (in percents) and no name </p>
+
 </div>
 </div>
 <a id="a127acbd4e8d8020efe6da3ceb02efc3d" name="a127acbd4e8d8020efe6da3ceb02efc3d"></a>
@@ -220,6 +233,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>virtual destructor </p>
 
 </div>
 </div>
@@ -246,6 +261,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pure virtual clone function </p>
 
 <p>Implemented in <a class="el" href="class_armor.html#a66a7dd54cf4327b8946b8599e058ec8d">Armor</a>, <a class="el" href="class_potion.html#aee7adfeb54ef87dfb611367795711235">Potion</a>, <a class="el" href="class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae">Spell</a>, <a class="el" href="class_weapon.html#ac1be11d5958f7128da493e046fb6f83e">Weapon</a>, and <a class="el" href="class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5">HeroEquipment</a>.</p>
 
@@ -274,6 +291,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>get bonus (as a multiplier) </p>
+
 </div>
 </div>
 <a id="a104a8a912857e3b85f02a65f031e6424" name="a104a8a912857e3b85f02a65f031e6424"></a>
@@ -299,6 +318,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>get this equipment's name </p>
+
 </div>
 </div>
 <a id="a75327615849b7f503a107be99823c9ec" name="a75327615849b7f503a107be99823c9ec"></a>
@@ -323,6 +344,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>print equipment's bonus </p>
 
 <p>Reimplemented in <a class="el" href="class_armor.html#a8eacfc08eba1b81e33a69bf75897136f">Armor</a>, <a class="el" href="class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f">HeroEquipment</a>, <a class="el" href="class_potion.html#a829520e66c08f015541dbd5b816dc1e8">Potion</a>, <a class="el" href="class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80">Spell</a>, and <a class="el" href="class_weapon.html#a32308d94be1b0de6e545fd727398b0e9">Weapon</a>.</p>
 

@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_map.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_map-members.html">List of all members</a>  </div>
@@ -92,13 +93,26 @@ $(document).ready(function(){initNavTree('class_map.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
+<p>class representing the map of game  
+ <a href="class_map.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_map_8hpp_source.html">Map.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7d60cecac143edb0795606a5ca6a087e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a7d60cecac143edb0795606a5ca6a087e">MAP_SYMBOLS</a> { <a class="el" href="class_map.html#a7d60cecac143edb0795606a5ca6a087ea88c189a42c87aa49d667fc8ab76bc323">FREE</a> = '.'
+, <a class="el" href="class_map.html#a7d60cecac143edb0795606a5ca6a087ea48d536b2de1195d0c9f6ea8ab884085e">WALL</a> = (char)219
+ }</td></tr>
+<tr class="memdesc:a7d60cecac143edb0795606a5ca6a087e"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum keeping the character for the free spots and walls on the map  <a href="class_map.html#a7d60cecac143edb0795606a5ca6a087e">More...</a><br /></td></tr>
+<tr class="separator:a7d60cecac143edb0795606a5ca6a087e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a90dbf1dbeb4bc5f1917c7c736782f460"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a90dbf1dbeb4bc5f1917c7c736782f460">Map</a> (<a class="el" href="class_player.html">Player</a> *p, const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="memdesc:a90dbf1dbeb4bc5f1917c7c736782f460"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct map by player and name of game to be read from file locted at directory "games\"  <a href="class_map.html#a90dbf1dbeb4bc5f1917c7c736782f460">More...</a><br /></td></tr>
 <tr class="separator:a90dbf1dbeb4bc5f1917c7c736782f460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e6cf7ba89f84c99829ff4cd7eaa46c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a7e6cf7ba89f84c99829ff4cd7eaa46c3">Map</a> (<a class="el" href="class_player.html">Player</a> *p, unsigned lvl=1)</td></tr>
+<tr class="memdesc:a7e6cf7ba89f84c99829ff4cd7eaa46c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct random map by player and level of the map  <a href="class_map.html#a7e6cf7ba89f84c99829ff4cd7eaa46c3">More...</a><br /></td></tr>
 <tr class="separator:a7e6cf7ba89f84c99829ff4cd7eaa46c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5618697d5c1aadb33ac680f5bb6f7d90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a5618697d5c1aadb33ac680f5bb6f7d90">Map</a> (const <a class="el" href="class_map.html">Map</a> &amp;other)=delete</td></tr>
 <tr class="separator:a5618697d5c1aadb33ac680f5bb6f7d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,10 +121,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa403fbe09394ccf39747588f5168e3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a> ()</td></tr>
 <tr class="separator:aa403fbe09394ccf39747588f5168e3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad12012d57bed8f1b32a03a1d5f8a6b98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_constants.html#af21cd021274693d26201a595a4b7234a">Constants::LEVEL_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98">run</a> ()</td></tr>
+<tr class="memdesc:ad12012d57bed8f1b32a03a1d5f8a6b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">run action on the map (player moves and does some action)  <a href="class_map.html#ad12012d57bed8f1b32a03a1d5f8a6b98">More...</a><br /></td></tr>
 <tr class="separator:ad12012d57bed8f1b32a03a1d5f8a6b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9742bfb34e95ef450f5f6f46c5b39b91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9742bfb34e95ef450f5f6f46c5b39b91">isSaved</a> () const</td></tr>
+<tr class="memdesc:a9742bfb34e95ef450f5f6f46c5b39b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if current state of the map is saved  <a href="class_map.html#a9742bfb34e95ef450f5f6f46c5b39b91">More...</a><br /></td></tr>
 <tr class="separator:a9742bfb34e95ef450f5f6f46c5b39b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fda16feff3704ef70e46bc35da65a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9fda16feff3704ef70e46bc35da65a82">saveProgress</a> (const <a class="el" href="class_string.html">String</a> &amp;game)</td></tr>
+<tr class="memdesc:a9fda16feff3704ef70e46bc35da65a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">save current state of the map on file "games\&lt;game name&gt;.dndmap"  <a href="class_map.html#a9fda16feff3704ef70e46bc35da65a82">More...</a><br /></td></tr>
 <tr class="separator:a9fda16feff3704ef70e46bc35da65a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a241dc13d1741b6010f93cf7a2a4ac2cc"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a241dc13d1741b6010f93cf7a2a4ac2cc">getLevel</a> () const</td></tr>
 <tr class="separator:a241dc13d1741b6010f93cf7a2a4ac2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,10 +135,42 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d3ec3127f9510d01c3b4f13067f1b8a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a">getHero</a> (unsigned index, const <a class="el" href="class_string.html">String</a> &amp;name=&quot;unknown&quot;)</td></tr>
+<tr class="memdesc:a7d3ec3127f9510d01c3b4f13067f1b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get Hero by ID and name  <a href="class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a">More...</a><br /></td></tr>
 <tr class="separator:a7d3ec3127f9510d01c3b4f13067f1b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b9394a1eeda22fa437394b635e5380"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a67b9394a1eeda22fa437394b635e5380">read</a> (const <a class="el" href="class_string.html">String</a> &amp;file, <a class="el" href="class_player.html">Player</a> *p)</td></tr>
 <tr class="separator:a67b9394a1eeda22fa437394b635e5380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing the map of game </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a7d60cecac143edb0795606a5ca6a087e" name="a7d60cecac143edb0795606a5ca6a087e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d60cecac143edb0795606a5ca6a087e">&#9670;&nbsp;</a></span>MAP_SYMBOLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="class_map.html#a7d60cecac143edb0795606a5ca6a087e">Map::MAP_SYMBOLS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>enum keeping the character for the free spots and walls on the map </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7d60cecac143edb0795606a5ca6a087ea88c189a42c87aa49d667fc8ab76bc323" name="a7d60cecac143edb0795606a5ca6a087ea88c189a42c87aa49d667fc8ab76bc323"></a>FREE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d60cecac143edb0795606a5ca6a087ea48d536b2de1195d0c9f6ea8ab884085e" name="a7d60cecac143edb0795606a5ca6a087ea48d536b2de1195d0c9f6ea8ab884085e"></a>WALL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a90dbf1dbeb4bc5f1917c7c736782f460" name="a90dbf1dbeb4bc5f1917c7c736782f460"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90dbf1dbeb4bc5f1917c7c736782f460">&#9670;&nbsp;</a></span>Map() <span class="overload">[1/3]</span></h2>
@@ -148,6 +197,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>construct map by player and name of game to be read from file locted at directory "games\" </p>
 
 </div>
 </div>
@@ -176,6 +227,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>construct random map by player and level of the map </p>
 
 </div>
 </div>
@@ -257,6 +310,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>get Hero by ID and name </p>
+
 </div>
 </div>
 <a id="a241dc13d1741b6010f93cf7a2a4ac2cc" name="a241dc13d1741b6010f93cf7a2a4ac2cc"></a>
@@ -306,6 +361,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>check if current state of the map is saved </p>
 
 </div>
 </div>
@@ -386,6 +443,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>run action on the map (player moves and does some action) </p>
+
 </div>
 </div>
 <a id="a9fda16feff3704ef70e46bc35da65a82" name="a9fda16feff3704ef70e46bc35da65a82"></a>
@@ -403,6 +462,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>save current state of the map on file "games\&lt;game name&gt;.dndmap" </p>
 
 </div>
 </div>

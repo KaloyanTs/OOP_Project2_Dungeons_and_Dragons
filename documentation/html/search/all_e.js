@@ -1,7 +1,7 @@
 var searchData=
 [
   ['operator_20const_20char_20_2a_0',['operator const char *',['../class_string.html#a9a12caedc885ac44c86d104a8cb60f82',1,'String']]],
-  ['operator_28_29_1',['operator()',['../class_multiple_image_printer.html#a648a9e0f58ba0610044f806423d96e77',1,'MultipleImagePrinter::operator()()'],['../class_printer.html#afee64bf06133d6dec1fb582fd7d421b7',1,'Printer::operator()()']]],
+  ['operator_28_29_1',['operator()',['../class_printer.html#afee64bf06133d6dec1fb582fd7d421b7',1,'Printer']]],
   ['operator_2b_2',['operator+',['../class_string.html#ac094f267da5e0cdc7559bb1fa163f650',1,'String']]],
   ['operator_2b_3d_3',['operator+=',['../class_string.html#ab84728b14cac3bc213351c8ae8fb3364',1,'String']]],
   ['operator_3c_3c_4',['operator&lt;&lt;',['../_image_8cpp.html#a8c9dcc38795fd631e2b37df3b520c361',1,'operator&lt;&lt;(std::ostream &amp;os, const Image &amp;I):&#160;Image.cpp'],['../_image_8hpp.html#a8c9dcc38795fd631e2b37df3b520c361',1,'operator&lt;&lt;(std::ostream &amp;os, const Image &amp;I):&#160;Image.cpp'],['../_string_8cpp.html#a30adfcced3310355f78fd68bd37392cc',1,'operator&lt;&lt;(std::ostream &amp;os, const String &amp;S):&#160;String.cpp'],['../_string_8hpp.html#a30adfcced3310355f78fd68bd37392cc',1,'operator&lt;&lt;(std::ostream &amp;os, const String &amp;S):&#160;String.cpp']]],

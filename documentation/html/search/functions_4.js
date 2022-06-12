@@ -13,12 +13,14 @@ var searchData=
   ['gethealth_10',['getHealth',['../class_human.html#a0e2038b39919f8441c96864e1a1318e8',1,'Human::getHealth()'],['../class_mage.html#ad51249ad988018d5c7e5114c21d84157',1,'Mage::getHealth()'],['../class_player.html#a5a97887e33c7ba20a8dc11671d46e646',1,'Player::getHealth()'],['../class_warrior.html#ad4638f09069c06e614f35d64ffa943da',1,'Warrior::getHealth()']]],
   ['gethero_11',['getHero',['../class_map.html#a7d3ec3127f9510d01c3b4f13067f1b8a',1,'Map']]],
   ['getid_12',['getID',['../class_armor.html#ad7f309930cb7f5af715da36e91d1f3e8',1,'Armor::getID()'],['../class_hero_equipment.html#abefa58addb723b086c1a62f33fefa7af',1,'HeroEquipment::getID()'],['../class_potion.html#a8299e44e23cb14cc28c5cbb4fa8a1508',1,'Potion::getID()'],['../class_spell.html#a59827e289d9f675c2cdf5a52e017690d',1,'Spell::getID()'],['../class_weapon.html#af68da97d81348a94024bee736557f806',1,'Weapon::getID()']]],
-  ['getlevel_13',['getLevel',['../class_map.html#a241dc13d1741b6010f93cf7a2a4ac2cc',1,'Map::getLevel()'],['../class_troop.html#a8900de59ffca17c1de50965db7636bda',1,'Troop::getLevel()']]],
-  ['getmana_14',['getMana',['../class_human.html#ae02abea6262d43a4ee75bff958240138',1,'Human::getMana()'],['../class_mage.html#ab260e862f1964a810ac4b951cfd27f2f',1,'Mage::getMana()'],['../class_player.html#a01924d190e773c8a27c0071d23986bbd',1,'Player::getMana()'],['../class_warrior.html#a91c1b39050986237111b07308c21d816',1,'Warrior::getMana()']]],
-  ['getname_15',['getName',['../class_equipment.html#a104a8a912857e3b85f02a65f031e6424',1,'Equipment::getName()'],['../class_player.html#af7576d2f69a277218213912a5697cb16',1,'Player::getName()']]],
-  ['getoutputstream_16',['getOutputStream',['../class_printer.html#a1a48ce8cd2d01bf07b813d54de887882',1,'Printer']]],
-  ['getx_17',['getX',['../class_event_generator.html#aa090e3767587340a07ce146f194e624b',1,'EventGenerator::getX()'],['../class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1',1,'Player::getX()']]],
-  ['gety_18',['getY',['../class_event_generator.html#a0a78e020148152c5bdbde9745a1637bc',1,'EventGenerator::getY()'],['../class_player.html#af8e08c2349e8a6a177e102b28eadcbd2',1,'Player::getY()']]],
-  ['grammar_19',['Grammar',['../class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f',1,'Grammar']]],
-  ['greater_20',['greater',['../class_constants.html#a3d566364e1171e8bac1c4c380b02284d',1,'Constants']]]
+  ['getinstance_13',['getInstance',['../class_armor_name_generator.html#aab006d5ad318d5f6be82d31628faf0ce',1,'ArmorNameGenerator::getInstance()'],['../class_dragon_quote_generator.html#ac15aaa6de3ef36dee307e9c73c6e3758',1,'DragonQuoteGenerator::getInstance()'],['../class_spell_name_generator.html#afdf85530be012e11c702c74e2e49730a',1,'SpellNameGenerator::getInstance()'],['../class_weapon_name_generator.html#a781d0e24e7ccc9312fe70823fc726903',1,'WeaponNameGenerator::getInstance()']]],
+  ['getintance_14',['getIntance',['../class_potion_name_generator.html#aa5dc835deff13509223cbfb8091644a9',1,'PotionNameGenerator']]],
+  ['getlevel_15',['getLevel',['../class_map.html#a241dc13d1741b6010f93cf7a2a4ac2cc',1,'Map::getLevel()'],['../class_troop.html#a8900de59ffca17c1de50965db7636bda',1,'Troop::getLevel()']]],
+  ['getmana_16',['getMana',['../class_human.html#ae02abea6262d43a4ee75bff958240138',1,'Human::getMana()'],['../class_mage.html#ab260e862f1964a810ac4b951cfd27f2f',1,'Mage::getMana()'],['../class_player.html#a01924d190e773c8a27c0071d23986bbd',1,'Player::getMana()'],['../class_warrior.html#a91c1b39050986237111b07308c21d816',1,'Warrior::getMana()']]],
+  ['getname_17',['getName',['../class_equipment.html#a104a8a912857e3b85f02a65f031e6424',1,'Equipment::getName()'],['../class_player.html#af7576d2f69a277218213912a5697cb16',1,'Player::getName()']]],
+  ['getoutputstream_18',['getOutputStream',['../class_printer.html#a1a48ce8cd2d01bf07b813d54de887882',1,'Printer']]],
+  ['getx_19',['getX',['../class_event_generator.html#aa090e3767587340a07ce146f194e624b',1,'EventGenerator::getX()'],['../class_player.html#ad0c7d58f89ff2bf0138b9d9248c3aec1',1,'Player::getX()']]],
+  ['gety_20',['getY',['../class_event_generator.html#a0a78e020148152c5bdbde9745a1637bc',1,'EventGenerator::getY()'],['../class_player.html#af8e08c2349e8a6a177e102b28eadcbd2',1,'Player::getY()']]],
+  ['grammar_21',['Grammar',['../class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f',1,'Grammar']]],
+  ['greater_22',['greater',['../class_constants.html#a3d566364e1171e8bac1c4c380b02284d',1,'Constants']]]
 ];

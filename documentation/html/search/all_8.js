@@ -12,13 +12,14 @@ var searchData=
   ['heroequipment_2ehpp_9',['HeroEquipment.hpp',['../_hero_equipment_8hpp.html',1,'']]],
   ['hex_10',['HEX',['../_c_make_c_compiler_id_8c.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCXXCompilerId.cpp']]],
   ['hit_11',['hit',['../class_player.html#aa920c97d61a0a95c8ead2747b8c14849',1,'Player']]],
-  ['human_12',['Human',['../class_human.html',1,'']]],
-  ['human_13',['HUMAN',['../class_player.html#aa3832d6a561492b10e05853e0307a776aa36c6719f4d3207d858cf956ef1e93b6',1,'Player']]],
-  ['human_14',['Human',['../class_human.html#ac4409d16c2c6ed8409b5c9956c94fdb0',1,'Human::Human(unsigned posY, unsigned posX, const String &amp;name=&quot;unknown&quot;)'],['../class_human.html#a537d140122eea65f9480b0f70e402f82',1,'Human::Human(std::ifstream &amp;ifs)']]],
-  ['human_2ecpp_15',['Human.cpp',['../_human_8cpp.html',1,'']]],
-  ['human_2ecpp_2eobj_2ed_16',['Human.cpp.obj.d',['../_human_8cpp_8obj_8d.html',1,'']]],
-  ['human_2ehpp_17',['Human.hpp',['../_human_8hpp.html',1,'']]],
-  ['human_5finit_5fattack_18',['HUMAN_INIT_ATTACK',['../class_constants.html#ad889377ae3726017cad2d5fb172e129a',1,'Constants']]],
-  ['human_5finit_5fhealth_19',['HUMAN_INIT_HEALTH',['../class_constants.html#ad16ff661603553a82112f07cb27cb76a',1,'Constants']]],
-  ['human_5finit_5fmana_20',['HUMAN_INIT_MANA',['../class_constants.html#a80dd7b21326e6a1c6a472460ad1a7801',1,'Constants']]]
+  ['hotel_20project_20documentation_12',['Hotel Project Documentation',['../index.html',1,'']]],
+  ['human_13',['Human',['../class_human.html',1,'']]],
+  ['human_14',['HUMAN',['../class_player.html#aa3832d6a561492b10e05853e0307a776aa36c6719f4d3207d858cf956ef1e93b6',1,'Player']]],
+  ['human_15',['Human',['../class_human.html#ac4409d16c2c6ed8409b5c9956c94fdb0',1,'Human::Human(unsigned posY, unsigned posX, const String &amp;name=&quot;unknown&quot;)'],['../class_human.html#a537d140122eea65f9480b0f70e402f82',1,'Human::Human(std::ifstream &amp;ifs)']]],
+  ['human_2ecpp_16',['Human.cpp',['../_human_8cpp.html',1,'']]],
+  ['human_2ecpp_2eobj_2ed_17',['Human.cpp.obj.d',['../_human_8cpp_8obj_8d.html',1,'']]],
+  ['human_2ehpp_18',['Human.hpp',['../_human_8hpp.html',1,'']]],
+  ['human_5finit_5fattack_19',['HUMAN_INIT_ATTACK',['../class_constants.html#ad889377ae3726017cad2d5fb172e129a',1,'Constants']]],
+  ['human_5finit_5fhealth_20',['HUMAN_INIT_HEALTH',['../class_constants.html#ad16ff661603553a82112f07cb27cb76a',1,'Constants']]],
+  ['human_5finit_5fmana_21',['HUMAN_INIT_MANA',['../class_constants.html#a80dd7b21326e6a1c6a472460ad1a7801',1,'Constants']]]
 ];

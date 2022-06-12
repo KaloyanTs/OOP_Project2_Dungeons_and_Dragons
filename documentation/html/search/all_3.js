@@ -7,12 +7,13 @@ var searchData=
   ['close_4',['CLOSE',['../class_constants.html#af21cd021274693d26201a595a4b7234aa7286293c9125ac7d7bace94c190bc16d',1,'Constants']]],
   ['cmakeccompilerid_2ec_5',['CMakeCCompilerId.c',['../_c_make_c_compiler_id_8c.html',1,'']]],
   ['cmakecxxcompilerid_2ecpp_6',['CMakeCXXCompilerId.cpp',['../_c_make_c_x_x_compiler_id_8cpp.html',1,'']]],
-  ['compiler_5fid_7',['COMPILER_ID',['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
-  ['constants_8',['Constants',['../class_constants.html',1,'']]],
-  ['constants_2ecpp_9',['Constants.cpp',['../_constants_8cpp.html',1,'']]],
-  ['constants_2ecpp_2eobj_2ed_10',['Constants.cpp.obj.d',['../_constants_8cpp_8obj_8d.html',1,'']]],
-  ['constants_2ehpp_11',['Constants.hpp',['../_constants_8hpp.html',1,'']]],
-  ['copy_12',['copy',['../class_vector.html#af814b039cfa44e866e7bd4b1100149b8',1,'Vector']]],
-  ['cost_5fper_5flevel_13',['COST_PER_LEVEL',['../class_constants.html#aa09aa0d2b8d63b86e7d00318a2f35977',1,'Constants']]],
-  ['cxx_5fstd_14',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
+  ['commands_2emd_7',['commands.md',['../commands_8md.html',1,'']]],
+  ['compiler_5fid_8',['COMPILER_ID',['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['constants_9',['Constants',['../class_constants.html',1,'']]],
+  ['constants_2ecpp_10',['Constants.cpp',['../_constants_8cpp.html',1,'']]],
+  ['constants_2ecpp_2eobj_2ed_11',['Constants.cpp.obj.d',['../_constants_8cpp_8obj_8d.html',1,'']]],
+  ['constants_2ehpp_12',['Constants.hpp',['../_constants_8hpp.html',1,'']]],
+  ['copy_13',['copy',['../class_vector.html#af814b039cfa44e866e7bd4b1100149b8',1,'Vector']]],
+  ['cost_5fper_5flevel_14',['COST_PER_LEVEL',['../class_constants.html#aa09aa0d2b8d63b86e7d00318a2f35977',1,'Constants']]],
+  ['cxx_5fstd_15',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
 ];

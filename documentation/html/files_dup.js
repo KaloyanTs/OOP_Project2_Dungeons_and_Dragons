@@ -1,13 +1,14 @@
 var files_dup =
 [
     [ "build", "dir_4fef79e7177ba769987a8da36c892c5f.html", "dir_4fef79e7177ba769987a8da36c892c5f" ],
+    [ "markdowns", "dir_e2747db4f7ae73898caba355dcf25927.html", null ],
     [ "Armor.cpp", "_armor_8cpp.html", null ],
     [ "Armor.hpp", "_armor_8hpp.html", [
       [ "Armor", "class_armor.html", "class_armor" ]
     ] ],
     [ "ArmorNameGenerator.cpp", "_armor_name_generator_8cpp.html", null ],
     [ "ArmorNameGenerator.hpp", "_armor_name_generator_8hpp.html", [
-      [ "ArmorNameGenerator", "class_armor_name_generator.html", "class_armor_name_generator" ]
+      [ "ArmorNameGenerator", "class_armor_name_generator.html", null ]
     ] ],
     [ "Constants.cpp", "_constants_8cpp.html", null ],
     [ "Constants.hpp", "_constants_8hpp.html", [
@@ -19,7 +20,7 @@ var files_dup =
     ] ],
     [ "DragonQuoteGenerator.cpp", "_dragon_quote_generator_8cpp.html", null ],
     [ "DragonQuoteGenerator.hpp", "_dragon_quote_generator_8hpp.html", [
-      [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", "class_dragon_quote_generator" ]
+      [ "DragonQuoteGenerator", "class_dragon_quote_generator.html", null ]
     ] ],
     [ "Equipment.cpp", "_equipment_8cpp.html", null ],
     [ "Equipment.hpp", "_equipment_8hpp.html", [
@@ -60,10 +61,8 @@ var files_dup =
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "Map.cpp", "_map_8cpp.html", null ],
-    [ "Map.hpp", "_map_8hpp.html", "_map_8hpp" ],
-    [ "MultipleImagePrinter.cpp", "_multiple_image_printer_8cpp.html", null ],
-    [ "MultipleImagePrinter.hpp", "_multiple_image_printer_8hpp.html", [
-      [ "MultipleImagePrinter", "class_multiple_image_printer.html", "class_multiple_image_printer" ]
+    [ "Map.hpp", "_map_8hpp.html", [
+      [ "Map", "class_map.html", "class_map" ]
     ] ],
     [ "MyException.hpp", "_my_exception_8hpp.html", [
       [ "MyException", "class_my_exception.html", "class_my_exception" ]
@@ -76,7 +75,7 @@ var files_dup =
     ] ],
     [ "PotionNameGenerator.cpp", "_potion_name_generator_8cpp.html", null ],
     [ "PotionNameGenerator.hpp", "_potion_name_generator_8hpp.html", [
-      [ "PotionNameGenerator", "class_potion_name_generator.html", "class_potion_name_generator" ]
+      [ "PotionNameGenerator", "class_potion_name_generator.html", null ]
     ] ],
     [ "Printer.hpp", "_printer_8hpp.html", [
       [ "Printer", "class_printer.html", "class_printer" ]
@@ -87,7 +86,7 @@ var files_dup =
     ] ],
     [ "SpellNameGenerator.cpp", "_spell_name_generator_8cpp.html", null ],
     [ "SpellNameGenerator.hpp", "_spell_name_generator_8hpp.html", [
-      [ "SpellNameGenerator", "class_spell_name_generator.html", "class_spell_name_generator" ]
+      [ "SpellNameGenerator", "class_spell_name_generator.html", null ]
     ] ],
     [ "Stack.hpp", "_stack_8hpp.html", [
       [ "Stack< T >", "class_stack.html", "class_stack" ]
@@ -111,6 +110,6 @@ var files_dup =
     ] ],
     [ "WeaponNameGenerator.cpp", "_weapon_name_generator_8cpp.html", null ],
     [ "WeaponNameGenerator.hpp", "_weapon_name_generator_8hpp.html", [
-      [ "WeaponNameGenerator", "class_weapon_name_generator.html", "class_weapon_name_generator" ]
+      [ "WeaponNameGenerator", "class_weapon_name_generator.html", null ]
     ] ]
 ];

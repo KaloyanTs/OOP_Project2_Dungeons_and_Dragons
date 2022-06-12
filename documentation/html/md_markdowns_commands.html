@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dungeons &amp; Dragons: C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/MultipleImagePrinter.hpp File Reference</title>
+<title>Dungeons &amp; Dragons: User commands</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_multiple_image_printer_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('md_markdowns_commands.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,28 +83,75 @@ $(document).ready(function(){initNavTree('_multiple_image_printer_8hpp.html','')
 </iframe>
 </div>
 
-<div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">C:/Users/KaloyanTs/Documents/GitHub/OOP_Project2/MultipleImagePrinter.hpp File Reference</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">User commands </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_printer_8hpp_source.html">Printer.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_image_8hpp_source.html">Image.hpp</a>&quot;</code><br />
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#autotoc_md0">The UI works with the following commands:</a></li>
+<li class="level1"><a href="#autotoc_md1">Adding new reservation</a></li>
+<li class="level1"><a href="#autotoc_md2">Free rooms on particular date</a></li>
+<li class="level1"><a href="#autotoc_md3">Free particular room</a></li>
+<li class="level1"><a href="#autotoc_md4">Create report about the usage of the rooms in particular period</a></li>
+<li class="level1"><a href="#autotoc_md5">Suggest room for a group of guests and partcular period</a></li>
+<li class="level1"><a href="#autotoc_md6">Close a room for maintenance</a></li>
+<li class="level1"><a href="#autotoc_md7">See current state of all the rooms</a></li>
+<li class="level1"><a href="#autotoc_md8">See when a room is free for certain number of days</a></li>
+</ul>
 </div>
-<p><a href="_multiple_image_printer_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiple_image_printer.html">MultipleImagePrinter</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+<div class="textblock"><p ><a class="anchor" id="Commands"></a></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+The UI works with the following commands:</h1>
+<p >(<em>They are displayed on startup in the console</em>)</p>
+<dl class="section note"><dt>Note</dt><dd>all dates must be input in format D/M/Y </dd>
+<dd>
+parameters with &lt;&gt; are mandatory and these with [] are optional</dd></dl>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Adding new reservation</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>reserve</b>: [Room number] [Accomodation date] [Departure date] {Guest name[;]} {Note} </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Free rooms on particular date</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>available</b>: [date] </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Free particular room</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>free</b>: [Room number] </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Create report about the usage of the rooms in particular period</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>report</b>: [From date] [To date] </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Suggest room for a group of guests and partcular period</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>request</b>: [minimal number of beds] [Accomodation date] [Departure date] </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Close a room for maintenance</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>maintenance</b>: [room number] [From date] [To date] [Note] </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md7"></a>
+See current state of all the rooms</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>rooms</b>: </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md8"></a>
+See when a room is free for certain number of days</h1>
+<blockquote class="doxtable">
+<p >&zwj;<b>plan</b>: [Room number] [Number of nights] </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="_multiple_image_printer_8hpp.html">MultipleImagePrinter.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

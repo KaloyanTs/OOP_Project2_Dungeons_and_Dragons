@@ -91,17 +91,19 @@ $(document).ready(function(){initNavTree('_armor_name_generator_8hpp_source.html
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __ARMOR_NAME_GENERATOR_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_grammar_8hpp.html">Grammar.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_armor_name_generator.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_armor_name_generator.html">ArmorNameGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_grammar.html">Grammar</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="class_armor_name_generator.html#a83017d118d0ebca6ed38a31ef692118f">ArmorNameGenerator</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>};</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_armor_name_generator.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_armor_name_generator.html">ArmorNameGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_grammar.html">Grammar</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_class" href="class_armor_name_generator.html">ArmorNameGenerator</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_armor_name_generator.html">ArmorNameGenerator</a> &amp;<a class="code hl_function" href="class_armor_name_generator.html#aab006d5ad318d5f6be82d31628faf0ce">getInstance</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_grammar_8hpp_html"><div class="ttname"><a href="_grammar_8hpp.html">Grammar.hpp</a></div></div>
-<div class="ttc" id="aclass_armor_name_generator_html"><div class="ttname"><a href="class_armor_name_generator.html">ArmorNameGenerator</a></div><div class="ttdef"><b>Definition:</b> ArmorNameGenerator.hpp:6</div></div>
-<div class="ttc" id="aclass_armor_name_generator_html_a83017d118d0ebca6ed38a31ef692118f"><div class="ttname"><a href="class_armor_name_generator.html#a83017d118d0ebca6ed38a31ef692118f">ArmorNameGenerator::ArmorNameGenerator</a></div><div class="ttdeci">ArmorNameGenerator()</div><div class="ttdef"><b>Definition:</b> ArmorNameGenerator.cpp:3</div></div>
-<div class="ttc" id="aclass_grammar_html"><div class="ttname"><a href="class_grammar.html">Grammar</a></div><div class="ttdef"><b>Definition:</b> Grammar.hpp:8</div></div>
+<div class="ttc" id="aclass_armor_name_generator_html"><div class="ttname"><a href="class_armor_name_generator.html">ArmorNameGenerator</a></div><div class="ttdoc">singleton class generating random names of armor based on CFG grammar rules</div><div class="ttdef"><b>Definition:</b> ArmorNameGenerator.hpp:7</div></div>
+<div class="ttc" id="aclass_armor_name_generator_html_aab006d5ad318d5f6be82d31628faf0ce"><div class="ttname"><a href="class_armor_name_generator.html#aab006d5ad318d5f6be82d31628faf0ce">ArmorNameGenerator::getInstance</a></div><div class="ttdeci">static ArmorNameGenerator &amp; getInstance()</div><div class="ttdoc">get access to the only object of type ArmorNameGenerator</div><div class="ttdef"><b>Definition:</b> ArmorNameGenerator.cpp:14</div></div>
+<div class="ttc" id="aclass_grammar_html"><div class="ttname"><a href="class_grammar.html">Grammar</a></div><div class="ttdoc">class representing context-free grammar having rules for word generation</div><div class="ttdef"><b>Definition:</b> Grammar.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

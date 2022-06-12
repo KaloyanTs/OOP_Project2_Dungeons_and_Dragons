@@ -93,6 +93,9 @@ $(document).ready(function(){initNavTree('class_grammar.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
+<p>class representing context-free grammar having rules for word generation  
+ <a href="class_grammar.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_grammar_8hpp_source.html">Grammar.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Grammar:</div>
@@ -100,27 +103,32 @@ Inheritance diagram for Grammar:</div>
  <div class="center">
   <img src="class_grammar.png" usemap="#Grammar_map" alt=""/>
   <map id="Grammar_map" name="Grammar_map">
-<area href="class_armor_name_generator.html" alt="ArmorNameGenerator" shape="rect" coords="0,56,147,80"/>
-<area href="class_dragon_quote_generator.html" alt="DragonQuoteGenerator" shape="rect" coords="157,56,304,80"/>
-<area href="class_potion_name_generator.html" alt="PotionNameGenerator" shape="rect" coords="314,56,461,80"/>
-<area href="class_spell_name_generator.html" alt="SpellNameGenerator" shape="rect" coords="471,56,618,80"/>
-<area href="class_weapon_name_generator.html" alt="WeaponNameGenerator" shape="rect" coords="628,56,775,80"/>
+<area href="class_armor_name_generator.html" title="singleton class generating random names of armor based on CFG grammar rules" alt="ArmorNameGenerator" shape="rect" coords="0,56,147,80"/>
+<area href="class_dragon_quote_generator.html" title="singleton class generating random quotes of dragons based on CFG grammar rules" alt="DragonQuoteGenerator" shape="rect" coords="157,56,304,80"/>
+<area href="class_potion_name_generator.html" title="singleton class generating random names of potions based on CFG grammar rules" alt="PotionNameGenerator" shape="rect" coords="314,56,461,80"/>
+<area href="class_spell_name_generator.html" title="singleton class generating random names of spells based on CFG grammar rules" alt="SpellNameGenerator" shape="rect" coords="471,56,618,80"/>
+<area href="class_weapon_name_generator.html" title="singleton class generating random names of weapons based on CFG grammar rules" alt="WeaponNameGenerator" shape="rect" coords="628,56,775,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7c468dafe5a6e6204c874cc8ab8c78f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f">Grammar</a> (const <a class="el" href="class_string.html">String</a> &amp;start=&quot;S&quot;)</td></tr>
+<tr class="memdesc:ab7c468dafe5a6e6204c874cc8ab8c78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor of grammar based on initial variable ('S' by default)  <a href="class_grammar.html#ab7c468dafe5a6e6204c874cc8ab8c78f">More...</a><br /></td></tr>
 <tr class="separator:ab7c468dafe5a6e6204c874cc8ab8c78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f3401e9f1f15cc1d78695f0c8b50395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395">generateWord</a> (<a class="el" href="class_string.html">String</a> &amp;buf) const</td></tr>
+<tr class="memdesc:a9f3401e9f1f15cc1d78695f0c8b50395"><td class="mdescLeft">&#160;</td><td class="mdescRight">get random word from the language of the grammar  <a href="class_grammar.html#a9f3401e9f1f15cc1d78695f0c8b50395">More...</a><br /></td></tr>
 <tr class="separator:a9f3401e9f1f15cc1d78695f0c8b50395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a454e34a8fa75bc1d6f67442152d29801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grammar.html">Grammar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grammar.html#a454e34a8fa75bc1d6f67442152d29801">addRule</a> (<a class="el" href="class_string.html">String</a> rule)</td></tr>
+<tr class="memdesc:a454e34a8fa75bc1d6f67442152d29801"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a new rule to the list of rules; multiple rules are allowed divided by '|' and after each letter (0|1|2) must be typed specifying if the letter is variable (1), terminal with space (1) or terminal without space (2)  <a href="class_grammar.html#a454e34a8fa75bc1d6f67442152d29801">More...</a><br /></td></tr>
 <tr class="separator:a454e34a8fa75bc1d6f67442152d29801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing context-free grammar having rules for word generation </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7c468dafe5a6e6204c874cc8ab8c78f" name="ab7c468dafe5a6e6204c874cc8ab8c78f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7c468dafe5a6e6204c874cc8ab8c78f">&#9670;&nbsp;</a></span>Grammar()</h2>
 
@@ -144,6 +152,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>constructor of grammar based on initial variable ('S' by default) </p>
 
 </div>
 </div>
@@ -172,6 +182,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>adds a new rule to the list of rules; multiple rules are allowed divided by '|' and after each letter (0|1|2) must be typed specifying if the letter is variable (1), terminal with space (1) or terminal without space (2) </p>
+
 </div>
 </div>
 <a id="a9f3401e9f1f15cc1d78695f0c8b50395" name="a9f3401e9f1f15cc1d78695f0c8b50395"></a>
@@ -189,6 +201,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>get random word from the language of the grammar </p>
 
 </div>
 </div>

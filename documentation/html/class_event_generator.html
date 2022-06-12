@@ -92,6 +92,9 @@ $(document).ready(function(){initNavTree('class_event_generator.html',''); initR
 </div><!--header-->
 <div class="contents">
 
+<p>abstract class representing something triggering an event  
+ <a href="class_event_generator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_event_generator_8hpp_source.html">EventGenerator.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for EventGenerator:</div>
@@ -99,8 +102,8 @@ Inheritance diagram for EventGenerator:</div>
  <div class="center">
   <img src="class_event_generator.png" usemap="#EventGenerator_map" alt=""/>
   <map id="EventGenerator_map" name="EventGenerator_map">
-<area href="class_dragon.html" alt="Dragon" shape="rect" coords="0,56,101,80"/>
-<area href="class_hero_equipment.html" alt="HeroEquipment" shape="rect" coords="166,56,267,80"/>
+<area href="class_dragon.html" title="class representing a dragon enemy of the player on the map" alt="Dragon" shape="rect" coords="0,56,101,80"/>
+<area href="class_hero_equipment.html" title="class representing equipment owned by a hero" alt="HeroEquipment" shape="rect" coords="166,56,267,80"/>
 <area href="class_armor.html" title="class representing armor of the player protecting him from enemies damage with some bonus" alt="Armor" shape="rect" coords="0,112,101,136"/>
 <area href="class_potion.html" alt="Potion" shape="rect" coords="111,112,212,136"/>
 <area href="class_spell.html" alt="Spell" shape="rect" coords="222,112,323,136"/>
@@ -111,18 +114,25 @@ Inheritance diagram for EventGenerator:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f34fd2b2359ce8454309a516b44b445"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a6f34fd2b2359ce8454309a516b44b445">EventGenerator</a> (unsigned y, unsigned x, const <a class="el" href="class_string.html">String</a> &amp;msg, unsigned board=true)</td></tr>
+<tr class="memdesc:a6f34fd2b2359ce8454309a516b44b445"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct event generator by its position on map and error message  <a href="class_event_generator.html#a6f34fd2b2359ce8454309a516b44b445">More...</a><br /></td></tr>
 <tr class="separator:a6f34fd2b2359ce8454309a516b44b445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65ef84c1033c722593ce41386efe679a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a65ef84c1033c722593ce41386efe679a">~EventGenerator</a> ()</td></tr>
+<tr class="memdesc:a65ef84c1033c722593ce41386efe679a"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual destructor  <a href="class_event_generator.html#a65ef84c1033c722593ce41386efe679a">More...</a><br /></td></tr>
 <tr class="separator:a65ef84c1033c722593ce41386efe679a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c476f4825d750da9634094c32323c7"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a26c476f4825d750da9634094c32323c7">getChar</a> () const =0</td></tr>
+<tr class="memdesc:a26c476f4825d750da9634094c32323c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virtual function getting the representing character of the object on the map  <a href="class_event_generator.html#a26c476f4825d750da9634094c32323c7">More...</a><br /></td></tr>
 <tr class="separator:a26c476f4825d750da9634094c32323c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f1332b3bdf8ee1477ca4a4aea2e824d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_constants.html#aead8da5c6a3d03a60f04eb732e9139a7">Constants::ACTION_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a4f1332b3bdf8ee1477ca4a4aea2e824d">action</a> (<a class="el" href="class_player.html">Player</a> *, bool &amp;run)=0</td></tr>
+<tr class="memdesc:a4f1332b3bdf8ee1477ca4a4aea2e824d"><td class="mdescLeft">&#160;</td><td class="mdescRight">function executing the action between the derived object and a player  <a href="class_event_generator.html#a4f1332b3bdf8ee1477ca4a4aea2e824d">More...</a><br /></td></tr>
 <tr class="separator:a4f1332b3bdf8ee1477ca4a4aea2e824d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefdf51225b0bb2abd2fbca2bb8195ae8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#aefdf51225b0bb2abd2fbca2bb8195ae8">print</a> () const =0</td></tr>
+<tr class="memdesc:aefdf51225b0bb2abd2fbca2bb8195ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">print info about the derived object  <a href="class_event_generator.html#aefdf51225b0bb2abd2fbca2bb8195ae8">More...</a><br /></td></tr>
 <tr class="separator:aefdf51225b0bb2abd2fbca2bb8195ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedaf687f0b44dc70282ee9250274631f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#aedaf687f0b44dc70282ee9250274631f">locatedAt</a> (unsigned y, unsigned x)</td></tr>
+<tr class="memdesc:aedaf687f0b44dc70282ee9250274631f"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if this object is located at particular position on the map  <a href="class_event_generator.html#aedaf687f0b44dc70282ee9250274631f">More...</a><br /></td></tr>
 <tr class="separator:aedaf687f0b44dc70282ee9250274631f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5fc33ce4dae34acd579be6ff770b15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a9f5fc33ce4dae34acd579be6ff770b15">isOnBoard</a> () const</td></tr>
+<tr class="memdesc:a9f5fc33ce4dae34acd579be6ff770b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if this generator in currently on the board  <a href="class_event_generator.html#a9f5fc33ce4dae34acd579be6ff770b15">More...</a><br /></td></tr>
 <tr class="separator:a9f5fc33ce4dae34acd579be6ff770b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c75e01dc0dd3597a84457ed5097e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#ad35c75e01dc0dd3597a84457ed5097e9">removeFromBoard</a> ()</td></tr>
 <tr class="separator:ad35c75e01dc0dd3597a84457ed5097e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,14 +143,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e8ead9d3203dc4ae0885677d28ca71b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a7e8ead9d3203dc4ae0885677d28ca71b">getErrorMsg</a> () const</td></tr>
 <tr class="separator:a7e8ead9d3203dc4ae0885677d28ca71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6fe78c71ee7069bdf03504a154ed29e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#ac6fe78c71ee7069bdf03504a154ed29e">write</a> (std::ofstream &amp;ofs) const =0</td></tr>
+<tr class="memdesc:ac6fe78c71ee7069bdf03504a154ed29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">write the derived object info into a text file  <a href="class_event_generator.html#ac6fe78c71ee7069bdf03504a154ed29e">More...</a><br /></td></tr>
 <tr class="separator:ac6fe78c71ee7069bdf03504a154ed29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a75a32587a0e58fd6b1efc7b87b2ebca0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_generator.html#a75a32587a0e58fd6b1efc7b87b2ebca0">EventGenerator</a> (unsigned y, unsigned x, unsigned board=true)</td></tr>
+<tr class="memdesc:a75a32587a0e58fd6b1efc7b87b2ebca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct event generator by its position on map  <a href="class_event_generator.html#a75a32587a0e58fd6b1efc7b87b2ebca0">More...</a><br /></td></tr>
 <tr class="separator:a75a32587a0e58fd6b1efc7b87b2ebca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >abstract class representing something triggering an event </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a75a32587a0e58fd6b1efc7b87b2ebca0" name="a75a32587a0e58fd6b1efc7b87b2ebca0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75a32587a0e58fd6b1efc7b87b2ebca0">&#9670;&nbsp;</a></span>EventGenerator() <span class="overload">[1/2]</span></h2>
 
@@ -180,6 +194,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>construct event generator by its position on map </p>
 
 </div>
 </div>
@@ -229,6 +245,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>construct event generator by its position on map and error message </p>
+
 </div>
 </div>
 <a id="a65ef84c1033c722593ce41386efe679a" name="a65ef84c1033c722593ce41386efe679a"></a>
@@ -253,6 +271,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>virtual destructor </p>
 
 </div>
 </div>
@@ -291,6 +311,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>function executing the action between the derived object and a player </p>
+
 <p>Implemented in <a class="el" href="class_dragon.html#aeb1e2529d367e9a89de0f6512734af87">Dragon</a>, and <a class="el" href="class_hero_equipment.html#a0c3ce9a19f46a1834c8fa8be3e8954bd">HeroEquipment</a>.</p>
 
 </div>
@@ -317,6 +339,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pure virtual function getting the representing character of the object on the map </p>
 
 <p>Implemented in <a class="el" href="class_dragon.html#a6fdf692a5b97d4c2006fe0bbb2ae6fca">Dragon</a>, and <a class="el" href="class_hero_equipment.html#a3441677fa036dc60c9dc8afde7f9ef33">HeroEquipment</a>.</p>
 
@@ -420,6 +444,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>check if this generator in currently on the board </p>
+
 </div>
 </div>
 <a id="aedaf687f0b44dc70282ee9250274631f" name="aedaf687f0b44dc70282ee9250274631f"></a>
@@ -456,6 +482,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>check if this object is located at particular position on the map </p>
+
 </div>
 </div>
 <a id="aefdf51225b0bb2abd2fbca2bb8195ae8" name="aefdf51225b0bb2abd2fbca2bb8195ae8"></a>
@@ -480,6 +508,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>print info about the derived object </p>
 
 <p>Implemented in <a class="el" href="class_armor.html#a8eacfc08eba1b81e33a69bf75897136f">Armor</a>, <a class="el" href="class_dragon.html#a532458f8906905a6aafe64fe8aceae39">Dragon</a>, <a class="el" href="class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f">HeroEquipment</a>, <a class="el" href="class_potion.html#a829520e66c08f015541dbd5b816dc1e8">Potion</a>, <a class="el" href="class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80">Spell</a>, and <a class="el" href="class_weapon.html#a32308d94be1b0de6e545fd727398b0e9">Weapon</a>.</p>
 
@@ -533,6 +563,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>write the derived object info into a text file </p>
 
 <p>Implemented in <a class="el" href="class_dragon.html#ac4bf53716ebde9abe45228081b91ab3f">Dragon</a>, and <a class="el" href="class_hero_equipment.html#ad3f9181954eb2cc6a008afb1aa5d038d">HeroEquipment</a>.</p>
 
