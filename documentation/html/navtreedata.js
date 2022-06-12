@@ -30,7 +30,8 @@ var NAVTREE =
       [ "Achitecture", "index.html#Achitecture", [
         [ "Supporting classes", "index.html#cl", null ]
       ] ],
-      [ "File organization", "index.html#files", [
+      [ "File organization", "index.html#files", null ],
+      [ "Class hierarchy", "index.html#hierarchy", [
         [ "Example", "index.html#Example", null ]
       ] ],
       [ "Ideas for future developments", "index.html#idea", null ]
