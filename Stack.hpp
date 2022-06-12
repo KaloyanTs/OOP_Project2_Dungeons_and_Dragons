@@ -3,13 +3,18 @@
 #include "Vector.hpp"
 #include <cassert>
 
+/// template class representing stack DS (LIFO)
 template <typename T>
 class Stack : protected Vector<T>
 {
 public:
+    /// get the top element of the stack
     T top() const;
+    /// push new element to the stack
     Stack &push(const T &el);
+    /// pop last element form the stack
     void pop();
+    /// check if the stack is empty
     bool empty() const { return !Vector<T>::m_size; }
 };
 

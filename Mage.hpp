@@ -3,6 +3,7 @@
 #include "Player.hpp"
 #include "Troop.hpp"
 
+/// class representing specific type of player
 class Mage : public Player, public Troop
 {
     HERO_TYPE getID() const { return HERO_TYPE::MAGE; }

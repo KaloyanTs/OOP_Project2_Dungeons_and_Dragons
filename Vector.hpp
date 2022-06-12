@@ -3,28 +3,38 @@
 #include <cstddef>
 #include <cassert>
 
+/// template class vector representing container of objects
 template <typename T>
 class Vector
 {
 protected:
+    /// default capacity on create
     static const unsigned INIT_CAPACITY = 2;
+    /// array of objects
     T *data;
+    /// size and capacity of the container
     size_t m_size, m_capacity;
-
+    /// double the capacity of the vector
     void expand();
+    /// reduce the capacity of the vector by 2
     void shrink();
+    /// copy data from another vector
     void copy(const Vector &other);
 
 public:
+    /// construct vector with certain capacity
     Vector(size_t cap = INIT_CAPACITY) : data(new T[cap]), m_capacity(cap), m_size(0) {}
     Vector(const Vector &other);
     Vector &operator=(const Vector &other);
     ~Vector();
 
     unsigned getCount() const { return m_size; }
+    /// add new object to the end of this container
     Vector &push_back(const T &el);
     Vector &remove(const T &el);
+    /// remove last object from the container (returned as result)
     T pop_back();
+    /// remove object at particular index from the container (returned as result)
     T pop_at(unsigned index);
     size_t size() const { return m_size; }
     size_t capacity() const { return m_capacity; }
