@@ -71,6 +71,9 @@ $(document).ready(function(){initNavTree('class_player.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
+<p>class representing player moving on the board and interacting with event generators on it  
+ <a href="class_player.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_8hpp_source.html">Player.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -80,16 +83,19 @@ Public Types</h2></td></tr>
 , <a class="el" href="class_player.html#aa3832d6a561492b10e05853e0307a776abb26dae038073a33dd85044c31e6be5d">WARRIOR</a> = 2
 , <a class="el" href="class_player.html#aa3832d6a561492b10e05853e0307a776abb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a> = 3
  }</td></tr>
+<tr class="memdesc:aa3832d6a561492b10e05853e0307a776"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID's of different hero types.  <a href="class_player.html#aa3832d6a561492b10e05853e0307a776">More...</a><br /></td></tr>
 <tr class="separator:aa3832d6a561492b10e05853e0307a776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9686165e0f897e13e1c37f24773af6a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9686165e0f897e13e1c37f24773af6a4">Player</a> (unsigned posY, unsigned posX, const <a class="el" href="class_string.html">String</a> &amp;n)</td></tr>
+<tr class="memdesc:a9686165e0f897e13e1c37f24773af6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct player by its position on the board and name  <a href="class_player.html#a9686165e0f897e13e1c37f24773af6a4">More...</a><br /></td></tr>
 <tr class="separator:a9686165e0f897e13e1c37f24773af6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memTemplParams" colspan="2">template&lt;typename ALLOWED &gt; </td></tr>
 <tr class="memitem:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">move</a> (bool &amp;run, bool &amp;pause, ALLOWED f)</td></tr>
+<tr class="memdesc:a6b4af8af17be94af69b06b6c470e2ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the player on the map with keyboard keys if new position is allowed  <a href="class_player.html#a6b4af8af17be94af69b06b6c470e2ed9">More...</a><br /></td></tr>
 <tr class="separator:a6b4af8af17be94af69b06b6c470e2ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8e08c2349e8a6a177e102b28eadcbd2"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af8e08c2349e8a6a177e102b28eadcbd2">getY</a> () const</td></tr>
 <tr class="separator:af8e08c2349e8a6a177e102b28eadcbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,18 +104,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90cf459656e4ac511c56834c9e5a76b8"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a90cf459656e4ac511c56834c9e5a76b8">getChar</a> () const</td></tr>
 <tr class="separator:a90cf459656e4ac511c56834c9e5a76b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03bd4ab639c42919c70965940ab64dd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a03bd4ab639c42919c70965940ab64dd5">take</a> (const <a class="el" href="class_hero_equipment.html">HeroEquipment</a> &amp;) const</td></tr>
+<tr class="memdesc:a03bd4ab639c42919c70965940ab64dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">player tries to take equipment (false if not enough space in the inventar)  <a href="class_player.html#a03bd4ab639c42919c70965940ab64dd5">More...</a><br /></td></tr>
 <tr class="separator:a03bd4ab639c42919c70965940ab64dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7576d2f69a277218213912a5697cb16"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af7576d2f69a277218213912a5697cb16">getName</a> () const</td></tr>
 <tr class="separator:af7576d2f69a277218213912a5697cb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a786aa953d350e5bc0d23b25c5640c46b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a786aa953d350e5bc0d23b25c5640c46b">printStats</a> () const =0</td></tr>
 <tr class="separator:a786aa953d350e5bc0d23b25c5640c46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5699b5bf835475cd0db331c3566c225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac5699b5bf835475cd0db331c3566c225">printItems</a> () const</td></tr>
+<tr class="memdesc:ac5699b5bf835475cd0db331c3566c225"><td class="mdescLeft">&#160;</td><td class="mdescRight">print equipment of the hero  <a href="class_player.html#ac5699b5bf835475cd0db331c3566c225">More...</a><br /></td></tr>
 <tr class="separator:ac5699b5bf835475cd0db331c3566c225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c811d2bd82845a7b2659a07bc5a5384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6c811d2bd82845a7b2659a07bc5a5384">printBattleState</a> (<a class="el" href="class_dragon.html">Dragon</a> &amp;) const</td></tr>
+<tr class="memdesc:a6c811d2bd82845a7b2659a07bc5a5384"><td class="mdescLeft">&#160;</td><td class="mdescRight">print player's info, battle icon and dragon's info  <a href="class_player.html#a6c811d2bd82845a7b2659a07bc5a5384">More...</a><br /></td></tr>
 <tr class="separator:a6c811d2bd82845a7b2659a07bc5a5384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ea365eabdbe2f930e3a49347ab55bd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae1ea365eabdbe2f930e3a49347ab55bd">alive</a> () const =0</td></tr>
 <tr class="separator:ae1ea365eabdbe2f930e3a49347ab55bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa920c97d61a0a95c8ead2747b8c14849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa920c97d61a0a95c8ead2747b8c14849">hit</a> (<a class="el" href="class_dragon.html">Dragon</a> &amp;d)</td></tr>
+<tr class="memdesc:aa920c97d61a0a95c8ead2747b8c14849"><td class="mdescLeft">&#160;</td><td class="mdescRight">deal damage to a dragon  <a href="class_player.html#aa920c97d61a0a95c8ead2747b8c14849">More...</a><br /></td></tr>
 <tr class="separator:aa920c97d61a0a95c8ead2747b8c14849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5176eb73a71d54dc2976e9f2821631d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5176eb73a71d54dc2976e9f2821631d5">takeDamage</a> (float dmg)=0</td></tr>
 <tr class="separator:a5176eb73a71d54dc2976e9f2821631d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b0ad3e5de326f9b30090186fcf5cc2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6b0ad3e5de326f9b30090186fcf5cc2a">regenerate</a> (float percentage=0)=0</td></tr>
 <tr class="separator:a6b0ad3e5de326f9b30090186fcf5cc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a> ()</td></tr>
+<tr class="memdesc:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset position on the board (back to top-left corner)  <a href="class_player.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">More...</a><br /></td></tr>
 <tr class="separator:a1af5d39f7bac2aeaa1e30c7dda2332fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eab765db52a1d6cacccc89e02d5f298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0eab765db52a1d6cacccc89e02d5f298">save</a> (const <a class="el" href="class_string.html">String</a> &amp;game) const</td></tr>
+<tr class="memdesc:a0eab765db52a1d6cacccc89e02d5f298"><td class="mdescLeft">&#160;</td><td class="mdescRight">write info into text file  <a href="class_player.html#a0eab765db52a1d6cacccc89e02d5f298">More...</a><br /></td></tr>
 <tr class="separator:a0eab765db52a1d6cacccc89e02d5f298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a281a2890f05d55453bb91dec640ed026"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a281a2890f05d55453bb91dec640ed026">gainXP</a> (unsigned gain)=0</td></tr>
 <tr class="separator:a281a2890f05d55453bb91dec640ed026"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,14 +145,18 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a959f38b798e6eb9b483d1647d11a7f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a959f38b798e6eb9b483d1647d11a7f65">Player</a> (std::ifstream &amp;ifs)</td></tr>
+<tr class="memdesc:a959f38b798e6eb9b483d1647d11a7f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">readind player from text file  <a href="class_player.html#a959f38b798e6eb9b483d1647d11a7f65">More...</a><br /></td></tr>
 <tr class="separator:a959f38b798e6eb9b483d1647d11a7f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:af3f1d0666549ae2319c417f0b03504e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html">HeroEquipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af3f1d0666549ae2319c417f0b03504e6">equip</a> [<a class="el" href="class_constants.html#a92aeb5d8bf6bb3a3fd65212f3d325a38">Constants::EQUIPMENT_COUNT</a>]</td></tr>
+<tr class="memdesc:af3f1d0666549ae2319c417f0b03504e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">equipment worn by the player  <a href="class_player.html#af3f1d0666549ae2319c417f0b03504e6">More...</a><br /></td></tr>
 <tr class="separator:af3f1d0666549ae2319c417f0b03504e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing player moving on the board and interacting with event generators on it </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa3832d6a561492b10e05853e0307a776" name="aa3832d6a561492b10e05853e0307a776"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3832d6a561492b10e05853e0307a776">&#9670;&nbsp;</a></span>HERO_TYPE</h2>
 
@@ -160,6 +176,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>ID's of different hero types. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa3832d6a561492b10e05853e0307a776aa36c6719f4d3207d858cf956ef1e93b6" name="aa3832d6a561492b10e05853e0307a776aa36c6719f4d3207d858cf956ef1e93b6"></a>HUMAN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa3832d6a561492b10e05853e0307a776ae9af6985dd404f6c53989203890211f3" name="aa3832d6a561492b10e05853e0307a776ae9af6985dd404f6c53989203890211f3"></a>MAGE&#160;</td><td class="fielddoc"></td></tr>
@@ -194,6 +212,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>readind player from text file </p>
+
 </div>
 </div>
 <a id="a9686165e0f897e13e1c37f24773af6a4" name="a9686165e0f897e13e1c37f24773af6a4"></a>
@@ -227,6 +247,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>construct player by its position on the board and name </p>
 
 </div>
 </div>
@@ -508,6 +530,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>deal damage to a dragon </p>
+
 </div>
 </div>
 <a id="a6b4af8af17be94af69b06b6c470e2ed9" name="a6b4af8af17be94af69b06b6c470e2ed9"></a>
@@ -544,6 +568,8 @@ template&lt;typename ALLOWED &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>move the player on the map with keyboard keys if new position is allowed </p>
+
 </div>
 </div>
 <a id="a6c811d2bd82845a7b2659a07bc5a5384" name="a6c811d2bd82845a7b2659a07bc5a5384"></a>
@@ -561,6 +587,8 @@ template&lt;typename ALLOWED &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>print player's info, battle icon and dragon's info </p>
 
 </div>
 </div>
@@ -605,6 +633,8 @@ template&lt;typename ALLOWED &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>print equipment of the hero </p>
 
 </div>
 </div>
@@ -686,6 +716,8 @@ template&lt;typename ALLOWED &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>reset position on the board (back to top-left corner) </p>
+
 </div>
 </div>
 <a id="a0eab765db52a1d6cacccc89e02d5f298" name="a0eab765db52a1d6cacccc89e02d5f298"></a>
@@ -704,6 +736,8 @@ template&lt;typename ALLOWED &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>write info into text file </p>
+
 </div>
 </div>
 <a id="a03bd4ab639c42919c70965940ab64dd5" name="a03bd4ab639c42919c70965940ab64dd5"></a>
@@ -721,6 +755,8 @@ template&lt;typename ALLOWED &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>player tries to take equipment (false if not enough space in the inventar) </p>
 
 </div>
 </div>
@@ -772,6 +808,8 @@ template&lt;typename ALLOWED &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>equipment worn by the player </p>
 
 </div>
 </div>

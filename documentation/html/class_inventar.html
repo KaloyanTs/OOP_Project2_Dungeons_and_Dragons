@@ -69,42 +69,56 @@ $(document).ready(function(){initNavTree('class_inventar.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
+<p>class representing inventar of a player (container for his equipment)  
+ <a href="class_inventar.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_inventar_8hpp_source.html">Inventar.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c592c99bc20ca9fe21e6fa0f0c798fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#a8c592c99bc20ca9fe21e6fa0f0c798fd">Inventar</a> (size_t lim=<a class="el" href="class_constants.html#a17b65027f16902896598a7657cee740b">Constants::INVENTAR_LIMIT</a>)</td></tr>
+<tr class="memdesc:a8c592c99bc20ca9fe21e6fa0f0c798fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct inventar with initial capacity  <a href="class_inventar.html#a8c592c99bc20ca9fe21e6fa0f0c798fd">More...</a><br /></td></tr>
 <tr class="separator:a8c592c99bc20ca9fe21e6fa0f0c798fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a065f75916b13c9ebae676b81e68bff26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#a065f75916b13c9ebae676b81e68bff26">~Inventar</a> ()</td></tr>
 <tr class="separator:a065f75916b13c9ebae676b81e68bff26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd4fdf19ae0cd02d03985aa6b5e75c7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#afd4fdf19ae0cd02d03985aa6b5e75c7e">print</a> (const <a class="el" href="class_string.html">String</a> &amp;owner) const</td></tr>
+<tr class="memdesc:afd4fdf19ae0cd02d03985aa6b5e75c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">print some player's inventar knowing his name  <a href="class_inventar.html#afd4fdf19ae0cd02d03985aa6b5e75c7e">More...</a><br /></td></tr>
 <tr class="separator:afd4fdf19ae0cd02d03985aa6b5e75c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf7086530f57035401e7ef75bd492c41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#abf7086530f57035401e7ef75bd492c41">put</a> (const <a class="el" href="class_hero_equipment.html">HeroEquipment</a> &amp;el)</td></tr>
+<tr class="memdesc:abf7086530f57035401e7ef75bd492c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">add new equipment to the inventar  <a href="class_inventar.html#abf7086530f57035401e7ef75bd492c41">More...</a><br /></td></tr>
 <tr class="separator:abf7086530f57035401e7ef75bd492c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a735e70349f5e932dbae0af0009741ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html">HeroEquipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#a735e70349f5e932dbae0af0009741ceb">remove</a> (unsigned index)</td></tr>
+<tr class="memdesc:a735e70349f5e932dbae0af0009741ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove the equipment at certain index from the inventar (returned as a result)  <a href="class_inventar.html#a735e70349f5e932dbae0af0009741ceb">More...</a><br /></td></tr>
 <tr class="separator:a735e70349f5e932dbae0af0009741ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bd3cd999f666d504b129f26508ef760"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#a0bd3cd999f666d504b129f26508ef760">getCount</a> () const</td></tr>
 <tr class="separator:a0bd3cd999f666d504b129f26508ef760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d9a9193d4afac43e5a6ddc7501db5d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#a3d9a9193d4afac43e5a6ddc7501db5d7">write</a> (std::ofstream &amp;ofs) const</td></tr>
+<tr class="memdesc:a3d9a9193d4afac43e5a6ddc7501db5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">write info into a text file  <a href="class_inventar.html#a3d9a9193d4afac43e5a6ddc7501db5d7">More...</a><br /></td></tr>
 <tr class="separator:a3d9a9193d4afac43e5a6ddc7501db5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1986ecbe0b1826ee0518ad55f114e0f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_event_generator.html">EventGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#ae1986ecbe0b1826ee0518ad55f114e0f">getEquipment</a> (unsigned index, unsigned y, unsigned x, unsigned bot, unsigned top=0, unsigned cost=0)</td></tr>
+<tr class="memdesc:ae1986ecbe0b1826ee0518ad55f114e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get new equipment recognized by its ID (parameter 1)  <a href="class_inventar.html#ae1986ecbe0b1826ee0518ad55f114e0f">More...</a><br /></td></tr>
 <tr class="separator:ae1986ecbe0b1826ee0518ad55f114e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9d6a10791ffbd7adb0db9217a9814a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_hero_equipment.html">HeroEquipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inventar.html#adb9d6a10791ffbd7adb0db9217a9814a">readEquipment</a> (std::ifstream &amp;ifs, unsigned buf)</td></tr>
+<tr class="memdesc:adb9d6a10791ffbd7adb0db9217a9814a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get new equipment recognized by its ID and read from text file  <a href="class_inventar.html#adb9d6a10791ffbd7adb0db9217a9814a">More...</a><br /></td></tr>
 <tr class="separator:adb9d6a10791ffbd7adb0db9217a9814a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_vector"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_vector')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_vector.html">Vector&lt; HeroEquipment * &gt;</a></td></tr>
 <tr class="memitem:a25e5d1e79116318ebb92ad98a17ac275 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a25e5d1e79116318ebb92ad98a17ac275">expand</a> ()</td></tr>
+<tr class="memdesc:a25e5d1e79116318ebb92ad98a17ac275 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">double the capacity of the vector  <a href="class_vector.html#a25e5d1e79116318ebb92ad98a17ac275">More...</a><br /></td></tr>
 <tr class="separator:a25e5d1e79116318ebb92ad98a17ac275 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c14696d987344139f98dca2ec78664 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a21c14696d987344139f98dca2ec78664">shrink</a> ()</td></tr>
+<tr class="memdesc:a21c14696d987344139f98dca2ec78664 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">reduce the capacity of the vector by 2  <a href="class_vector.html#a21c14696d987344139f98dca2ec78664">More...</a><br /></td></tr>
 <tr class="separator:a21c14696d987344139f98dca2ec78664 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af814b039cfa44e866e7bd4b1100149b8 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#af814b039cfa44e866e7bd4b1100149b8">copy</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;other)</td></tr>
+<tr class="memdesc:af814b039cfa44e866e7bd4b1100149b8 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy data from another vector  <a href="class_vector.html#af814b039cfa44e866e7bd4b1100149b8">More...</a><br /></td></tr>
 <tr class="separator:af814b039cfa44e866e7bd4b1100149b8 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab84261534eea16d7b6c31232200be25 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#aab84261534eea16d7b6c31232200be25">Vector</a> (size_t cap=<a class="el" href="class_vector.html#a958962153e62865ea1ed0a2f4f140836">INIT_CAPACITY</a>)</td></tr>
+<tr class="memdesc:aab84261534eea16d7b6c31232200be25 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct vector with certain capacity  <a href="class_vector.html#aab84261534eea16d7b6c31232200be25">More...</a><br /></td></tr>
 <tr class="separator:aab84261534eea16d7b6c31232200be25 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940f94b7c4a1c15a65a1ab6e13859dfe inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a940f94b7c4a1c15a65a1ab6e13859dfe">Vector</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;other)</td></tr>
 <tr class="separator:a940f94b7c4a1c15a65a1ab6e13859dfe inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,12 +129,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a7c995f24eaa46f3c9e91bc0cee1db887 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a7c995f24eaa46f3c9e91bc0cee1db887">getCount</a> () const</td></tr>
 <tr class="separator:a7c995f24eaa46f3c9e91bc0cee1db887 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab79b1c0ff2d92d2fc8608b4f4919cde inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde">push_back</a> (const <a class="el" href="class_hero_equipment.html">HeroEquipment</a> * &amp;el)</td></tr>
+<tr class="memdesc:aab79b1c0ff2d92d2fc8608b4f4919cde inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">add new object to the end of this container  <a href="class_vector.html#aab79b1c0ff2d92d2fc8608b4f4919cde">More...</a><br /></td></tr>
 <tr class="separator:aab79b1c0ff2d92d2fc8608b4f4919cde inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f1b6fd4bec156189f1bda4c1f3c8c6 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ac8f1b6fd4bec156189f1bda4c1f3c8c6">remove</a> (const <a class="el" href="class_hero_equipment.html">HeroEquipment</a> * &amp;el)</td></tr>
 <tr class="separator:ac8f1b6fd4bec156189f1bda4c1f3c8c6 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab508ab90dabd2253a1e5721ecf9e8965 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html">HeroEquipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ab508ab90dabd2253a1e5721ecf9e8965">pop_back</a> ()</td></tr>
+<tr class="memdesc:ab508ab90dabd2253a1e5721ecf9e8965 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove last object from the container (returned as result)  <a href="class_vector.html#ab508ab90dabd2253a1e5721ecf9e8965">More...</a><br /></td></tr>
 <tr class="separator:ab508ab90dabd2253a1e5721ecf9e8965 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a85c9458592289e460bb87603d944f7 inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html">HeroEquipment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a5a85c9458592289e460bb87603d944f7">pop_at</a> (unsigned index)</td></tr>
+<tr class="memdesc:a5a85c9458592289e460bb87603d944f7 inherit pro_methods_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove object at particular index from the container (returned as result)  <a href="class_vector.html#a5a85c9458592289e460bb87603d944f7">More...</a><br /></td></tr>
 <tr class="separator:a5a85c9458592289e460bb87603d944f7 inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b439586cd10cb45d002ca9d6e3db43c inherit pro_methods_class_vector"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c">size</a> () const</td></tr>
 <tr class="separator:a9b439586cd10cb45d002ca9d6e3db43c inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,16 +149,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:abe2c3415acd9486de623c61b735bdfab inherit pro_methods_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_vector"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_vector')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_vector.html">Vector&lt; HeroEquipment * &gt;</a></td></tr>
 <tr class="memitem:a536da87a916c8bdf2565fa6d808337f2 inherit pro_attribs_class_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html">HeroEquipment</a> * *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a536da87a916c8bdf2565fa6d808337f2">data</a></td></tr>
+<tr class="memdesc:a536da87a916c8bdf2565fa6d808337f2 inherit pro_attribs_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of objects  <a href="class_vector.html#a536da87a916c8bdf2565fa6d808337f2">More...</a><br /></td></tr>
 <tr class="separator:a536da87a916c8bdf2565fa6d808337f2 inherit pro_attribs_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8331fe99244fd51edf87b3b0d9a1b05e inherit pro_attribs_class_vector"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a8331fe99244fd51edf87b3b0d9a1b05e">m_size</a></td></tr>
+<tr class="memdesc:a8331fe99244fd51edf87b3b0d9a1b05e inherit pro_attribs_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">size and capacity of the container  <a href="class_vector.html#a8331fe99244fd51edf87b3b0d9a1b05e">More...</a><br /></td></tr>
 <tr class="separator:a8331fe99244fd51edf87b3b0d9a1b05e inherit pro_attribs_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a33a002bcbacebd85038fdf0e8788e inherit pro_attribs_class_vector"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ae6a33a002bcbacebd85038fdf0e8788e">m_capacity</a></td></tr>
 <tr class="separator:ae6a33a002bcbacebd85038fdf0e8788e inherit pro_attribs_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_class_vector"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_vector')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_vector.html">Vector&lt; HeroEquipment * &gt;</a></td></tr>
 <tr class="memitem:a958962153e62865ea1ed0a2f4f140836 inherit pro_static_attribs_class_vector"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a958962153e62865ea1ed0a2f4f140836">INIT_CAPACITY</a></td></tr>
+<tr class="memdesc:a958962153e62865ea1ed0a2f4f140836 inherit pro_static_attribs_class_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">default capacity on create  <a href="class_vector.html#a958962153e62865ea1ed0a2f4f140836">More...</a><br /></td></tr>
 <tr class="separator:a958962153e62865ea1ed0a2f4f140836 inherit pro_static_attribs_class_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing inventar of a player (container for his equipment) </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8c592c99bc20ca9fe21e6fa0f0c798fd" name="a8c592c99bc20ca9fe21e6fa0f0c798fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c592c99bc20ca9fe21e6fa0f0c798fd">&#9670;&nbsp;</a></span>Inventar()</h2>
 
@@ -165,6 +187,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>construct inventar with initial capacity </p>
 
 </div>
 </div>
@@ -269,6 +293,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>get new equipment recognized by its ID (parameter 1) </p>
+
 </div>
 </div>
 <a id="afd4fdf19ae0cd02d03985aa6b5e75c7e" name="afd4fdf19ae0cd02d03985aa6b5e75c7e"></a>
@@ -287,6 +313,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>print some player's inventar knowing his name </p>
+
 </div>
 </div>
 <a id="abf7086530f57035401e7ef75bd492c41" name="abf7086530f57035401e7ef75bd492c41"></a>
@@ -304,6 +332,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>add new equipment to the inventar </p>
 
 </div>
 </div>
@@ -341,6 +371,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>get new equipment recognized by its ID and read from text file </p>
+
 </div>
 </div>
 <a id="a735e70349f5e932dbae0af0009741ceb" name="a735e70349f5e932dbae0af0009741ceb"></a>
@@ -359,6 +391,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>remove the equipment at certain index from the inventar (returned as a result) </p>
+
 </div>
 </div>
 <a id="a3d9a9193d4afac43e5a6ddc7501db5d7" name="a3d9a9193d4afac43e5a6ddc7501db5d7"></a>
@@ -376,6 +410,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>write info into a text file </p>
 
 </div>
 </div>

@@ -68,23 +68,30 @@ $(document).ready(function(){initNavTree('class_spell.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>class representing a spell which can be cast dealing some damage to an enemy  
+ <a href="class_spell.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_spell_8hpp_source.html">Spell.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf8f33bfee5eb15eac62617a02328678"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#aaf8f33bfee5eb15eac62617a02328678">Spell</a> (unsigned y, unsigned x, unsigned bot, unsigned top=0, bool onBoard=true, unsigned c=0)</td></tr>
+<tr class="memdesc:aaf8f33bfee5eb15eac62617a02328678"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, placing the spell on certain position on the board, cost and setting bounds for the given bonus, name is randomly generated  <a href="class_spell.html#aaf8f33bfee5eb15eac62617a02328678">More...</a><br /></td></tr>
 <tr class="separator:aaf8f33bfee5eb15eac62617a02328678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34cc045bc7bd7ca6b08f009aacaab022"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#a34cc045bc7bd7ca6b08f009aacaab022">Spell</a> (unsigned <a class="el" href="class_equipment.html#a431115f428ae4c157d34330424d5a6ec">bonus</a>, unsigned c, const <a class="el" href="class_string.html">String</a> &amp;<a class="el" href="class_equipment.html#a2475e80488b85de0adc69d7d459ca3f3">name</a>)</td></tr>
+<tr class="memdesc:a34cc045bc7bd7ca6b08f009aacaab022"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, creating spell owned by a hero and having only bonus, cost and name  <a href="class_spell.html#a34cc045bc7bd7ca6b08f009aacaab022">More...</a><br /></td></tr>
 <tr class="separator:a34cc045bc7bd7ca6b08f009aacaab022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac64ce51d59fa4a081bfdbdb0c5c0d3ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spell.html">Spell</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae">clone</a> () const</td></tr>
-<tr class="memdesc:ac64ce51d59fa4a081bfdbdb0c5c0d3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virtual clone function  <a href="class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae">More...</a><br /></td></tr>
+<tr class="memdesc:ac64ce51d59fa4a081bfdbdb0c5c0d3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual clone function  <a href="class_spell.html#ac64ce51d59fa4a081bfdbdb0c5c0d3ae">More...</a><br /></td></tr>
 <tr class="separator:ac64ce51d59fa4a081bfdbdb0c5c0d3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5d6ea51eea97a24dfb60276c02b6b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80">print</a> () const</td></tr>
-<tr class="memdesc:ac5d6ea51eea97a24dfb60276c02b6b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">print info about the equipment (picture, bonus, cost (if has) and name)  <a href="class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80">More...</a><br /></td></tr>
+<tr class="memdesc:ac5d6ea51eea97a24dfb60276c02b6b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">printing image, name, bonus and cost of this spell  <a href="class_spell.html#ac5d6ea51eea97a24dfb60276c02b6b80">More...</a><br /></td></tr>
 <tr class="separator:ac5d6ea51eea97a24dfb60276c02b6b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59827e289d9f675c2cdf5a52e017690d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero_equipment.html#a89d2bfa1001cdb8a313e0055ed55f340">ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#a59827e289d9f675c2cdf5a52e017690d">getID</a> () const</td></tr>
+<tr class="memdesc:a59827e289d9f675c2cdf5a52e017690d"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the ID (used in saving and reading equipment)  <a href="class_spell.html#a59827e289d9f675c2cdf5a52e017690d">More...</a><br /></td></tr>
 <tr class="separator:a59827e289d9f675c2cdf5a52e017690d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa847be175d18bfffeb6146f01dfdb519"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell.html#aa847be175d18bfffeb6146f01dfdb519">getCost</a> () const</td></tr>
+<tr class="memdesc:aa847be175d18bfffeb6146f01dfdb519"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the cost for casting the spell  <a href="class_spell.html#aa847be175d18bfffeb6146f01dfdb519">More...</a><br /></td></tr>
 <tr class="separator:aa847be175d18bfffeb6146f01dfdb519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_hero_equipment"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_hero_equipment')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_hero_equipment.html">HeroEquipment</a></td></tr>
 <tr class="memitem:a78f112309f57050a7d7284e3e71a099c inherit pub_methods_class_hero_equipment"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hero_equipment.html#a78f112309f57050a7d7284e3e71a099c">HeroEquipment</a> (const <a class="el" href="class_image.html">Image</a> *p, unsigned y, unsigned x, unsigned top=0, unsigned bottom=0, bool board=true)</td></tr>
@@ -191,7 +198,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2475e80488b85de0adc69d7d459ca3f3 inherit pro_attribs_class_equipment"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equipment.html#a2475e80488b85de0adc69d7d459ca3f3">name</a></td></tr>
 <tr class="separator:a2475e80488b85de0adc69d7d459ca3f3 inherit pro_attribs_class_equipment"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing a spell which can be cast dealing some damage to an enemy </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf8f33bfee5eb15eac62617a02328678" name="aaf8f33bfee5eb15eac62617a02328678"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf8f33bfee5eb15eac62617a02328678">&#9670;&nbsp;</a></span>Spell() <span class="overload">[1/2]</span></h2>
 
@@ -242,6 +251,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>constructor, placing the spell on certain position on the board, cost and setting bounds for the given bonus, name is randomly generated </p>
+
 </div>
 </div>
 <a id="a34cc045bc7bd7ca6b08f009aacaab022" name="a34cc045bc7bd7ca6b08f009aacaab022"></a>
@@ -284,6 +295,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>constructor, creating spell owned by a hero and having only bonus, cost and name </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -310,7 +323,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>pure virtual clone function </p>
+<p>virtual clone function </p>
 
 <p>Implements <a class="el" href="class_hero_equipment.html#a0a595912deaafd93b351eabab6648ec5">HeroEquipment</a>.</p>
 
@@ -339,6 +352,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>getter for the cost for casting the spell </p>
+
 <p>Implements <a class="el" href="class_hero_equipment.html#aa558ae97e7dcd7102f6fe3d16cad85fc">HeroEquipment</a>.</p>
 
 </div>
@@ -365,6 +380,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>getter for the ID (used in saving and reading equipment) </p>
 
 <p>Implements <a class="el" href="class_hero_equipment.html#abefa58addb723b086c1a62f33fefa7af">HeroEquipment</a>.</p>
 
@@ -393,7 +410,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>print info about the equipment (picture, bonus, cost (if has) and name) </p>
+<p>printing image, name, bonus and cost of this spell </p>
 
 <p>Reimplemented from <a class="el" href="class_hero_equipment.html#aa4342caacb838276d6f6f3d021f2ee6f">HeroEquipment</a>.</p>
 

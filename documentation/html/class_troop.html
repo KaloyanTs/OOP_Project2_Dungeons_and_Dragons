@@ -70,38 +70,52 @@ $(document).ready(function(){initNavTree('class_troop.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>class representing something living on the map, having level, health, attack and mana  
+ <a href="class_troop.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_troop_8hpp_source.html">Troop.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a67074de9f11779acc74f3a5d275c3d1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a67074de9f11779acc74f3a5d275c3d1c">Troop</a> (float _attack, float _mana, float _health, unsigned lvl=1)</td></tr>
+<tr class="memdesc:a67074de9f11779acc74f3a5d275c3d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a troop with attack, mana, health and level  <a href="class_troop.html#a67074de9f11779acc74f3a5d275c3d1c">More...</a><br /></td></tr>
 <tr class="separator:a67074de9f11779acc74f3a5d275c3d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fec8442de49d617fe31e0a7c3f9ba6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a8fec8442de49d617fe31e0a7c3f9ba6d">Troop</a> (std::ifstream &amp;ifs)</td></tr>
+<tr class="memdesc:a8fec8442de49d617fe31e0a7c3f9ba6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct troop by reading its data from text file  <a href="class_troop.html#a8fec8442de49d617fe31e0a7c3f9ba6d">More...</a><br /></td></tr>
 <tr class="separator:a8fec8442de49d617fe31e0a7c3f9ba6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b75f72ec43bc3471895fb215c821a59"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a9b75f72ec43bc3471895fb215c821a59">~Troop</a> ()</td></tr>
+<tr class="memdesc:a9b75f72ec43bc3471895fb215c821a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual destructor  <a href="class_troop.html#a9b75f72ec43bc3471895fb215c821a59">More...</a><br /></td></tr>
 <tr class="separator:a9b75f72ec43bc3471895fb215c821a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58799ff5841d4f3dc2dfb42e1fc601c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_troop.html">Troop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#ad58799ff5841d4f3dc2dfb42e1fc601c">clone</a> () const =0</td></tr>
 <tr class="separator:ad58799ff5841d4f3dc2dfb42e1fc601c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340181700539d108c97aadef47e05e5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a340181700539d108c97aadef47e05e5a">print</a> (float attackBonus=0) const</td></tr>
+<tr class="memdesc:a340181700539d108c97aadef47e05e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function printing the stats of this troop  <a href="class_troop.html#a340181700539d108c97aadef47e05e5a">More...</a><br /></td></tr>
 <tr class="separator:a340181700539d108c97aadef47e05e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8900de59ffca17c1de50965db7636bda"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a8900de59ffca17c1de50965db7636bda">getLevel</a> () const</td></tr>
 <tr class="separator:a8900de59ffca17c1de50965db7636bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa221953d9ab89bf04e37826076ff5abd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#aa221953d9ab89bf04e37826076ff5abd">takeDamage</a> (float dmg)</td></tr>
+<tr class="memdesc:aa221953d9ab89bf04e37826076ff5abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower the health of this troop by some damage (health cannot be below 0)  <a href="class_troop.html#aa221953d9ab89bf04e37826076ff5abd">More...</a><br /></td></tr>
 <tr class="separator:aa221953d9ab89bf04e37826076ff5abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f7b53d4d238610d0d7de4a73246be4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a60f7b53d4d238610d0d7de4a73246be4">payMana</a> (float points)</td></tr>
+<tr class="memdesc:a60f7b53d4d238610d0d7de4a73246be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">pay amount of mana (to cast a spell for example)  <a href="class_troop.html#a60f7b53d4d238610d0d7de4a73246be4">More...</a><br /></td></tr>
 <tr class="separator:a60f7b53d4d238610d0d7de4a73246be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e3866268550e389001ae63c12daddf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a4e3866268550e389001ae63c12daddf3">regen</a> (float percentage=0)</td></tr>
+<tr class="memdesc:a4e3866268550e389001ae63c12daddf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">regenerate health by some percentage (when percentage is 0 the troop is regenerated to half health)  <a href="class_troop.html#a4e3866268550e389001ae63c12daddf3">More...</a><br /></td></tr>
 <tr class="separator:a4e3866268550e389001ae63c12daddf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec12392e67f7667178f9ffdcb73e198c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#aec12392e67f7667178f9ffdcb73e198c">gainXP</a> (unsigned gain)</td></tr>
+<tr class="memdesc:aec12392e67f7667178f9ffdcb73e198c"><td class="mdescLeft">&#160;</td><td class="mdescRight">gain amount of XP (if enough it levels up)  <a href="class_troop.html#aec12392e67f7667178f9ffdcb73e198c">More...</a><br /></td></tr>
 <tr class="separator:aec12392e67f7667178f9ffdcb73e198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4c6c38121f85e8a310c3a3fbe091669c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a4c6c38121f85e8a310c3a3fbe091669c">determineStat</a> (unsigned lvl, float init, float perLevel) const</td></tr>
+<tr class="memdesc:a4c6c38121f85e8a310c3a3fbe091669c"><td class="mdescLeft">&#160;</td><td class="mdescRight">determine value of a stat of some troop of particular level with some initial value and multiplier per level  <a href="class_troop.html#a4c6c38121f85e8a310c3a3fbe091669c">More...</a><br /></td></tr>
 <tr class="separator:a4c6c38121f85e8a310c3a3fbe091669c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a489506cd244ede8010fa7d93cc47b14b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">alive</a> () const</td></tr>
+<tr class="memdesc:a489506cd244ede8010fa7d93cc47b14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if this troop is alive (has positive health)  <a href="class_troop.html#a489506cd244ede8010fa7d93cc47b14b">More...</a><br /></td></tr>
 <tr class="separator:a489506cd244ede8010fa7d93cc47b14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b3c92af869e6b33e9b1b7ee0032ae60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a0b3c92af869e6b33e9b1b7ee0032ae60">save</a> (std::ofstream &amp;ofs) const</td></tr>
+<tr class="memdesc:a0b3c92af869e6b33e9b1b7ee0032ae60"><td class="mdescLeft">&#160;</td><td class="mdescRight">write info about this troop to a text file  <a href="class_troop.html#a0b3c92af869e6b33e9b1b7ee0032ae60">More...</a><br /></td></tr>
 <tr class="separator:a0b3c92af869e6b33e9b1b7ee0032ae60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -119,9 +133,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ab361e42b3cbd9d58b1a6b6256d43a361"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#ab361e42b3cbd9d58b1a6b6256d43a361">health</a></td></tr>
 <tr class="separator:ab361e42b3cbd9d58b1a6b6256d43a361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a8b4439c510e0d9846221750d843f7"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_troop.html#a90a8b4439c510e0d9846221750d843f7">xpNeeded</a></td></tr>
+<tr class="memdesc:a90a8b4439c510e0d9846221750d843f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">XP needed to reach next level.  <a href="class_troop.html#a90a8b4439c510e0d9846221750d843f7">More...</a><br /></td></tr>
 <tr class="separator:a90a8b4439c510e0d9846221750d843f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >class representing something living on the map, having level, health, attack and mana </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a67074de9f11779acc74f3a5d275c3d1c" name="a67074de9f11779acc74f3a5d275c3d1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67074de9f11779acc74f3a5d275c3d1c">&#9670;&nbsp;</a></span>Troop() <span class="overload">[1/2]</span></h2>
 
@@ -168,6 +185,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>construct a troop with attack, mana, health and level </p>
+
 </div>
 </div>
 <a id="a8fec8442de49d617fe31e0a7c3f9ba6d" name="a8fec8442de49d617fe31e0a7c3f9ba6d"></a>
@@ -185,6 +204,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>construct troop by reading its data from text file </p>
 
 </div>
 </div>
@@ -211,6 +232,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>virtual destructor </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -236,6 +259,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>check if this troop is alive (has positive health) </p>
 
 </div>
 </div>
@@ -306,6 +331,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>determine value of a stat of some troop of particular level with some initial value and multiplier per level </p>
+
 </div>
 </div>
 <a id="aec12392e67f7667178f9ffdcb73e198c" name="aec12392e67f7667178f9ffdcb73e198c"></a>
@@ -323,6 +350,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>gain amount of XP (if enough it levels up) </p>
 
 </div>
 </div>
@@ -367,6 +396,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>pay amount of mana (to cast a spell for example) </p>
+
 </div>
 </div>
 <a id="a340181700539d108c97aadef47e05e5a" name="a340181700539d108c97aadef47e05e5a"></a>
@@ -393,6 +424,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>virtual function printing the stats of this troop </p>
+
 </div>
 </div>
 <a id="a4e3866268550e389001ae63c12daddf3" name="a4e3866268550e389001ae63c12daddf3"></a>
@@ -410,6 +443,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>regenerate health by some percentage (when percentage is 0 the troop is regenerated to half health) </p>
 
 </div>
 </div>
@@ -437,6 +472,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>write info about this troop to a text file </p>
+
 </div>
 </div>
 <a id="aa221953d9ab89bf04e37826076ff5abd" name="aa221953d9ab89bf04e37826076ff5abd"></a>
@@ -462,6 +499,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>lower the health of this troop by some damage (health cannot be below 0) </p>
 
 <p>Reimplemented in <a class="el" href="class_dragon.html#ad7912addd7a0156ed85460189a957083">Dragon</a>, <a class="el" href="class_human.html#a5f2388784fabc1c4b3b9b9667035b798">Human</a>, <a class="el" href="class_mage.html#ab514e52d9d8da90fd95ecd313808b16e">Mage</a>, and <a class="el" href="class_warrior.html#a6650ce6b48a9fad9d57be5ac0c4f9e66">Warrior</a>.</p>
 
@@ -619,6 +658,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>XP needed to reach next level. </p>
 
 </div>
 </div>
