@@ -30,7 +30,7 @@ public:
           maxHealth(_health),
           maxMana(_mana),
           level(lvl),
-          xpNeeded(lvl * XP_NEED_ACUMULATION) {}
+          xpNeeded(lvl * Constants::XP_NEED_ACUMULATION) {}
     Troop(std::ifstream &ifs);
     virtual ~Troop() {}
 

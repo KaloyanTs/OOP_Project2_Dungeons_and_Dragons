@@ -57,7 +57,7 @@ void Troop::gainXP(unsigned gain)
         {
             levelUp();
             gain -= xpNeeded;
-            xpNeeded = level * XP_NEED_ACUMULATION;
+            xpNeeded = level * Constants::XP_NEED_ACUMULATION;
         } while (gain >= xpNeeded);
         xpNeeded -= gain;
     }
@@ -70,10 +70,10 @@ void Troop::levelUp()
     system("cls");
     unsigned sum = 0;
     unsigned a, h, m;
-    Constants::STDOUT("You are now level ")(++level)("\n\tChoose how to distribute ")(LEVEL_UP_POINTS)(" points...\n");
+    Constants::STDOUT("You are now level ")(++level)("\n\tChoose how to distribute ")(Constants::LEVEL_UP_POINTS)(" points...\n");
     Constants::STDOUT("\tPoints improving attack\t(currently ")(attack)("): ");
     std::cin >> a;
-    while (sum + a > LEVEL_UP_POINTS)
+    while (sum + a > Constants::LEVEL_UP_POINTS)
     {
         Constants::STDOUT("Too much power gained! Try again...\n");
         std::cin >> a;
@@ -82,7 +82,7 @@ void Troop::levelUp()
 
     Constants::STDOUT("\tPoints improving health\t(currently ")(health)("): ");
     std::cin >> h;
-    while (sum + h > LEVEL_UP_POINTS)
+    while (sum + h > Constants::LEVEL_UP_POINTS)
     {
         Constants::STDOUT("Too much power gained! Try again...\n");
         std::cin >> h;
@@ -91,7 +91,7 @@ void Troop::levelUp()
 
     Constants::STDOUT("\tPoints improving mana\t(currently ")(mana)("): ");
     std::cin >> m;
-    while (sum + m > LEVEL_UP_POINTS)
+    while (sum + m > Constants::LEVEL_UP_POINTS)
     {
         Constants::STDOUT("Too much power gained! Try again...\n");
         std::cin >> m;

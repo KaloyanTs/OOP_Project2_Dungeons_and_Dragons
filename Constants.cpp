@@ -8,3 +8,6 @@ const WeaponNameGenerator Constants::weapon_name_generator;
 const ArmorNameGenerator Constants::armor_name_generator;
 const SpellNameGenerator Constants::spell_name_generator;
 const PotionNameGenerator Constants::potion_name_generator;
+
+const unsigned Constants::LEVEL_UP_POINTS = 30;
+const float Constants::EPS = 1e-3;

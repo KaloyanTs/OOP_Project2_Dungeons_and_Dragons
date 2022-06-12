@@ -13,7 +13,7 @@ void Game::start()
     system("cls");
     delete map;
     delete pl;
-    Constants::STDOUT("Press l to load game or n to begin new game\n");
+    Constants::STDOUT("Press\tl to load existing game\nor\tn to begin a new game\n");
     char c;
     while ((c = getch()) != 'l' && c != 'n')
     {
@@ -106,7 +106,7 @@ Constants::LEVEL_STATE Game::run()
         tmp = map->run();
         if (tmp == Constants::LEVEL_STATE::PASS)
         {
-            if (level < LEVEL_COUNT)
+            if (level < Constants::LEVEL_COUNT)
             {
                 delete map;
                 map = new Map(pl, ++level);

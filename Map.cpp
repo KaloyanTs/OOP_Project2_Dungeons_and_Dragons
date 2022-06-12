@@ -57,9 +57,9 @@ Map::Map(Player *p, unsigned lvl)
 
         events.push_back(Inventar::getEquipment(
             rand() % 3, posY, posX,
-            level * MINIMUM_BONUS_PER_LEVEL + INITIAL_MINIMAL_BONUS,
-            level * MAXIMAL_BONUS_PER_LEVEL + INITIAL_MAXIMAL_BONUS,
-            rand() % (lvl * COST_PER_LEVEL) + INITIAL_MINIMAL_COST));
+            level * Constants::MINIMUM_BONUS_PER_LEVEL + Constants::INITIAL_MINIMAL_BONUS,
+            level * Constants::MAXIMAL_BONUS_PER_LEVEL + Constants::INITIAL_MAXIMAL_BONUS,
+            rand() % (lvl * Constants::COST_PER_LEVEL) + Constants::INITIAL_MINIMAL_COST));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
     for (unsigned i = 0; i < potionCount; ++i)
@@ -72,8 +72,8 @@ Map::Map(Player *p, unsigned lvl)
 
         events.push_back(new Potion(
             posY, posX,
-            POTION_INITIAL_MINIMAL_COST + lvl * POTION_COST_PER_LEVEL,
-            POTION_INITIAL_MAXIMAL_COST + lvl * POTION_COST_PER_LEVEL));
+            Constants::POTION_INITIAL_MINIMAL_COST + lvl * Constants::POTION_COST_PER_LEVEL,
+            Constants::POTION_INITIAL_MAXIMAL_COST + lvl * Constants::POTION_COST_PER_LEVEL));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
 }

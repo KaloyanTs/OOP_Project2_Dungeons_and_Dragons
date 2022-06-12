@@ -7,27 +7,6 @@
 #include "DragonQuoteGenerator.hpp"
 #include "MultipleImagePrinter.hpp"
 
-#define INITIAL_MINIMAL_BONUS 5
-#define MINIMUM_BONUS_PER_LEVEL 5
-
-#define INITIAL_MAXIMAL_BONUS 10
-#define MAXIMAL_BONUS_PER_LEVEL 25
-
-#define INITIAL_MINIMAL_COST 10
-#define COST_PER_LEVEL 10
-
-#define POTION_INITIAL_MINIMAL_COST 15
-#define POTION_INITIAL_MAXIMAL_COST 30
-#define POTION_COST_PER_LEVEL 7
-
-#define EPS 1e-3
-
-#define LEVEL_COUNT 4
-#define LEVEL_UP_POINTS 30
-
-#define XP_NEED_ACUMULATION 5
-#define XP_DROP_PER_LEVEL 2
-
 class Constants
 {
     Constants() {}
@@ -48,6 +27,19 @@ public:
         PAUSE,
         END
     };
+    static const unsigned INITIAL_MINIMAL_BONUS = 5;
+    static const unsigned MINIMUM_BONUS_PER_LEVEL = 5;
+    static const unsigned INITIAL_MAXIMAL_BONUS = 10;
+    static const unsigned MAXIMAL_BONUS_PER_LEVEL = 25;
+    static const unsigned INITIAL_MINIMAL_COST = 10;
+    static const unsigned COST_PER_LEVEL = 10;
+    static const unsigned POTION_INITIAL_MINIMAL_COST = 15;
+    static const unsigned POTION_INITIAL_MAXIMAL_COST = 30;
+    static const unsigned POTION_COST_PER_LEVEL = 7;
+    static const unsigned LEVEL_COUNT = 4;
+    static const unsigned LEVEL_UP_POINTS;
+    static const unsigned XP_NEED_ACUMULATION = 5;
+    static const unsigned XP_DROP_PER_LEVEL = 2;
     static bool equal(float a, float b) { return a - b < EPS && a - b > -EPS; }
     static bool less(float a, float b) { return a - b <= -EPS; }
     static bool greater(float a, float b) { return a - b >= EPS; }
@@ -82,6 +74,7 @@ public:
     static const SpellNameGenerator spell_name_generator;
     static const PotionNameGenerator potion_name_generator;
     static const DragonQuoteGenerator dragon_quote_generator;
+    static const float EPS;
 };
 
 #endif
