@@ -22,7 +22,8 @@ void Map::generateMap() const
 Map::Map(Player *p, unsigned lvl)
     : running(false), pause(false), saved(false),
       level(lvl), rows(fib(lvl, 10, 15)), cols(fib(lvl, 10, 10)),
-      data(new char *[rows]), dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
+      data(new char *[rows]), board(new char[rows * (2 * cols + 1)]),
+      dragonCount(fib(lvl, 2, 3)), treasureCount(fib(lvl, 2, 2)),
       potionCount(fib(lvl, 1, 2)),
       events(dragonCount + treasureCount + potionCount),
       pl(p)
@@ -76,6 +77,10 @@ Map::Map(Player *p, unsigned lvl)
             Constants::POTION_INITIAL_MAXIMAL_COST + lvl * Constants::POTION_COST_PER_LEVEL));
         data[posY][posX] = events[events.size() - 1]->getChar();
     }
+
+    for (unsigned i = 0; i < rows; ++i)
+        board[i * (2 * cols + 1) + 2 * cols] = '\n';
+    board[rows * (2 * cols + 1) - 1] = '\0';
 }
 
 EventGenerator *Map::print() const
@@ -83,25 +88,44 @@ EventGenerator *Map::print() const
     system("cls");
     Constants::STDOUT("Level ")(level)("\n\n");
     bool plHere = false;
+
+    // Constants::STDOUT(board);
     for (unsigned i = 0; i < rows; ++i)
-    {
         for (unsigned j = 0; j < cols; ++j)
         {
             plHere = (i == pl->getY() && j == pl->getX());
-            Constants::STDOUT(plHere
-                                  ? pl->getChar()
-                                  : (data[i][j] == (char)MAP_SYMBOLS::WALL
-                                         ? data[i][j]
-                                         : '_'))
 
-                ((data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
-                      ? pl->getChar()
-                      : data[i][j]));
+            board[i * (2 * cols + 1) + 2 * j] = (plHere
+                                                     ? pl->getChar()
+                                                     : (data[i][j] == (char)MAP_SYMBOLS::WALL
+                                                            ? data[i][j]
+                                                            : '_'));
+
+            board[i * (2 * cols + 1) + 2 * j + 1] = ((data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
+                                                          ? pl->getChar()
+                                                          : data[i][j]));
         }
-        if (i == rows - 1)
-            Constants::STDOUT(">>>");
-        Constants::STDOUT('\n');
-    }
+    Constants::STDOUT(board)(">>>\n");
+
+    // for (unsigned i = 0; i < rows; ++i)
+    // {
+    //     for (unsigned j = 0; j < cols; ++j)
+    //     {
+    //         plHere = (i == pl->getY() && j == pl->getX());
+    //         Constants::STDOUT(plHere
+    //                               ? pl->getChar()
+    //                               : (data[i][j] == (char)MAP_SYMBOLS::WALL
+    //                                      ? data[i][j]
+    //                                      : '_'))
+
+    //             ((data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
+    //                   ? pl->getChar()
+    //                   : data[i][j]));
+    //     }
+    //     if (i == rows - 1)
+    //         Constants::STDOUT(">>>");
+    //     Constants::STDOUT('\n');
+    // }
     unsigned i = 0;
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
@@ -177,6 +201,7 @@ Map::~Map()
     for (unsigned i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
+    delete[] board;
 }
 
 Constants::LEVEL_STATE Map::run()
@@ -255,7 +280,7 @@ void Map::saveProgress(const String &game)
 }
 
 Map::Map(Player *p, const String &path)
-    : data(nullptr), pl(p), running(false), pause(false), saved(true),
+    : data(nullptr), board(nullptr), pl(p), running(false), pause(false), saved(true),
       level(0), rows(0), cols(0), dragonCount(0),
       treasureCount(0)
 {
@@ -310,6 +335,11 @@ Map::Map(Player *p, const String &path)
 
     for (unsigned i = 0; i < events.size(); ++i)
         data[events[i]->getY()][events[i]->getX()] = events[i]->getChar();
+
+    board = new char[rows * (2 * cols + 1)];
+    for (unsigned i = 0; i < rows; ++i)
+        board[i * (2 * cols + 1) + 2 * cols] = '\n';
+    board[rows * (2 * cols + 1) - 1] = '\0';
 }
 
 Player *Map::getHero(unsigned index, const String &name)

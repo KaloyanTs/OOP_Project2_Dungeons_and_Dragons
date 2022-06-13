@@ -17,6 +17,7 @@ class Map
     unsigned rows, cols;
     unsigned level;
     char **data;
+    char *board;
     size_t dragonCount;
     size_t treasureCount;
     size_t potionCount;
