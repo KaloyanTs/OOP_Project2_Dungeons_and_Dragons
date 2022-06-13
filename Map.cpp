@@ -106,26 +106,6 @@ EventGenerator *Map::print() const
                                                           : data[i][j]));
         }
     Constants::STDOUT(board)(">>>\n");
-
-    // for (unsigned i = 0; i < rows; ++i)
-    // {
-    //     for (unsigned j = 0; j < cols; ++j)
-    //     {
-    //         plHere = (i == pl->getY() && j == pl->getX());
-    //         Constants::STDOUT(plHere
-    //                               ? pl->getChar()
-    //                               : (data[i][j] == (char)MAP_SYMBOLS::WALL
-    //                                      ? data[i][j]
-    //                                      : '_'))
-
-    //             ((data[i][j] == (char)MAP_SYMBOLS::FREE && plHere
-    //                   ? pl->getChar()
-    //                   : data[i][j]));
-    //     }
-    //     if (i == rows - 1)
-    //         Constants::STDOUT(">>>");
-    //     Constants::STDOUT('\n');
-    // }
     unsigned i = 0;
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
