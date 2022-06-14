@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dungeons &amp; Dragons: Hotel Project Documentation</title>
+<title>Dungeons &amp; Dragons: DND Project Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,38 +61,56 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </script>
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Hotel Project Documentation </div></div>
+  <div class="headertitle"><div class="title">DND Project Documentation </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Overview">Overview</a></li>
-<li class="level1"><a href="#Achitecture">Achitecture</a><ul><li class="level2"><a href="#cl">Supporting classes</a></li>
+<ul><li class="level1"><a href="#Overview">Overview</a><ul><li class="level2"><a href="#cl">Supporting classes</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#files">File organization</a></li>
-<li class="level1"><a href="#hierarchy">Class hierarchy</a><ul><li class="level2"><a href="#Example">Example</a></li>
+<li class="level1"><a href="#hierarchy">Class hierarchy</a><ul><li class="level2"><a href="#exmpl">Example</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#idea">Ideas for future developments</a></li>
 </ul>
 </div>
-<div class="textblock"><p ><a class="el" href="md_markdowns_bibliography.html#Bibliography">Bibliography</a></p>
+<div class="textblock"><p ><a class="el" href="md_markdowns_bibliography.html#Bibliography">Bibliography</a> <br  />
+<a class="el" href="md_markdowns_commands.html#Commands">Commands</a></p>
 <h1><a class="anchor" id="Overview"></a>
 Overview</h1>
-<h1><a class="anchor" id="Achitecture"></a>
-Achitecture</h1>
+<p >This project is a MMO game in which the main character moves around a map, kills enemies (dragons), collects items and progresses into new maps. The program runs in console mode. Keyboard keys are used for playing. The main goal is to pass all the levels without your health falling below 0.<br  />
+ The main character can be one of 3 types: human, mage or hero, starting at level 1 with fixed stats and being given 30 points to distribute over his stats on level up<br  />
+ The player can equip up to 1 weapon, armor and spell, each of which gives him some bonus.</p>
 <h2><a class="anchor" id="cl"></a>
 Supporting classes</h2>
+<p >For the purposes of the project I have developed:</p><ul>
+<li>class <a class="el" href="class_string.html" title="Class representing dynamic string (array of characters)">String</a>, representing sequence of characters with any length</li>
+<li>class <a class="el" href="class_vector.html" title="template class vector representing container of objects">Vector</a>, representing container of objects of the same type</li>
+<li>class <a class="el" href="class_stack.html" title="template class representing stack DS (LIFO)">Stack</a>, representing LIFO data structure</li>
+<li>class <a class="el" href="class_grammar.html" title="class representing context-free grammar having rules for word generation">Grammar</a>, representing context-free grammar, used to generate random names and quotes, based on grammar rules;</li>
+<li>class <a class="el" href="class_image.html" title="class representing image (ascii art)">Image</a>, representing ascii art picture, which can be printed on the console</li>
+</ul>
 <h1><a class="anchor" id="files"></a>
 File organization</h1>
 <p ><img src="..\assets\main_8cpp__incl.png" alt="Organization" class="inline"/></p>
 <h1><a class="anchor" id="hierarchy"></a>
 Class hierarchy</h1>
 <p ><img src="..\assets\inherit_graph_0.png" alt="Hierarchy0" class="inline"/> <img src="..\assets\inherit_graph_1.png" alt="Hierarchy1" class="inline"/> <img src="..\assets\inherit_graph_2.png" alt="Hierarchy2" class="inline"/> <img src="..\assets\inherit_graph_3.png" alt="Hierarchy3" class="inline"/> <img src="..\assets\inherit_graph_4.png" alt="Hierarchy4" class="inline"/> <img src="..\assets\inherit_graph_5.png" alt="Hierarchy5" class="inline"/> <img src="..\assets\inherit_graph_6.png" alt="Hierarchy6" class="inline"/> <img src="..\assets\inherit_graph_7.png" alt="Hierarchy7" class="inline"/> <img src="..\assets\inherit_graph_8.png" alt="Hierarchy8" class="inline"/> <img src="..\assets\inherit_graph_9.png" alt="Hierarchy9" class="inline"/> <img src="..\assets\inherit_graph_10.png" alt="Hierarchy10" class="inline"/> <img src="..\assets\inherit_graph_11.png" alt="Hierarchy11" class="inline"/> <img src="..\assets\inherit_graph_12.png" alt="Hierarchy12" class="inline"/> <img src="..\assets\inherit_graph_13.png" alt="Hierarchy13" class="inline"/></p>
-<h2><a class="anchor" id="Example"></a>
+<h2><a class="anchor" id="exmpl"></a>
 Example</h2>
+<p ><img src="..\assets\example1.png" alt="Hierarchy11" class="inline"/> <img src="..\assets\example2.png" alt="Hierarchy12" class="inline"/> <img src="..\assets\example3.png" alt="Hierarchy13" class="inline"/></p>
 <h1><a class="anchor" id="idea"></a>
 Ideas for future developments</h1>
+<p >There are many concepts and extensions to be developed in the game such as:</p><ul>
+<li>More enemy monsters types</li>
+<li>Some quests giving XP and equipment</li>
+<li>Portals leading to another maps</li>
+<li>More interactive battles</li>
+<li>The main character is not alone, he can lead his own party</li>
+<li>The enemies are not alone, they are in a party</li>
+<li>Options for different difficulty </li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

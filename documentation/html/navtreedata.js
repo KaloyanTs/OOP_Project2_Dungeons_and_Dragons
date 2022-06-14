@@ -25,14 +25,13 @@
 var NAVTREE =
 [
   [ "Dungeons & Dragons", "index.html", [
-    [ "Hotel Project Documentation", "index.html", [
-      [ "Overview", "index.html#Overview", null ],
-      [ "Achitecture", "index.html#Achitecture", [
+    [ "DND Project Documentation", "index.html", [
+      [ "Overview", "index.html#Overview", [
         [ "Supporting classes", "index.html#cl", null ]
       ] ],
       [ "File organization", "index.html#files", null ],
       [ "Class hierarchy", "index.html#hierarchy", [
-        [ "Example", "index.html#Example", null ]
+        [ "Example", "index.html#exmpl", null ]
       ] ],
       [ "Ideas for future developments", "index.html#idea", null ]
     ] ],
