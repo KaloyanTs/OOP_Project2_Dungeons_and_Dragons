@@ -1,5 +1,6 @@
-@mainpage Hotel Project Documentation
+@mainpage DND Project Documentation
 @subpage Bibliography
+<br>@subpage Commands
 @tableofcontents
 
 @section Overview
