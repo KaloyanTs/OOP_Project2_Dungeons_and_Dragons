@@ -8,7 +8,5 @@ int main()
     dnd.start();
     // todo reduce folder size
 
-    // todo use on string to print
-
     return 0;
 }
