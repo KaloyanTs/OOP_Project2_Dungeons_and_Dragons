@@ -6,6 +6,6 @@ My GitHub repository is located at:<br> https://github.com/KaloyanTs/OOP_Project
 
 @section m Used materials
 
-* String library:<br> https://www.cplusplus.com/reference/string/string/
 * OOP lectures
+* Implementing context-free grammar using stack:<br> https://www.javatpoint.com/automata-cfg-to-pda-conversion
 * conio.h library:<br> https://en.wikipedia.org/wiki/Conio.h
