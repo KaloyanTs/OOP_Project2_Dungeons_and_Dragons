@@ -1,7 +1,6 @@
 var files_dup =
 [
-    [ "build", "dir_4fef79e7177ba769987a8da36c892c5f.html", "dir_4fef79e7177ba769987a8da36c892c5f" ],
-    [ "markdowns", "dir_e2747db4f7ae73898caba355dcf25927.html", null ],
+    [ "markdowns", "dir_822baa1b6b19661f487f1ae52567a2eb.html", null ],
     [ "Armor.cpp", "_armor_8cpp.html", null ],
     [ "Armor.hpp", "_armor_8hpp.html", [
       [ "Armor", "class_armor.html", "class_armor" ]

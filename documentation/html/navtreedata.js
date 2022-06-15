@@ -57,9 +57,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Enumerations", "globals_enum.html", null ]
       ] ]
     ] ]
   ] ]
@@ -68,8 +66,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armor_8cpp.html",
-"class_human.html#a9f3b8312ca9667f93796f58301700be8",
-"index.html"
+"class_player.html#a6b4af8af17be94af69b06b6c470e2ed9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
