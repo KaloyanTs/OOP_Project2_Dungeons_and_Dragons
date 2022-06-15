@@ -32,7 +32,7 @@ public:
     };
 
 private:
-    static const char PLAYER_CHAR = (char)177;
+    static const char PLAYER_CHAR = (char)207;
     unsigned y, x;
     Inventar *inv;
     String name;
