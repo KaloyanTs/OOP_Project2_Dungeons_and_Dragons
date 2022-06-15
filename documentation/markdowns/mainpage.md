@@ -49,3 +49,4 @@ There are many concepts and extensions to be developed in the game such as:
 * The main character is not alone, he can lead his own party
 * The enemies are not alone, they are in a party
 * Options for different difficulty
+* Enemies can move on the map, not standing still
