@@ -9,4 +9,5 @@ Doxyfile
 present/
 present.zip
 !build/assets
+!build/games
 .VSCodeCounter/

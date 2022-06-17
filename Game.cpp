@@ -210,6 +210,9 @@ void Game::save()
     Constants::STDOUT("\n\nEnter name of current game: ");
     char name[Constants::INPUT_LIMIT];
     std::cin >> name;
+    std::cin.ignore();
     pl->save(name);
     map->saveProgress(name);
+    Constants::STDOUT("Game successfully saved as \"")(name)("\"\n");
+    getch();
 }
