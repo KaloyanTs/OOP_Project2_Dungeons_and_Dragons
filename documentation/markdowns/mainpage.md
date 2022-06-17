@@ -4,7 +4,7 @@
 @tableofcontents
 
 @section Overview
-This project is a MMO game in which the main character moves around a map, kills enemies (dragons), collects items and progresses into new maps. The program runs in console mode. Keyboard keys are used for playing. The main goal is to pass all the levels without your health falling below 0.<br>
+This project is a RPG game in which the main character moves around a map, kills enemies (dragons), collects items and progresses into new maps. The program runs in console mode. Keyboard keys are used for playing. The main goal is to pass all the levels without your health falling below 0.<br>
 The main character can be one of 3 types: human, mage or hero, starting at level 1 with fixed stats and being given 30 points to distribute over his stats on level up<br>
 The player can equip up to 1 weapon, armor and spell, each of which gives him some bonus.
 
