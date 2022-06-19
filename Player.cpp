@@ -221,6 +221,8 @@ void Player::save(const String &game) const
     file += game;
     file += ".dndplayer";
     std::ofstream ofs(file);
+    if (!ofs)
+        throw MyException("\"games\" folder missing...", "Player::save(const String &) const");
 
     ofs << (int)getID() << '\n';
     ofs << name.size() << ' ' << name.c_str() << '\n';

@@ -244,6 +244,8 @@ void Map::saveProgress(const String &game)
     name += game;
     name += ".dndmap";
     std::ofstream ofs(name.c_str());
+    if (!ofs)
+        throw MyException("\"games\" folder missing...", "Player::save(const String &) const");
 
     ofs << level << ' ' << rows << ' ' << cols << "\n\n";
     ofs << events.size() << '\n';

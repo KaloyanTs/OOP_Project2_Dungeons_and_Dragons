@@ -211,8 +211,16 @@ void Game::save()
     char name[Constants::INPUT_LIMIT];
     std::cin >> name;
     std::cin.ignore();
+    try{
     pl->save(name);
     map->saveProgress(name);
+    }
+    catch(const MyException &err)
+    {
+        std::cout<<err.what()<<'\n';
+        getch();
+        return;
+    }
     Constants::STDOUT("Game successfully saved as \"")(name)("\"\n");
     getch();
 }
