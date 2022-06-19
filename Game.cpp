@@ -6,14 +6,13 @@ Game::Game() : map(nullptr), pl(nullptr), running(false), level(0)
 
 void Game::start()
 {
-    Constants::STDOUT(GameAssets::game_logo);
-    Constants::STDOUT("\tPress any key to play...");
+    Constants::out << GameAssets::game_logo << "\tPress any key to play...";
     getch();
 
     system("cls");
     delete map;
     delete pl;
-    Constants::STDOUT("Press\tl to load existing game\nor\tn to begin a new game\n");
+    Constants::out << "Press\tl to load existing game\nor\tn to begin a new game\n";
     char c;
     while ((c = getch()) != 'l' && c != 'n')
     {
@@ -48,7 +47,7 @@ void Game::load()
     delete map;
     map = nullptr;
     char name[Constants::INPUT_LIMIT];
-    Constants::STDOUT("\nEnter name of game to be loaded:\n");
+    Constants::out << "\nEnter name of game to be loaded:\n";
     std::cin.getline(name, Constants::INPUT_LIMIT);
     pl = Game::readPlayer(name);
     map = new Map(pl, name);
@@ -80,14 +79,14 @@ void Game::newGame()
 {
     level = 1;
     system("cls");
-    Constants::STDOUT("New game:\n\tChoose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n");
+    Constants::out << "New game:\n\tChoose a hero:\n\t1 for human\n\t2 for mage\n\t3 for warrior\n";
     char chosen;
     do
     {
         chosen = getch();
     } while (chosen - '0' - 1 >= Constants::HERO_TYPES || chosen - '0' - 1 < 0);
     char name[Constants::INPUT_LIMIT] = "";
-    Constants::STDOUT("Choose name for your hero:\t");
+    Constants::out << "Choose name for your hero:\t";
     std::cin.getline(name, Constants::INPUT_LIMIT);
     if (!*name)
         strcpy(name, "unknown");
@@ -115,7 +114,7 @@ Constants::LEVEL_STATE Game::run()
             else
             {
                 system("cls");
-                Constants::STDOUT(pl->getName())(", you proved yourself as a real hero and will be rewarded as deserved!\nThis is the end game...");
+                Constants::out << pl->getName() << ", you proved yourself as a real hero and will be rewarded as deserved!\nThis is the end game...";
                 getch();
                 running = false;
                 return Constants::LEVEL_STATE::END;
@@ -126,7 +125,7 @@ Constants::LEVEL_STATE Game::run()
             system("cls");
 
             char c;
-            Constants::STDOUT("Press p to resume the game;\nPress n to start a new game;\nPress s to save current progress;\nPress l to load existing game;\nPress ` to exit.");
+            Constants::out << "Press p to resume the game;\nPress n to start a new game;\nPress s to save current progress;\nPress l to load existing game;\nPress ` to exit.";
             while ((c = getch()) != 'p' && c != (char)KEYS::EXIT && c != 's' && c != 'l' && c != 'n')
             {
             }
@@ -135,7 +134,7 @@ Constants::LEVEL_STATE Game::run()
                 running = false;
                 if (!map->isSaved())
                 {
-                    Constants::STDOUT("\n\ns to save your progress\nx to quit without saving\n");
+                    Constants::out << "\n\ns to save your progress\nx to quit without saving\n";
                     char c;
                     while ((c = getch()) != 's' && c != 'x' && c != (char)KEYS::EXIT)
                     {
@@ -154,7 +153,7 @@ Constants::LEVEL_STATE Game::run()
                 {
                     if (!map->isSaved())
                     {
-                        Constants::STDOUT("\n\ns to save your progress\nx to quit without saving\n");
+                        Constants::out << "\n\ns to save your progress\nx to quit without saving\n";
                         char c;
                         while ((c = getch()) != 's' && c != 'x' && c != (char)KEYS::EXIT)
                         {
@@ -179,7 +178,7 @@ Constants::LEVEL_STATE Game::run()
             {
                 if (!map->isSaved())
                 {
-                    Constants::STDOUT("\n\ns to save your progress\nx to discard progress\n");
+                    Constants::out << "\n\ns to save your progress\nx to discard progress\n";
                     char c;
                     while ((c = getch()) != 's' && c != 'x' && c != (char)KEYS::EXIT)
                     {
@@ -207,20 +206,21 @@ Constants::LEVEL_STATE Game::run()
 
 void Game::save()
 {
-    Constants::STDOUT("\n\nEnter name of current game: ");
+    Constants::out << "\n\nEnter name of current game: ";
     char name[Constants::INPUT_LIMIT];
     std::cin >> name;
     std::cin.ignore();
-    try{
-    pl->save(name);
-    map->saveProgress(name);
-    }
-    catch(const MyException &err)
+    try
     {
-        std::cout<<err.what()<<'\n';
+        pl->save(name);
+        map->saveProgress(name);
+    }
+    catch (const MyException &err)
+    {
+        std::cout << err.what() << '\n';
         getch();
         return;
     }
-    Constants::STDOUT("Game successfully saved as \"")(name)("\"\n");
+    Constants::out << "Game successfully saved as \"" << name << "\"\n";
     getch();
 }

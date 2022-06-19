@@ -2,5 +2,5 @@
 
 void Equipment::print() const
 {
-    Constants::STDOUT("Bonus: ")(bonus)('%');
+    Constants::out << "Bonus: " << bonus << '%';
 }

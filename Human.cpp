@@ -8,9 +8,9 @@ void Human::print() const
 
 void Human::printBrief() const
 {
-    Constants::STDOUT(getName())("\nHuman\tlevel ")(getLevel());
-    Constants::STDOUT("\t(")(xpNeeded)("xp needed)\n");
+    Constants::out << getName() << "\nHuman\tlevel " << getLevel() << "\t(" << xpNeeded << "xp needed)\n";
     Troop::print((equip[0] ? equip[0]->getBonus() : 0));
     if (equip[2])
-        Constants::STDOUT("\tSPELL DAMAGE(")(equip[2]->getCost())(" mana): ")(attack * (1 + equip[2]->getBonus()))('\n');
+        Constants::out << "\tSPELL DAMAGE(" << equip[2]->getCost() << " mana): "
+                       << attack * (1 + equip[2]->getBonus()) << '\n';
 }

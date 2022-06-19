@@ -6,7 +6,7 @@ Potion::Potion(unsigned y, unsigned x, unsigned bot, unsigned top, bool onBoard)
 void Potion::print() const
 {
     HeroEquipment::print();
-    Constants::STDOUT(name)('\n');
+    Constants::out << name << '\n';
     Equipment::print();
-    Constants::STDOUT('\n');
+    Constants::out << '\n';
 }

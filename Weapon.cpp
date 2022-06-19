@@ -6,7 +6,7 @@ Weapon::Weapon(unsigned y, unsigned x, unsigned bot, unsigned top, bool onBoard)
 void Weapon::print() const
 {
     HeroEquipment::print();
-    Constants::STDOUT(name)('\n');
+    Constants::out << name << '\n';
     Equipment::print();
-    Constants::STDOUT('\n');
+    Constants::out << '\n';
 }

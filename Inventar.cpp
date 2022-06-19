@@ -15,7 +15,7 @@ EventGenerator *Inventar::getEquipment(unsigned index, unsigned y, unsigned x, u
 
 void Inventar::print(const String &owner) const
 {
-    Constants::STDOUT(owner)("'s inventar:\n\n");
+    Constants::out << owner << "'s inventar:\n\n";
     for (unsigned i = 0; i < m_size; ++i)
         this->operator[](i)->print();
 }

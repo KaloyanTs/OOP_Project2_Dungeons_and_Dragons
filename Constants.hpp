@@ -5,7 +5,7 @@
 #include "SpellNameGenerator.hpp"
 #include "PotionNameGenerator.hpp"
 #include "DragonQuoteGenerator.hpp"
-#include "Printer.hpp"
+#include "GameAssets.hpp"
 
 /// class without instances keeping all the constants in this project
 class Constants
@@ -30,6 +30,7 @@ public:
         PAUSE,
         END
     };
+    static std::ostream &out;
     static const unsigned INITIAL_MINIMAL_BONUS = 5;
     static const unsigned MINIMUM_BONUS_PER_LEVEL = 5;
     static const unsigned INITIAL_MAXIMAL_BONUS = 10;
@@ -49,7 +50,6 @@ public:
     static bool less(float a, float b) { return a - b <= -EPS; }
     /// function comparing floats with precision
     static bool greater(float a, float b) { return a - b >= EPS; }
-    static const Printer STDOUT;
     static const unsigned INPUT_LIMIT = 100;
     static const unsigned DRAGON_ARMOR_INIT = 15;
     static const unsigned DRAGON_ARMOR_PER_LEVEL = 5;

@@ -86,10 +86,9 @@ Map::Map(Player *p, unsigned lvl)
 EventGenerator *Map::print() const
 {
     system("cls");
-    Constants::STDOUT("Level ")(level)("\n\n");
+    Constants::out << "Level " << level << "\n\n";
     bool plHere = false;
 
-    // Constants::STDOUT(board);
     for (unsigned i = 0; i < rows; ++i)
         for (unsigned j = 0; j < cols; ++j)
         {
@@ -105,7 +104,7 @@ EventGenerator *Map::print() const
                                                           ? pl->getChar()
                                                           : data[i][j]));
         }
-    Constants::STDOUT(board)(">>>\n");
+    Constants::out << board << ">>>\n";
     unsigned i = 0;
     while (i < events.size() && !events[i]->locatedAt(pl->getY(), pl->getX()))
         ++i;
@@ -221,7 +220,7 @@ Constants::LEVEL_STATE Map::run()
             }
             else if (pl->getY() == rows - 1 && pl->getX() == cols)
             {
-                Constants::STDOUT("Level passed successfully!");
+                Constants::out << "Level passed successfully!";
                 getch();
                 running = false;
                 return Constants::LEVEL_STATE::PASS;

@@ -1,7 +1,6 @@
 #ifndef __TROOP_HPP
 #define __TROOP_HPP
 #include "Constants.hpp"
-#include "Printer.hpp"
 #include "GameAssets.hpp"
 #include "HeroEquipment.hpp"
 

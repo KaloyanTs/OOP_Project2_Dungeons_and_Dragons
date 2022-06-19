@@ -8,8 +8,9 @@ Troop::Troop(std::ifstream &ifs)
 void Troop::print(float attackBonus) const
 {
     // p(GameAssets::stats_header, GameAssets::stats_count);
-    Constants::STDOUT("HEALTH\t\tATTACK\tMANA\n")(health)('\\')(maxHealth);
-    Constants::STDOUT('\t')((1 + attackBonus) * attack)('\t')(mana)('\\')(maxMana)('\n');
+    Constants::out << "HEALTH\t\tATTACK\tMANA\n"
+                   << health << '\\' << maxHealth;
+    Constants::out << '\t' << (1 + attackBonus) * attack << '\t' << mana << '\\' << maxMana << '\n';
 }
 
 float Troop::determineStat(unsigned lvl, float init, float perLevel) const
@@ -70,30 +71,30 @@ void Troop::levelUp()
     system("cls");
     unsigned sum = 0;
     unsigned a, h, m;
-    Constants::STDOUT("You are now level ")(++level)("\n\tChoose how to distribute ")(Constants::LEVEL_UP_POINTS)(" points...\n");
-    Constants::STDOUT("\tPoints improving attack\t(currently ")(attack)("): ");
+    Constants::out << "You are now level " << ++level << "\n\tChoose how to distribute " << Constants::LEVEL_UP_POINTS << " points...\n";
+    Constants::out << "\tPoints improving attack\t(currently " << attack << "): ";
     std::cin >> a;
     while (sum + a > Constants::LEVEL_UP_POINTS)
     {
-        Constants::STDOUT("Too much power gained! Try again...\n");
+        Constants::out << "Too much power gained! Try again...\n";
         std::cin >> a;
     }
     sum += a;
 
-    Constants::STDOUT("\tPoints improving health\t(currently ")(maxHealth)("): ");
+    Constants::out << "\tPoints improving health\t(currently " << maxHealth << "): ";
     std::cin >> h;
     while (sum + h > Constants::LEVEL_UP_POINTS)
     {
-        Constants::STDOUT("Too much power gained! Try again...\n");
+        Constants::out << "Too much power gained! Try again...\n";
         std::cin >> h;
     }
     sum += h;
 
-    Constants::STDOUT("\tPoints improving mana\t(currently ")(maxMana)("): ");
+    Constants::out << "\tPoints improving mana\t(currently " << maxMana << "): ";
     std::cin >> m;
     while (sum + m > Constants::LEVEL_UP_POINTS)
     {
-        Constants::STDOUT("Too much power gained! Try again...\n");
+        Constants::out << "Too much power gained! Try again...\n";
         std::cin >> m;
     }
     maxHealth += h;

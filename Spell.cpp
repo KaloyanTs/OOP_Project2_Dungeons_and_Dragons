@@ -9,7 +9,7 @@ Spell::Spell(unsigned y, unsigned x, unsigned bot, unsigned top, bool onBoard, u
 void Spell::print() const
 {
     HeroEquipment::print();
-    Constants::STDOUT(name)('\n');
+    Constants::out << name << '\n';
     Equipment::print();
-    Constants::STDOUT("\tCost: ")(cost)('\n');
+    Constants::out << "\tCost: " << cost << '\n';
 }
