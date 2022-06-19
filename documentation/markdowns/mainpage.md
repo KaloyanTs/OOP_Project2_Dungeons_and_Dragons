@@ -27,7 +27,6 @@ For the purposes of the project I have developed:
 ![Hierarchy4](..\assets\inherit_graph_4.png)
 ![Hierarchy5](..\assets\inherit_graph_5.png)
 ![Hierarchy6](..\assets\inherit_graph_6.png)
-![Hierarchy7](..\assets\inherit_graph_7.png)
 ![Hierarchy8](..\assets\inherit_graph_8.png)
 ![Hierarchy9](..\assets\inherit_graph_9.png)
 ![Hierarchy10](..\assets\inherit_graph_10.png)
