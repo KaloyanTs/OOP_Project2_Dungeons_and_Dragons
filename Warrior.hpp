@@ -40,8 +40,6 @@ public:
     void regenerate(float percentage) { Troop::regen(percentage); }
     /// gain amount of XP (levels up if enough XP)
     void gainXP(unsigned gain) { Troop::gainXP(gain); }
-    /// write the warrior's info into a text file
-    void save(const String &game) const;
 };
 
 #endif

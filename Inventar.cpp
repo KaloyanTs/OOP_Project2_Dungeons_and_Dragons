@@ -57,8 +57,6 @@ void Inventar::write(std::ofstream &ofs) const
 
 HeroEquipment *Inventar::readEquipment(std::ifstream &ifs, unsigned buf)
 {
-    // ofs << (int)getID() << ' ' << getBonus() << getCost() << ' '
-    //         << name.size() << ' ' << name.c_str() << '\n';
     unsigned bonus;
     float cost;
     unsigned length;

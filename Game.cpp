@@ -41,7 +41,6 @@ void Game::start()
 
 void Game::load()
 {
-    // throw MyException("Temporarily disabled", "Player *readPlayer(const String &)");
     delete pl;
     pl = nullptr;
     delete map;
@@ -91,7 +90,7 @@ void Game::newGame()
     if (!*name)
         strcpy(name, "unknown");
     pl = Map::getHero(chosen - '0' - 1, name);
-    map = new Map(pl, level); // todo this is throwing an exception
+    map = new Map(pl, level);
 }
 
 Constants::LEVEL_STATE Game::run()
