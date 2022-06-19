@@ -13,6 +13,5 @@ var class_human =
     [ "printBrief", "class_human.html#aaf6bd1cee55344b6629acfb996bec3be", null ],
     [ "printStats", "class_human.html#a5eb69b804d423c0fb421ad55a4bb7c5a", null ],
     [ "regenerate", "class_human.html#a5ea6561d7fecd90567d3e5b2038e832c", null ],
-    [ "save", "class_human.html#a22891e7cc0b0aca6a56c8faa130a26e4", null ],
     [ "takeDamage", "class_human.html#a5f2388784fabc1c4b3b9b9667035b798", null ]
 ];

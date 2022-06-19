@@ -1,14 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"index.html":[],
-"index.html#Overview":[0,0],
-"index.html#cl":[0,0,0],
-"index.html#exmpl":[0,2,0],
-"index.html#files":[0,1],
-"index.html#hierarchy":[0,2],
-"index.html#idea":[0,3],
-"level4_8dndmap.html":[4,0,0,0,7],
-"logo_8dnd.html":[4,0,0,0,8],
 "main_8cpp.html":[4,0,31],
 "main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,31,0],
 "main_8cpp_8obj_8d.html":[4,0,0,1,1,14],

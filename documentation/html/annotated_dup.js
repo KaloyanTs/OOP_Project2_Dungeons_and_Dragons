@@ -20,7 +20,6 @@ var annotated_dup =
     [ "Player", "class_player.html", "class_player" ],
     [ "Potion", "class_potion.html", "class_potion" ],
     [ "PotionNameGenerator", "class_potion_name_generator.html", null ],
-    [ "Printer", "class_printer.html", "class_printer" ],
     [ "Spell", "class_spell.html", "class_spell" ],
     [ "SpellNameGenerator", "class_spell_name_generator.html", null ],
     [ "Stack", "class_stack.html", "class_stack" ],

@@ -13,6 +13,5 @@ var class_warrior =
     [ "printBrief", "class_warrior.html#a6335ca7b2d598a4f209b95c89879373f", null ],
     [ "printStats", "class_warrior.html#acecbdcdca59d7a81dfa5d2db66148a31", null ],
     [ "regenerate", "class_warrior.html#afbe1a84da874c4db3ca2ec9996ec38ee", null ],
-    [ "save", "class_warrior.html#a6cf35dd5ecb124176f2688bb17f19afa", null ],
     [ "takeDamage", "class_warrior.html#a6650ce6b48a9fad9d57be5ac0c4f9e66", null ]
 ];

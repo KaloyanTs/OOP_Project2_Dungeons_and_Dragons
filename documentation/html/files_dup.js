@@ -77,9 +77,6 @@ var files_dup =
     [ "PotionNameGenerator.hpp", "_potion_name_generator_8hpp.html", [
       [ "PotionNameGenerator", "class_potion_name_generator.html", null ]
     ] ],
-    [ "Printer.hpp", "_printer_8hpp.html", [
-      [ "Printer", "class_printer.html", "class_printer" ]
-    ] ],
     [ "Spell.cpp", "_spell_8cpp.html", null ],
     [ "Spell.hpp", "_spell_8hpp.html", [
       [ "Spell", "class_spell.html", "class_spell" ]

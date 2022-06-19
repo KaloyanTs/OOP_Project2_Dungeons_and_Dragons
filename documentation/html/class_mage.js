@@ -13,6 +13,5 @@ var class_mage =
     [ "printBrief", "class_mage.html#a1564f6467e749d570ef36ea8acc1b2e7", null ],
     [ "printStats", "class_mage.html#af4b83aec44f91d81d0a3081d26e0ad9a", null ],
     [ "regenerate", "class_mage.html#a7c4dedbb124d0d76a9b112415f41f660", null ],
-    [ "save", "class_mage.html#a6d472f8265f2b99fdb9cda76b596e608", null ],
     [ "takeDamage", "class_mage.html#ab514e52d9d8da90fd95ecd313808b16e", null ]
 ];
