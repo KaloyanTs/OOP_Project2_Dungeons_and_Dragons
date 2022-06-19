@@ -22,8 +22,6 @@ public:
     static const Image armor_icon;
     static const Image spell_icon;
     static const Image dragon;
-    static const size_t stats_count = 3;
-    static const Image *stats_header[stats_count];
 };
 
 #endif

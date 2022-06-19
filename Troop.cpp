@@ -7,7 +7,6 @@ Troop::Troop(std::ifstream &ifs)
 
 void Troop::print(float attackBonus) const
 {
-    // p(GameAssets::stats_header, GameAssets::stats_count);
     Constants::out << "HEALTH\t\tATTACK\tMANA\n"
                    << health << '\\' << maxHealth;
     Constants::out << '\t' << (1 + attackBonus) * attack << '\t' << mana << '\\' << maxMana << '\n';
